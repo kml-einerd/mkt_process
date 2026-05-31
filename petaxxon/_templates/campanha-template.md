@@ -29,5 +29,5 @@ Quem PRODUZ não conclui; quem APROVA conclui. DoD: [...]
 
 ## As 3 camadas
 - **Ideal:** [...]
-- **Foto atual:** [...]
+- **Foto atual:** [roda | a testar | a desenhar — o que existe hoje]
 - **Gaps:** [...]
