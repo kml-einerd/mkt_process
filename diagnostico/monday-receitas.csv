@@ -1,0 +1,113 @@
+﻿Group (Receita),Item (Passo · Bloco),Subitem (Micro-task),Entregável,Papel (Owner),Bloco origem,Nota de montagem
+Setup de Funil (do zero),01 · Termo de Abertura (TAP),,Documento de abertura do projeto/evento,PM,B-CTN-02,Termo de Abertura — fonte única de verdade da oferta
+Setup de Funil (do zero),01 · Termo de Abertura (TAP),Preencher TAP,"Oferta, promessa, escopo, responsáveis, prazo",PM,B-CTN-02,
+Setup de Funil (do zero),02 · Identidade Visual (pack),,Kit visual do projeto/evento,Designer,B-IDV-01,Identidade visual — antes de páginas e checkout
+Setup de Funil (do zero),02 · Identidade Visual (pack),Alinhar concepção,Direção visual aprovada,Designer,B-IDV-01,
+Setup de Funil (do zero),02 · Identidade Visual (pack),Criar logo,Logo do evento/produto,Designer,B-IDV-01,
+Setup de Funil (do zero),02 · Identidade Visual (pack),Criar pack de imagens,"Capas, imagem WhatsApp, backgrounds",Designer,B-IDV-01,
+Setup de Funil (do zero),02 · Identidade Visual (pack),Design das páginas/checkout,Backgrounds + foto produto 1×1 + banner checkout,Designer,B-IDV-01,
+Setup de Funil (do zero),03 · Pasta/Drive do Projeto,,Estrutura de Drive padronizada do projeto,PM,B-INF-05,Drive do projeto — estrutura de pastas
+Setup de Funil (do zero),03 · Pasta/Drive do Projeto,Criar estrutura de pastas,Drive com pastas padrão (copy/design/vídeo/dados),PM,B-INF-05,
+Setup de Funil (do zero),04 · Setup GHL (CRM core),,"GHL configurado com tags, mapa e automações de evento",CRM,B-INF-01,"Setup GHL — tags, mapa, automações de pagamento"
+Setup de Funil (do zero),04 · Setup GHL (CRM core),Criar tags no GHL,Tags do funil criadas,CRM,B-INF-01,
+Setup de Funil (do zero),04 · Setup GHL (CRM core),Criar mapa de tags,Documento mapeando tag→evento,CRM,B-INF-01,
+Setup de Funil (do zero),04 · Setup GHL (CRM core),Integrar tags na Trivvo,Checkout disparando tags,CRM,B-INF-01,
+Setup de Funil (do zero),04 · Setup GHL (CRM core),"Programar automações (CA, AC, CC, PIX)",Eventos de pagamento automatizados,CRM,B-INF-01,
+Setup de Funil (do zero),05 · Checkout (gateway),,Checkout configurado e testado,Infra,B-INF-02,Checkout — gateway processando + tags
+Setup de Funil (do zero),05 · Checkout (gateway),Configurar produto e oferta,"Valor, garantia, entregáveis",Infra,B-INF-02,
+Setup de Funil (do zero),05 · Checkout (gateway),Configurar checkout,Checkout no ar (2 cartões se aplicável),Infra,B-INF-02,
+Setup de Funil (do zero),05 · Checkout (gateway),Integrar tags GHL,Compra dispara tag,Infra,B-INF-02,
+Setup de Funil (do zero),05 · Checkout (gateway),Testar compra,Transação de teste aprovada,Infra,B-INF-02,
+Setup de Funil (do zero),06 · Trackeamento (Pixel + UTM),,Rastreamento de eventos funcionando,Tráfego,B-INF-03,Trackeamento — pixel + UTM (NÃO subir tráfego sem isto)
+Setup de Funil (do zero),06 · Trackeamento (Pixel + UTM),Configurar pixel + eventos,Pixels instalados disparando eventos-chave,Tráfego,B-INF-03,
+Setup de Funil (do zero),06 · Trackeamento (Pixel + UTM),Definir e aplicar UTMs,Planilha de UTMs + links rastreáveis,Tráfego,B-INF-03,
+Setup de Funil (do zero),06 · Trackeamento (Pixel + UTM),Validar rastreio dos leads,Leads atribuídos por fonte/UTM,Tráfego,B-INF-03,
+Setup de Funil (do zero),07 · Página (parametrizável),,1 página publicada e aprovada,Copy + Design + Infra,B-PAG-01,Página de captura (param: captura)
+Setup de Funil (do zero),07 · Página (parametrizável),Escrever copy da página,"Copy da página (headline, oferta, CTA)",Copy + Design + Infra,B-PAG-01,
+Setup de Funil (do zero),07 · Página (parametrizável),Criar design,Layout da página,Copy + Design + Infra,B-PAG-01,
+Setup de Funil (do zero),07 · Página (parametrizável),Aprovação,Página aprovada por quem responde,Copy + Design + Infra,B-PAG-01,
+Setup de Funil (do zero),07 · Página (parametrizável),Implementar,Página publicada e testada (mobile + desktop),Copy + Design + Infra,B-PAG-01,
+Setup de Funil (do zero),08 · Página (parametrizável),,1 página publicada e aprovada,Copy + Design + Infra,B-PAG-01,Página de vendas (param: vendas)
+Setup de Funil (do zero),08 · Página (parametrizável),Escrever copy da página,"Copy da página (headline, oferta, CTA)",Copy + Design + Infra,B-PAG-01,
+Setup de Funil (do zero),08 · Página (parametrizável),Criar design,Layout da página,Copy + Design + Infra,B-PAG-01,
+Setup de Funil (do zero),08 · Página (parametrizável),Aprovação,Página aprovada por quem responde,Copy + Design + Infra,B-PAG-01,
+Setup de Funil (do zero),08 · Página (parametrizável),Implementar,Página publicada e testada (mobile + desktop),Copy + Design + Infra,B-PAG-01,
+Setup de Funil (do zero),09 · Página (parametrizável),,1 página publicada e aprovada,Copy + Design + Infra,B-PAG-01,Página de obrigado (param: obrigado)
+Setup de Funil (do zero),09 · Página (parametrizável),Escrever copy da página,"Copy da página (headline, oferta, CTA)",Copy + Design + Infra,B-PAG-01,
+Setup de Funil (do zero),09 · Página (parametrizável),Criar design,Layout da página,Copy + Design + Infra,B-PAG-01,
+Setup de Funil (do zero),09 · Página (parametrizável),Aprovação,Página aprovada por quem responde,Copy + Design + Infra,B-PAG-01,
+Setup de Funil (do zero),09 · Página (parametrizável),Implementar,Página publicada e testada (mobile + desktop),Copy + Design + Infra,B-PAG-01,
+Setup de Funil (do zero),10 · Formulário de Captura / Pesquisa,,Formulário ativo coletando dados,Infra + CRM,B-PAG-02,Formulário de captura/pesquisa
+Setup de Funil (do zero),10 · Formulário de Captura / Pesquisa,Definir campos e recompensa,Lista de campos + isca,Infra + CRM,B-PAG-02,
+Setup de Funil (do zero),10 · Formulário de Captura / Pesquisa,Criar e integrar,"Form publicado, gravando no CRM",Infra + CRM,B-PAG-02,
+Setup de Funil (do zero),11 · Sequência de E-mails,,Automação de e-mails ativa no GHL,Copy + CRM,B-CRM-01,Sequência de e-mails (param: captação+venda)
+Setup de Funil (do zero),11 · Sequência de E-mails,Escrever copy dos e-mails,Copy de cada e-mail da sequência,Copy + CRM,B-CRM-01,
+Setup de Funil (do zero),11 · Sequência de E-mails,Criar lista + campos no GHL,Lista segmentada com campos,Copy + CRM,B-CRM-01,
+Setup de Funil (do zero),11 · Sequência de E-mails,Montar automação + disparos,Fluxo GHL com gatilhos configurados,Copy + CRM,B-CRM-01,
+Setup de Funil (do zero),12 · WhatsApp API (disparo/sequência),,Mensagens WhatsApp automatizadas e aprovadas,Copy + CRM,B-CRM-02,WhatsApp API (param: captação+venda)
+Setup de Funil (do zero),12 · WhatsApp API (disparo/sequência),Escrever copy das mensagens,Copy de cada mensagem,Copy + CRM,B-CRM-02,
+Setup de Funil (do zero),12 · WhatsApp API (disparo/sequência),Aprovar mensagens na API,Templates aprovados (se API oficial),Copy + CRM,B-CRM-02,
+Setup de Funil (do zero),12 · WhatsApp API (disparo/sequência),Configurar automação/disparo,Fluxo agendado e testado,Copy + CRM,B-CRM-02,
+Setup de Funil (do zero),13 · Área de Membros,,Curso/produto disponível na área de membros,Infra,B-INF-04,Área de membros — entrega do produto
+Setup de Funil (do zero),13 · Área de Membros,Criar produto,Produto cadastrado na plataforma,Infra,B-INF-04,
+Setup de Funil (do zero),13 · Área de Membros,Configurar integração,Compra libera acesso automático,Infra,B-INF-04,
+Setup de Funil (do zero),13 · Área de Membros,Vincular curso ao produto,Conteúdo + capa publicados,Infra,B-INF-04,
+Setup de Funil (do zero),14 · Subir Campanha,,Campanha no ar recebendo tráfego,Gestor Tráfego,B-TRF-01,Subir campanha — só depois de tudo acima
+Setup de Funil (do zero),14 · Subir Campanha,Planejar verba e públicos,Hierarquia de públicos + verba distribuída,Gestor Tráfego,B-TRF-01,
+Setup de Funil (do zero),14 · Subir Campanha,Subir campanha,"Ads ativos, orçamento base, UTM ok",Gestor Tráfego,B-TRF-01,
+Remessa Nova (1 lote de criativos),01 · Criativo de Vídeo,,"1 anúncio em vídeo, 2 formatos (4×5 e 9×16), renomeado no padrão",Copy + Gravação + Editor,B-CRT-01,"Criativo de vídeo (param: novo ad, com copy) ◆ gargalo na copy"
+Remessa Nova (1 lote de criativos),01 · Criativo de Vídeo,Escrever copy do criativo ◆,"Doc de copy, sem info errada, link no comentário",Copy + Gravação + Editor,B-CRT-01,
+Remessa Nova (1 lote de criativos),01 · Criativo de Vídeo,Gravar (expert ou banco),Takes brutos de todos os ângulos no Drive,Copy + Gravação + Editor,B-CRT-01,
+Remessa Nova (1 lote de criativos),01 · Criativo de Vídeo,Editar,"4×5 + 9×16, recursos nativos CapCut/TikTok, sem-hook 1º",Copy + Gravação + Editor,B-CRT-01,
+Remessa Nova (1 lote de criativos),01 · Criativo de Vídeo,Revisar (condicional),Aprovado pelo Head de Edição,Copy + Gravação + Editor,B-CRT-01,
+Remessa Nova (1 lote de criativos),01 · Criativo de Vídeo,Renomear no padrão,[hook][versão]-[editor]-[copy]-[funil]-[remessa]-[projeto]-ON,Copy + Gravação + Editor,B-CRT-01,
+Remessa Nova (1 lote de criativos),02 · Subir Campanha,,Campanha no ar recebendo tráfego,Gestor Tráfego,B-TRF-01,Subir campanha (objetivo: teste)
+Remessa Nova (1 lote de criativos),02 · Subir Campanha,Planejar verba e públicos,Hierarquia de públicos + verba distribuída,Gestor Tráfego,B-TRF-01,
+Remessa Nova (1 lote de criativos),02 · Subir Campanha,Subir campanha,"Ads ativos, orçamento base, UTM ok",Gestor Tráfego,B-TRF-01,
+Remessa Nova (1 lote de criativos),03 · Teste de Criativo (3 dias),,Veredito pass/fail por criativo,Gestor Tráfego,B-TRF-02,Teste de criativo 3 dias — critério pass/fail
+Remessa Nova (1 lote de criativos),03 · Teste de Criativo (3 dias),Rodar janela completa,3 dias sem pausa,Gestor Tráfego,B-TRF-02,
+Remessa Nova (1 lote de criativos),03 · Teste de Criativo (3 dias),Aplicar critério pass/fail,"Validado: CPA≤meta & CTR≥1,5% · Descarte: CPA>30% acima ou CTR<1% · resto reteste",Gestor Tráfego,B-TRF-02,
+Remessa Nova (1 lote de criativos),04 · Relatório de Performance,,Planilha/painel com resultado do período,Gestor Tráfego,B-ANL-01,Relatório de performance — veredito por ad
+Remessa Nova (1 lote de criativos),04 · Relatório de Performance,Consolidar métricas,"CPA, CTR, ROAS, conversão por criativo/funil",Gestor Tráfego,B-ANL-01,
+Remessa Nova (1 lote de criativos),04 · Relatório de Performance,Registrar veredito,"O que validou, escalou, descartou",Gestor Tráfego,B-ANL-01,
+Remessa Nova (1 lote de criativos),05 · Escala (1→2→Winner),,Criativo validado escalado em múltiplas contas,Gestor Tráfego,B-TRF-03,Escala (validados → 1 → 2 → winner)
+Remessa Nova (1 lote de criativos),05 · Escala (1→2→Winner),Escala 1,Sobe orçamento — 1ª faixa,Gestor Tráfego,B-TRF-03,
+Remessa Nova (1 lote de criativos),05 · Escala (1→2→Winner),Escala 2,Replica em múltiplas Ad Accounts (AC1-AC7),Gestor Tráfego,B-TRF-03,
+Remessa Nova (1 lote de criativos),05 · Escala (1→2→Winner),Winner → Pools,Ad campeão em controle ads (ON),Gestor Tráfego,B-TRF-03,
+Remessa Nova (1 lote de criativos),06 · Remix / BTC / Plugar-Hook,,Variação de criativo existente (compilação ou troca de hook),Editor,B-CRT-03,Remix/BTC/Hook — caminho curto p/ abastecer enquanto copy é gargalo
+Remessa Nova (1 lote de criativos),06 · Remix / BTC / Plugar-Hook,Definir remix na estratégia,Brief do que recombinar,Editor,B-CRT-03,
+Remessa Nova (1 lote de criativos),06 · Remix / BTC / Plugar-Hook,Editar remix/hook,"Vídeo nos formatos, renomeado",Editor,B-CRT-03,
+PDA — exemplo (semana de produção),01 · PDA (Plano de Ação),,Container que agrupa remessas de uma semana/mês,Gestor Tráfego,B-CTN-01,PDA [S4-M3] [GPS] Remessa 570-573 — abre o container
+PDA — exemplo (semana de produção),01 · PDA (Plano de Ação),Abrir PDA numerado,Container com nomenclatura padrão,Gestor Tráfego,B-CTN-01,
+PDA — exemplo (semana de produção),01 · PDA (Plano de Ação),Distribuir remessas (ads/hooks/BTC),Remessas-filhas criadas e atribuídas,Gestor Tráfego,B-CTN-01,
+PDA — exemplo (semana de produção),02 · Criativo de Vídeo,,"1 anúncio em vídeo, 2 formatos (4×5 e 9×16), renomeado no padrão",Copy + Gravação + Editor,B-CRT-01,"Remessa 570 · Novos Ads (vídeo, com copy) ◆"
+PDA — exemplo (semana de produção),02 · Criativo de Vídeo,Escrever copy do criativo ◆,"Doc de copy, sem info errada, link no comentário",Copy + Gravação + Editor,B-CRT-01,
+PDA — exemplo (semana de produção),02 · Criativo de Vídeo,Gravar (expert ou banco),Takes brutos de todos os ângulos no Drive,Copy + Gravação + Editor,B-CRT-01,
+PDA — exemplo (semana de produção),02 · Criativo de Vídeo,Editar,"4×5 + 9×16, recursos nativos CapCut/TikTok, sem-hook 1º",Copy + Gravação + Editor,B-CRT-01,
+PDA — exemplo (semana de produção),02 · Criativo de Vídeo,Revisar (condicional),Aprovado pelo Head de Edição,Copy + Gravação + Editor,B-CRT-01,
+PDA — exemplo (semana de produção),02 · Criativo de Vídeo,Renomear no padrão,[hook][versão]-[editor]-[copy]-[funil]-[remessa]-[projeto]-ON,Copy + Gravação + Editor,B-CRT-01,
+PDA — exemplo (semana de produção),03 · Criativo de Vídeo,,"1 anúncio em vídeo, 2 formatos (4×5 e 9×16), renomeado no padrão",Copy + Gravação + Editor,B-CRT-01,"Remessa 571 · Novos Hooks (vídeo, com copy) ◆"
+PDA — exemplo (semana de produção),03 · Criativo de Vídeo,Escrever copy do criativo ◆,"Doc de copy, sem info errada, link no comentário",Copy + Gravação + Editor,B-CRT-01,
+PDA — exemplo (semana de produção),03 · Criativo de Vídeo,Gravar (expert ou banco),Takes brutos de todos os ângulos no Drive,Copy + Gravação + Editor,B-CRT-01,
+PDA — exemplo (semana de produção),03 · Criativo de Vídeo,Editar,"4×5 + 9×16, recursos nativos CapCut/TikTok, sem-hook 1º",Copy + Gravação + Editor,B-CRT-01,
+PDA — exemplo (semana de produção),03 · Criativo de Vídeo,Revisar (condicional),Aprovado pelo Head de Edição,Copy + Gravação + Editor,B-CRT-01,
+PDA — exemplo (semana de produção),03 · Criativo de Vídeo,Renomear no padrão,[hook][versão]-[editor]-[copy]-[funil]-[remessa]-[projeto]-ON,Copy + Gravação + Editor,B-CRT-01,
+PDA — exemplo (semana de produção),04 · Remix / BTC / Plugar-Hook,,Variação de criativo existente (compilação ou troca de hook),Editor,B-CRT-03,"Remessa 572 · BTC (só edição, sem copy — paralelo)"
+PDA — exemplo (semana de produção),04 · Remix / BTC / Plugar-Hook,Definir remix na estratégia,Brief do que recombinar,Editor,B-CRT-03,
+PDA — exemplo (semana de produção),04 · Remix / BTC / Plugar-Hook,Editar remix/hook,"Vídeo nos formatos, renomeado",Editor,B-CRT-03,
+PDA — exemplo (semana de produção),05 · Remix / BTC / Plugar-Hook,,Variação de criativo existente (compilação ou troca de hook),Editor,B-CRT-03,Remessa 573 · Plugar/Substituir Hooks (sem copy — paralelo)
+PDA — exemplo (semana de produção),05 · Remix / BTC / Plugar-Hook,Definir remix na estratégia,Brief do que recombinar,Editor,B-CRT-03,
+PDA — exemplo (semana de produção),05 · Remix / BTC / Plugar-Hook,Editar remix/hook,"Vídeo nos formatos, renomeado",Editor,B-CRT-03,
+PDA — exemplo (semana de produção),06 · Subir Campanha,,Campanha no ar recebendo tráfego,Gestor Tráfego,B-TRF-01,Subir campanha (todas as remessas)
+PDA — exemplo (semana de produção),06 · Subir Campanha,Planejar verba e públicos,Hierarquia de públicos + verba distribuída,Gestor Tráfego,B-TRF-01,
+PDA — exemplo (semana de produção),06 · Subir Campanha,Subir campanha,"Ads ativos, orçamento base, UTM ok",Gestor Tráfego,B-TRF-01,
+PDA — exemplo (semana de produção),07 · Teste de Criativo (3 dias),,Veredito pass/fail por criativo,Gestor Tráfego,B-TRF-02,Teste 3 dias (todas)
+PDA — exemplo (semana de produção),07 · Teste de Criativo (3 dias),Rodar janela completa,3 dias sem pausa,Gestor Tráfego,B-TRF-02,
+PDA — exemplo (semana de produção),07 · Teste de Criativo (3 dias),Aplicar critério pass/fail,"Validado: CPA≤meta & CTR≥1,5% · Descarte: CPA>30% acima ou CTR<1% · resto reteste",Gestor Tráfego,B-TRF-02,
+PDA — exemplo (semana de produção),08 · Relatório de Performance,,Planilha/painel com resultado do período,Gestor Tráfego,B-ANL-01,Relatório consolidado do PDA
+PDA — exemplo (semana de produção),08 · Relatório de Performance,Consolidar métricas,"CPA, CTR, ROAS, conversão por criativo/funil",Gestor Tráfego,B-ANL-01,
+PDA — exemplo (semana de produção),08 · Relatório de Performance,Registrar veredito,"O que validou, escalou, descartou",Gestor Tráfego,B-ANL-01,
+PDA — exemplo (semana de produção),09 · Contingência de Conta,,Tráfego restaurado após ban de BM,Gestor Tráfego + TI,B-TRF-04,Contingência de conta — se alguma BM cair durante o teste
+PDA — exemplo (semana de produção),09 · Contingência de Conta,Detectar ban,Alerta de queda de tráfego,Gestor Tráfego + TI,B-TRF-04,
+PDA — exemplo (semana de produção),09 · Contingência de Conta,Rotacionar conta,"Pegar perfil/BM reserva, reconfigurar funil/pixel",Gestor Tráfego + TI,B-TRF-04,
+PDA — exemplo (semana de produção),09 · Contingência de Conta,Reaquecer e registrar,BM nova rodando + incidente registrado (MTTR),Gestor Tráfego + TI,B-TRF-04,

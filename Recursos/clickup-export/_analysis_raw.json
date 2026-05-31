@@ -1,0 +1,790 @@
+{
+  "LC_Lari_Colares": {
+    "rows": 7024,
+    "folders": [
+      "hidden"
+    ],
+    "lists": [
+      "Teste Tráfego",
+      "[CDV-F01-Semanal] Teste de criativo",
+      "[CDV-F02-VSL] Teste criativos",
+      "[CDV-F02-VSL] Testes de funis",
+      "[CDV-FO1-Semanal] Testes de funis",
+      "[GPS] CRM (Automações)",
+      "[GPS] Pools Ads",
+      "[GPS] Teste criativos",
+      "[GPS] Teste ticket médio",
+      "[GPS] Testes de funis",
+      "[LC] CDV Semanal",
+      "[LC] CDV VSL",
+      "[LC] GPS-F01",
+      "[LC] Miles e Points"
+    ],
+    "statuses": {
+      "🏆feito": 6061,
+      "fechado": 274,
+      "🔒 não exec|bklg": 141,
+      "🔓 pendente": 87,
+      "⚡em execução": 84,
+      "desligados": 64,
+      "não validados": 51,
+      "read to go": 44,
+      "em teste": 41,
+      "em teste ": 39,
+      "validados": 21,
+      "retestar": 18,
+      "🔒 não executar": 16,
+      "controle ads": 15,
+      "ready to go": 12,
+      "✅ em validação": 10,
+      "🔍 checagem": 9,
+      "🔴 ajuste | block": 6,
+      "✍️ copy em execução": 5,
+      "escala 1": 5,
+      "reteste": 4,
+      "escala 2": 4,
+      "winner": 4,
+      "checkagem ": 2,
+      "rascunho": 2,
+      "escala": 2,
+      "a fazer": 1,
+      "🎨 edição em execução": 1,
+      "não validado ": 1
+    },
+    "status_types": {
+      "closed": 6335,
+      "custom": 449,
+      "open": 229,
+      "done": 11
+    },
+    "top_assignees": {
+      "Lucas Diniz Cordeiro": 983,
+      "Samuel Lira": 967,
+      "Kayke": 837,
+      "Paulo Ricardo": 561,
+      "Marcel Rodrigues": 310,
+      "Henrique Gabriel": 295,
+      "Thiago Martins": 272,
+      "Fernando Origuela": 265,
+      "Brian Lira": 242,
+      "Lucas Nunes": 207
+    },
+    "top_creators": {
+      "Pedro Duarte": 3046,
+      "Bruno Gabriel Aguiar Silva": 2709,
+      "Lucas Diniz Cordeiro": 395,
+      "ClickBot": 326,
+      "Kayke": 173,
+      "Kemuel de Mel Leopoldino": 81,
+      "Henrique Gabriel": 72,
+      "Cesar Ribeiro": 66,
+      "Samuel Lira": 59,
+      "Jaqueline Fortuna": 43
+    },
+    "top_tags": {
+      "hm - ads": 34,
+      "gps - ads": 33,
+      "hm - funil": 15,
+      "🟢": 15,
+      "escala 2": 14,
+      "🟡": 13,
+      "escala 1": 13,
+      "🔴": 9,
+      "gps - funil": 8,
+      "cpm alto": 8,
+      "validado": 6,
+      "gps - ticket": 4,
+      "gps_campanha_teste": 2,
+      "vsl ads": 1,
+      "semanal ads": 1
+    },
+    "sample_tasks": [
+      "Criação do banner",
+      "Subir estrutura - Upsell",
+      "Criação do banner",
+      "Subir estrutura",
+      "Estrutura na trivvo - Downsell",
+      "Estrutura na trivvo",
+      "Validação comitê",
+      "Validação de Design",
+      "Implementar na página",
+      "Escrever copy",
+      "Nova página de Downsell",
+      "Editar vídeo upsell",
+      "Implementar vídeo",
+      "Validação comitê",
+      "Gravar vídeo upsell",
+      "Escrever copy",
+      "Video para upsell",
+      "[GPS] Downsell",
+      "[GPS] Upsell",
+      "Validar",
+      "Implementar página",
+      "Escrever copy",
+      "Nova página de upsell",
+      "Editar vídeo",
+      "Escrever copy",
+      "[GPS] Gravações da Lari (4 vídeos)",
+      "Gravar take da Lari assinando o termo",
+      "[GPS] Termo de compromisso - Gravar take da Lari assinando o termo",
+      "Validar",
+      "Implementar typebot"
+    ],
+    "priorities": {
+      "urgent": 116,
+      "high": 53,
+      "normal": 27
+    },
+    "created_range": "2024-06-28 to 2026-04-03",
+    "updated_range": "2024-07-16 to 2026-04-03"
+  },
+  "Gestão": {
+    "rows": 1389,
+    "folders": [
+      "BKP",
+      "Templates",
+      "hidden"
+    ],
+    "lists": [
+      "Audiovisual ",
+      "Ação de Vendas",
+      "Backlog de Infoproduto",
+      "Backlog de Infoproduto (cópia)",
+      "Encapsulado",
+      "Implantação MFV",
+      "Meteórico",
+      "Perpetuo",
+      "Tarefas GP"
+    ],
+    "statuses": {
+      "a fazer": 1004,
+      "não executar": 222,
+      "pendente": 162,
+      "feito": 1
+    },
+    "status_types": {
+      "open": 1226,
+      "custom": 162,
+      "closed": 1
+    },
+    "top_assignees": {
+      "Lucas Diniz Cordeiro": 32,
+      "Thiago Martins": 29,
+      "Samuel Lira": 29,
+      "Kayke": 18,
+      "Henrique Gabriel": 13,
+      "Gabriel aquino Xavier de Oliveira": 8,
+      "Brian Lira": 8,
+      "Thays da Costa": 6,
+      "Kemuel de Mel Leopoldino": 6,
+      "Braz Cardoso": 3
+    },
+    "top_creators": {
+      "Pedro Duarte": 1306,
+      "Pablo Souza": 66,
+      "Thallys Gomes": 16,
+      "Henrique Gabriel": 1
+    },
+    "top_tags": {},
+    "sample_tasks": [
+      "✍️ Copy enviar Ajuste Plugar/Substituir",
+      "✍️ Copy enviar Ajuste BTC",
+      "🎞️ Editar Plugar/Substituir Hooks",
+      "⏫ Iniciar Tráfego Plugar/Substituir Hooks",
+      "🎞️ Remessa XX - Plugar/Substituir Hooks",
+      "⏫ Iniciar Tráfego BTC",
+      "🎞️ Editar BTC",
+      "🎞️ Remessa XX - BTC",
+      "🎞️ Editar novos hooks",
+      "🎥 Gravar novos hooks",
+      "✍️ Copy escrever novos hooks",
+      "⏫ Iniciar Tráfego novos hooks",
+      "🎬 Remessa XX - Novos Hooks",
+      "⏫ Iniciar Tráfego novos ads",
+      "🎞️ Editar novos ads",
+      "🎥 Gravar novos ads",
+      "✍️ Copy escrever novos ads",
+      "🎬 Remessa XX - Novos ads",
+      "🚀[PDA S2-M10] [xx] - Remessa XX a XX",
+      "📊Gerar relatório de desempenho novos ads",
+      "3️⃣Testar novos ads (3 dias)",
+      "⏫ Iniciar Tráfego novos ads",
+      "🎥 Gravar novos ads",
+      "🔍 Revisar nonos ads",
+      "✍️ Copy escrever novos ads",
+      "🎞️ Editar novos ads",
+      "🎬 Remessa XX - Novos ads venda direta",
+      "💻Implementar página",
+      "✨Realizar o Design da página",
+      "✍ Escrever copy para página"
+    ],
+    "priorities": {
+      "urgent": 10
+    },
+    "created_range": "2024-04-09 to 2025-10-13",
+    "updated_range": "2024-06-11 to 2025-12-08"
+  },
+  "DIS_-_Equipes": {
+    "rows": 584,
+    "folders": [
+      "Ferramentas/Cursos",
+      "hidden"
+    ],
+    "lists": [
+      "Audiovisual",
+      "Automação",
+      "Comercial ",
+      "Contingência  (API)",
+      "Contingência  (Trafego)",
+      "Cursos e Treinamentos",
+      "Dev",
+      "Funil/Infra",
+      "Gestão",
+      "IA/Drive",
+      "Infraestrutura",
+      "Projetos",
+      "Social Media",
+      "Trivvo",
+      "Tráfego",
+      "Web/Design"
+    ],
+    "statuses": {
+      "fechado": 183,
+      "ativo": 78,
+      "bloqueada ": 55,
+      "concluído 🏆": 52,
+      "read to go": 33,
+      "a fazer": 33,
+      "cancelado/sem custo": 29,
+      "complete": 23,
+      "perfis ": 23,
+      "to do": 22,
+      "feito": 19,
+      "em progresso": 12,
+      "ativos ok": 8,
+      "verificacao da bm": 4,
+      "bm escala trafego": 4,
+      "in progress": 3,
+      "revisar": 2,
+      "solicitação": 1
+    },
+    "status_types": {
+      "closed": 225,
+      "custom": 166,
+      "done": 104,
+      "open": 89
+    },
+    "top_assignees": {
+      "Lucas Diniz Cordeiro": 67,
+      "Samuel Lira": 31,
+      "Gabriel Gbola": 20,
+      "Henrique Gabriel": 20,
+      "Lucas Nunes": 19,
+      "Cesar Ribeiro": 19,
+      "Pedro Duarte": 17,
+      "Gabriel Lucas": 16,
+      "Gabriel aquino Xavier de Oliveira": 14,
+      "Paulo Ricardo": 13
+    },
+    "top_creators": {
+      "Lucas Diniz Cordeiro": 330,
+      "Pedro Duarte": 127,
+      "Cesar Ribeiro": 23,
+      "Paulo Ricardo": 20,
+      "Adrieli Diniz": 19,
+      "Thays da Costa": 19,
+      "Gabriel Lucas": 17,
+      "Bruno Souza": 15,
+      "Henrique Gabriel": 5,
+      "Everton Lima": 5
+    },
+    "top_tags": {
+      "ativa": 15,
+      "verificado": 4,
+      "pf21": 4,
+      "autenticado dis": 1
+    },
+    "sample_tasks": [
+      "BM- Jéssika - (Comercial) (final 6117)",
+      "Alicia Natividade - PFPPKARE021 (F.Marcos)",
+      "BM 02 - PF19",
+      "Lorran sylva - PF19",
+      "Kira1602.1808 - PF011",
+      "Carlos 2 - PF011",
+      "Carlos - PF011",
+      "Edjane Silva - PF010",
+      "Edjane Silva 2 - PF010",
+      "Leis da Fortuna - PF010",
+      "Emily Santos - PF009",
+      "Ariana Braz Teles 2 - PF009",
+      "Ariana Braz Teles - PF009",
+      "Sharkwares 4953 - PF007",
+      "Manu - PF007",
+      "Gabriela Silva - PF005",
+      "Bianca Castro - PF005",
+      "Mariana Silva - PF005",
+      "Gerencia 1 - PF001",
+      "Verificar BM012 PF012 ->  Elysium",
+      "Verificar BM1 - O curso do amor -> Trivvo filial",
+      "Verificar BM1 - Guia Você Aprovado -> Trivvo matrix",
+      "BM2 - Dra Roberta G. -> Testar subir Waba nela",
+      "BM - Nowork -> Abrir chamado suporte",
+      "Verificar BM1 - DIS -> Trivvo Filial",
+      "BM 2 - DIS -> Verificar com Trivvo Matrix",
+      "Verificar BM2 - Dra Roberta G. -> Trivvo matrix (N disponivel)",
+      "Subir Proxy para perfil ppkare",
+      "Subir dominio: https://www.laricolares.com/",
+      "Verificação da BM -> Trivvo Filial"
+    ],
+    "priorities": {
+      "urgent": 32,
+      "high": 22,
+      "normal": 4
+    },
+    "created_range": "2024-07-21 to 2026-04-02",
+    "updated_range": "2024-07-23 to 2026-04-02"
+  },
+  "AVT_Avastus": {
+    "rows": 478,
+    "folders": [
+      "hidden"
+    ],
+    "lists": [
+      "[DIS] Fleyn",
+      "[MDFW] MindFlow",
+      "[PPC] PPClear"
+    ],
+    "statuses": {
+      "🏆feito": 420,
+      "🔒 não exec|bklg": 50,
+      "🔓 pendente": 6,
+      "⚡em execução": 2
+    },
+    "status_types": {
+      "closed": 420,
+      "open": 50,
+      "custom": 8
+    },
+    "top_assignees": {
+      "Lucas Diniz Cordeiro": 58,
+      "Kayke": 55,
+      "Samuel Lira": 50,
+      "Thiago Martins": 33,
+      "Paulo Ricardo": 22,
+      "Lucas Nunes": 21,
+      "Brian Lira": 21,
+      "Lucas Cesar": 19,
+      "Henrique Gabriel": 17,
+      "Marcel Rodrigues": 15
+    },
+    "top_creators": {
+      "Pedro Duarte": 284,
+      "Bruno Gabriel Aguiar Silva": 179,
+      "Thallys Gomes": 10,
+      "Lucas Diniz Cordeiro": 3,
+      "Henrique Gabriel": 1,
+      "Kayke": 1
+    },
+    "top_tags": {},
+    "sample_tasks": [
+      "Validação comitê",
+      "Editar VSL",
+      "Gravar VSL",
+      "Criar copy",
+      "Validação comitê",
+      "Editar ads",
+      "Gravar ads",
+      "Criar copy",
+      "Remessa 01",
+      "Validar",
+      "Implementar na página",
+      "Criar copy",
+      "Implementar no checkout",
+      "Definir os produtos",
+      "VSL",
+      "Remessa de ads",
+      "Nova página",
+      "Checkout",
+      "🚀[PDA S4-M2] [MF] - Remessa 10 a XX",
+      "🚀[PDA S3-M2] [MF] - Remessa 09",
+      "🚀[PDA S2-M2] [MF] - Remessa 9",
+      "🚀[PDA S1-M2] [MF] - Remessa 09",
+      "🚀[PDA S4-M1] [MF] - Remessa 09",
+      "🚀[PDA S3-M1] [MF] - Remessa 09",
+      "🚀[PDA S2-M1] [MF] - Remessa 09",
+      "🚀[PDA S1-M1] [MF] - Remessa 9",
+      "🚀[PDA S5-M12] [MF] - Remessa 09",
+      "🚀[PDA S4-M12] [MF] - Remessa 09",
+      "Criar imagem ",
+      "Implementar vídeo "
+    ],
+    "priorities": {
+      "urgent": 3
+    },
+    "created_range": "2025-03-03 to 2026-03-16",
+    "updated_range": "2025-03-03 to 2026-04-02"
+  },
+  "DIS_DEV": {
+    "rows": 114,
+    "folders": [
+      "hidden"
+    ],
+    "lists": [
+      "Aplicativo GPS",
+      "Trackeamento"
+    ],
+    "statuses": {
+      "Closed": 75,
+      "não executar": 16,
+      "pendente": 15,
+      "revisar": 5,
+      "em progresso": 3
+    },
+    "status_types": {
+      "closed": 75,
+      "custom": 23,
+      "open": 16
+    },
+    "top_assignees": {
+      "Pedro Neto": 63,
+      "Mario Augusto Mania": 17,
+      "Altiéres": 16,
+      "Bruno Gabriel Aguiar Silva": 8,
+      "Lucas Cesar": 4,
+      "Kemuel de Mel Leopoldino": 3,
+      "Pedro Duarte": 2,
+      "Alvaro Pistore": 1
+    },
+    "top_creators": {
+      "Altiéres": 71,
+      "Pedro Duarte": 40,
+      "Bruno Gabriel Aguiar Silva": 3
+    },
+    "top_tags": {},
+    "sample_tasks": [
+      "Ajusta na Pág. \"Account\" da Aba de Adm",
+      "Arrumar o material de onboarding do Sistema GPS (Curso)",
+      "Quando houver só datas de 'ida', não duplicar ofertar",
+      "Resolver questão de 'refresh' da página.",
+      "Retirar Vídeo Tutorial Após (Todo) Login (Deixar Apenas Pós Quiz)",
+      "Criar 7 Novas Capas (400x220) p/ App Sistema GPS",
+      "Trocar Mensagem na Pág. do \"Não Tenho Milhas\" + Trocar Mensagem Automática",
+      "Reduzir o tempo em que as ofertas ficam disponíveis (de 15 dias para 10)",
+      "Após a compra, enviar mensagem via WhatsApp com os dados de acesso",
+      "Ajustar Banner Inicial do App → Menor e +Assertivo",
+      "Trocar nome dos botões na Oferta",
+      "Adicionar seção de \"Ultimas Ofertas\"",
+      "Mudar exibição inicial da oferta (Add: A partir de)",
+      "Adicionar a possibilidade do usuário identificar o número de passageiros na oferta.",
+      "Atualizar botão de \"Emitir em Dinheiro\"",
+      "Permitir a busca somente por volta... OU quando a oferta na tiver nenhuma data de volta, não duplicar.",
+      "Permitir aumentar a velocidade de reprodução dos vídeos dos cursos.",
+      "Atualização do Questionário",
+      "Botão do Suporte em cima do \"Alertas\"",
+      "FAQ da aba de Alertas não abre",
+      "Materiais de Apoio (Desktop) não baixam. Enviam para aba \"Início\"",
+      "Materiais de Apoio no iPhone (Safari + Chrome) não baixam",
+      "Permitir a Busca por \"Nome da Cidade\" além de código IATA/nome do aeroporto",
+      "Criar Seção \"Conteúdos Adquiridos\" na aba \"Cursos\"",
+      "Adicionar E-mail do Usuário nos Botões: Solicitar Reembolso e Fale com o Suporte",
+      "Na Busca, procurar pelo ID do Voo/Oferta",
+      "Após Responder um Comentário, o Usuário Deve Receber a Resposta Via E-mail",
+      "Att. da Aba Favoritos",
+      "Após 15 dias, colocar a oferta como \"Encerrada\"",
+      "Fazer Takes do App para Inserir em Anúncios"
+    ],
+    "priorities": {},
+    "created_range": "2025-06-06 to 2026-04-02",
+    "updated_range": "2025-06-11 to 2026-04-02"
+  },
+  "EVA_Eva_Essence": {
+    "rows": 152,
+    "folders": [
+      "hidden"
+    ],
+    "lists": [
+      "[E-EVA] Ecommerce EVA",
+      "[LVND] Lavanda",
+      "[OEO] Olibano"
+    ],
+    "statuses": {
+      "🏆feito": 152
+    },
+    "status_types": {
+      "closed": 152
+    },
+    "top_assignees": {
+      "Thallys Gomes": 20,
+      "Kayke": 10,
+      "Lucas Diniz Cordeiro": 8,
+      "Samuel Lira": 8,
+      "Thiago Martins": 6,
+      "Jaqueline Fortuna": 6,
+      "Paulo Ricardo": 4,
+      "Lucas Fazendeiro": 4,
+      "Kemuel de Mel Leopoldino": 4,
+      "Lucas Cesar": 4
+    },
+    "top_creators": {
+      "Pedro Duarte": 149,
+      "Thays da Costa": 2,
+      "Lucas Diniz Cordeiro": 1
+    },
+    "top_tags": {},
+    "sample_tasks": [
+      "⏫ Iniciar Tráfego",
+      "✍️ Copy escrever novos ads",
+      "🎞️ Editar ads",
+      "🔍 Revisar ads",
+      "🎬 Remessa 02 - Ads Lead História UGC",
+      "🎨Atualizar página de vendas",
+      "Atualização do Funil [LVND] - Add Lead na pg com Delay e novos ads",
+      "⏫ Iniciar Tráfego",
+      "🔍 Revisar ads",
+      "✍️ Copy escrever novos ads",
+      "🎞️ Editar ads",
+      "🎬 Remessa 01 - Novos ads Lead História",
+      "Check List Verificação do Funil [LVND]",
+      "Configurar o checkout Trivvo",
+      "Subir o funil na Trivvo",
+      "Criar Integração através das Tags na Trivvo",
+      "Programar Automações dos Eventos (CA, AC, CC, PIX)",
+      "Criar MAPA de Tags",
+      "Criar Tags no GHL",
+      "Configurar GHL",
+      "Planilhas de Investimento em Tráfego",
+      "Criar planilha de links (UTM) e dados",
+      "Configurar Infraestrura [LVND]",
+      "Criar design da foto do produto 1x1",
+      "Criar design do banner do topo do checkout",
+      "Criar design do checkout",
+      "Aprovar Página de Vendas e Obrigado",
+      "Criar página de Vendas e Obrigado",
+      "Design página de Vendas e Obrigado",
+      "Escrever copy página Vendas e Obrigado"
+    ],
+    "priorities": {
+      "urgent": 1
+    },
+    "created_range": "2025-03-03 to 2025-05-16",
+    "updated_range": "2025-03-04 to 2025-09-26"
+  },
+  "Creators_Club": {
+    "rows": 60,
+    "folders": [
+      "hidden"
+    ],
+    "lists": [
+      "[CC] Afiliado - Andressa",
+      "[CC] Teste de Criativos",
+      "[CC] Testes de funis"
+    ],
+    "statuses": {
+      "🏆feito": 31,
+      "🔓 pendente": 13,
+      "🔒 não exec|bklg": 6,
+      "⚡em execução": 5,
+      "em teste ": 2,
+      "em teste": 1,
+      "🔍 checagem": 1,
+      "🔴 ajuste | block": 1
+    },
+    "status_types": {
+      "closed": 31,
+      "custom": 22,
+      "open": 6,
+      "done": 1
+    },
+    "top_assignees": {
+      "Kayke": 9,
+      "Bruno Gabriel Aguiar Silva": 6,
+      "Felipe": 5,
+      "Altiéres": 5,
+      "Lucas Cesar": 4,
+      "Brian Lira": 3,
+      "Thays da Costa": 3,
+      "Lucas Nunes": 1,
+      "Pedro Souza": 1,
+      "Mario Augusto Mania": 1
+    },
+    "top_creators": {
+      "Bruno Gabriel Aguiar Silva": 41,
+      "Altiéres": 12,
+      "Pedro Duarte": 4,
+      "Lucas Diniz Cordeiro": 2,
+      "ClickBot": 1
+    },
+    "top_tags": {
+      "cc ads": 1
+    },
+    "sample_tasks": [
+      "Remessa 01 - novos ADS",
+      "1 Campanha TB-V1 - R1 - Engajamento - Creators",
+      "TB-V1",
+      "Implementar na página",
+      "Criar design",
+      "Criar copy",
+      "Página de upsell (Brian)",
+      "Implementar na página",
+      "Criar copy",
+      "Ajustar os ads com a imagem da Andressa",
+      "Rodar VSL direto para página de vendas",
+      "Ads e Ajustes páginas para rodar o Low ticket 2K seguidores - Brian",
+      "Após a compra, enviar mensagem via WhatsApp com os dados de acesso",
+      "(Radar Viral) Radar Viral Liberado p/ Não Compradores",
+      "Validação comitê",
+      "Editar ads",
+      "Validar",
+      "Criar img",
+      "Remessa 03 - Ads imagem",
+      "Adicionar pixel na estrutura do Creators",
+      "(DMM) Bot do Discord não está funcionando",
+      "Ajustar imagens dos banners",
+      "Capa para e-mails",
+      "Remessa 02",
+      "E-mail de boas-vindas",
+      "(DMM) Video de Onboarding do Desafio",
+      "(DMM) Verificar se o Discord está funcionando corretamente",
+      "(DMM) Estruturar um Checklist Diário",
+      "(DMM) Moderação no Discord",
+      "(DMM) Definir Data do Desafio (Esperando Confirmação)"
+    ],
+    "priorities": {},
+    "created_range": "2026-03-10 to 2026-03-31",
+    "updated_range": "2026-03-23 to 2026-04-03"
+  },
+  "Trivvo": {
+    "rows": 19,
+    "folders": [
+      "hidden"
+    ],
+    "lists": [
+      "Trivvo - V1",
+      "Trivvo - V2"
+    ],
+    "statuses": {
+      "fechado": 8,
+      "a fazer": 5,
+      "em progresso": 3,
+      "não executar": 2,
+      "concluído 🏆": 1
+    },
+    "status_types": {
+      "closed": 8,
+      "open": 7,
+      "custom": 3,
+      "done": 1
+    },
+    "top_assignees": {
+      "Pedro Souza": 1,
+      "Lucas Cesar": 1
+    },
+    "top_creators": {
+      "Pedro Duarte": 11,
+      "Simone Faquineli": 8
+    },
+    "top_tags": {},
+    "sample_tasks": [
+      "Subir o site da Trivvo em Astro",
+      "Vendas de produtos na área de membros",
+      "Gestão de Grupos para eliminar o sendflow",
+      "Atualizar o sistema de afiliado",
+      "Site institucional com recursos de IA",
+      "Implementar GetNet",
+      "Migrar e-mail para PostMaker",
+      "Implementar o pagamento via Apple Pay",
+      "Ajustar a tentativa de compra no Upsell",
+      "Monitoramento infra",
+      "Analise N8N",
+      "Disparo de Evento de Reembolso parcial",
+      "Integração do Frontend ao Grafana",
+      "Relatório de Vendas e Faturamento por Produto e Cliente",
+      "Relatório de Alunos por Expert/Produto",
+      "Alteração das Tentativas de Disparo do Evento",
+      "Armazenamento e Reprocessamento de Eventos com Erro",
+      "Lista de relatórios para desenvolvimento",
+      "Adicionar comunicação Ominichanell https://novu.co/"
+    ],
+    "priorities": {
+      "urgent": 3,
+      "high": 2,
+      "normal": 2
+    },
+    "created_range": "2024-10-28 to 2025-12-17",
+    "updated_range": "2025-01-08 to 2025-12-18"
+  },
+  "DIS_ACADEMY": {
+    "rows": 13,
+    "folders": [
+      "hidden"
+    ],
+    "lists": [
+      "DIS"
+    ],
+    "statuses": {
+      "to do": 13
+    },
+    "status_types": {
+      "open": 13
+    },
+    "top_assignees": {},
+    "top_creators": {
+      "Pedro Duarte": 13
+    },
+    "top_tags": {},
+    "sample_tasks": [
+      "Criar o dashboard de funis",
+      "Subir conteúdos moments",
+      "Checar tarefas que estão no pasta do tráfego",
+      "Contratar ferramenta Mário - https://www.searchapi.io/",
+      "Alterar o Salário do Bruno",
+      "Ajustar o Crisp",
+      "Novo processo de cotações",
+      "Colocar Blog para funcionar",
+      "Cadastro no INPI - Myles e Elysium",
+      "Desmontar os móveis do antigo estudio",
+      "Baixar a aula do CIA sobre o Claude",
+      "Contratar TIM para o escritorio",
+      "Levantar ferramentas para repassar ao financeiro"
+    ],
+    "priorities": {},
+    "created_range": "2026-02-11 to 2026-02-12",
+    "updated_range": "2026-02-11 to 2026-02-12"
+  },
+  "DIS_Agência_Dis": {
+    "rows": 5,
+    "folders": [
+      "hidden"
+    ],
+    "lists": [
+      "Agência Dis"
+    ],
+    "statuses": {
+      "🔒 não exec|bklg": 3,
+      "⚡em execução": 1,
+      "🔓 pendente": 1
+    },
+    "status_types": {
+      "open": 3,
+      "custom": 2
+    },
+    "top_assignees": {
+      "Lucas Cesar": 1,
+      "Altiéres": 1
+    },
+    "top_creators": {
+      "Pedro Duarte": 5
+    },
+    "top_tags": {},
+    "sample_tasks": [
+      "Novo design de logos - INPI",
+      "Página e Instagram para estrutura de tráfego",
+      "Criar ads para contratação - 5 versões estático",
+      "Criar Design Typebot - Formulário de contratação",
+      "Estrutura empresarial"
+    ],
+    "priorities": {},
+    "created_range": "2025-09-03 to 2025-12-05",
+    "updated_range": "2025-09-03 to 2026-04-02"
+  }
+}

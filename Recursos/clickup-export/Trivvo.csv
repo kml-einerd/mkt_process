@@ -1,0 +1,72 @@
+space,list,folder,task_id,task_name,status,status_type,priority,assignees,creator,tags,created,updated,due_date,start_date,time_estimate,points,description,url,parent
+Trivvo,Trivvo - V1,hidden,86ae0edpz,Subir o site da Trivvo em Astro,concluído 🏆,done,,Pedro Souza,Pedro Duarte,,2025-12-17 21:37,2025-12-18 15:07,,,,,,https://app.clickup.com/t/86ae0edpz,
+Trivvo,Trivvo - V1,hidden,86adtg0k2,Vendas de produtos na área de membros,a fazer,open,,,Pedro Duarte,,2025-12-08 18:23,2025-12-08 18:23,,,,,,https://app.clickup.com/t/86adtg0k2,
+Trivvo,Trivvo - V1,hidden,86adtg08p,Gestão de Grupos para eliminar o sendflow,a fazer,open,,,Pedro Duarte,,2025-12-08 18:23,2025-12-08 18:23,,,,,,https://app.clickup.com/t/86adtg08p,
+Trivvo,Trivvo - V1,hidden,86adh0vvj,Atualizar o sistema de afiliado,a fazer,open,,,Pedro Duarte,,2025-11-26 18:33,2025-11-26 18:33,,,,,,https://app.clickup.com/t/86adh0vvj,
+Trivvo,Trivvo - V1,hidden,86adh0k6n,Site institucional com recursos de IA,em progresso,custom,,Lucas Cesar,Pedro Duarte,,2025-11-26 18:26,2025-12-17 21:37,,,,,,https://app.clickup.com/t/86adh0k6n,
+Trivvo,Trivvo - V1,hidden,86adh0jyc,Implementar GetNet,em progresso,custom,,,Pedro Duarte,,2025-11-26 18:26,2025-11-26 18:35,,,,,,https://app.clickup.com/t/86adh0jyc,
+Trivvo,Trivvo - V1,hidden,86adh0jg9,Migrar e-mail para PostMaker,a fazer,open,,,Pedro Duarte,,2025-11-26 18:26,2025-11-26 18:26,,,,,,https://app.clickup.com/t/86adh0jg9,
+Trivvo,Trivvo - V1,hidden,86adh0jaz,Implementar o pagamento via Apple Pay,em progresso,custom,,,Pedro Duarte,,2025-11-26 18:26,2025-11-26 18:35,,,,,,https://app.clickup.com/t/86adh0jaz,
+Trivvo,Trivvo - V1,hidden,86adh0gp6,Ajustar a tentativa de compra no Upsell,a fazer,open,,,Pedro Duarte,,2025-11-26 18:24,2025-11-26 18:25,,,,,"Caso apresente falha, por exemplo falta de saldo possibilitar que o cliente adicione outro cartão ou PIX para seguir com o pagamento.",https://app.clickup.com/t/86adh0gp6,
+Trivvo,Trivvo - V1,hidden,86a5n755q,Monitoramento infra,fechado,closed,urgent,,Simone Faquineli,,2024-11-20 17:04,2025-01-08 18:45,2024-11-29 07:00,,,,Construção de todos os alarmes de falhas na infra da v1 e disparo de alertas no Discord,https://app.clickup.com/t/86a5n755q,
+Trivvo,Trivvo - V1,hidden,86a5n74xe,Analise N8N,fechado,closed,high,,Simone Faquineli,,2024-11-20 17:03,2025-02-14 03:14,2024-11-22 07:00,,,,O N8N está escalando frequentemente por conta de excesso de requisições com erro.,https://app.clickup.com/t/86a5n74xe,
+Trivvo,Trivvo - V1,hidden,86a5e2hew,Disparo de Evento de Reembolso parcial,fechado,closed,,,Simone Faquineli,,2024-10-29 00:37,2025-01-08 18:45,,,,,"Quando ocorrer um reembolso parcial, criar um evento que sinalize que ocorreu o reembolso parcial e que informe o valor reembolsado.
+
+Cenário de aplicação: Utilizaremos para enviar essas informações ao UTMfy",https://app.clickup.com/t/86a5e2hew,
+Trivvo,Trivvo - V1,hidden,86a5e2gpm,Integração do Frontend ao Grafana,fechado,closed,normal,,Simone Faquineli,,2024-10-29 00:31,2025-02-14 03:13,2024-12-06 07:00,,,,"Como desenvolvedor,
+quero integrar o frontend ao Grafana,
+para monitorar logs e gerar relatórios de performance em tempo real, garantindo a estabilidade e eficiência do sistema.
+
+Critérios de Aceitação:
+
+	1.	Autenticação e Configuração:
+	•	A integração deve utilizar uma API key do Grafana para autenticação segura.
+	•	O endpoint do Grafana e as credenciais devem ser configuráveis via ambiente seguro (como variáveis de ambiente).
+
+	2.	Envio de Logs:
+	•	O frontend deve enviar logs relevantes para o",https://app.clickup.com/t/86a5e2gpm,
+Trivvo,Trivvo - V1,hidden,86a5e2faf,Relatório de Vendas e Faturamento por Produto e Cliente,fechado,closed,high,,Simone Faquineli,,2024-10-29 00:25,2025-01-08 18:45,2024-11-01 07:00,,,,"Como analista de vendas,
+quero extrair dados de vendas de um determinado produto e expert em um período específico,
+para entender o faturamento completo, identificar clientes recorrentes e analisar o impacto de checkouts e upsells.
+
+Critérios de Aceitação:
+
+	1.	Filtros para Geração do Relatório:
+	•	O sistema deve permitir a seleção dos seguintes filtros:
+	•	Cliente: Lista suspensa com os clientes (experts) cadastrados.
+	•	Produto: Produtos vinculados ao expert selecionado. Possibilidade de selec",https://app.clickup.com/t/86a5e2faf,
+Trivvo,Trivvo - V1,hidden,86a5e2car,Relatório de Alunos por Expert/Produto,fechado,closed,normal,,Simone Faquineli,,2024-10-29 00:13,2025-02-14 03:13,2024-11-01 07:00,,,,"Como analista de suporte,
+quero acessar uma tela para visualizar e exportar relatórios de alunos,
+para facilitar a obtenção de informações sobre alunos de forma rápida e personalizada.
+
+Critérios de Aceitação:
+
+	1.	Acesso à Tela de Relatórios:
+	•	A tela de relatórios deve estar acessível por meio do menu de navegação do sistema.
+	•	O usuário deve poder selecionar filtros para gerar relatórios específicos.
+
+	2.	Filtros Disponíveis:
+	•	Cliente: Lista suspensa contendo todos os clientes cadastrados",https://app.clickup.com/t/86a5e2car,
+Trivvo,Trivvo - V1,hidden,86a5e27dx,Alteração das Tentativas de Disparo do Evento,fechado,closed,urgent,,Simone Faquineli,,2024-10-28 23:48,2025-01-08 18:45,2024-11-01 07:00,,,,"Como desenvolvedor responsável pela operação,
+quero que o sistema faça tentativas de envio de eventos com intervalos maiores em caso de falha,
+para minimizar o risco de não entrega dos dados de acesso para os clientes.
+
+Critérios de Aceitação:
+
+	1.	Número de Tentativas:
+	•	O sistema deve tentar enviar o evento com erro até 3 vezes no total.
+
+	2.	Intervalos Entre Tentativas:
+	•	A segunda deve ocorrer 5 minutos após a primeira tentativa.
+	•	A terceira tentativa deve ocorrer 10 minutos após a segun",https://app.clickup.com/t/86a5e27dx,
+Trivvo,Trivvo - V1,hidden,86a5e2759,Armazenamento e Reprocessamento de Eventos com Erro,fechado,closed,urgent,,Simone Faquineli,,2024-10-28 23:45,2025-01-08 18:45,2024-11-01 07:00,,,,"Como analista de sistemas,
+quero que os eventos que falham ao disparar sejam armazenados para reprocessamento em massa,
+para garantir que nenhuma transação importante seja perdida e todos os clientes recebam acesso aos produtos comprados.
+
+Critérios de Aceitação:
+
+	1.	Armazenamento dos Eventos com Erro:
+	•	Todos os eventos que não forem disparados com sucesso devem ser registrados em uma tabela de “Eventos Pendentes”.
+	•	Os eventos armazenados precisam conter: ID da transação, produto adquirido,",https://app.clickup.com/t/86a5e2759,
+Trivvo,Trivvo - V2,hidden,86adh1dkb,Lista de relatórios para desenvolvimento,não executar,open,,,Pedro Duarte,,2025-11-26 18:47,2025-11-26 18:48,,,,,,https://app.clickup.com/t/86adh1dkb,
+Trivvo,Trivvo - V2,hidden,86adh1ct6,Adicionar comunicação Ominichanell https://novu.co/,não executar,open,,,Pedro Duarte,,2025-11-26 18:46,2025-11-26 18:46,,,,,,https://app.clickup.com/t/86adh1ct6,

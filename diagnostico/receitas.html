@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Receitas de Montagem · Blocos LEGO · Direct Response</title>
+<style>
+  :root{
+    --ink:#16140f; --ink-soft:#3d382e; --paper:#f4f0e6; --paper-2:#ece6d6;
+    --card:#fbf9f2; --line:#d8d0bd; --accent:#b5462b; --accent-2:#1f6f5c;
+    --gold:#a9842f; --red:#a3271d; --green:#2e6b4a;
+    --shadow:0 1px 0 rgba(0,0,0,.04),0 8px 24px -16px rgba(0,0,0,.35);
+    --mono:'SFMono-Regular',ui-monospace,'JetBrains Mono',Menlo,Consolas,monospace;
+    --serif:'Iowan Old Style','Palatino Linotype','Georgia',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55}
+  ::selection{background:var(--accent);color:#fff}
+
+  .hero{background:linear-gradient(155deg,#15291f,#1a1710 55%,#2a2417);color:#f4f0e6;padding:44px 0 32px;border-bottom:3px solid var(--accent-2)}
+  .hero .in{max-width:1100px;margin:0 auto;padding:0 32px}
+  .hero a.back{color:#7fb8a4;font-size:12.5px;text-decoration:none;font-family:var(--mono)}
+  .hero .kick{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#7fb8a4;margin:12px 0}
+  .hero h1{font-family:var(--serif);font-size:clamp(26px,4vw,40px);margin:0 0 10px;font-weight:600;line-height:1.08}
+  .hero .sub{font-size:15px;color:#b9b09a;max-width:720px;margin:0}
+
+  .downloads{background:var(--paper-2);border-bottom:1px solid var(--line)}
+  .downloads .in{max-width:1100px;margin:0 auto;padding:16px 32px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .downloads .lbl{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-soft)}
+  .dl{display:inline-flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 14px;text-decoration:none;color:var(--ink);font-size:13px;transition:.13s}
+  .dl:hover{border-color:var(--accent-2);color:var(--accent-2)}
+  .dl .ext{font-family:var(--mono);font-size:10px;background:var(--paper-2);padding:2px 6px;border-radius:5px;color:var(--ink-soft)}
+
+  .nav{position:sticky;top:0;z-index:40;background:var(--paper-2);border-bottom:1px solid var(--line);box-shadow:0 4px 14px -10px rgba(0,0,0,.4)}
+  .nav .in{max-width:1100px;margin:0 auto;padding:11px 32px;display:flex;gap:10px;flex-wrap:wrap}
+  .nav a{font-size:13px;padding:6px 14px;border-radius:18px;border:1px solid var(--line);background:var(--card);text-decoration:none;color:var(--ink-soft);transition:.13s}
+  .nav a:hover{border-color:var(--ink-soft);color:var(--ink)}
+
+  main{max-width:1100px;margin:0 auto;padding:28px 32px 100px}
+
+  .recipe{margin:0 0 50px}
+  .r-head{border-left:5px solid var(--accent-2);padding:4px 0 4px 18px;margin-bottom:8px}
+  .r-head .rid{font-family:var(--mono);font-size:11.5px;color:var(--accent-2);font-weight:700}
+  .r-head h2{font-family:var(--serif);font-size:27px;margin:3px 0 6px;font-weight:600}
+  .r-head .desc{font-size:14.5px;color:var(--ink-soft);max-width:740px;margin:0}
+  .r-head .stat{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);margin-top:8px}
+
+  .flowstrip{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 22px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+  .fs-block{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:7px;color:#fff;white-space:nowrap}
+  .fs-arrow{color:var(--line);align-self:center;font-size:13px}
+
+  .steps{position:relative;margin:0;padding-left:34px}
+  .steps:before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:var(--line)}
+  .step{position:relative;margin:0 0 14px;background:var(--card);border:1px solid var(--line);border-radius:11px;overflow:hidden;box-shadow:var(--shadow)}
+  .step:before{content:"";position:absolute;left:-28px;top:20px;width:13px;height:13px;border-radius:50%;background:var(--bc);border:2px solid var(--paper);z-index:2}
+  .step.bot:before{background:var(--red);box-shadow:0 0 0 4px rgba(163,39,29,.18)}
+  .step-head{padding:13px 18px;cursor:pointer;display:flex;align-items:center;gap:12px;border-left:4px solid var(--bc)}
+  .step-head .ord{font-family:var(--mono);font-size:12px;color:var(--bc);font-weight:700;flex:0 0 auto}
+  .step-head .nm{font-weight:600;flex:1}
+  .step-head .nm .blk{font-family:var(--mono);font-size:10px;color:var(--ink-soft);margin-left:8px}
+  .step-head .fam{font-family:var(--mono);font-size:10px;padding:2px 8px;border-radius:11px;color:#fff;white-space:nowrap}
+  .step-head .chev{color:var(--ink-soft);font-size:11px;transition:.2s}
+  .step.open .step-head .chev{transform:rotate(90deg)}
+  .step .note{padding:0 18px 4px;font-size:12.5px;color:var(--ink-soft);font-style:italic}
+  .step-body{display:none;padding:8px 18px 16px;border-top:1px solid var(--line);background:#fcfaf3}
+  .step.open .step-body{display:block}
+  .step-body .deliv{font-size:12.5px;color:var(--ink-soft);margin:6px 0 10px}
+  .step-body .deliv b{color:var(--ink)}
+  .mt{list-style:none;margin:0;padding:0}
+  .mt li{font-size:12.5px;padding:5px 0 5px 18px;position:relative;border-bottom:1px dashed var(--line);color:var(--ink-soft)}
+  .mt li:last-child{border-bottom:none}
+  .mt li:before{content:"›";position:absolute;left:3px;color:var(--bc);font-weight:700}
+  .mt li b{color:var(--ink)}
+  .bot-tag{color:var(--red);font-family:var(--mono);font-size:10px}
+
+  .par-note{background:#dcebe1;border:1px solid #a9d3c0;border-radius:9px;padding:11px 16px;margin:10px 0 0;font-size:13px;color:var(--ink-soft)}
+  .par-note b{color:var(--green)}
+
+  footer{max-width:1100px;margin:0 auto;padding:30px 32px;color:var(--ink-soft);font-size:13px;border-top:1px solid var(--line)}
+  footer code{font-family:var(--mono);font-size:12px;background:var(--paper-2);padding:1px 6px;border-radius:5px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="in">
+    <a class="back" href="templates.html">← voltar ao catálogo de blocos</a>
+    <div class="kick">Receitas de Montagem · combinação de blocos</div>
+    <h1>Os blocos montados: Setup de Funil, Remessa Nova, PDA</h1>
+    <p class="sub">Cada receita é uma combinação ordenada dos blocos LEGO do catálogo. Mostra a sequência, onde está o gargalo e o que roda em paralelo. Os mesmos blocos, arranjos diferentes.</p>
+  </div>
+</header>
+
+<div class="downloads">
+  <div class="in">
+    <span class="lbl">Baixar p/ Monday:</span>
+    <a class="dl" href="blocos.json" download>Catálogo de blocos <span class="ext">JSON</span></a>
+    <a class="dl" href="monday-blocos.csv" download>Blocos (import board) <span class="ext">CSV</span></a>
+    <a class="dl" href="monday-receitas.csv" download>Receitas montadas <span class="ext">CSV</span></a>
+    <a class="dl" href="receitas.json" download>Receitas <span class="ext">JSON</span></a>
+  </div>
+</div>
+
+<div class="nav"><div class="in" id="nav"></div></div>
+
+<main id="main"></main>
+
+<footer>
+  <strong>Como subir no Monday:</strong> Board → ⋯ → Import data → Excel/CSV. Use <code>monday-blocos.csv</code> como template-base (Group=Família, Item=Bloco, Subitem=micro-task) ou <code>monday-receitas.csv</code> para os 3 fluxos prontos. Colunas: Group · Item · Subitem · Entregável · Papel(Owner) · Bloco origem. ◆ = gargalo (proteja a capacidade).
+</footer>
+
+<script>
+const RECIPES = [{"id": "R-SETUP", "nome": "Setup de Funil (do zero)", "desc": "Montar a infraestrutura completa de um funil novo antes de subir tráfego.", "passos": [{"ordem": 1, "bloco_id": "B-CTN-02", "bloco": "Termo de Abertura (TAP)", "familia": "Container / Planejamento", "entregavel": "Documento de abertura do projeto/evento", "papel": "PM", "gargalo": false, "nota": "Termo de Abertura — fonte única de verdade da oferta", "micro_tasks": [{"task": "Preencher TAP", "entregavel": "Oferta, promessa, escopo, responsáveis, prazo", "gargalo": false}]}, {"ordem": 2, "bloco_id": "B-IDV-01", "bloco": "Identidade Visual (pack)", "familia": "Identidade Visual", "entregavel": "Kit visual do projeto/evento", "papel": "Designer", "gargalo": false, "nota": "Identidade visual — antes de páginas e checkout", "micro_tasks": [{"task": "Alinhar concepção", "entregavel": "Direção visual aprovada", "gargalo": false}, {"task": "Criar logo", "entregavel": "Logo do evento/produto", "gargalo": false}, {"task": "Criar pack de imagens", "entregavel": "Capas, imagem WhatsApp, backgrounds", "gargalo": false}, {"task": "Design das páginas/checkout", "entregavel": "Backgrounds + foto produto 1×1 + banner checkout", "gargalo": false}]}, {"ordem": 3, "bloco_id": "B-INF-05", "bloco": "Pasta/Drive do Projeto", "familia": "Infraestrutura", "entregavel": "Estrutura de Drive padronizada do projeto", "papel": "PM", "gargalo": false, "nota": "Drive do projeto — estrutura de pastas", "micro_tasks": [{"task": "Criar estrutura de pastas", "entregavel": "Drive com pastas padrão (copy/design/vídeo/dados)", "gargalo": false}]}, {"ordem": 4, "bloco_id": "B-INF-01", "bloco": "Setup GHL (CRM core)", "familia": "Infraestrutura", "entregavel": "GHL configurado com tags, mapa e automações de evento", "papel": "CRM", "gargalo": false, "nota": "Setup GHL — tags, mapa, automações de pagamento", "micro_tasks": [{"task": "Criar tags no GHL", "entregavel": "Tags do funil criadas", "gargalo": false}, {"task": "Criar mapa de tags", "entregavel": "Documento mapeando tag→evento", "gargalo": false}, {"task": "Integrar tags na Trivvo", "entregavel": "Checkout disparando tags", "gargalo": false}, {"task": "Programar automações (CA, AC, CC, PIX)", "entregavel": "Eventos de pagamento automatizados", "gargalo": false}]}, {"ordem": 5, "bloco_id": "B-INF-02", "bloco": "Checkout (gateway)", "familia": "Infraestrutura", "entregavel": "Checkout configurado e testado", "papel": "Infra", "gargalo": false, "nota": "Checkout — gateway processando + tags", "micro_tasks": [{"task": "Configurar produto e oferta", "entregavel": "Valor, garantia, entregáveis", "gargalo": false}, {"task": "Configurar checkout", "entregavel": "Checkout no ar (2 cartões se aplicável)", "gargalo": false}, {"task": "Integrar tags GHL", "entregavel": "Compra dispara tag", "gargalo": false}, {"task": "Testar compra", "entregavel": "Transação de teste aprovada", "gargalo": false}]}, {"ordem": 6, "bloco_id": "B-INF-03", "bloco": "Trackeamento (Pixel + UTM)", "familia": "Infraestrutura", "entregavel": "Rastreamento de eventos funcionando", "papel": "Tráfego", "gargalo": false, "nota": "Trackeamento — pixel + UTM (NÃO subir tráfego sem isto)", "micro_tasks": [{"task": "Configurar pixel + eventos", "entregavel": "Pixels instalados disparando eventos-chave", "gargalo": false}, {"task": "Definir e aplicar UTMs", "entregavel": "Planilha de UTMs + links rastreáveis", "gargalo": false}, {"task": "Validar rastreio dos leads", "entregavel": "Leads atribuídos por fonte/UTM", "gargalo": false}]}, {"ordem": 7, "bloco_id": "B-PAG-01", "bloco": "Página (parametrizável)", "familia": "Página", "entregavel": "1 página publicada e aprovada", "papel": "Copy + Design + Infra", "gargalo": false, "nota": "Página de captura (param: captura)", "micro_tasks": [{"task": "Escrever copy da página", "entregavel": "Copy da página (headline, oferta, CTA)", "gargalo": false}, {"task": "Criar design", "entregavel": "Layout da página", "gargalo": false}, {"task": "Aprovação", "entregavel": "Página aprovada por quem responde", "gargalo": false}, {"task": "Implementar", "entregavel": "Página publicada e testada (mobile + desktop)", "gargalo": false}]}, {"ordem": 8, "bloco_id": "B-PAG-01", "bloco": "Página (parametrizável)", "familia": "Página", "entregavel": "1 página publicada e aprovada", "papel": "Copy + Design + Infra", "gargalo": false, "nota": "Página de vendas (param: vendas)", "micro_tasks": [{"task": "Escrever copy da página", "entregavel": "Copy da página (headline, oferta, CTA)", "gargalo": false}, {"task": "Criar design", "entregavel": "Layout da página", "gargalo": false}, {"task": "Aprovação", "entregavel": "Página aprovada por quem responde", "gargalo": false}, {"task": "Implementar", "entregavel": "Página publicada e testada (mobile + desktop)", "gargalo": false}]}, {"ordem": 9, "bloco_id": "B-PAG-01", "bloco": "Página (parametrizável)", "familia": "Página", "entregavel": "1 página publicada e aprovada", "papel": "Copy + Design + Infra", "gargalo": false, "nota": "Página de obrigado (param: obrigado)", "micro_tasks": [{"task": "Escrever copy da página", "entregavel": "Copy da página (headline, oferta, CTA)", "gargalo": false}, {"task": "Criar design", "entregavel": "Layout da página", "gargalo": false}, {"task": "Aprovação", "entregavel": "Página aprovada por quem responde", "gargalo": false}, {"task": "Implementar", "entregavel": "Página publicada e testada (mobile + desktop)", "gargalo": false}]}, {"ordem": 10, "bloco_id": "B-PAG-02", "bloco": "Formulário de Captura / Pesquisa", "familia": "Página", "entregavel": "Formulário ativo coletando dados", "papel": "Infra + CRM", "gargalo": false, "nota": "Formulário de captura/pesquisa", "micro_tasks": [{"task": "Definir campos e recompensa", "entregavel": "Lista de campos + isca", "gargalo": false}, {"task": "Criar e integrar", "entregavel": "Form publicado, gravando no CRM", "gargalo": false}]}, {"ordem": 11, "bloco_id": "B-CRM-01", "bloco": "Sequência de E-mails", "familia": "CRM / Comunicação", "entregavel": "Automação de e-mails ativa no GHL", "papel": "Copy + CRM", "gargalo": false, "nota": "Sequência de e-mails (param: captação+venda)", "micro_tasks": [{"task": "Escrever copy dos e-mails", "entregavel": "Copy de cada e-mail da sequência", "gargalo": false}, {"task": "Criar lista + campos no GHL", "entregavel": "Lista segmentada com campos", "gargalo": false}, {"task": "Montar automação + disparos", "entregavel": "Fluxo GHL com gatilhos configurados", "gargalo": false}]}, {"ordem": 12, "bloco_id": "B-CRM-02", "bloco": "WhatsApp API (disparo/sequência)", "familia": "CRM / Comunicação", "entregavel": "Mensagens WhatsApp automatizadas e aprovadas", "papel": "Copy + CRM", "gargalo": false, "nota": "WhatsApp API (param: captação+venda)", "micro_tasks": [{"task": "Escrever copy das mensagens", "entregavel": "Copy de cada mensagem", "gargalo": false}, {"task": "Aprovar mensagens na API", "entregavel": "Templates aprovados (se API oficial)", "gargalo": false}, {"task": "Configurar automação/disparo", "entregavel": "Fluxo agendado e testado", "gargalo": false}]}, {"ordem": 13, "bloco_id": "B-INF-04", "bloco": "Área de Membros", "familia": "Infraestrutura", "entregavel": "Curso/produto disponível na área de membros", "papel": "Infra", "gargalo": false, "nota": "Área de membros — entrega do produto", "micro_tasks": [{"task": "Criar produto", "entregavel": "Produto cadastrado na plataforma", "gargalo": false}, {"task": "Configurar integração", "entregavel": "Compra libera acesso automático", "gargalo": false}, {"task": "Vincular curso ao produto", "entregavel": "Conteúdo + capa publicados", "gargalo": false}]}, {"ordem": 14, "bloco_id": "B-TRF-01", "bloco": "Subir Campanha", "familia": "Tráfego", "entregavel": "Campanha no ar recebendo tráfego", "papel": "Gestor Tráfego", "gargalo": false, "nota": "Subir campanha — só depois de tudo acima", "micro_tasks": [{"task": "Planejar verba e públicos", "entregavel": "Hierarquia de públicos + verba distribuída", "gargalo": false}, {"task": "Subir campanha", "entregavel": "Ads ativos, orçamento base, UTM ok", "gargalo": false}]}]}, {"id": "R-REMESSA", "nome": "Remessa Nova (1 lote de criativos)", "desc": "Produzir, testar e validar UM lote de criativos. Vive dentro de um PDA.", "passos": [{"ordem": 1, "bloco_id": "B-CRT-01", "bloco": "Criativo de Vídeo", "familia": "Criativo", "entregavel": "1 anúncio em vídeo, 2 formatos (4×5 e 9×16), renomeado no padrão", "papel": "Copy + Gravação + Editor", "gargalo": true, "nota": "Criativo de vídeo (param: novo ad, com copy) ◆ gargalo na copy", "micro_tasks": [{"task": "Escrever copy do criativo", "entregavel": "Doc de copy, sem info errada, link no comentário", "gargalo": true}, {"task": "Gravar (expert ou banco)", "entregavel": "Takes brutos de todos os ângulos no Drive", "gargalo": false}, {"task": "Editar", "entregavel": "4×5 + 9×16, recursos nativos CapCut/TikTok, sem-hook 1º", "gargalo": false}, {"task": "Revisar (condicional)", "entregavel": "Aprovado pelo Head de Edição", "gargalo": false}, {"task": "Renomear no padrão", "entregavel": "[hook][versão]-[editor]-[copy]-[funil]-[remessa]-[projeto]-ON", "gargalo": false}]}, {"ordem": 2, "bloco_id": "B-TRF-01", "bloco": "Subir Campanha", "familia": "Tráfego", "entregavel": "Campanha no ar recebendo tráfego", "papel": "Gestor Tráfego", "gargalo": false, "nota": "Subir campanha (objetivo: teste)", "micro_tasks": [{"task": "Planejar verba e públicos", "entregavel": "Hierarquia de públicos + verba distribuída", "gargalo": false}, {"task": "Subir campanha", "entregavel": "Ads ativos, orçamento base, UTM ok", "gargalo": false}]}, {"ordem": 3, "bloco_id": "B-TRF-02", "bloco": "Teste de Criativo (3 dias)", "familia": "Tráfego", "entregavel": "Veredito pass/fail por criativo", "papel": "Gestor Tráfego", "gargalo": false, "nota": "Teste de criativo 3 dias — critério pass/fail", "micro_tasks": [{"task": "Rodar janela completa", "entregavel": "3 dias sem pausa", "gargalo": false}, {"task": "Aplicar critério pass/fail", "entregavel": "Validado: CPA≤meta & CTR≥1,5% · Descarte: CPA>30% acima ou CTR<1% · resto reteste", "gargalo": false}]}, {"ordem": 4, "bloco_id": "B-ANL-01", "bloco": "Relatório de Performance", "familia": "Análise / Métrica", "entregavel": "Planilha/painel com resultado do período", "papel": "Gestor Tráfego", "gargalo": false, "nota": "Relatório de performance — veredito por ad", "micro_tasks": [{"task": "Consolidar métricas", "entregavel": "CPA, CTR, ROAS, conversão por criativo/funil", "gargalo": false}, {"task": "Registrar veredito", "entregavel": "O que validou, escalou, descartou", "gargalo": false}]}, {"ordem": 5, "bloco_id": "B-TRF-03", "bloco": "Escala (1→2→Winner)", "familia": "Tráfego", "entregavel": "Criativo validado escalado em múltiplas contas", "papel": "Gestor Tráfego", "gargalo": false, "nota": "Escala (validados → 1 → 2 → winner)", "micro_tasks": [{"task": "Escala 1", "entregavel": "Sobe orçamento — 1ª faixa", "gargalo": false}, {"task": "Escala 2", "entregavel": "Replica em múltiplas Ad Accounts (AC1-AC7)", "gargalo": false}, {"task": "Winner → Pools", "entregavel": "Ad campeão em controle ads (ON)", "gargalo": false}]}, {"ordem": 6, "bloco_id": "B-CRT-03", "bloco": "Remix / BTC / Plugar-Hook", "familia": "Criativo", "entregavel": "Variação de criativo existente (compilação ou troca de hook)", "papel": "Editor", "gargalo": false, "nota": "Remix/BTC/Hook — caminho curto p/ abastecer enquanto copy é gargalo", "micro_tasks": [{"task": "Definir remix na estratégia", "entregavel": "Brief do que recombinar", "gargalo": false}, {"task": "Editar remix/hook", "entregavel": "Vídeo nos formatos, renomeado", "gargalo": false}]}]}, {"id": "R-PDA", "nome": "PDA — exemplo (semana de produção)", "desc": "Plano de Ação que agrupa 4 remessas-filhas de uma semana. Container + composição.", "passos": [{"ordem": 1, "bloco_id": "B-CTN-01", "bloco": "PDA (Plano de Ação)", "familia": "Container / Planejamento", "entregavel": "Container que agrupa remessas de uma semana/mês", "papel": "Gestor Tráfego", "gargalo": false, "nota": "PDA [S4-M3] [GPS] Remessa 570-573 — abre o container", "micro_tasks": [{"task": "Abrir PDA numerado", "entregavel": "Container com nomenclatura padrão", "gargalo": false}, {"task": "Distribuir remessas (ads/hooks/BTC)", "entregavel": "Remessas-filhas criadas e atribuídas", "gargalo": false}]}, {"ordem": 2, "bloco_id": "B-CRT-01", "bloco": "Criativo de Vídeo", "familia": "Criativo", "entregavel": "1 anúncio em vídeo, 2 formatos (4×5 e 9×16), renomeado no padrão", "papel": "Copy + Gravação + Editor", "gargalo": true, "nota": "Remessa 570 · Novos Ads (vídeo, com copy) ◆", "micro_tasks": [{"task": "Escrever copy do criativo", "entregavel": "Doc de copy, sem info errada, link no comentário", "gargalo": true}, {"task": "Gravar (expert ou banco)", "entregavel": "Takes brutos de todos os ângulos no Drive", "gargalo": false}, {"task": "Editar", "entregavel": "4×5 + 9×16, recursos nativos CapCut/TikTok, sem-hook 1º", "gargalo": false}, {"task": "Revisar (condicional)", "entregavel": "Aprovado pelo Head de Edição", "gargalo": false}, {"task": "Renomear no padrão", "entregavel": "[hook][versão]-[editor]-[copy]-[funil]-[remessa]-[projeto]-ON", "gargalo": false}]}, {"ordem": 3, "bloco_id": "B-CRT-01", "bloco": "Criativo de Vídeo", "familia": "Criativo", "entregavel": "1 anúncio em vídeo, 2 formatos (4×5 e 9×16), renomeado no padrão", "papel": "Copy + Gravação + Editor", "gargalo": true, "nota": "Remessa 571 · Novos Hooks (vídeo, com copy) ◆", "micro_tasks": [{"task": "Escrever copy do criativo", "entregavel": "Doc de copy, sem info errada, link no comentário", "gargalo": true}, {"task": "Gravar (expert ou banco)", "entregavel": "Takes brutos de todos os ângulos no Drive", "gargalo": false}, {"task": "Editar", "entregavel": "4×5 + 9×16, recursos nativos CapCut/TikTok, sem-hook 1º", "gargalo": false}, {"task": "Revisar (condicional)", "entregavel": "Aprovado pelo Head de Edição", "gargalo": false}, {"task": "Renomear no padrão", "entregavel": "[hook][versão]-[editor]-[copy]-[funil]-[remessa]-[projeto]-ON", "gargalo": false}]}, {"ordem": 4, "bloco_id": "B-CRT-03", "bloco": "Remix / BTC / Plugar-Hook", "familia": "Criativo", "entregavel": "Variação de criativo existente (compilação ou troca de hook)", "papel": "Editor", "gargalo": false, "nota": "Remessa 572 · BTC (só edição, sem copy — paralelo)", "micro_tasks": [{"task": "Definir remix na estratégia", "entregavel": "Brief do que recombinar", "gargalo": false}, {"task": "Editar remix/hook", "entregavel": "Vídeo nos formatos, renomeado", "gargalo": false}]}, {"ordem": 5, "bloco_id": "B-CRT-03", "bloco": "Remix / BTC / Plugar-Hook", "familia": "Criativo", "entregavel": "Variação de criativo existente (compilação ou troca de hook)", "papel": "Editor", "gargalo": false, "nota": "Remessa 573 · Plugar/Substituir Hooks (sem copy — paralelo)", "micro_tasks": [{"task": "Definir remix na estratégia", "entregavel": "Brief do que recombinar", "gargalo": false}, {"task": "Editar remix/hook", "entregavel": "Vídeo nos formatos, renomeado", "gargalo": false}]}, {"ordem": 6, "bloco_id": "B-TRF-01", "bloco": "Subir Campanha", "familia": "Tráfego", "entregavel": "Campanha no ar recebendo tráfego", "papel": "Gestor Tráfego", "gargalo": false, "nota": "Subir campanha (todas as remessas)", "micro_tasks": [{"task": "Planejar verba e públicos", "entregavel": "Hierarquia de públicos + verba distribuída", "gargalo": false}, {"task": "Subir campanha", "entregavel": "Ads ativos, orçamento base, UTM ok", "gargalo": false}]}, {"ordem": 7, "bloco_id": "B-TRF-02", "bloco": "Teste de Criativo (3 dias)", "familia": "Tráfego", "entregavel": "Veredito pass/fail por criativo", "papel": "Gestor Tráfego", "gargalo": false, "nota": "Teste 3 dias (todas)", "micro_tasks": [{"task": "Rodar janela completa", "entregavel": "3 dias sem pausa", "gargalo": false}, {"task": "Aplicar critério pass/fail", "entregavel": "Validado: CPA≤meta & CTR≥1,5% · Descarte: CPA>30% acima ou CTR<1% · resto reteste", "gargalo": false}]}, {"ordem": 8, "bloco_id": "B-ANL-01", "bloco": "Relatório de Performance", "familia": "Análise / Métrica", "entregavel": "Planilha/painel com resultado do período", "papel": "Gestor Tráfego", "gargalo": false, "nota": "Relatório consolidado do PDA", "micro_tasks": [{"task": "Consolidar métricas", "entregavel": "CPA, CTR, ROAS, conversão por criativo/funil", "gargalo": false}, {"task": "Registrar veredito", "entregavel": "O que validou, escalou, descartou", "gargalo": false}]}, {"ordem": 9, "bloco_id": "B-TRF-04", "bloco": "Contingência de Conta", "familia": "Tráfego", "entregavel": "Tráfego restaurado após ban de BM", "papel": "Gestor Tráfego + TI", "gargalo": false, "nota": "Contingência de conta — se alguma BM cair durante o teste", "micro_tasks": [{"task": "Detectar ban", "entregavel": "Alerta de queda de tráfego", "gargalo": false}, {"task": "Rotacionar conta", "entregavel": "Pegar perfil/BM reserva, reconfigurar funil/pixel", "gargalo": false}, {"task": "Reaquecer e registrar", "entregavel": "BM nova rodando + incidente registrado (MTTR)", "gargalo": false}]}]}];
+const FAMCOL = {"Criativo": "#2a5a86", "Página": "#6b4a7a", "CRM / Comunicação": "#a9842f", "Infraestrutura": "#557", "Conteúdo / Vídeo": "#9a3b6b", "Identidade Visual": "#b5462b", "Container / Planejamento": "#7a5a3a", "Tráfego": "#2e6b4a", "Análise / Métrica": "#365"};
+function col(f){return FAMCOL[f]||'#777';}
+function el(t,c,x){const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e;}
+
+const nav=document.getElementById('nav');
+RECIPES.forEach(r=>{const a=el('a',null,r.nome);a.href='#'+r.id;nav.appendChild(a);});
+
+const main=document.getElementById('main');
+RECIPES.forEach(r=>{
+  const sec=el('section','recipe');sec.id=r.id;
+  const head=el('div','r-head');
+  head.appendChild(el('div','rid',r.id));
+  head.appendChild(el('h2',null,r.nome));
+  head.appendChild(el('p','desc',r.desc));
+  const nbot=r.passos.filter(p=>p.gargalo).length;
+  head.appendChild(el('div','stat',r.passos.length+' blocos · '+r.passos.reduce((a,p)=>a+p.micro_tasks.length,0)+' micro-tasks'+(nbot?' · '+nbot+' gargalo(s) ◆':'')));
+  sec.appendChild(head);
+
+  // flow strip
+  const strip=el('div','flowstrip');
+  r.passos.forEach((p,i)=>{
+    if(i)strip.appendChild(el('span','fs-arrow','→'));
+    const fb=el('span','fs-block',p.bloco_id);fb.style.background=col(p.familia);
+    if(p.gargalo)fb.textContent=p.bloco_id+' ◆';
+    strip.appendChild(fb);
+  });
+  sec.appendChild(strip);
+
+  // steps
+  const steps=el('div','steps');
+  r.passos.forEach(p=>{
+    const c=col(p.familia);
+    const st=el('div','step'+(p.gargalo?' bot':''));st.style.setProperty('--bc',c);
+    const sh=el('div','step-head');
+    sh.appendChild(el('span','ord',String(p.ordem).padStart(2,'0')));
+    const nm=el('span','nm');nm.appendChild(document.createTextNode(p.bloco));
+    const blk=el('span','blk',p.bloco_id);nm.appendChild(blk);
+    if(p.gargalo){const b=el('span','bot-tag',' ◆');nm.appendChild(b);}
+    sh.appendChild(nm);
+    const fam=el('span','fam',p.familia);fam.style.background=c;sh.appendChild(fam);
+    sh.appendChild(el('span','chev','▶'));
+    st.appendChild(sh);
+    if(p.nota)st.appendChild(el('div','note',p.nota));
+    const body=el('div','step-body');
+    const dv=el('div','deliv');const b=el('b');b.textContent='entrega: ';dv.appendChild(b);dv.appendChild(document.createTextNode(p.entregavel+' · papel: '+p.papel));
+    body.appendChild(dv);
+    const ul=el('ul','mt');
+    p.micro_tasks.forEach(t=>{const li=el('li');const bb=el('b');bb.textContent=t.task;li.appendChild(bb);if(t.gargalo){const x=el('span','bot-tag',' ◆');li.appendChild(x);}li.appendChild(document.createTextNode(' — '+t.entregavel));ul.appendChild(li);});
+    body.appendChild(ul);
+    st.appendChild(body);
+    sh.addEventListener('click',()=>st.classList.toggle('open'));
+    steps.appendChild(st);
+  });
+  sec.appendChild(steps);
+
+  // nota de paralelismo por receita
+  const PARNOTES={
+    'R-SETUP':'Identidade, Drive, GHL, Checkout, Pixel e as Páginas não dependem entre si — rode tudo junto. O serial real é: TAP primeiro, tráfego por último (só sobe com tracking pronto).',
+    'R-REMESSA':'o Remix/BTC não toca a copy — dispare-o em paralelo aos Novos Ads para manter tráfego abastecido enquanto a copy é o gargalo.',
+    'R-PDA':'BTC (572) e Plugar-Hooks (573) rodam sem copy, em paralelo às remessas 570/571 que dependem do copywriter. Contingência só dispara se houver ban.'
+  };
+  if(PARNOTES[r.id]){
+    const pn=el('div','par-note');
+    const lbl=el('b',null,'∥ Paralelize: ');
+    pn.appendChild(lbl);
+    pn.appendChild(document.createTextNode(PARNOTES[r.id]));
+    sec.appendChild(pn);
+  }
+
+  main.appendChild(sec);
+});
+</script>
+</body>
+</html>

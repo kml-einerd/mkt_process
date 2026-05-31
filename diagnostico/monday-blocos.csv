@@ -1,0 +1,127 @@
+﻿Group (Família),Item (Bloco),Subitem (Micro-task),Entregável,Papel (Owner),Parâmetros,Input,Output,Gargalo,Reaparece em
+Criativo,B-CRT-01 · Criativo de Vídeo,,"1 anúncio em vídeo, 2 formatos (4×5 e 9×16), renomeado no padrão",Copy + Gravação + Editor,tipo: novo ad | novo hook | reels | origem: gravação | banco | IA | com copy? sim/não,Brief de ângulo/hook + (se aplicável) copy aprovada,Vídeo editado pronto pra subir,GARGALO,Remessa | Lançamento | CDV | Meteórico
+Criativo,B-CRT-01 · Criativo de Vídeo,Escrever copy do criativo ◆,"Doc de copy, sem info errada, link no comentário",Copy + Gravação + Editor,,,,GARGALO,
+Criativo,B-CRT-01 · Criativo de Vídeo,Gravar (expert ou banco),Takes brutos de todos os ângulos no Drive,Copy + Gravação + Editor,,,,,
+Criativo,B-CRT-01 · Criativo de Vídeo,Editar,"4×5 + 9×16, recursos nativos CapCut/TikTok, sem-hook 1º",Copy + Gravação + Editor,,,,,
+Criativo,B-CRT-01 · Criativo de Vídeo,Revisar (condicional),Aprovado pelo Head de Edição,Copy + Gravação + Editor,,,,,
+Criativo,B-CRT-01 · Criativo de Vídeo,Renomear no padrão,[hook][versão]-[editor]-[copy]-[funil]-[remessa]-[projeto]-ON,Copy + Gravação + Editor,,,,,
+Criativo,B-CRT-02 · Criativo Estático,,"1 anúncio estático (imagem), formatos do funil",Copy + Designer,uso: captação | remarketing | venda direta | formato: feed | stories | 1×1,Brief + referência visual,Imagem pronta pra campanha,,Lançamento | CDV | Meteórico
+Criativo,B-CRT-02 · Criativo Estático,Criar copy,Texto do anúncio,Copy + Designer,,,,,
+Criativo,B-CRT-02 · Criativo Estático,Captar/selecionar imagens,Banco de imagens da peça,Copy + Designer,,,,,
+Criativo,B-CRT-02 · Criativo Estático,Criar design,Arte montada nos formatos,Copy + Designer,,,,,
+Criativo,B-CRT-02 · Criativo Estático,Revisar design,Arte aprovada,Copy + Designer,,,,,
+Criativo,B-CRT-03 · Remix / BTC / Plugar-Hook,,Variação de criativo existente (compilação ou troca de hook),Editor,tipo: BTC | plugar hook | substituir hook | footprint,Criativos-base já validados,Nova variação pronta pra testar — SEM passar por copy/gravação,,Remessa | CDV
+Criativo,B-CRT-03 · Remix / BTC / Plugar-Hook,Definir remix na estratégia,Brief do que recombinar,Editor,,,,,
+Criativo,B-CRT-03 · Remix / BTC / Plugar-Hook,Editar remix/hook,"Vídeo nos formatos, renomeado",Editor,,,,,
+Página,B-PAG-01 · Página (parametrizável),,1 página publicada e aprovada,Copy + Design + Infra,tipo: captura | vendas | obrigado | VSL | venda direta | plataforma: WordPress | builder | com VSL? sim/não,Oferta definida + identidade visual,"URL no ar, testada",,Lançamento | CDV | Meteórico | Implantação | Remessa (venda direta)
+Página,B-PAG-01 · Página (parametrizável),Escrever copy da página,"Copy da página (headline, oferta, CTA)",Copy + Design + Infra,,,,,
+Página,B-PAG-01 · Página (parametrizável),Criar design,Layout da página,Copy + Design + Infra,,,,,
+Página,B-PAG-01 · Página (parametrizável),Aprovação,Página aprovada por quem responde,Copy + Design + Infra,,,,,
+Página,B-PAG-01 · Página (parametrizável),Implementar,Página publicada e testada (mobile + desktop),Copy + Design + Infra,,,,,
+Página,B-PAG-02 · Formulário de Captura / Pesquisa,,Formulário ativo coletando dados,Infra + CRM,uso: inscrição | pesquisa segmentação | recompensa | destino: GHL | FormMeta | TypeBot,Campos definidos + integração de destino,Form ativo integrado ao CRM,,Lançamento | CDV
+Página,B-PAG-02 · Formulário de Captura / Pesquisa,Definir campos e recompensa,Lista de campos + isca,Infra + CRM,,,,,
+Página,B-PAG-02 · Formulário de Captura / Pesquisa,Criar e integrar,"Form publicado, gravando no CRM",Infra + CRM,,,,,
+Página,B-PAG-03 · Funil TypeBot (versionado),,"Funil conversacional no ar, versionado",Infra,variante: TB | TBA | TBA2 | com VSL? qual versão,Roteiro do funil + VSL,Funil no ar com registro de versão ativa,,CDV | Remessa (teste de funil)
+Página,B-PAG-03 · Funil TypeBot (versionado),Montar fluxo TypeBot,Funil construído (TB-VNN),Infra,,,,,
+Página,B-PAG-03 · Funil TypeBot (versionado),Registrar versão ativa + export (condicional),Changelog + export da versão anterior (rollback),Infra,,,,,
+Página,B-PAG-03 · Funil TypeBot (versionado),Publicar e testar,"Funil no ar, conversão testada",Infra,,,,,
+CRM / Comunicação,B-CRM-01 · Sequência de E-mails,,Automação de e-mails ativa no GHL,Copy + CRM,etapa: captação | antecipação | venda | recuperação | onboarding | pós-venda | nº de e-mails,Lista/tag GHL + copy,E-mails disparando por gatilho,,Lançamento | CDV | Implantação | Meteórico
+CRM / Comunicação,B-CRM-01 · Sequência de E-mails,Escrever copy dos e-mails,Copy de cada e-mail da sequência,Copy + CRM,,,,,
+CRM / Comunicação,B-CRM-01 · Sequência de E-mails,Criar lista + campos no GHL,Lista segmentada com campos,Copy + CRM,,,,,
+CRM / Comunicação,B-CRM-01 · Sequência de E-mails,Montar automação + disparos,Fluxo GHL com gatilhos configurados,Copy + CRM,,,,,
+CRM / Comunicação,B-CRM-02 · WhatsApp API (disparo/sequência),,Mensagens WhatsApp automatizadas e aprovadas,Copy + CRM,etapa: captação | antecipação | venda | follow-up | canal: API oficial | SendFlow | Wazzap,Copy + números/grupos + automação,Mensagens disparando,,Lançamento | CDV | Meteórico
+CRM / Comunicação,B-CRM-02 · WhatsApp API (disparo/sequência),Escrever copy das mensagens,Copy de cada mensagem,Copy + CRM,,,,,
+CRM / Comunicação,B-CRM-02 · WhatsApp API (disparo/sequência),Aprovar mensagens na API (condicional),Templates aprovados (se API oficial),Copy + CRM,,,,,
+CRM / Comunicação,B-CRM-02 · WhatsApp API (disparo/sequência),Configurar automação/disparo,Fluxo agendado e testado,Copy + CRM,,,,,
+CRM / Comunicação,B-CRM-03 · Automação ManyChat (Instagram),,Fluxo ManyChat de captura/nutrição ativo,Copy + CRM,uso: captação | nutrição | distribuição de isca,Copy + gatilho (palavra/comentário),Automação IG capturando lead,,CDV | Meteórico
+CRM / Comunicação,B-CRM-03 · Automação ManyChat (Instagram),Escrever copy + definir gatilho,Copy e palavra-gatilho,Copy + CRM,,,,,
+CRM / Comunicação,B-CRM-03 · Automação ManyChat (Instagram),Montar automação + integrar GHL,"Fluxo ativo, lead caindo no GHL",Copy + CRM,,,,,
+CRM / Comunicação,B-CRM-04 · Grupo de WhatsApp (evento),,Grupo criado com automação de mensagens,CRM + Design,uso: aquecimento evento | comunidade permanente,Nome/descrição + sequência de mensagens,Grupo ativo com fluxo automático,,Lançamento | CDV | Meteórico
+CRM / Comunicação,B-CRM-04 · Grupo de WhatsApp (evento),Criar e configurar grupo,"Grupo com nome, descrição, capa",CRM + Design,,,,,
+CRM / Comunicação,B-CRM-04 · Grupo de WhatsApp (evento),Configurar envio automático (GHL),Mensagens automáticas no grupo,CRM + Design,,,,,
+CRM / Comunicação,B-CRM-05 · Disparo Voz/SMS,,Campanha de voz ou SMS executada,Copy + Gravação + CRM,canal: Ligue Leads (voz) | Comtele (SMS) | etapa: antecipação | venda,Copy + (voz) áudio gravado + automação,Disparo agendado/executado,,Lançamento | CDV
+CRM / Comunicação,B-CRM-05 · Disparo Voz/SMS,Criar copy,Roteiro da mensagem,Copy + Gravação + CRM,,,,,
+CRM / Comunicação,B-CRM-05 · Disparo Voz/SMS,Gravar áudio (se voz) (condicional),Áudio do especialista,Copy + Gravação + CRM,,,,,
+CRM / Comunicação,B-CRM-05 · Disparo Voz/SMS,Configurar automação no canal,Disparo agendado,Copy + Gravação + CRM,,,,,
+Infraestrutura,B-INF-01 · Setup GHL (CRM core),,"GHL configurado com tags, mapa e automações de evento",CRM,escopo: novo produto | novo lançamento | nova semana,Produto/oferta definidos,"CRM pronto: tags, mapa, integração checkout",,Lançamento | CDV | Implantação | Meteórico
+Infraestrutura,B-INF-01 · Setup GHL (CRM core),Criar tags no GHL,Tags do funil criadas,CRM,,,,,
+Infraestrutura,B-INF-01 · Setup GHL (CRM core),Criar mapa de tags,Documento mapeando tag→evento,CRM,,,,,
+Infraestrutura,B-INF-01 · Setup GHL (CRM core),Integrar tags na Trivvo,Checkout disparando tags,CRM,,,,,
+Infraestrutura,B-INF-01 · Setup GHL (CRM core),"Programar automações (CA, AC, CC, PIX)",Eventos de pagamento automatizados,CRM,,,,,
+Infraestrutura,B-INF-02 · Checkout (gateway),,Checkout configurado e testado,Infra,gateway: Trivvo | outro | produtos: principal | upsell | combo | 2 cartões? sim/não,"Preço, garantia, entregáveis + design do checkout",Checkout processando pagamento,,Lançamento | CDV | Implantação | Meteórico
+Infraestrutura,B-INF-02 · Checkout (gateway),Configurar produto e oferta,"Valor, garantia, entregáveis",Infra,,,,,
+Infraestrutura,B-INF-02 · Checkout (gateway),Configurar checkout,Checkout no ar (2 cartões se aplicável),Infra,,,,,
+Infraestrutura,B-INF-02 · Checkout (gateway),Integrar tags GHL,Compra dispara tag,Infra,,,,,
+Infraestrutura,B-INF-02 · Checkout (gateway),Testar compra,Transação de teste aprovada,Infra,,,,,
+Infraestrutura,B-INF-03 · Trackeamento (Pixel + UTM),,Rastreamento de eventos funcionando,Tráfego,pixels: Meta | Google | TikTok | eventos: page view | VSL play | clique | conversão,Páginas/funil no ar,Eventos disparando e visíveis no painel,,Lançamento | CDV | Implantação | Creators Club
+Infraestrutura,B-INF-03 · Trackeamento (Pixel + UTM),Configurar pixel + eventos,Pixels instalados disparando eventos-chave,Tráfego,,,,,
+Infraestrutura,B-INF-03 · Trackeamento (Pixel + UTM),Definir e aplicar UTMs,Planilha de UTMs + links rastreáveis,Tráfego,,,,,
+Infraestrutura,B-INF-03 · Trackeamento (Pixel + UTM),Validar rastreio dos leads,Leads atribuídos por fonte/UTM,Tráfego,,,,,
+Infraestrutura,B-INF-04 · Área de Membros,,Curso/produto disponível na área de membros,Infra,plataforma do produto | com bônus? sim/não,Conteúdo do curso + capa,Aluno acessa o produto após compra,,Lançamento | Implantação
+Infraestrutura,B-INF-04 · Área de Membros,Criar produto,Produto cadastrado na plataforma,Infra,,,,,
+Infraestrutura,B-INF-04 · Área de Membros,Configurar integração,Compra libera acesso automático,Infra,,,,,
+Infraestrutura,B-INF-04 · Área de Membros,Vincular curso ao produto,Conteúdo + capa publicados,Infra,,,,,
+Infraestrutura,B-INF-05 · Pasta/Drive do Projeto,,Estrutura de Drive padronizada do projeto,PM,template de pastas do projeto,Projeto definido,Drive estruturado e compartilhado,,Lançamento | Implantação | Meteórico
+Infraestrutura,B-INF-05 · Pasta/Drive do Projeto,Criar estrutura de pastas,Drive com pastas padrão (copy/design/vídeo/dados),PM,,,,,
+Conteúdo / Vídeo,B-CNT-01 · Gravação do Expert,,Material bruto gravado (VSL/aulas/criativos),Gravação + Expert,tipo: VSL principal | VSL upsell | aulas curso | criativos | depoimento | local: estúdio | remoto,Roteiro/copy + agenda do expert,Brutos no Drive prontos pra edição,,Implantação | Lançamento | Remessa
+Conteúdo / Vídeo,B-CNT-01 · Gravação do Expert,Fechar data/contrato/pagamento expert (condicional),"Expert confirmado, contrato assinado",Gravação + Expert,,,,,
+Conteúdo / Vídeo,B-CNT-01 · Gravação do Expert,Briefing para estúdio,Estúdio alinhado,Gravação + Expert,,,,,
+Conteúdo / Vídeo,B-CNT-01 · Gravação do Expert,Gravar,Brutos no Drive,Gravação + Expert,,,,,
+Conteúdo / Vídeo,B-CNT-02 · Edição de Vídeo (ciclo V1→VF),,Vídeo finalizado após ciclo de revisão,Editor Vídeo,material: VSL | aulas | criativos | ciclo: V1→Rev→VF→Rev,Brutos gravados + briefing de edição,Vídeo final aprovado,,Implantação | Lançamento
+Conteúdo / Vídeo,B-CNT-02 · Edição de Vídeo (ciclo V1→VF),Entrega V1,Primeira versão editada,Editor Vídeo,,,,,
+Conteúdo / Vídeo,B-CNT-02 · Edição de Vídeo (ciclo V1→VF),Revisão V1,Ajustes apontados,Editor Vídeo,,,,,
+Conteúdo / Vídeo,B-CNT-02 · Edição de Vídeo (ciclo V1→VF),Entrega VF,Versão final,Editor Vídeo,,,,,
+Conteúdo / Vídeo,B-CNT-02 · Edição de Vídeo (ciclo V1→VF),Revisão VF,Aprovação final,Editor Vídeo,,,,,
+Conteúdo / Vídeo,B-CNT-03 · Slides / Pitch,,Apresentação pronta pra live/aula,Copy + Design,uso: pitch de venda | aula,Roteiro + identidade visual,Slides + QR/links configurados,,Lançamento | CDV
+Conteúdo / Vídeo,B-CNT-03 · Slides / Pitch,Criar copy dos slides,Roteiro dos slides,Copy + Design,,,,,
+Conteúdo / Vídeo,B-CNT-03 · Slides / Pitch,Criar design,Slides diagramados,Copy + Design,,,,,
+Conteúdo / Vídeo,B-CNT-03 · Slides / Pitch,Revisar + configurar QR/link,Slides finais com QR do checkout,Copy + Design,,,,,
+Conteúdo / Vídeo,B-CNT-04 · Background de Live,,Pacote visual da transmissão,Designer,plataforma: YouTube | HotWebinar,Identidade visual + dados do produto,"Telas, GC, thumb, QR prontos",,Lançamento | CDV
+Conteúdo / Vídeo,B-CNT-04 · Background de Live,Montar telas e elementos,"Logo, GC nome+IG, slides, QR checkout, telas base/IG, thumb regressiva",Designer,,,,,
+Conteúdo / Vídeo,B-CNT-05 · PDF / Bônus / Ebook,,Material em PDF diagramado e hospedado,Copy + Design,uso: bônus | isca | combo explicativo,Conteúdo + identidade,PDF pronto pra distribuição,,Lançamento | Meteórico
+Conteúdo / Vídeo,B-CNT-05 · PDF / Bônus / Ebook,Construir conteúdo (copy),Texto do material,Copy + Design,,,,,
+Conteúdo / Vídeo,B-CNT-05 · PDF / Bônus / Ebook,Diagramar PDF,PDF finalizado e hospedado,Copy + Design,,,,,
+Conteúdo / Vídeo,B-CNT-06 · Produção do Curso (entrega),,"Curso completo gravado, editado e entregue",PM + Expert + Editor,produto: principal | upsell | bônus,Concepção do produto + expert,Curso na área de membros,,Implantação
+Conteúdo / Vídeo,B-CNT-06 · Produção do Curso (entrega),Roteiro e estruturação ◆,Roteiro do curso,PM + Expert + Editor,,,,GARGALO,
+Conteúdo / Vídeo,B-CNT-06 · Produção do Curso (entrega),Revisão do roteiro,Roteiro aprovado,PM + Expert + Editor,,,,,
+Conteúdo / Vídeo,B-CNT-06 · Produção do Curso (entrega),Gravação das aulas,Aulas gravadas,PM + Expert + Editor,,,,,
+Conteúdo / Vídeo,B-CNT-06 · Produção do Curso (entrega),Edição (V1→VF),Aulas finalizadas,PM + Expert + Editor,,,,,
+Conteúdo / Vídeo,B-CNT-06 · Produção do Curso (entrega),Upload + link,"Aulas no Drive, link anexado",PM + Expert + Editor,,,,,
+Conteúdo / Vídeo,B-CNT-06 · Produção do Curso (entrega),Entrega (produto+capa+área),Disponível na área de membros,PM + Expert + Editor,,,,,
+Identidade Visual,B-IDV-01 · Identidade Visual (pack),,Kit visual do projeto/evento,Designer,escopo: produto novo | evento | semana,Conceito/posicionamento,Logo + pack de imagens + backgrounds,,Lançamento | Implantação | Meteórico | CDV
+Identidade Visual,B-IDV-01 · Identidade Visual (pack),Alinhar concepção,Direção visual aprovada,Designer,,,,,
+Identidade Visual,B-IDV-01 · Identidade Visual (pack),Criar logo,Logo do evento/produto,Designer,,,,,
+Identidade Visual,B-IDV-01 · Identidade Visual (pack),Criar pack de imagens,"Capas, imagem WhatsApp, backgrounds",Designer,,,,,
+Identidade Visual,B-IDV-01 · Identidade Visual (pack),Design das páginas/checkout,Backgrounds + foto produto 1×1 + banner checkout,Designer,,,,,
+Container / Planejamento,B-CTN-01 · PDA (Plano de Ação),,Container que agrupa remessas de uma semana/mês,Gestor Tráfego,nomenclatura: [PDA S{semana}-M{mês}] [Projeto] - Remessa NNN a NNN,Estratégia da semana + nº de criativos,PDA aberto com remessas filhas,,Remessa | Implantação
+Container / Planejamento,B-CTN-01 · PDA (Plano de Ação),Abrir PDA numerado,Container com nomenclatura padrão,Gestor Tráfego,,,,,
+Container / Planejamento,B-CTN-01 · PDA (Plano de Ação),Distribuir remessas (ads/hooks/BTC),Remessas-filhas criadas e atribuídas,Gestor Tráfego,,,,,
+Container / Planejamento,B-CTN-02 · Termo de Abertura (TAP),,Documento de abertura do projeto/evento,PM,escopo: produto | lançamento | meteórico,Briefing inicial da oferta,"TAP preenchido (oferta, promessa, responsáveis)",,Lançamento | Implantação | Meteórico
+Container / Planejamento,B-CTN-02 · Termo de Abertura (TAP),Preencher TAP,"Oferta, promessa, escopo, responsáveis, prazo",PM,,,,,
+Tráfego,B-TRF-01 · Subir Campanha,,Campanha no ar recebendo tráfego,Gestor Tráfego,fonte: Meta | Google | TikTok | objetivo: teste | escala | remarketing,Criativos prontos + conta + verba + públicos,Campanha ativa com UTM,,Remessa | Lançamento | CDV | Implantação
+Tráfego,B-TRF-01 · Subir Campanha,Planejar verba e públicos,Hierarquia de públicos + verba distribuída,Gestor Tráfego,,,,,
+Tráfego,B-TRF-01 · Subir Campanha,Subir campanha,"Ads ativos, orçamento base, UTM ok",Gestor Tráfego,,,,,
+Tráfego,B-TRF-02 · Teste de Criativo (3 dias),,Veredito pass/fail por criativo,Gestor Tráfego,janela: 3 dias (ajustável) | critério: CPA + CTR + gasto vs ticket,Campanha no ar,Decisão: validado / reteste / descarte,,Remessa | CDV
+Tráfego,B-TRF-02 · Teste de Criativo (3 dias),Rodar janela completa,3 dias sem pausa,Gestor Tráfego,,,,,
+Tráfego,B-TRF-02 · Teste de Criativo (3 dias),Aplicar critério pass/fail,"Validado: CPA≤meta & CTR≥1,5% · Descarte: CPA>30% acima ou CTR<1% · resto reteste",Gestor Tráfego,,,,,
+Tráfego,B-TRF-03 · Escala (1→2→Winner),,Criativo validado escalado em múltiplas contas,Gestor Tráfego,faixa: escala 1 | escala 2 | winner/pool,Criativo validado no teste,Ad escalado com orçamento progressivo,,Remessa
+Tráfego,B-TRF-03 · Escala (1→2→Winner),Escala 1,Sobe orçamento — 1ª faixa,Gestor Tráfego,,,,,
+Tráfego,B-TRF-03 · Escala (1→2→Winner),Escala 2,Replica em múltiplas Ad Accounts (AC1-AC7),Gestor Tráfego,,,,,
+Tráfego,B-TRF-03 · Escala (1→2→Winner),Winner → Pools,Ad campeão em controle ads (ON),Gestor Tráfego,,,,,
+Tráfego,B-TRF-04 · Contingência de Conta,,Tráfego restaurado após ban de BM,Gestor Tráfego + TI,pool: perfis API (PF) | BMs reserva (AC),Conta bloqueada + pool de backup,Campanha rodando em conta nova,,Remessa | CDV | Lançamento
+Tráfego,B-TRF-04 · Contingência de Conta,Detectar ban,Alerta de queda de tráfego,Gestor Tráfego + TI,,,,,
+Tráfego,B-TRF-04 · Contingência de Conta,Rotacionar conta,"Pegar perfil/BM reserva, reconfigurar funil/pixel",Gestor Tráfego + TI,,,,,
+Tráfego,B-TRF-04 · Contingência de Conta,Reaquecer e registrar,BM nova rodando + incidente registrado (MTTR),Gestor Tráfego + TI,,,,,
+Análise / Métrica,B-ANL-01 · Relatório de Performance,,Planilha/painel com resultado do período,Gestor Tráfego,fonte: planilha manual → migrar p/ Metabase/Grafana,Dados da campanha/funil,Métricas consolidadas + veredito,,Remessa | CDV | Lançamento
+Análise / Métrica,B-ANL-01 · Relatório de Performance,Consolidar métricas,"CPA, CTR, ROAS, conversão por criativo/funil",Gestor Tráfego,,,,,
+Análise / Métrica,B-ANL-01 · Relatório de Performance,Registrar veredito,"O que validou, escalou, descartou",Gestor Tráfego,,,,,
+Análise / Métrica,B-ANL-02 · Scorecard / Métricas do Ciclo,,Painel de saúde do negócio (semanal),PM / Tráfego,"métricas: CPL, show-up, conversão, NPS, renovação",Dados do ciclo/semana,5-7 números olhados toda semana,,CDV | Lançamento
+Análise / Métrica,B-ANL-02 · Scorecard / Métricas do Ciclo,Coletar indicadores-chave,CPL<R$8 · show-up>35% · conv>8% · NPS>8.5 · renov>70%,PM / Tráfego,,,,,
+Análise / Métrica,B-ANL-02 · Scorecard / Métricas do Ciclo,Aplicar regra de escala,Escalar só com 4 verdes por 3 meses consecutivos,PM / Tráfego,,,,,
+CRM / Comunicação,B-CRM-06 · Onboarding / Pós-venda,,Cliente onboarded e engajado,Copy + CRM + Suporte,etapa: confirmação | onboarding | engajamento 7d | NPS | recuperação,Compra confirmada,Jornada pós-venda rodando,,CDV | Lançamento | Implantação
+CRM / Comunicação,B-CRM-06 · Onboarding / Pós-venda,E-mail de compra/onboarding,Automação de boas-vindas ativa,Copy + CRM + Suporte,,,,,
+CRM / Comunicação,B-CRM-06 · Onboarding / Pós-venda,Sequência de engajamento 7d,Fluxo de ativação,Copy + CRM + Suporte,,,,,
+CRM / Comunicação,B-CRM-06 · Onboarding / Pós-venda,NPS + recuperação,Pesquisa NPS + automação de cancelados,Copy + CRM + Suporte,,,,,
+Página,B-PAG-04 · Configuração de Transmissão (Live),,Sala de transmissão pronta e agendada,Infra,plataforma: YouTube | HotWebinar,Data/hora + acesso,"Live agendada, acesso liberado, descrição",,Lançamento | CDV
+Página,B-PAG-04 · Configuração de Transmissão (Live),Configurar e agendar live,Sala criada e testada,Infra,,,,,
+Página,B-PAG-04 · Configuração de Transmissão (Live),Liberar acesso + descrição,"Convidados, descrição, links na transmissão",Infra,,,,,

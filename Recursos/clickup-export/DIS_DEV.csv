@@ -1,0 +1,416 @@
+space,list,folder,task_id,task_name,status,status_type,priority,assignees,creator,tags,created,updated,due_date,start_date,time_estimate,points,description,url,parent
+DIS DEV,Aplicativo GPS,hidden,86agmf0u9,"Ajusta na Pág. ""Account"" da Aba de Adm",pendente,custom,,"Mario Augusto Mania, Pedro Neto",Altiéres,,2026-04-02 14:06,2026-04-02 18:47,,,,,"A maioria dos alunos da antiga plataforma (App Sistema GPS) não possuem acesso à nova plataforma (). Sendo assim, alguns deles vêem até o suporte para solicitar o acesso à plataforma. 
+
+Dessa forma, o suporte cria a conta no App. 
+
+O problema é: atualmente, não é possível definir o tempo que a conta ficará ativa (o tempo que o usuário poderá acessar a plataforma).
+
+ Então, caso o aluno tenha apenas mais 02 meses, por exemplo, não podemos limitar seu acesso. 
+
+Faz-se necessário criar essa funcion",https://app.clickup.com/t/86agmf0u9,
+DIS DEV,Aplicativo GPS,hidden,86agjeeyw,Arrumar o material de onboarding do Sistema GPS (Curso),pendente,custom,,Lucas Cesar,Altiéres,,2026-03-31 13:42,2026-03-31 14:20,,,,,"O material de onboarding do curso ""Sistema GPS"" utiliza de prints da antiga plataforma, assim como seu endereço (url), além de mencionar o grupo ""Plantão de Viagens"", que foi descontinuado. 
+
+Faz-se necessário arrumar essas questões no material. Vou deixar as especificações abaixo:
+
+
+(Na imagem, há números. Use para se localizar)
+1 - Trocar a frase por ""Nossa plataforma é""
+2 - Trocar o link por: https://aplicativogps.com.br
+
+Extra: trocar a imagem (print) dessa página. Nela, mostrar o painel de ",https://app.clickup.com/t/86agjeeyw,
+DIS DEV,Aplicativo GPS,hidden,86agcrrgw,"Quando houver só datas de 'ida', não duplicar ofertar",Closed,closed,,Pedro Neto,Altiéres,,2026-03-23 19:29,2026-03-31 17:06,,,,,"Atualmente, quando uma oferta é cadastrado no Telegram, ela sofre uma duplicação.
+
+Exemplo:
+GRU → MAD
+Ida: 01/05 e 03/05
+Volta: 02/05 e 06/05
+
+É duplicado para:
+MAD → GRU
+Ida: 02/05 e 06/05
+Volta: 01/05 e 03/05
+
+Entretanto, há algumas ofertas que naturalmente não têm datas de ida ou de volta:
+
+Nesse caso, a oferta foi duplicata para GRU → MAD, mas não havia datas de idas.
+
+Então, gostaria de, caso não haja datas de volta, não duplicar a oferta.",https://app.clickup.com/t/86agcrrgw,
+DIS DEV,Aplicativo GPS,hidden,86ag6z1g5,Resolver questão de 'refresh' da página.,pendente,custom,,Pedro Neto,Altiéres,,2026-03-16 15:39,2026-03-16 15:41,,,,,,https://app.clickup.com/t/86ag6z1g5,
+DIS DEV,Aplicativo GPS,hidden,86ag2rq37,Retirar Vídeo Tutorial Após (Todo) Login (Deixar Apenas Pós Quiz),Closed,closed,,Pedro Neto,Altiéres,,2026-03-10 19:26,2026-03-16 15:27,,,,,,https://app.clickup.com/t/86ag2rq37,
+DIS DEV,Aplicativo GPS,hidden,86ag1qaze,Criar 7 Novas Capas (400x220) p/ App Sistema GPS,Closed,closed,,Lucas Cesar,Altiéres,,2026-03-09 20:39,2026-03-16 15:24,,,,,"Segundo o Lucas Nunes, o Mário não consegue fazer a extensão de acesso ao conteúdo do cliente sem que haja um 'curso' exposto na plataforma. Por isso, vamos precisar fazer 07 novas capas de curso. Já criei os cursos e descrições necessárias, só falta as artes.
+
+Capas Necessárias: → Formato 400x220:
++1 Ano de Acesso ao Guia Definitivo do Chek-in
++1 Ano de Acesso ao Sistema GPS
++1 Ano de Acesso ao Milhas On Power
++1 Ano de Acesso ao APP Sistema GPS
+Acesso Vitalício ao GPS de Emissões
+Acesso Vitalí",https://app.clickup.com/t/86ag1qaze,
+DIS DEV,Aplicativo GPS,hidden,86ag15vqh,"Trocar Mensagem na Pág. do ""Não Tenho Milhas"" + Trocar Mensagem Automática",Closed,closed,,Pedro Neto,Altiéres,,2026-03-09 15:03,2026-03-09 18:42,2026-03-09 07:00,2026-03-09 07:00,,,,https://app.clickup.com/t/86ag15vqh,
+DIS DEV,Aplicativo GPS,hidden,86afzv1pt,Reduzir o tempo em que as ofertas ficam disponíveis (de 15 dias para 10),Closed,closed,,Pedro Neto,Altiéres,,2026-03-06 21:40,2026-03-09 18:31,,,,,,https://app.clickup.com/t/86afzv1pt,
+DIS DEV,Aplicativo GPS,hidden,86afyxpaq,"Após a compra, enviar mensagem via WhatsApp com os dados de acesso",pendente,custom,,"Pedro Neto, Mario Augusto Mania",Altiéres,,2026-03-05 22:43,2026-03-05 22:53,,,,,"Olá, {{contact.first_name}}! 👋
+Seja muito bem-vindo(a) ao Sistema GPS! ✈️💛
+Seu acesso já está liberado e você já pode começar a usar o aplicativo.
+
+🔓 Acesse aqui:
+https://aplicativogps.com.br/
+
+🔑 Seus dados de acesso:
+👤 Login: {{login}}
+🔐 Senha: {{senha}}
+
+Com esse mesmo login você também poderá acessar a área de membros e os cursos dentro do aplicativo. Basta entrar no APP e ir até a aba “Cursos”. 📚
+
+Caso tenha alguma dúvida ou dificuldade para acessar, basta entrar em contato com nosso suporte",https://app.clickup.com/t/86afyxpaq,
+DIS DEV,Aplicativo GPS,hidden,86afy6h1e,Ajustar Banner Inicial do App → Menor e +Assertivo,Closed,closed,,Pedro Neto,Altiéres,,2026-03-05 12:53,2026-03-06 21:42,,,,,"O banner do CDV diário está atrapalhando algumas pessoas. Ele é muito grande, e mesmo clicando no X costuma abrir uma outra página
+
+Por que? 
+Porque alguns caem na página, acham que é o app, preenchem as informações e depois vão no suporte dizendo que o app não funciona
+
+Poderíamos aumentar a assertividade? Se a pessoa clicar no X, ela sair do banner",https://app.clickup.com/t/86afy6h1e,
+DIS DEV,Aplicativo GPS,hidden,86afuwtcw,Trocar nome dos botões na Oferta,Closed,closed,,Pedro Neto,Altiéres,,2026-03-02 12:40,2026-03-03 19:43,,,,,,https://app.clickup.com/t/86afuwtcw,
+DIS DEV,Aplicativo GPS,hidden,86afnzzpt,"Adicionar seção de ""Ultimas Ofertas""",Closed,closed,,Pedro Neto,Altiéres,,2026-02-24 12:56,2026-02-25 15:01,,,,,"Preparei um modelo visual. Irei explicar a ideia após apresentá-lo:
+
+
+Na aba inicial (Início), abaixo dos Banners, teremos uma pequena seção chamada ""Últimas Ofertas"". Nela, será apresentada as últimas 03 ofertas cadastradas, ou seja, as mais recentes. Isso irá mostrar aos usuários que novas ofertas saem todos os dias.
+
+Assim como na busca personalizada, podemos deixar uma 4 oferta, cortada pela metade e mais apagada (fade out), com a opção de ""Ver Mais"".
+
+Clicando em ""Ver Mais"", ele seria direc",https://app.clickup.com/t/86afnzzpt,
+DIS DEV,Aplicativo GPS,hidden,86afh26ux,Mudar exibição inicial da oferta (Add: A partir de),Closed,closed,,Pedro Neto,Altiéres,,2026-02-18 15:53,2026-02-20 14:04,,,,,"Precisamos fazer essa alteração porque o trecho de ida OU volta equivale a esse número, mas o valor de ida E volta seria dobrado.",https://app.clickup.com/t/86afh26ux,
+DIS DEV,Aplicativo GPS,hidden,86afh1uuq,Adicionar a possibilidade do usuário identificar o número de passageiros na oferta.,Closed,closed,,Pedro Neto,Altiéres,,2026-02-18 15:44,2026-02-18 19:09,,,,,"Muitos usuários perguntam se é possível emitir mais de uma passagem e, sim, é (dependendo da disponibilidade).
+
+Atualmente, o usuário precisa mudar o número de passageiros no site da companhia aérea. 
+
+Após clicar em ""Emitir"", ele vai ao site com uma 'pré-pesquisa', com origem, destino e datas. Se pudermos adicionar um campo de 'passageiros' será fantástico. Exemplo:
+
+
+Só precisamos colocar um aviso de que:
+Atenção: o número de passagens promocionais pode variar e o preço será multiplicado pelo ",https://app.clickup.com/t/86afh1uuq,
+DIS DEV,Aplicativo GPS,hidden,86aff00vh,"Atualizar botão de ""Emitir em Dinheiro""",Closed,closed,,Pedro Neto,Altiéres,,2026-02-16 17:59,2026-02-20 14:05,,,,,,https://app.clickup.com/t/86aff00vh,
+DIS DEV,Aplicativo GPS,hidden,86afevyy4,"Permitir a busca somente por volta... OU quando a oferta na tiver nenhuma data de volta, não duplicar.",Closed,closed,,Pedro Neto,Altiéres,,2026-02-16 15:46,2026-02-20 14:14,,,,,"Atualmente, duplicamos todas as ofertas enviadas via Telegram.
+
+Exemplo:
+Oferta Enviada: Brasília → Orlando
+Oferta Duplicada: Orlando → Brasília
+
+As datas de volta se tornam a data de ida na oferta duplicada. Isso funciona muito bem, mas somente quando há datas de volta. Caso não haja data de volta, a oferta duplicada apresenta um problema: ter somente data de volta. 
+
+Exemplo:
+Oferta Enviada:
+Brasília → Orlando 
+Ida: 16/02 e 17/02
+Volta: (nulo)
+
+Oferta Duplicada:
+Orlando → Brasília
+Ida: (nulo)
+",https://app.clickup.com/t/86afevyy4,
+DIS DEV,Aplicativo GPS,hidden,86afbcga5,Permitir aumentar a velocidade de reprodução dos vídeos dos cursos.,Closed,closed,,Pedro Neto,Altiéres,,2026-02-12 16:09,2026-02-18 19:20,,,,,,https://app.clickup.com/t/86afbcga5,
+DIS DEV,Aplicativo GPS,hidden,86af8y87k,Atualização do Questionário,Closed,closed,,Pedro Neto,Altiéres,,2026-02-10 17:26,2026-03-16 15:37,,,,,,https://app.clickup.com/t/86af8y87k,
+DIS DEV,Aplicativo GPS,hidden,86af22kne,"Botão do Suporte em cima do ""Alertas""",Closed,closed,,Pedro Neto,Altiéres,,2026-02-03 20:03,2026-02-18 19:22,,,,,,https://app.clickup.com/t/86af22kne,
+DIS DEV,Aplicativo GPS,hidden,86af21fwp,FAQ da aba de Alertas não abre,Closed,closed,,Pedro Neto,Altiéres,,2026-02-03 19:43,2026-02-18 19:23,,,,,,https://app.clickup.com/t/86af21fwp,
+DIS DEV,Aplicativo GPS,hidden,86af0wqm3,"Materiais de Apoio (Desktop) não baixam. Enviam para aba ""Início""",Closed,closed,,Mario Augusto Mania,Altiéres,,2026-02-02 19:31,2026-02-03 12:14,,,,,,https://app.clickup.com/t/86af0wqm3,
+DIS DEV,Aplicativo GPS,hidden,86af0mr3w,Materiais de Apoio no iPhone (Safari + Chrome) não baixam,Closed,closed,,Pedro Neto,Altiéres,,2026-02-02 17:21,2026-03-10 18:52,,,,,,https://app.clickup.com/t/86af0mr3w,
+DIS DEV,Aplicativo GPS,hidden,86aeyyh4c,"Permitir a Busca por ""Nome da Cidade"" além de código IATA/nome do aeroporto",Closed,closed,,Pedro Neto,Altiéres,,2026-01-30 18:14,2026-02-13 16:19,,,,,"Muitas pessoas relatam que não encontraram a cidade de origem, como Natal, Fortaleza ou Florianópolis, por exemplo. Isso se dá porque atualmente é preciso buscar pelo nome do aeroporto ou pelo seu código IATA. 
+
+Exemplo:
+São José dos Campos → 0 Resultados
+
+
+SJK (Aeroporto de São José dos Campos) → 1 Resultado
+
+
+É interessante que deixemos que os usuários busquem pelo nome da cidade e encontrem o que procuram.",https://app.clickup.com/t/86aeyyh4c,
+DIS DEV,Aplicativo GPS,hidden,86aeyvg5z,"Criar Seção ""Conteúdos Adquiridos"" na aba ""Cursos""",Closed,closed,,Pedro Neto,Altiéres,,2026-01-30 17:11,2026-02-18 19:26,,,,,"Acima de 'Destaques', deixarmos uma seção chamada ""Conteúdos Adquiridos"" com todos os cursos e treinamentos que o usuário adquiriu. Isso evitará que ele precise scrollar para achar algum conteúdo específico e evitamos que a pessoa não encontre o que comprou.",https://app.clickup.com/t/86aeyvg5z,
+DIS DEV,Aplicativo GPS,hidden,86aeykzz5,Adicionar E-mail do Usuário nos Botões: Solicitar Reembolso e Fale com o Suporte,Closed,closed,,Pedro Neto,Altiéres,,2026-01-30 14:18,2026-02-18 19:27,,,,,"A primeira coisa que o suporte faz quando o cliente chega é pedir seu e-mail para conferir no sistema suas compras válidas. Por isso, vamos encurtar o caminho e deixar o e-mail da pessoa já registrado ao clicar nos botões que ficam no Perfil do usuário.",https://app.clickup.com/t/86aeykzz5,
+DIS DEV,Aplicativo GPS,hidden,86aewvvw7,"Na Busca, procurar pelo ID do Voo/Oferta",Closed,closed,,Pedro Neto,Altiéres,,2026-01-28 18:22,2026-02-18 19:29,,,,,"Na aba de Buscar, permitir que o usuário pesquisa pelo ID do Voo.
+
+
+2045, por exemplo.
+
+Essa é uma melhoria que visa ajudar a equipe de suporte a encontrar a oferta dentro do app. 
+
+Se pesquisarmos ""2045"" seria possível encontrar a oferta REC → FEN, por exemplo.",https://app.clickup.com/t/86aewvvw7,
+DIS DEV,Aplicativo GPS,hidden,86aerz085,"Após Responder um Comentário, o Usuário Deve Receber a Resposta Via E-mail",Closed,closed,,Pedro Neto,Altiéres,,2026-01-23 18:32,2026-02-25 15:05,,,,,"Na aba ""Cursos"", é possível selecionar o curso que você gostaria de consumir e tirar sua dúvida sobre a aula nos comentários.
+
+Entretanto, quando a equipe responsável responde, o aluno não é notificado sobre a resposta. A não ser que ele retorne na aula que ele já viu e procure saber se foi respondido.
+
+Devemos criar um e-mail de notificação, para alertar os alunos que sua dúvida foi sanada. 
+
+Vou deixar dois modelos de e-mail para seguirmos:
+
+→ Modelo 01:
+Assunto: Sua dúvida foi respondida
+Text",https://app.clickup.com/t/86aerz085,
+DIS DEV,Aplicativo GPS,hidden,86aerxegf,Att. da Aba Favoritos,Closed,closed,,Pedro Neto,Altiéres,,2026-01-23 17:56,2026-02-20 14:16,,,,,"Vamos atualizar a Aba de Favoritos. 
+
+Serão necessárias X modificações:
+
+01. Poder Digitar a Cidade/Local de Origem do Aeroporto (Não apenas o código IATA)
+
+O aeroporto marcado no print, por exemplo, é de Fortaleza. Houve algumas reclamações durante a live dizendo que os aeroportos de Florianópolis e Fortaleza não constavam na lista. Eles constam, mas as pessoas não sabem utilizar o código IATA. 
+
+(Natal (NAT) é um aeroporto que eu não encontrei na lista)
+
+Além disso, eu escrevi ""FOR"" e o item é",https://app.clickup.com/t/86aerxegf,
+DIS DEV,Aplicativo GPS,hidden,86aerh86m,"Após 15 dias, colocar a oferta como ""Encerrada""",Closed,closed,,Pedro Neto,Altiéres,,2026-01-23 12:21,2026-01-26 13:13,,,,,,https://app.clickup.com/t/86aerh86m,
+DIS DEV,Aplicativo GPS,hidden,86aeqr7vh,Fazer Takes do App para Inserir em Anúncios,Closed,closed,,Altiéres,Altiéres,,2026-01-22 15:24,2026-01-22 18:14,,,,,"Segue a pasta com 06 Takes retirados do App Sistema GPS.
+Pasta
+
+No nome de cada um está a ação que foi feita. Caso precisem de algum take específico (voos com destino a Venezuela, por exemplo), basta me comunicar.
+
+Será necessário uma pequena edição nos takes, como acelerar, cortar carregamentos, etc.",https://app.clickup.com/t/86aeqr7vh,
+DIS DEV,Aplicativo GPS,hidden,86aeq29vd,Colocar um aviso de “Atenção” → avisando que há +48h que a oferta foi cadastrada.,Closed,closed,,Pedro Neto,Altiéres,,2026-01-21 19:55,2026-01-26 13:11,,,,,"Nessa exibição inicial, colocar:
+Tag em Amarelo → 🕑+48h Cadastrada
+Tag em Vermelho (Fraco) → 🕑+120h Cadastrada",https://app.clickup.com/t/86aeq29vd,
+DIS DEV,Aplicativo GPS,hidden,86aeq26qb,"Ao clicar em “Criar Alerta” em determinado destino, preencher automaticamente o Alerta com aquele destino.",Closed,closed,,Pedro Neto,Altiéres,,2026-01-21 19:54,2026-01-26 13:16,,,,,"Se eu estou na aba da oferta para ""Orlando"", por exemplo, e clicar em ""Criar Alerta""... É um sinal claro que eu quero criar um alerta com destino a Orlando.
+
+Sendo assim, é interessante que o botão venha configurado para preencher automaticamente o campo ""destino"" com ""Orlando"" ao clicar em ""Criar Alerta"".",https://app.clickup.com/t/86aeq26qb,
+DIS DEV,Aplicativo GPS,hidden,86aeq22jk,Mostrar na Exibição Inicial a Classe do Voo,Closed,closed,,Pedro Neto,Altiéres,,2026-01-21 19:52,2026-01-26 13:11,,,,,"Colocar uma Tag, identificando a classe do voo (Econômica, Executiva, etc.)",https://app.clickup.com/t/86aeq22jk,
+DIS DEV,Aplicativo GPS,hidden,86aeq160z,Mudança na Aba de Alertas: Substituir Data Definida por Período (Mês),Closed,closed,,Pedro Neto,Altiéres,,2026-01-21 19:33,2026-01-29 19:59,,,,,"Atualmente, a pessoa tem de definir uma data específica para viajar, e o sistema abre um range maior de possibilidades.
+
+Iremos substituir a questão da obrigatoriedade de definir uma data. A pessoa poderá decidir em qual/quais período/s gostaria de receber alerta. 
+
+Exemplo:
+Origem X → Destino Y
+
+Datas da Viagem:
+Selecione o mês ou meses que gostaria de ser notificado sobre essa oportunidade.
+
+(Seleção - 12 meses para frente. Se estamos em Junho, vai aparecer Jun/26 até Mai/27)
+Jan/26 | Fev/26..",https://app.clickup.com/t/86aeq160z,
+DIS DEV,Aplicativo GPS,hidden,86aeq0yzk,"""Duplicar"" Ofertas de Passagens (Rio → Orlando | Orlando → Rio)",Closed,closed,,"Pedro Neto, Mario Augusto Mania",Altiéres,,2026-01-21 19:28,2026-01-26 13:25,,,,,"Esse voo de Brasília → Orlando, por exemplo.
+
+Quando entramos no destino “Brasília”, não há nenhum voo Orlando → Brasília.
+
+Bastaria ‘duplicar’ a oferta e teríamos mais disponibilidades de passagens. 
+
+O que seria feito?
+As datas de volta da passagem (Brasília → Orlando)  se tornariam as datas de ida da passagem (Orlando → Brasília)
+Da mesma forma, as datas de ida da passagem (Brasília → Orlando) se tornariam as datas de volta da passagem (Orlando → Brasília)
+
+Companhia, preço, etc... Tudo perma",https://app.clickup.com/t/86aeq0yzk,
+DIS DEV,Aplicativo GPS,hidden,86aentrv9,Corrigir Bug de Filtragem por Aeroporto em Ofertas,Closed,closed,,Pedro Neto,Altiéres,,2026-01-20 18:10,2026-01-26 13:18,,,,,"Quando faço a filtragem por aeroporto, a lista fica em branco.
+
+Exemplo:
+
+
+
+
+Arrumar. Porque existia esse aeroporto disponível, só não foi filtrado.",https://app.clickup.com/t/86aentrv9,
+DIS DEV,Aplicativo GPS,hidden,86aek1wr3,"No Perfil da Conta, adicionar o Crisp para atendimento",Closed,closed,,Pedro Neto,Altiéres,,2026-01-16 13:29,2026-01-20 17:45,,,,,,https://app.clickup.com/t/86aek1wr3,
+DIS DEV,Aplicativo GPS,hidden,86aek1w0a,Trocar o nome da aba “Aprender” por “Treinamentos” ou “Cursos”,Closed,closed,,Pedro Neto,Altiéres,,2026-01-16 13:28,2026-01-20 17:41,,,,,,https://app.clickup.com/t/86aek1w0a,
+DIS DEV,Aplicativo GPS,hidden,86aek1pyb,Enviar Relatório das Respostas do Quiz,pendente,custom,,"Pedro Neto, Mario Augusto Mania",Altiéres,,2026-01-16 13:22,2026-02-24 15:44,,,,,,https://app.clickup.com/t/86aek1pyb,
+DIS DEV,Aplicativo GPS,hidden,86aek1p8u,"No Quiz, a primeira pergunta deve ser “Onde você mora?” (Cidade/País)",Closed,closed,,Pedro Neto,Altiéres,,2026-01-16 13:21,2026-01-28 16:56,,,,,,https://app.clickup.com/t/86aek1p8u,
+DIS DEV,Aplicativo GPS,hidden,86aek1e6t,"Colocar o ""App Sistema GPS"" na Play Store + Apple Store",pendente,custom,,Mario Augusto Mania,Altiéres,,2026-01-16 13:11,2026-01-16 13:11,,,,,,https://app.clickup.com/t/86aek1e6t,
+DIS DEV,Aplicativo GPS,hidden,86aek1au4,Automatizar as Datas + Locais Após Clicar em “Emitir com Minhas Milhas”,Closed,closed,,"Pedro Neto, Mario Augusto Mania",Altiéres,,2026-01-16 13:05,2026-01-20 18:46,,,,,,https://app.clickup.com/t/86aek1au4,
+DIS DEV,Aplicativo GPS,hidden,86aek12dw,Aba Buscar Terá (Origem → Destino + Sistema de Recomendações),Closed,closed,,Pedro Neto,Altiéres,,2026-01-16 12:53,2026-02-25 15:20,,,,,"Mudar a Aba de Busca:
+
+
+Como ficaria?
+
+(No local do quadrado preto, seria uma oferta de passagem.)
+
+A melhoria proposta é permitir a busca por Origem + Destino , com dois caminhos:
+1 - Se existir promoção para a rota exata, exibir os resultados normalmente.
+
+2 - Se não existir, não devolver um “nada”, mas sim uma mensagem (“sem promoção no momento + crie alerta”) e recomendações .
+
+Recomnedações:
+- Bloco 1: Promoções saindo de (Origem). Mostrar opções saindo daquela origem (para outros destinos)",https://app.clickup.com/t/86aek12dw,
+DIS DEV,Aplicativo GPS,hidden,86aeh5q4d,"Permitir ""erros"" na Busca",Closed,closed,,Pedro Neto,Altiéres,,2026-01-14 16:45,2026-01-26 13:09,,,,,"Caso a pessoa digite ""Sao Paulo"", ""Japao"" ou ""Tailandia"", por exemplo, ela não encontrará o destino que procura, porque é preciso escrever o nome do local com os acentos corretos.
+ 
+
+Retirar a necessidade de escrever o nome do local com acento.",https://app.clickup.com/t/86aeh5q4d,
+DIS DEV,Aplicativo GPS,hidden,86aeh533c,Arrumar Bugs do 'Filtro' de Ofertas,Closed,closed,,Pedro Neto,Altiéres,,2026-01-14 16:31,2026-01-21 20:18,,,,,"A aba de filtros apresenta alguns bugs:
+
+Não é possível digitar o nome do aeroporto. Ter de selecionar o aeroporto dentro da lista é ruim, caso tenho muitos. Permitir que o usuário escreva o nome do aeroporto.
+
+Caso eu filtre as ofertas e, logo depois, entre em alguma: o filtro sai ao voltar à página. Temos que manter o filtro após o usuário voltar a página.",https://app.clickup.com/t/86aeh533c,
+DIS DEV,Aplicativo GPS,hidden,86aeh4wdh,"Arrumar Bug do ""Última Oportunidade Encontrada""",Closed,closed,,Pedro Neto,Altiéres,,2026-01-14 16:26,2026-01-20 18:06,,,,,"Foi implementada a questão da ""Última Oportunidade Encontrada""
+]
+O que é ótimo. Entretanto, caso eu utilize os filtros, essa última oportunidade encontrada muda (o que não deveria acontecer).
+
+Exemplo:
+Se eu filtrar por ""Menos Milhas"", a ""Última Oportunidade"" se torna a passagem com menor preço em milhas.
+
+
+Isso vale para todos os filtros.
+
+O ideal é fixar a última oportunidade encontrada ou retirar esse campo quando for filtrada a lista.",https://app.clickup.com/t/86aeh4wdh,
+DIS DEV,Aplicativo GPS,hidden,86aedcdgt,"Permitir que a ""Busca"" ache Países",Closed,closed,,Pedro Neto,Altiéres,,2026-01-09 15:39,2026-01-12 18:19,,,,,"A gente tem que permitir que a busca aceite os nomes dos países também, que daí a pessoa pode clicar e ver as cidades que tem dentro.
+
+""Ahhh, quero viajar para o Estados Unidos"" → Ele digita, não acha nada.
+
+
+Sendo que é um país inserido no app. 
+
+Serve para qualquer outro que esteja dentro do app.",https://app.clickup.com/t/86aedcdgt,
+DIS DEV,Aplicativo GPS,hidden,86aedbjax,"Informações pessoais (ganho, idade dos filhos, etc.) no perfil",Closed,closed,,Pedro Neto,Altiéres,,2026-01-09 15:06,2026-03-16 15:32,,,,,,https://app.clickup.com/t/86aedbjax,
+DIS DEV,Aplicativo GPS,hidden,86aecd1x1,Sessão: Viagem Internacional,Closed,closed,,Altiéres,Pedro Duarte,,2026-01-08 16:09,2026-01-27 13:55,,,,,"Estamos vendendo o App GPS para quem fala português em todo o mundo.
+Para atender a esssa demanda, adicionar no aplicativo uma Sessão: Internacional 
+
+Equipe de TI efetuar o desenvolvimento
+Equipe de Produto disponibilizar/procurar passagens internacionais para alimentar a nova sessão
+
+Detalhando:
+Esta valendo:
+
+Brasil -> Exterior
+Exterior -> Brasil
+Exterior <-> Exterior
+
+O que não vai ter é 
+Brasil <-> Brasil",https://app.clickup.com/t/86aecd1x1,
+DIS DEV,Aplicativo GPS,hidden,86aecagqg,"Opção do ""Banner"" enviar para uma página externa",Closed,closed,,Pedro Neto,Altiéres,,2026-01-08 14:50,2026-01-09 17:14,,,,,"Dar a opção do Banner/Destaque enviar para uma página externa, como um contato de WhatsApp ou um blog, por exemplo.
+
+Também seria interessante permitir trocar o texto do botão que aparece. Ao invés de ser ""Ver Ofertas"", poderíamos trocar para: Fale com o Suporte (por exemplo).",https://app.clickup.com/t/86aecagqg,
+DIS DEV,Aplicativo GPS,hidden,86aec7539,Check geral,Closed,closed,,"Altiéres, Kemuel de Mel Leopoldino, Alvaro Pistore",Pedro Duarte,,2026-01-08 13:14,2026-01-14 16:53,,,,,,https://app.clickup.com/t/86aec7539,86aec73tx
+DIS DEV,Aplicativo GPS,hidden,86aec74wj,Implementar,revisar,custom,,Pedro Neto,Pedro Duarte,,2026-01-08 13:14,2026-01-09 15:31,,,,,,https://app.clickup.com/t/86aec74wj,86aec73tx
+DIS DEV,Aplicativo GPS,hidden,86aec74uj,Criar o design,pendente,custom,,Lucas Cesar,Pedro Duarte,,2026-01-08 13:14,2026-01-08 13:17,,,,,,https://app.clickup.com/t/86aec74uj,86aec73tx
+DIS DEV,Aplicativo GPS,hidden,86aec73tx,Atualizar a página que envia para EMITIR COM DINHEIRO,em progresso,custom,,,Pedro Duarte,,2026-01-08 13:13,2026-01-09 15:31,,,,,https://www.figma.com/design/cmXnQ2pQnxk57nZwc1L55H/Travelsy---Travel-Agency-Single-page-Template--Community-?node-id=0-1&p=f,https://app.clickup.com/t/86aec73tx,
+DIS DEV,Aplicativo GPS,hidden,86ae889qn,"Adicionar Texto em ""Opções de Compra""",Closed,closed,,Pedro Neto,Altiéres,,2026-01-05 13:35,2026-01-05 17:02,,,,,"Adicionar abaixo de ""Valor Estimado"" o texto:
+*Valor por trecho (ida ou volta)
+
+Exemplo:",https://app.clickup.com/t/86ae889qn,
+DIS DEV,Aplicativo GPS,hidden,86ae6e6z2,Criar Site Institucional,revisar,custom,,Altiéres,Altiéres,,2025-12-31 16:43,2026-03-04 11:47,,,,,Figma: https://www.figma.com/design/Ey7yOJ3vsRd35WS3hHqHrH/Travel-Website-Landing-Page--Community-?node-id=0-1&p=f,https://app.clickup.com/t/86ae6e6z2,
+DIS DEV,Aplicativo GPS,hidden,86ae6d9db,Criar imagens vetorizadas,pendente,custom,,Lucas Cesar,Pedro Duarte,,2025-12-31 15:27,2026-01-02 13:38,,,,,"Precisamos criar imagens Vetorizadas para o App Sistema GPS. Por quê?
+
+As logos/nomes dos Programas de Viagem das Companhias Aéreas precisam estar vetorizados para não existir marcas ou bordas dentro da limitação. Perceba que no print abaixo a única imagem vetorizada é o da Azul. As demais têm 'bordas'.
+
+
+
+Deixei as imagens que precisam ser vetorizadas em anexo. São elas:
+Latam Pass
+Privilege Club
+Aeroplan
+Iberia Plus
+Connect Miles
+AAdvantage
+Flying Club
+
+O ideal é que os clientes possam ver e r",https://app.clickup.com/t/86ae6d9db,86ae39txy
+DIS DEV,Aplicativo GPS,hidden,86ae6bty0,Adicionar Aba de Hotéis (Futuramente),não executar,open,,,Altiéres,,2025-12-31 13:03,2025-12-31 13:03,,,,,,https://app.clickup.com/t/86ae6bty0,
+DIS DEV,Aplicativo GPS,hidden,86ae6btn6,"Adicionar um ícone de ""carregando"" quando estiver buscando as ofertas",Closed,closed,,Pedro Neto,Altiéres,,2025-12-31 13:01,2026-01-06 17:58,,,,,"Quando clicamos para carregas as ofertas, durante certo tempo há um delay, no qual a tela fica em branco. É importante que tenha um ícone de carregamento para que as pessoas não imagem que não tenha oferta alguma.",https://app.clickup.com/t/86ae6btn6,
+DIS DEV,Aplicativo GPS,hidden,86ae6btct,Rank dos Melhores Cartões c/ Link de Afiliados (Destaque),não executar,open,,,Altiéres,,2025-12-31 13:00,2025-12-31 13:00,,,,,,https://app.clickup.com/t/86ae6btct,
+DIS DEV,Aplicativo GPS,hidden,86ae6brt6,Criar FAQ/Vídeo Tutorial de cada Aba do App,Closed,closed,,Altiéres,Altiéres,,2025-12-31 12:57,2026-01-23 17:55,,,,,F.A.Q. Geral:,https://app.clickup.com/t/86ae6brt6,
+DIS DEV,Aplicativo GPS,hidden,86ae5kbe0,- Encaminhar um acesso específico,pendente,custom,,,Pedro Duarte,,2025-12-29 21:57,2025-12-29 21:57,,,,,,https://app.clickup.com/t/86ae5kbe0,86ae5kbdj
+DIS DEV,Aplicativo GPS,hidden,86ae5kbdp,- Acesso exclusivo totalmente voltado para aprender,pendente,custom,,,Pedro Duarte,,2025-12-29 21:57,2025-12-29 21:57,,,,,,https://app.clickup.com/t/86ae5kbdp,86ae5kbdj
+DIS DEV,Aplicativo GPS,hidden,86ae5kbdj,Área de Aprender,pendente,custom,,"Altiéres, Kemuel de Mel Leopoldino",Pedro Duarte,,2025-12-29 21:57,2025-12-29 21:58,,,,,,https://app.clickup.com/t/86ae5kbdj,
+DIS DEV,Aplicativo GPS,hidden,86ae5ka4b,Limitar a qtde de acessos simultâneos para 3,em progresso,custom,,"Pedro Neto, Altiéres",Pedro Duarte,,2025-12-29 21:55,2025-12-29 21:57,,,,,,https://app.clickup.com/t/86ae5ka4b,
+DIS DEV,Aplicativo GPS,hidden,86ae4byb6,"Abrir Lista de Aeroportos ao ""Criar Alerta""",não executar,open,,,Altiéres,,2025-12-26 13:56,2025-12-26 13:59,,,,,"É preciso abrir uma lista de aeroportos ao clicar na seleção de aeroporto de origem e destino, dentro do ""criar alerta"". Isso deixará o processo mais intuitivo.",https://app.clickup.com/t/86ae4byb6,
+DIS DEV,Aplicativo GPS,hidden,86ae4bng5,Bug de Clique (Verificar),não executar,open,,,Altiéres,,2025-12-26 13:39,2026-01-09 15:21,,,,,"Por algum motivo, por vezes, o clique/toque não funciona. Seja para selecionar uma oferta ou entrar em algum curso na aba de ""Aprender"".",https://app.clickup.com/t/86ae4bng5,
+DIS DEV,Aplicativo GPS,hidden,86ae39x5n,"Adicionar o Campo ""Companhia"" em ""Programas de Viagens""",Closed,closed,,Pedro Neto,Altiéres,,2025-12-23 15:03,2025-12-31 13:16,,,,,"Adicionar o campo ""Companhia"" entre ""Programa"" e ""Valor"".
+
+Exemplo:
+Programa: Smiles
+Companhia: Gol
+Valor: 16,00",https://app.clickup.com/t/86ae39x5n,
+DIS DEV,Aplicativo GPS,hidden,86ae39txy,Trocar Imagens das Ofertas,revisar,custom,,,Altiéres,,2025-12-23 15:00,2026-04-02 19:58,,,,,"Atualmente, o sistema faz a ligação de ""Companhia Aérea → Logo""
+
+Entretanto, essa é uma visão equivocada. Precisamos excluir a questão da logo em ""Companhias Aéreas"" e adicionar ela (logo) em ""Programas de Viagens"".",https://app.clickup.com/t/86ae39txy,
+DIS DEV,Aplicativo GPS,hidden,86ae39rum,Criar Mensagem p/ a Aba de Alertas,pendente,custom,,Altiéres,Altiéres,,2025-12-23 14:59,2025-12-23 15:00,,,,,"Vamos adicionar uma mensagem na aba de alertas, avisando que é possível que o número de assentos tenha sido esgostado.",https://app.clickup.com/t/86ae39rum,
+DIS DEV,Aplicativo GPS,hidden,86ae39j2d,[Alertas de Voo] Automatizar,pendente,custom,,Bruno Gabriel Aguiar Silva,Altiéres,,2025-12-23 14:53,2025-12-23 14:58,,,,,"Melhoria!
+
+Atualmente, os alertas de voos criados pelos clientes precisam ser encontrados e avisados pela equipe, manualmente.
+
+O ideal é que, quando a pessoa criar um alerta, o sistema vasculhe todas as ofertas já existentes para verificar se há alguma que dê match com o que está sendo procurado pelo cliente.
+
+Ou, quando alguma nova oferta for inserida no app, o sistema identifique que essa é uma oferta que está sendo procurada pelos clientes e os avise.",https://app.clickup.com/t/86ae39j2d,
+DIS DEV,Aplicativo GPS,hidden,86ae39g1t,[Alertas de Voo] Relatório Completo do Alerta que o Cliente Cadastrou numa Única Aba,Closed,closed,,"Bruno Gabriel Aguiar Silva, Pedro Neto",Altiéres,,2025-12-23 14:51,2026-01-05 16:26,,,,,"Alertas de voos
+Exibir o alerta que o cliente inseriu completo
+Atendende adicionar na mesma janela a cotação do voo
+Vídeo Explicativo da Tarefa:
+
+https://t9007034734.p.clickup-attachments.com/t9007034734/81acb919-b7ea-4d97-af98-e4a5f06f4200/81acb919-b7ea-4d97-af98-e4a5f06f4200.webm?filename=screen-recording-2025-12-23-15%3A01.webm%3Ffilename%3Dscreen-recording-2025-12-23-15%3A01.webm&open=true",https://app.clickup.com/t/86ae39g1t,
+DIS DEV,Aplicativo GPS,hidden,86ae3994d,Alerta do quiz,Closed,closed,,"Pedro Neto, Altiéres",Bruno Gabriel Aguiar Silva,,2025-12-23 14:45,2026-01-09 15:06,,,,,,https://app.clickup.com/t/86ae3994d,86ae397jb
+DIS DEV,Aplicativo GPS,hidden,86ae3990h,Configurar Quiz,revisar,custom,,"Pedro Neto, Altiéres",Bruno Gabriel Aguiar Silva,,2025-12-23 14:45,2026-01-09 14:25,,,,,"Att. 01 (Pergunta 04)
+
+Trocar parte do enunciado. 
+""Vamos usar isso...programa de milhas pro seu perfil"" 
+Trocar para:
+(Os seus gastos no cartão de crédito podem se tornar viagens grátis, sem gastar nem mais um real.)
+
+Pedro R. :   FEITO!!!
+
+
+Att. 02 (Pergunta 09)
+
+Trocar enunciado para:
+Qual o aeroporto mais próximo à você?
+→ A aba de busca é interessante que abra opções, antes da pessoa escrever o destino. Assim, fica mais intuitivo.
+
+Pedro R. :   FEITO!!!
+
+No momento não é possivel:
+P.S: O id",https://app.clickup.com/t/86ae3990h,86ae397jb
+DIS DEV,Aplicativo GPS,hidden,86ae397jb,Questionário primeiro acesso APP GPS,pendente,custom,,,Bruno Gabriel Aguiar Silva,,2025-12-23 14:43,2025-12-24 21:54,,,,,,https://app.clickup.com/t/86ae397jb,
+DIS DEV,Aplicativo GPS,hidden,86ae36pj4,"Mostrar a 'Classe' (Econômica, Executiva, etc.) da Oferta",Closed,closed,,Bruno Gabriel Aguiar Silva,Altiéres,,2025-12-23 12:36,2026-01-05 17:16,,,,,,https://app.clickup.com/t/86ae36pj4,
+DIS DEV,Aplicativo GPS,hidden,86ae2nfx5,"Criar Filtro ""Ofertas mais recentes""",Closed,closed,,"Bruno Gabriel Aguiar Silva, Pedro Neto",Altiéres,,2025-12-22 16:31,2026-01-05 17:16,,,,,"A Karen, a qual tem muito contato com os clientes, mencionou que uma reclamação frequente é que: não há novas oportunidades. 
+
+Seja porque o cliente buscou por um destino com poucas ofertas ou por que acessou ofertas mais antigas.
+
+Pensando nisso, ela deu a ideia de criarmos uma aba de ""Novas Oportunidades"", a fim de evidenciar aos clientes que novas ofertas saem todos os dias.
+
+
+Quem sabe possamos criar um filtro, como alternativa mais simples, para resolver essa problemática.
+
+Ao criar o filtr",https://app.clickup.com/t/86ae2nfx5,
+DIS DEV,Aplicativo GPS,hidden,86ae06dy6,Padronizar Nomes dos Destinos (Sigla → Destino),Closed,closed,,Pedro Neto,Altiéres,,2025-12-17 18:02,2026-01-26 13:26,,,,,,https://app.clickup.com/t/86ae06dy6,
+DIS DEV,Aplicativo GPS,hidden,86adzfz52,Adicionar uma FAQ nas Abas 'Alertas' e 'Ofertas',Closed,closed,,Pedro Neto,Pedro Duarte,,2025-12-16 21:52,2026-01-20 18:04,,,,,,https://app.clickup.com/t/86adzfz52,
+DIS DEV,Aplicativo GPS,hidden,86adzfnqh,Atualizar o vídeo da plataforma e habilitar o delay (Bloqueando pular),revisar,custom,,Altiéres,Pedro Duarte,,2025-12-16 21:43,2026-01-02 13:45,,,,,,https://app.clickup.com/t/86adzfnqh,
+DIS DEV,Aplicativo GPS,hidden,86adzfn5h,Melhorar a experiência de assistir as aulas,pendente,custom,,Altiéres,Pedro Duarte,,2025-12-16 21:42,2025-12-16 21:50,,,,,,https://app.clickup.com/t/86adzfn5h,
+DIS DEV,Aplicativo GPS,hidden,86adzfmmu,Adicionar a opção de solicitar Reembolso (Enviar direto para o WhatsApp),Closed,closed,,"Mario Augusto Mania, Pedro Neto",Pedro Duarte,,2025-12-16 21:41,2025-12-23 18:01,,,,,,https://app.clickup.com/t/86adzfmmu,
+DIS DEV,Aplicativo GPS,hidden,86adzfkt9,Emitir a cotação - Enviar para o atendente,Closed,closed,,"Mario Augusto Mania, Pedro Neto",Pedro Duarte,,2025-12-16 21:40,2026-01-12 13:24,,,,,"Alterar o atual texto que é uma venda do app para a descrição da prestação do serviço (Texto Álvaro)
+Encaminhar o formulário com as informações da passagem",https://app.clickup.com/t/86adzfkt9,
+DIS DEV,Aplicativo GPS,hidden,86adzfk55,"Exibir a data específica da passagem, não mostrar o calendário",Closed,closed,,"Mario Augusto Mania, Pedro Neto",Pedro Duarte,,2025-12-16 21:40,2025-12-23 17:59,,,,,"Exibir a data específica da passagem, não mostrar o calendário 
+ Adicionar a opção de solicitar outra data mesmo que não tenha o valor promocional",https://app.clickup.com/t/86adzfk55,
+DIS DEV,Aplicativo GPS,hidden,86adzfk0p,Adicionar a informação sobre a taxa de embarque,Closed,closed,,"Mario Augusto Mania, Pedro Neto",Pedro Duarte,,2025-12-16 21:40,2025-12-22 19:10,,,,,,https://app.clickup.com/t/86adzfk0p,
+DIS DEV,Aplicativo GPS,hidden,86adzfjxp,Exibir o programa de viagem,Closed,closed,,"Mario Augusto Mania, Pedro Neto",Pedro Duarte,,2025-12-16 21:39,2025-12-22 19:10,,,,,,https://app.clickup.com/t/86adzfjxp,
+DIS DEV,Aplicativo GPS,hidden,86adzfj8t,Preço médio do milheiro também em reais,Closed,closed,,"Mario Augusto Mania, Pedro Neto",Pedro Duarte,,2025-12-16 21:39,2025-12-22 19:10,,,,,"Tabela comparativa no admin 
+Informar que pode acontecer variações***",https://app.clickup.com/t/86adzfj8t,
+DIS DEV,Aplicativo GPS,hidden,86adzfhcf,"Adicionar o comparativo de preço médio de outras ferramentas (Google F. Kayak.. etc), informar o valor do desconto em reais",Closed,closed,,"Mario Augusto Mania, Pedro Neto",Pedro Duarte,,2025-12-16 21:38,2026-02-20 14:21,,,,,,https://app.clickup.com/t/86adzfhcf,
+DIS DEV,Aplicativo GPS,hidden,86adx8tx4,Acesso pós Reembolso,em progresso,custom,,"Mario Augusto Mania, Altiéres, Pedro Neto",Altiéres,,2025-12-12 20:56,2026-01-29 14:10,,,,,,https://app.clickup.com/t/86adx8tx4,
+DIS DEV,Aplicativo GPS,hidden,86ac957vw,"Criar aba de ""Destaques"" com as Melhores Oportunidades",Closed,closed,,"Bruno Gabriel Aguiar Silva, Altiéres",Altiéres,,2025-10-02 21:53,2025-12-16 21:44,,,,,,https://app.clickup.com/t/86ac957vw,
+DIS DEV,Aplicativo GPS,hidden,86ac95771,Marcar Reunião p/ Falar sobre o Bot de Automação (Grupo do Telegram -> App),Closed,closed,,"Altiéres, Bruno Gabriel Aguiar Silva",Altiéres,,2025-10-02 21:52,2025-12-16 21:44,,,,,,https://app.clickup.com/t/86ac95771,
+DIS DEV,Aplicativo GPS,hidden,86ac956dw,Filtrar para ver a Cidade de Saída [Permitir que o Cliente pesquisa o Aeroporto de Saída],Closed,closed,,"Altiéres, Bruno Gabriel Aguiar Silva",Altiéres,,2025-10-02 21:50,2025-12-16 21:44,,,,,,https://app.clickup.com/t/86ac956dw,
+DIS DEV,Aplicativo GPS,hidden,86a98f63w,Redirecionamento para clientes sem acesso ao produto,não executar,open,,,Pedro Duarte,,2025-06-06 14:36,2025-12-16 21:52,,,,,,https://app.clickup.com/t/86a98f63w,
+DIS DEV,Aplicativo GPS,hidden,86a98f62a,- Envio de Dados para o GHL,Closed,closed,,,Pedro Duarte,,2025-06-06 14:36,2025-06-24 13:56,,,,,,https://app.clickup.com/t/86a98f62a,
+DIS DEV,Aplicativo GPS,hidden,86a98f61n,- Criar uma tela inicial com as novas passagens e principais destinos,Closed,closed,,,Pedro Duarte,,2025-06-06 14:36,2025-12-16 21:43,,,,,,https://app.clickup.com/t/86a98f61n,
+DIS DEV,Aplicativo GPS,hidden,86a98f61a,- Cadastrar origem e destino e ser notificada,Closed,closed,,,Pedro Duarte,,2025-06-06 14:36,2025-12-16 21:43,,,,,,https://app.clickup.com/t/86a98f61a,
+DIS DEV,Aplicativo GPS,hidden,86a98f60x,"- Sinalizar novas passagens, conforme preferência",Closed,closed,,,Pedro Duarte,,2025-06-06 14:36,2025-12-16 21:46,,,,,,https://app.clickup.com/t/86a98f60x,
+DIS DEV,Trackeamento,hidden,86ag2ptjh,"Consertar ""Desativado"" no Radar Viral",Closed,closed,,,Altiéres,,2026-03-10 18:45,2026-03-20 19:34,,,,,"O Radar Viral é uma ferramenta que mostra os 10 conteúdos que viralizaram no TikTok Shop nos últimos 7 dias.
+
+Entretanto, atualmente é disponibilizado todos os vídeos inseridos:
+
+
+Mesmo os conteúdos desativados na plataforma de Adm estão sendo exibidos:
+
+
+Precisamos parar de exibir os conteúdos marcados como inativos.",https://app.clickup.com/t/86ag2ptjh,
+DIS DEV,Trackeamento,hidden,86afxvxd2,Trocar Banners da Área de Membros (Retirar o Peter Jordan das Imagens),Closed,closed,,"Pedro Duarte, Bruno Gabriel Aguiar Silva",Altiéres,,2026-03-04 21:54,2026-03-09 14:30,,,,,"Não podemos fazer uso da imagem do Peter Jordan:
+
+
+O tamanho da imagem é 1287x624.
+
+Será preciso 4 novos Banners:
+01. Formação Micro-Influencer
+02. YouTube Sem Aparecer
+03. Perdendo a Timidez 
+04. Desafio Viral - Dinheiro no Bolso",https://app.clickup.com/t/86afxvxd2,
+DIS DEV,Trackeamento,hidden,86abma0nf,Adquirir um dominio curto para encurtador,não executar,open,,,Pedro Duarte,,2025-09-08 14:10,2025-09-08 14:11,,,,,,https://app.clickup.com/t/86abma0nf,
+DIS DEV,Trackeamento,hidden,86abm8b0c,Criar ordenação dos conteúdos nas categorias de vídeo,não executar,open,,,Pedro Duarte,,2025-09-08 13:34,2025-09-08 13:34,,,,,,https://app.clickup.com/t/86abm8b0c,86abm8adt
+DIS DEV,Trackeamento,hidden,86abm8adt,Área Aprender,não executar,open,,,Pedro Duarte,,2025-09-08 13:34,2025-09-08 13:34,,,,,,https://app.clickup.com/t/86abm8adt,
+DIS DEV,Trackeamento,hidden,86abm89d7,Adicionar Scroll pra visualizar aulas em aprender,não executar,open,,,Pedro Duarte,,2025-09-08 13:33,2025-09-08 13:34,,,,,,https://app.clickup.com/t/86abm89d7,86abm8adt
+DIS DEV,Trackeamento,hidden,86abm86pf,Relatório de Comissão e Vendas,não executar,open,,,Pedro Duarte,,2025-09-08 13:31,2025-09-08 13:31,,,,,,https://app.clickup.com/t/86abm86pf,
+DIS DEV,Trackeamento,hidden,86abm7xmk,Importar os dados do Kalodata para o Radar Viral,não executar,open,,,Pedro Duarte,,2025-09-08 13:25,2025-09-08 13:25,,,,,,https://app.clickup.com/t/86abm7xmk,
+DIS DEV,Trackeamento,hidden,86abm7unu,Pop-up de atualizações,não executar,open,,,Pedro Duarte,,2025-09-08 13:23,2025-09-08 13:23,,,,,Pop-Up sempre que o Radar Viral for atualizado,https://app.clickup.com/t/86abm7unu,
+DIS DEV,Trackeamento,hidden,86abm7rdd,Remover nomenclatura obrigatória padrão,não executar,open,,,Pedro Duarte,,2025-09-08 13:21,2025-09-08 13:22,,,,,"Remover nomenclatura obrigatória padrão, por exemplo, Episódio, Temporada, antes do nome que quisermos colocar, assim teremos mais versatilidade para incluir como fizer mais sentido.",https://app.clickup.com/t/86abm7rdd,
+DIS DEV,Trackeamento,hidden,86abm7qqe,"Incluir comentários por aula, estilo o que temos na Trivvo (Area de membros Tiare)",não executar,open,,,Pedro Duarte,,2025-09-08 13:21,2025-09-08 13:22,,,,,"Incluir comentários por aula, estilo o que temos na Trivvo, para ter um suporte mais ativo e puxar melhorias no produto",https://app.clickup.com/t/86abm7qqe,
+DIS DEV,Trackeamento,hidden,86abm7q2f,Possibilidade de incluir arquivo como material de apoio,não executar,open,,,Pedro Duarte,,2025-09-08 13:21,2025-09-08 13:22,,,,,"Ter a possibilidade de incluir arquivo como material de apoio por aula, para que não fique perdido na descrição de aulas.",https://app.clickup.com/t/86abm7q2f,
+DIS DEV,Trackeamento,hidden,86aayfu2w,Adicionar a otimização de conteúdo via IA,não executar,open,,,Pedro Duarte,,2025-08-13 15:11,2025-08-13 15:11,,,,,,https://app.clickup.com/t/86aayfu2w,
+DIS DEV,Trackeamento,hidden,86a9nyq7g,Reunião de especificação do projeto,Closed,closed,,"Mario Augusto Mania, Pedro Duarte",Pedro Duarte,,2025-06-23 17:09,2025-09-08 13:08,2025-06-27 07:00,,,,,https://app.clickup.com/t/86a9nyq7g,
+DIS DEV,Trackeamento,hidden,86a9nyn6j,Reunião de apresentação Prototipo Navegável,Closed,closed,,"Mario Augusto Mania, Kemuel de Mel Leopoldino",Pedro Duarte,,2025-06-23 17:08,2025-09-08 13:08,2025-06-27 07:00,,,,,https://app.clickup.com/t/86a9nyn6j,
+DIS DEV,Trackeamento,hidden,86a9nyjec,Desenvolvimento da interface UX,Closed,closed,,,Pedro Duarte,,2025-06-23 17:06,2025-09-08 13:08,2025-06-25 07:00,,,,https://vue-demo.tailadmin.com/ - Sugestão de plataforma para modular,https://app.clickup.com/t/86a9nyjec,
+DIS DEV,Trackeamento,hidden,86a9ckxqm,Instalação de API nos sites solicitados,Closed,closed,,,Pedro Duarte,,2025-06-11 18:08,2025-06-11 18:08,,,,,,https://app.clickup.com/t/86a9ckxqm,

@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagnóstico de Processos · DIS Digital · ClickUp</title>
+<style>
+  :root{
+    --ink:#16140f; --ink-soft:#3d382e; --paper:#f4f0e6; --paper-2:#ece6d6;
+    --card:#fbf9f2; --line:#d8d0bd; --accent:#b5462b; --accent-2:#1f6f5c;
+    --gold:#a9842f; --blue:#2a5a86; --purple:#6b4a7a; --red:#a3271d; --green:#2e6b4a;
+    --shadow:0 1px 0 rgba(0,0,0,.04),0 8px 24px -16px rgba(0,0,0,.35);
+    --mono:'SFMono-Regular',ui-monospace,'JetBrains Mono',Menlo,Consolas,monospace;
+    --serif:'Iowan Old Style','Palatino Linotype','Georgia',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--accent);color:#fff}
+
+  /* layout */
+  .wrap{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+  nav.side{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--ink);
+    color:#cfc6b2;padding:28px 22px;border-right:3px solid var(--accent)}
+  nav.side .brand{font-family:var(--serif);font-size:20px;color:#fff;line-height:1.2;margin-bottom:4px}
+  nav.side .brand b{color:var(--accent)}
+  nav.side .sub{font-size:12px;color:#8c8268;letter-spacing:.04em;text-transform:uppercase;margin-bottom:26px}
+  nav.side a{display:block;color:#cfc6b2;text-decoration:none;font-size:14px;padding:7px 10px;
+    border-radius:6px;margin:2px 0;border-left:2px solid transparent;transition:.15s}
+  nav.side a:hover{background:#26221a;color:#fff}
+  nav.side a.act{background:#2c2719;color:#fff;border-left-color:var(--accent)}
+  nav.side .grp{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#6f6650;
+    margin:22px 0 6px;padding-left:10px}
+  nav.side .meta{margin-top:30px;padding-top:18px;border-top:1px solid #34301f;font-size:11.5px;color:#7d735a;line-height:1.7}
+
+  main{padding:0 0 120px}
+  .inner{max-width:920px;margin:0 auto;padding:0 48px}
+  section{padding:72px 0 8px;border-bottom:1px solid var(--line)}
+  section:last-child{border-bottom:none}
+
+  /* hero */
+  .hero{background:linear-gradient(160deg,#1a1710,#2a2417 60%,#1f3a31);color:#f4f0e6;
+    padding:80px 0 64px;border-bottom:3px solid var(--accent)}
+  .hero .inner{max-width:920px}
+  .hero .kick{font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+    color:#d9a679;margin-bottom:20px}
+  .hero h1{font-family:var(--serif);font-size:clamp(34px,5vw,56px);line-height:1.05;margin:0 0 18px;font-weight:600}
+  .hero h1 em{color:#e0a075;font-style:normal}
+  .hero p.lead{font-size:19px;max-width:640px;color:#d3cab4;line-height:1.55}
+  .hero .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+  .hero .stat{border-left:2px solid var(--accent)}
+  .hero .stat .n{font-family:var(--serif);font-size:34px;color:#fff;line-height:1;padding-left:14px}
+  .hero .stat .l{font-size:12.5px;color:#a99e84;padding-left:14px;margin-top:6px;line-height:1.35}
+
+  h2.sec{font-family:var(--serif);font-size:34px;font-weight:600;margin:0 0 6px;line-height:1.1}
+  .sec-kick{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:14px;display:block}
+  .sec-lead{font-size:18px;color:var(--ink-soft);max-width:680px;margin:0 0 36px}
+  h3{font-family:var(--serif);font-size:23px;margin:40px 0 10px;font-weight:600}
+  h4{font-size:16px;margin:26px 0 8px;letter-spacing:.01em}
+  p{margin:0 0 16px}
+  a.inl{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(181,70,43,.35)}
+  a.inl:hover{border-bottom-color:var(--accent)}
+
+  /* cards & callouts */
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px 26px;
+    margin:18px 0;box-shadow:var(--shadow)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .flag{border-left:4px solid var(--line);background:var(--card);border-radius:0 10px 10px 0;
+    padding:16px 20px;margin:12px 0}
+  .flag .sev{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  .flag h4{margin:4px 0 6px}
+  .flag.crit{border-left-color:var(--red)} .flag.crit .sev{color:var(--red)}
+  .flag.alta{border-left-color:var(--accent)} .flag.alta .sev{color:var(--accent)}
+  .flag.media{border-left-color:var(--gold)} .flag.media .sev{color:var(--gold)}
+  .flag.baixa{border-left-color:var(--accent-2)} .flag.baixa .sev{color:var(--accent-2)}
+  .flag p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+
+  .pill{display:inline-block;font-family:var(--mono);font-size:11px;padding:3px 9px;border-radius:20px;
+    background:var(--paper-2);border:1px solid var(--line);color:var(--ink-soft);margin:2px 4px 2px 0}
+  .tag-red{background:#f7e3df;border-color:#e5b8ae;color:var(--red)}
+  .tag-grn{background:#dcebe1;border-color:#a9d3c0;color:var(--green)}
+  .tag-gld{background:#f3e9cf;border-color:#dcc78a;color:#7d5f17}
+
+  /* tables */
+  table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:var(--card);
+    border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  th{background:var(--paper-2);text-align:left;padding:11px 14px;font-size:12px;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--ink-soft);border-bottom:1px solid var(--line);font-weight:700}
+  td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:var(--paper-2)}
+  td.num{font-family:var(--mono);font-weight:600;white-space:nowrap}
+
+  pre{background:#1c1810;color:#e3dccb;border-radius:10px;padding:18px 20px;overflow-x:auto;
+    font-family:var(--mono);font-size:13px;line-height:1.55;margin:16px 0;border:1px solid #2c2719}
+  code{font-family:var(--mono);font-size:.9em;background:var(--paper-2);padding:1px 6px;border-radius:5px}
+  pre code{background:none;padding:0}
+
+  ul.clean{list-style:none;padding:0;margin:14px 0}
+  ul.clean li{padding:8px 0 8px 26px;position:relative;border-bottom:1px dashed var(--line)}
+  ul.clean li:before{content:"▸";position:absolute;left:4px;color:var(--accent)}
+  ul.clean li:last-child{border-bottom:none}
+
+  /* lens cards */
+  .lens-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}
+  .lens-chip{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;
+    text-decoration:none;color:var(--ink);display:block;box-shadow:var(--shadow);transition:.18s;
+    border-top:3px solid var(--c)}
+  .lens-chip:hover{transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(0,0,0,.5)}
+  .lens-chip .ix{font-family:var(--mono);font-size:12px;color:var(--c);font-weight:700}
+  .lens-chip h4{margin:6px 0 6px;font-family:var(--serif);font-size:18px}
+  .lens-chip p{font-size:13px;color:var(--ink-soft);margin:0}
+
+  .lens{border-left:4px solid var(--c);padding-left:24px;margin:48px 0}
+  .lens .who{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--c);text-transform:uppercase;font-weight:700}
+  .lens .verdict{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--c);
+    border-radius:0 10px 10px 0;padding:16px 20px;margin:16px 0;font-family:var(--serif);font-size:17px;
+    font-style:italic;color:var(--ink)}
+  .conc-div{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
+  .conc-div .col{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px}
+  .conc-div .col.c h4{color:var(--green)} .conc-div .col.d h4{color:var(--accent)}
+  .conc-div ul{margin:6px 0 0;padding-left:18px;font-size:14px} .conc-div li{margin:6px 0}
+
+  .reco-split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+  .reco-split .box{background:var(--paper-2);border-radius:10px;padding:16px 18px;border:1px solid var(--line)}
+  .reco-split .box h5{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft)}
+  .reco-split ol{margin:0;padding-left:18px;font-size:14px} .reco-split li{margin:6px 0}
+
+  /* convergence matrix */
+  .matrix th:first-child{width:200px}
+  .dot{display:inline-block;width:11px;height:11px;border-radius:50%}
+  .legend{display:flex;gap:20px;font-size:13px;margin:12px 0;flex-wrap:wrap}
+  .legend span{display:flex;align-items:center;gap:6px}
+
+  /* POP */
+  .pop{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 26px;margin:18px 0;box-shadow:var(--shadow)}
+  .pop .head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px;
+    border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:14px}
+  .pop .head .id{font-family:var(--mono);font-size:12px;color:var(--accent);font-weight:700}
+  .pop .head h3{margin:2px 0 0;font-size:21px}
+  .pop .head .when{font-size:12.5px;color:var(--ink-soft);text-align:right}
+
+  .timeline{position:relative;margin:30px 0;padding-left:30px}
+  .timeline:before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .tl-step{position:relative;margin:0 0 18px}
+  .tl-step:before{content:"";position:absolute;left:-26px;top:6px;width:12px;height:12px;border-radius:50%;
+    background:var(--accent);border:2px solid var(--paper)}
+  .tl-step.bottle:before{background:var(--red);box-shadow:0 0 0 4px rgba(163,39,29,.18)}
+  .tl-step .t{font-weight:600}
+  .tl-step .d{font-size:13.5px;color:var(--ink-soft)}
+  .badge-par{font-family:var(--mono);font-size:10.5px;background:var(--tag-grn,#dcebe1);color:var(--green);
+    padding:2px 7px;border-radius:12px;border:1px solid #a9d3c0;margin-left:8px}
+  .badge-ser{font-family:var(--mono);font-size:10.5px;background:#f3e0db;color:var(--red);
+    padding:2px 7px;border-radius:12px;border:1px solid #e0b3a9;margin-left:8px}
+
+  /* roadmap */
+  .road{counter-reset:r}
+  .road .phase{display:grid;grid-template-columns:60px 1fr;gap:18px;margin:0 0 8px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .road .phase .when{font-family:var(--mono);font-size:13px;color:var(--accent);font-weight:700;padding-top:3px}
+  .road .phase h4{margin:0 0 6px}
+  .road .phase ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink-soft)}
+
+  blockquote{margin:20px 0;padding:14px 22px;border-left:4px solid var(--gold);background:var(--card);
+    border-radius:0 8px 8px 0;font-family:var(--serif);font-size:17px;font-style:italic;color:var(--ink-soft)}
+
+  footer{padding:40px 0;text-align:center;color:var(--ink-soft);font-size:13px}
+  .top-link{position:fixed;bottom:24px;right:24px;background:var(--ink);color:#fff;width:46px;height:46px;
+    border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;
+    box-shadow:0 8px 20px -8px rgba(0,0,0,.6);font-size:20px;opacity:0;transition:.3s;pointer-events:none}
+  .top-link.show{opacity:1;pointer-events:auto}
+
+  @media(max-width:920px){
+    .wrap{grid-template-columns:1fr}
+    nav.side{position:static;height:auto;border-right:none;border-bottom:3px solid var(--accent)}
+    .inner{padding:0 22px}
+    .grid2,.grid3,.lens-nav,.conc-div,.reco-split,.hero .stats{grid-template-columns:1fr}
+    .hero .stats{gap:8px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ===== SIDEBAR ===== -->
+<nav class="side" id="nav">
+  <div class="brand"><b>DIS</b> Digital</div>
+  <div class="sub">Diagnóstico de Processos</div>
+
+  <a href="#topo">Capa</a>
+  <a href="#sumario">Sumário executivo</a>
+  <div class="grp">Diagnóstico</div>
+  <a href="#operacao">A operação em números</a>
+  <a href="#redflags">Red flags</a>
+  <a href="#padroes">Padrões & variação</a>
+  <div class="grp">Mesa de autoridades</div>
+  <a href="#lentes">Visão geral das 6 lentes</a>
+  <a href="#lean">1 · Lean + TOC</a>
+  <a href="#agile">2 · Ágil + Escala</a>
+  <a href="#bpm">3 · BPM + Six Sigma</a>
+  <a href="#eos">4 · EOS + Accountability</a>
+  <a href="#sre">5 · SRE + DevOps</a>
+  <a href="#sec">6 · Segurança</a>
+  <div class="grp">Síntese</div>
+  <a href="#convergencia">Convergências</a>
+  <a href="#divergencia">Divergências</a>
+  <div class="grp">Ação</div>
+  <a href="#pops">POPs & templates</a>
+  <a href="#roadmap">Roadmap</a>
+  <a href="templates.html" style="color:#7fb8a4;border-left-color:var(--accent-2);margin-top:8px">↗ Catálogo de Blocos LEGO</a>
+
+  <div class="meta">
+    Fonte: export ClickUp<br>9.839 tasks · 10 spaces<br>abr/2024 – abr/2026<br>
+    <br>Análise: 6 lentes paralelas<br>+ 5 POPs prescritivos
+  </div>
+</nav>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="topo">
+  <div class="inner">
+    <div class="kick">Diagnóstico operacional · ClickUp · DIS Digital</div>
+    <h1>Não é caos.<br>É <em>padrão não-formalizado</em>.</h1>
+    <p class="lead">A operação já é altamente padronizada na prática — 86% das tasks seguem uma hierarquia, 6.141 dependências desenham os fluxos. O problema: o padrão vive na cabeça das pessoas e na cópia manual de tasks, não num modelo canônico. Seis autoridades de operações analisam os mesmos dados por ângulos diferentes.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">9.839</div><div class="l">tasks analisadas em 2 anos</div></div>
+      <div class="stat"><div class="n">44→5</div><div class="l">variantes que colapsam em 5 estruturas reais</div></div>
+      <div class="stat"><div class="n">53%</div><div class="l">das tasks sem dono definido</div></div>
+      <div class="stat"><div class="n">96</div><div class="l">senhas em texto plano no ClickUp</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== SUMÁRIO ===== -->
+<section id="sumario"><div class="inner">
+  <span class="sec-kick">Onde olhar primeiro</span>
+  <h2 class="sec">Sumário executivo</h2>
+  <p class="sec-lead">Três verdades centrais que toda a análise confirma — e o que decorre delas.</p>
+
+  <div class="card">
+    <h4 style="margin-top:0">1 · A operação sabe padronizar quando o padrão é leve e tem dono</h4>
+    <p>A nomenclatura de ads — <code>h5-vr1-Dan-Enrik-F01-R514-GPS-ON</code> — é rígida, posicional e universalmente seguida. Zero variação. Por quê? Tem dono, tem consequência (ad mal nomeado não roda) e vive <em>dentro</em> do fluxo. Já o status de projeto não tem dono — por isso floresceram 30 deles, alguns duplicados por erro de digitação. <strong>A capacidade de padronizar está provada; falta aplicá-la ao resto.</strong></p>
+  </div>
+
+  <div class="card">
+    <h4 style="margin-top:0">2 · A fábrica de criativos é serial e estrangulada pela copy</h4>
+    <p>O pipeline de 9 passos é 100% sequencial: Copy → Gravar → Editar → Tráfego → Testar. Um dia de atraso em copy = um dia de atraso em toda a remessa. Com um único copywriter de peso (Fernando) e um único editor pesado (Kayke, backup a 35%), o sistema inteiro corre na velocidade do elo mais fraco.</p>
+  </div>
+
+  <div class="card">
+    <h4 style="margin-top:0">3 · Metade do trabalho não tem dono, e um cérebro só planeja tudo</h4>
+    <p>53% das tasks sem assignee. Pedro Duarte cria 51% de todas as tasks (bus factor 1 — se ele sai, o planejamento para). 458 tasks "stale" apodrecem porque ninguém é dono e ninguém fecha. Não existe scorecard semanal: a operação confunde atividade com resultado.</p>
+  </div>
+
+  <blockquote>O conserto não exige mais talento — exige disciplina barata: consolidar 5 templates e 7 status, dar dono a toda task, tirar as senhas para um cofre hoje, e proteger o gargalo da copy. Tudo isso preservando a agilidade.</blockquote>
+</div></section>
+
+<!-- ===== OPERAÇÃO ===== -->
+<section id="operacao"><div class="inner">
+  <span class="sec-kick">Diagnóstico · estado atual</span>
+  <h2 class="sec">A operação em números</h2>
+  <p class="sec-lead">Marketing de performance para infoprodutos no nicho de milhas/viagens. Produto-âncora: GPS (app de emissão por milhas) + CDV (clube de viagens, live semanal). ~20 pessoas ativas.</p>
+
+  <table>
+    <thead><tr><th>Space</th><th>Tasks</th><th>Papel na operação</th><th>Saúde</th></tr></thead>
+    <tbody>
+      <tr><td><strong>[LC] Lari Colares</strong></td><td class="num">7.025</td><td>Core — pipeline de remessas R1–R595+, GPS + CDV</td><td><span class="pill tag-grn">ativo</span></td></tr>
+      <tr><td>Gestão</td><td class="num">1.389</td><td>Templates de lançamento (99,9% inerte — só 1 concluída)</td><td><span class="pill tag-gld">depósito</span></td></tr>
+      <tr><td>DIS - Equipes</td><td class="num">584</td><td>Back office: contas de anúncio, 78 SaaS, contingência</td><td><span class="pill tag-grn">ativo</span></td></tr>
+      <tr><td>[AVT] Avastus</td><td class="num">478</td><td>Marcas secundárias (MindFlow, PPClear, Fleyn)</td><td><span class="pill tag-grn">ativo</span></td></tr>
+      <tr><td>[EVA] Eva Essence</td><td class="num">152</td><td>Beleza/wellness — 100% concluído</td><td><span class="pill">arquivo</span></td></tr>
+      <tr><td>DIS DEV</td><td class="num">114</td><td>App GPS + tracking</td><td><span class="pill tag-grn">ativo</span></td></tr>
+      <tr><td>Creators Club</td><td class="num">60</td><td>Afiliados (novo, mar/2026) — tracking quebrado</td><td><span class="pill tag-red">em risco</span></td></tr>
+      <tr><td>Trivvo · DIS Academy · Agência</td><td class="num">37</td><td>Checkout próprio · backlog morto · embrião de agência</td><td><span class="pill tag-gld">marginal</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid3">
+    <div class="card"><h4 style="margin-top:0">Fluxo</h4>
+      <p style="font-size:14px;margin:0">86% das tasks têm parent.<br>6.141 dependências.<br>68% concluídas.<br>595+ remessas produzidas.</p></div>
+    <div class="card"><h4 style="margin-top:0">Pessoas</h4>
+      <p style="font-size:14px;margin:0">~20 ativas.<br>Pedro cria 51% das tasks.<br>Lucas+Samuel = 22% do volume.<br>Kayke = único editor pesado.</p></div>
+    <div class="card"><h4 style="margin-top:0">Stack</h4>
+      <p style="font-size:14px;margin:0">GHL, Trivvo, TypeBot, Meta.<br>51 versões de funil.<br>180 BMs (115 API + 65 tráfego).<br>78 SaaS ativas.</p></div>
+  </div>
+</div></section>
+
+<!-- ===== RED FLAGS ===== -->
+<section id="redflags"><div class="inner">
+  <span class="sec-kick">Diagnóstico · riscos</span>
+  <h2 class="sec">Red flags</h2>
+  <p class="sec-lead">Nove riscos identificados nos dados brutos. Um é crítico e não pode esperar a próxima hora.</p>
+
+  <div class="flag crit">
+    <div class="sev">● Crítica</div>
+    <h4>96 senhas em texto plano no ClickUp</h4>
+    <p>Campo "Senha" preenchido em 96 tasks, visível a todo o workspace. Valores reais vazaram no próprio export (<code>Sucesso2024!</code>). 105 logins de produção expostos. Qualquer pessoa — ou ex-colaborador — com acesso teve as chaves de até 96 sistemas. <strong>Ação: cofre hoje + rotação das expostas.</strong></p>
+  </div>
+  <div class="grid2">
+    <div class="flag alta"><div class="sev">● Alta</div><h4>Pipeline 100% serial</h4><p>Copy bloqueia gravação (154×) → edição (138×) → tráfego (160×). Zero paralelismo na remessa. Copy é a restrição.</p></div>
+    <div class="flag alta"><div class="sev">● Alta</div><h4>TypeBot: 51 versões, zero rollback</h4><p>Nenhum registro de qual versão está no ar. Se a V91 quebra, não há como voltar à V90. MTTR tende ao infinito.</p></div>
+    <div class="flag alta"><div class="sev">● Alta</div><h4>Bus factor = 1</h4><p>Pedro cria 51% das tasks, sem backup. Kayke segura a edição (Marcel só 35%). 7 de 8 assentos críticos têm bus factor 1.</p></div>
+    <div class="flag alta"><div class="sev">● Alta</div><h4>85% das BMs bloqueadas</h4><p>55 de 65 Business Managers banidas. Operação depende de rotação manual constante — incident response permanente sem runbook.</p></div>
+    <div class="flag media"><div class="sev">● Média</div><h4>53% das tasks sem dono</h4><p>5.167 tasks órfãs. Gestão 94%, Trivvo 89%, DIS Academy 100%. Sem nome atrelado, não há responsabilização nem trilha.</p></div>
+    <div class="flag media"><div class="sev">● Média</div><h4>458 tasks stale</h4><p>Ativas mas paradas há +30 dias. Estoque parado que polui dashboards e esconde o gargalo real.</p></div>
+    <div class="flag media"><div class="sev">● Média</div><h4>Creators Club sem tracking</h4><p>Programa de afiliados lançado sem tracking de conversão funcionando. Receita 100% no escuro.</p></div>
+    <div class="flag baixa"><div class="sev">● Baixa</div><h4>Gestão 99,9% inerte</h4><p>1.389 tasks, 1 concluída. Templates copiados manualmente que nunca viram execução sistemática.</p></div>
+  </div>
+</div></section>
+
+<!-- ===== PADRÕES ===== -->
+<section id="padroes"><div class="inner">
+  <span class="sec-kick">Diagnóstico · padrões</span>
+  <h2 class="sec">Padrões & variação</h2>
+  <p class="sec-lead">O catálogo tem 44 "modelos". Analisados pelo que o trabalho realmente produz, colapsam em apenas 5 estruturas reais. A variação extra é cosmética — e cara.</p>
+
+  <h3>44 → 5: as variantes colapsam</h3>
+  <table>
+    <thead><tr><th>Estrutura real</th><th>Forma</th><th>Variantes que a representam</th><th>Natureza da variação</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Remessa de Criativos</strong></td><td class="num">9 passos</td><td>6+ ("Novos Ads": com/sem revisão, com/sem copy, curta/completa)</td><td>Passos omitidos por descuido de clonagem, não por decisão</td></tr>
+      <tr><td><strong>Setup Aula ao Vivo</strong></td><td class="num">15 subtasks</td><td>múltiplas por produto</td><td>Mesma sequência renomeada por contexto</td></tr>
+      <tr><td><strong>Implantação Infoproduto</strong></td><td class="num">30+ subtasks</td><td>variantes por produto/squad</td><td>Macro-processo estável, rótulos divergentes</td></tr>
+      <tr><td><strong>CDV Semanal</strong></td><td class="num">9 fases</td><td>variantes semana-a-semana</td><td>Cadência fixa tratada como modelo novo</td></tr>
+      <tr><td><strong>Meteórico</strong></td><td class="num">10 subtasks</td><td>variantes por campanha</td><td>Sequência idêntica, nomes diferentes</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Fator de inflação: 8,8×.</strong> Cada modelo extra é uma superfície de manutenção, um ponto de divergência e uma página a mais no onboarding.</p>
+
+  <h3>Variação tóxica: 30 status onde cabem 7</h3>
+  <p>O space LC tem 30 status, incluindo duplicatas invisíveis que quebram qualquer relatório:</p>
+  <pre><code>em teste     ≠  em teste␣     (espaço no fim → dois buckets distintos)
+ready to go  ≠  read to go    (typo)
+checagem     ≠  checkagem     (typo)</code></pre>
+
+  <h3>O contraexemplo que prova tudo: nomenclatura de ads</h3>
+  <pre><code>h5-vr1-Dan-Enrik-F01-R514-GPS-ON
+│   │   │   │     │   │    │   └─ status (ON/OFF)
+│   │   │   │     │   │    └──── projeto
+│   │   │   │     │   └───────── remessa
+│   │   │   │     └───────────── funil
+│   │   │   └─────────────────── copy (autor)
+│   │   └─────────────────────── editor
+│   └─────────────────────────── versão
+└─────────────────────────────── hook</code></pre>
+  <p>Sete campos, ordem fixa, separador único, <strong>zero variação</strong>. A diferença: este padrão tem dono, tem consequência e está embutido no fluxo. Replicar esse mecanismo para status e templates é a cura.</p>
+</div></section>
+
+<!-- ===== LENTES OVERVIEW ===== -->
+<section id="lentes"><div class="inner">
+  <span class="sec-kick">Mesa de autoridades</span>
+  <h2 class="sec">Seis lentes sobre os mesmos dados</h2>
+  <p class="sec-lead">Cada lente é uma mesa de especialistas reais analisando a operação pelo seu ângulo. Olhe a mesma fábrica de criativos por seis janelas — e veja onde convergem e onde brigam.</p>
+  <div class="lens-nav">
+    <a class="lens-chip" href="#lean" style="--c:var(--accent)"><div class="ix">LENTE 01</div><h4>Lean + TOC</h4><p>Ohno & Goldratt. Fluxo, desperdício, a restrição é a copy.</p></a>
+    <a class="lens-chip" href="#agile" style="--c:var(--blue)"><div class="ix">LENTE 02</div><h4>Ágil + Escala</h4><p>Anderson & Shape Up. Já existe um Kanban — torná-lo explícito.</p></a>
+    <a class="lens-chip" href="#bpm" style="--c:var(--purple)"><div class="ix">LENTE 03</div><h4>BPM + Six Sigma</h4><p>Hammer, Rummler. Variação é o inimigo: 44→5, 30→7.</p></a>
+    <a class="lens-chip" href="#eos" style="--c:var(--gold)"><div class="ix">LENTE 04</div><h4>EOS + Accountability</h4><p>Wickman & Lencioni. Pessoas certas, assentos errados.</p></a>
+    <a class="lens-chip" href="#sre" style="--c:var(--accent-2)"><div class="ix">LENTE 05</div><h4>SRE + DevOps</h4><p>Google SRE, Gene Kim. Produção sem rollback nem runbook.</p></a>
+    <a class="lens-chip" href="#sec" style="--c:var(--red)"><div class="ix">LENTE 06</div><h4>Segurança</h4><p>Zero Trust, OWASP, LGPD. 96 senhas em texto plano.</p></a>
+  </div>
+</div></section>
+
+<!-- ===== LENS 1 LEAN ===== -->
+<section id="lean"><div class="inner">
+  <div class="lens" style="--c:var(--accent)">
+    <div class="who">Lente 01 · Taiichi Ohno (Lean) + Eliyahu Goldratt (Teoria das Restrições)</div>
+    <h2 class="sec" style="margin-top:8px">A fábrica estrangulada pela copy</h2>
+    <p>A operação é, literalmente, uma <strong>linha de montagem de criativos</strong>: 9 passos seriais, 6.141 dependências, remessas numeradas entrando como lotes. Ohno vê uma linha entupida de espera e retrabalho. Goldratt vê todo mundo otimizando o elo errado.</p>
+
+    <h4>Os 7 desperdícios, mapeados aqui</h4>
+    <ul class="clean">
+      <li><strong>Espera (o pior):</strong> os 3 dias de teste são espera institucionalizada; "Subir tráfego → Feedback" (434×) é o evento mais frequente da operação e é majoritariamente esperar dado chegar.</li>
+      <li><strong>Retrabalho:</strong> copy reprovada volta ao único copywriter de peso; refação de vídeo empilha no único editor.</li>
+      <li><strong>Estoque:</strong> 458 tasks stale = capital de atenção investido, valor zero entregue.</li>
+      <li><strong>Superprodução:</strong> numerar até R595+ enquanto a copy está em R580 gera fila na frente do gargalo.</li>
+      <li><strong>Handoffs:</strong> 9 passos = 8 passagens de bastão; com 53% sem dono, o bastão cai no chão.</li>
+      <li><strong>Talento subutilizado:</strong> Marcel a 35% enquanto Kayke afoga.</li>
+    </ul>
+
+    <h4>Goldratt: os 5 passos de focalização aplicados</h4>
+    <pre><code>1. IDENTIFICAR ........ a restrição é a COPY (alimenta toda a cadeia)
+2. EXPLORAR .......... copywriter NUNCA ocioso, nunca faz não-copy
+3. SUBORDINAR ........ todos trabalham no ritmo da copy, não no próprio
+4. ELEVAR ............ IA gera v0 + 2º copywriter + banco de hooks
+5. NÃO ACOMODAR ...... gargalo migra p/ edição (Kayke) → recomeçar</code></pre>
+
+    <div class="conc-div">
+      <div class="col c"><h4>Onde concordam</h4><ul>
+        <li>O sistema é uma corrente serial; a velocidade é ditada por um ponto só: a copy.</li>
+        <li>Trabalho parado é o inimigo — pare de empurrar.</li>
+        <li>Otimizar o tráfego (que já voa) não acelera nada.</li>
+      </ul></div>
+      <div class="col d"><h4>Onde divergem</h4><ul>
+        <li>Ohno elimina desperdício em <em>todo</em> lugar; Goldratt diz que mexer em não-gargalo é desperdício de esforço.</li>
+        <li>Ohno quer WIP mínimo; Goldratt quer um <em>buffer</em> antes da copy para o gargalo nunca faltar trabalho.</li>
+        <li>Síntese: TOC dá o foco, Lean dá o acabamento. Comece pela copy.</li>
+      </ul></div>
+    </div>
+
+    <div class="reco-split">
+      <div class="box"><h5>Time pequeno (3–6)</h5><ol>
+        <li>WIP limit na coluna "Copy": no máximo X remessas por vez.</li>
+        <li>O copywriter só escreve copy — tirar planilha/relatório/reunião.</li>
+        <li>Banco de hooks reutilizáveis (não escrever do zero).</li>
+        <li>Matar stale toda sexta. Só entra remessa nova quando uma sai do teste.</li>
+      </ol></div>
+      <div class="box"><h5>Time grande (15–30)</h5><ol>
+        <li>Buffer management formal: fila de briefings 100% prontos na frente da copy.</li>
+        <li>Elevar copy com IA (v0) + segundo copywriter.</li>
+        <li>Resolver o gargalo nº2 (edição/Kayke) antes que ele assuma — subir Marcel.</li>
+        <li>Dono em toda task + pull entre estações com andon.</li>
+      </ol></div>
+    </div>
+
+    <div class="verdict">A operação é uma linha de montagem estrangulada pela copy: pare de empurrar remessas e de otimizar o tráfego (que já voa), blinde e multiplique o copywriter — e a fábrica inteira anda.</div>
+  </div>
+</div></section>
+
+<!-- ===== LENS 2 AGILE ===== -->
+<section id="agile"><div class="inner">
+  <div class="lens" style="--c:var(--blue)">
+    <div class="who">Lente 02 · David Anderson (Kanban) + Shape Up (Basecamp) + Escala</div>
+    <h2 class="sec" style="margin-top:8px">Vocês já rodam um Kanban — só não sabem</h2>
+    <p>Não é um time que precisa "adotar ágil do zero". É um time que <strong>já tem um Kanban implícito</strong> e sofre por não tê-lo explicitado. Os status são colunas que ninguém desenhou; as 6.141 dependências são o value stream já mapeado.</p>
+
+    <h4>O sistema de fluxo que já existe</h4>
+    <ul class="clean">
+      <li><strong>Status = colunas:</strong> <code>não exec → pendente → em execução → checagem → feito</code> é um quadro Kanban clássico, com uma raia de escala de ads (validado → escala 1 → escala 2 → winner).</li>
+      <li><strong>Remessa = card:</strong> tem entrada (planilha), saída (relatório), atravessa colunas. A granularidade já está resolvida.</li>
+      <li><strong>Teste de 3 dias = pull explícito:</strong> uma das poucas políticas de fluxo que a operação tem — e funciona.</li>
+    </ul>
+
+    <h4>O que falta (as 3 peças)</h4>
+    <p>30 status (com typos) sem política de entrada/saída · 53% sem dono = card que ninguém puxou · zero WIP limit = gargalo invisível · 97% sem prioridade = sem classes de serviço.</p>
+
+    <blockquote>Veredito de Anderson: vocês não precisam de um novo sistema. Precisam tornar visível o que já têm e adicionar WIP limit, dono por card e classe de serviço.</blockquote>
+
+    <h4>Quadro Kanban mínimo proposto</h4>
+    <pre><code>┌─────────┬────────────┬─────────────┬───────────┬───────────┬────────┐
+│ BACKLOG │ PRONTO P/  │ EM EXECUÇÃO │ EM TESTE  │ VALIDAÇÃO │ FEITO  │
+│         │ PUXAR      │ Copy→Edição │ (3 dias)  │ (comitê)  │        │
+│   ∞     │ WIP ≤ 5    │ WIP ≤ 9 *   │ WIP ≤ 6   │ WIP ≤ 4   │   ∞    │
+└─────────┴────────────┴─────────────┴───────────┴───────────┴────────┘
+  ╔════════════════════════════════════════════════════════════════╗
+  ║ RAIA ESCALA: Validado → Escala 1 → Escala 2 → Winner (Pools)    ║
+  ╚════════════════════════════════════════════════════════════════╝
+* WIP execução = Copy 2 · Gravação 2 · Edição 3 · Tráfego 4 (parametrizável)
+  Time pequeno: trocar tudo por "WIP ≤ 3 no quadro inteiro"</code></pre>
+
+    <div class="conc-div">
+      <div class="col c"><h4>Onde concordam</h4><ul>
+        <li>O método de produção é bom — não jogar fora.</li>
+        <li>Falta limitar WIP: fazer menos ao mesmo tempo faz tudo fluir.</li>
+        <li>Trabalho órfão não flui — dono obrigatório.</li>
+        <li>Matar o backlog morto da Gestão (1.389/1).</li>
+      </ul></div>
+      <div class="col d"><h4>Onde divergem</h4><ul>
+        <li>Anderson <em>evolui</em> o que existe; Shape Up <em>deleta</em> o backlog e usa apetite fixo.</li>
+        <li>Resolve por tipo de trabalho: criativo recorrente = Kanban contínuo; lançamento/CDV = ciclo Shape Up.</li>
+        <li>Ambos concordam que 51% num só criador (Pedro) é insustentável.</li>
+      </ul></div>
+    </div>
+
+    <h4>O mesmo processo em duas escalas</h4>
+    <table>
+      <thead><tr><th>Dimensão</th><th>Time pequeno (3–6)</th><th>Time grande (15–30)</th></tr></thead>
+      <tbody>
+        <tr><td>WIP</td><td>1 por pessoa, máx 3 no quadro</td><td>Por etapa: Copy 2, Edição 3, Tráfego 4</td></tr>
+        <tr><td>Papéis</td><td>Acumulados (1 faz copy+gravação)</td><td>Dedicados, cada papel = uma raia</td></tr>
+        <tr><td>Granularidade</td><td>Remessa = 1 card com checklist</td><td>Remessa = parent com 4–6 subtasks</td></tr>
+        <tr><td>Cadência</td><td>Async, 5 min ao concluir</td><td>Replenishment semanal 15 min</td></tr>
+        <tr><td>Multi-marca</td><td>Um quadro, marca = swimlane</td><td>Um quadro por marca, template idêntico</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:14px;color:var(--ink-soft)">Prova de que escala para baixo: Eva Essence fechou 100% das tasks com o mesmo pipeline.</p>
+
+    <div class="verdict">A DIS já roda um Kanban inconsciente que produziu 595 remessas — basta torná-lo explícito com 6 colunas (vs 30), dono obrigatório e WIP limits, tratando lançamentos como ciclos de apetite fixo, não backlog perpétuo.</div>
+  </div>
+</div></section>
+
+<!-- ===== LENS 3 BPM ===== -->
+<section id="bpm"><div class="inner">
+  <div class="lens" style="--c:var(--purple)">
+    <div class="who">Lente 03 · Michael Hammer (BPM) + Six Sigma + Geary Rummler</div>
+    <h2 class="sec" style="margin-top:8px">Pagando por 44 processos, operando 5</h2>
+    <p>A bagunça não está no que fazem — está em quantas formas diferentes inventaram de fazer a mesma coisa. O inimigo é a <strong>variação</strong>: processo bom não é o mais rápido em média, é o mais previsível.</p>
+
+    <h4>O custo da variação (4 moedas)</h4>
+    <ul class="clean">
+      <li><strong>Onboarding lento:</strong> novato aprende 44 modelos em vez de 5 famílias. Conhecimento fica tácito ("pergunta pro fulano").</li>
+      <li><strong>Métricas mentindo:</strong> com <code>em teste</code> ≠ <code>em teste␣</code>, todo dashboard subnotifica. Six Sigma é impossível sem medição confiável.</li>
+      <li><strong>Defeito que vaza:</strong> a variante "sem revisão" põe criativo no ar sem QA — não por decisão, por sorteio de qual template foi clonado.</li>
+      <li><strong>Entropia:</strong> 44 modelos = 44 coisas para atualizar. Ninguém atualiza os 44 → divergem mais com o tempo.</li>
+    </ul>
+
+    <h4>Proposta: 30 → 7 status canônicos</h4>
+    <table>
+      <thead><tr><th>#</th><th>Status</th><th>Significa</th><th>Substitui o caos de</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td><code>backlog</code></td><td>Aceito, não iniciado</td><td>a fazer, ideias, novo</td></tr>
+        <tr><td class="num">2</td><td><code>em produção</code></td><td>Em execução</td><td>fazendo, em andamento</td></tr>
+        <tr><td class="num">3</td><td><code>em revisão</code></td><td>Aguardando QA</td><td>checagem, checkagem, revisar</td></tr>
+        <tr><td class="num">4</td><td><code>ajustes</code></td><td>Voltou da revisão</td><td>refazer, correção, retorno</td></tr>
+        <tr><td class="num">5</td><td><code>pronto</code></td><td>Aprovado, aguarda publicar</td><td>ready to go, read to go</td></tr>
+        <tr><td class="num">6</td><td><code>no ar / em teste</code></td><td>Publicado, em mensuração</td><td>em teste, em teste␣, ativo</td></tr>
+        <tr><td class="num">7</td><td><code>concluído</code></td><td>Encerrado (com acento)</td><td>finalizado, done, entregue</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:14px;color:var(--ink-soft)">Teto duro: 8. Minúsculas, sem espaço, fechados para edição livre — criar status vira privilégio do dono de processo.</p>
+
+    <div class="conc-div">
+      <div class="col c"><h4>Onde concordam</h4><ul>
+        <li>5 estruturas, não 44. Status precisa ser conjunto fechado.</li>
+        <li>O padrão de ads é o modelo a seguir (rígido, embutido, com dono).</li>
+        <li>Padrão precisa de DONO — variação prolifera onde não há responsável.</li>
+        <li>Descrever ≠ padronizar. Os 8 SOPs atuais são insuficientes.</li>
+      </ul></div>
+      <div class="col d"><h4>Onde divergem</h4><ul>
+        <li>Hammer: apague tudo e redesenhe (big bang). Six Sigma: meça primeiro, melhore incremental (DMAIC).</li>
+        <li>Resolução: Six Sigma no método, Hammer no escopo — piloto na Remessa, depois propaga.</li>
+        <li>Rummler avisa: template novo sem process owner = recaída garantida aos 30 status.</li>
+      </ul></div>
+    </div>
+
+    <blockquote>A regra de ouro: padronize o vocabulário e o esqueleto, liberte o conteúdo e o ritmo. Variante = etapa condicional, nunca template novo.</blockquote>
+
+    <div class="verdict">A operação não sofre de falta de padrão — sofre de 44 variantes cosméticas de 5 processos e 30 status onde cabem 7; a cura é consolidar e dar dono, padronizando o "o quê", nunca o "como".</div>
+  </div>
+</div></section>
+
+<!-- ===== LENS 4 EOS ===== -->
+<section id="eos"><div class="inner">
+  <div class="lens" style="--c:var(--gold)">
+    <div class="who">Lente 04 · Gino Wickman (EOS) + Patrick Lencioni + Bus Factor</div>
+    <h2 class="sec" style="margin-top:8px">Pessoas certas, assentos errados</h2>
+    <p>A pergunta da mesa: <strong>se as 5 pessoas certas tirarem férias na mesma semana, a operação sobrevive?</strong> Os dados dizem que não. O bus factor agregado é 1 — uma única ausência prolongada (Pedro) congela a empresa.</p>
+
+    <h4>Mapa de risco — bus factor por assento</h4>
+    <table>
+      <thead><tr><th>Pessoa</th><th>O que detém</th><th>BF</th><th>Impacto se sai hoje</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Pedro Duarte</strong></td><td>Planejamento de TODA a operação (51% das tasks)</td><td class="num" style="color:var(--red)">1</td><td>Planejamento PARA. Catástrofe.</td></tr>
+        <tr><td><strong>Kayke</strong></td><td>Edição de vídeo pesada (929 tasks)</td><td class="num" style="color:var(--red)">1,35</td><td>Throughput cai a 35%. Funil seca em 2 semanas.</td></tr>
+        <tr><td>Kemuel</td><td>Estratégia de copy + playbooks CDV</td><td class="num" style="color:var(--gold)">1</td><td>Perde-se o método de copy.</td></tr>
+        <tr><td>Lucas Diniz</td><td>Operação cross-functional (todos os spaces)</td><td class="num" style="color:var(--red)">1</td><td>"Coisas que só o Lucas resolve" travam.</td></tr>
+        <tr><td>Henrique · L. Nunes · L. Cesar</td><td>CRM · Infra/Páginas · Design (assentos únicos)</td><td class="num" style="color:var(--gold)">1</td><td>Quebra silenciosa em cada área.</td></tr>
+        <tr><td>Samuel + Lucas Diniz</td><td>Gestão de tráfego (perfis idênticos)</td><td class="num" style="color:var(--green)">2</td><td>Único par redundante saudável.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>7 de 8 assentos têm bus factor 1.</strong> A única redundância está onde menos precisaria (tráfego); o cérebro, o motor e o método não têm nenhuma.</p>
+
+    <h4>O antipadrão central</h4>
+    <p>Pedro ocupa simultaneamente <strong>Visionário + Integrator + planejador-executor</strong>. Wickman é categórico: quando uma pessoa segura cabeças demais, vira o gargalo de toda decisão. O movimento nº 1 é separar Visionário (Pedro) de Integrator (Bruno).</p>
+
+    <div class="conc-div">
+      <div class="col c"><h4>Onde concordam</h4><ul>
+        <li>Sem dono não há resultado — 53% órfão é o problema nº1.</li>
+        <li>Concentração mata a saúde do time (o 51% do Pedro).</li>
+        <li>O que não é medido não é gerido — falta scorecard semanal.</li>
+        <li>Pessoas certas, sistema errado — conserta-se rápido.</li>
+      </ul></div>
+      <div class="col d"><h4>Onde divergem</h4><ul>
+        <li>Wickman: comece pela estrutura. Lencioni: comece pela dinâmica humana (confiança).</li>
+        <li>Bus Factor quer ação <em>agora</em> — a pessoa pode sair na próxima semana.</li>
+        <li>Resolução: mínimo viável de accountability (assignee + scorecard de 5 números), estrutura pesada depois.</li>
+      </ul></div>
+    </div>
+
+    <h4>Scorecard semanal proposto</h4>
+    <table>
+      <thead><tr><th>Métrica</th><th>Dono</th><th>Meta</th></tr></thead>
+      <tbody>
+        <tr><td>CPA / ROAS médio da semana</td><td>Head de Tráfego</td><td>dentro do payback</td></tr>
+        <tr><td>Criativos novos publicados</td><td>Head de Conteúdo</td><td>≥ X/semana</td></tr>
+        <tr><td>Tasks SEM dono (contagem)</td><td>Integrator</td><td class="num">0</td></tr>
+        <tr><td>Tasks stale (+30d)</td><td>Integrator</td><td class="num">&lt; 20</td></tr>
+        <tr><td>Faturamento / leads da semana</td><td>Visionário</td><td>meta semanal</td></tr>
+      </tbody>
+    </table>
+
+    <div class="verdict">A operação tem as pessoas certas nos assentos errados, sem dono em metade do trabalho e sem nenhum número guiando a semana — corre com um cérebro só que pode desligar a empresa a qualquer momento.</div>
+  </div>
+</div></section>
+
+<!-- ===== LENS 5 SRE ===== -->
+<section id="sre"><div class="inner">
+  <div class="lens" style="--c:var(--accent-2)">
+    <div class="who">Lente 05 · Google SRE + Gene Kim (DORA) + Charity Majors</div>
+    <h2 class="sec" style="margin-top:8px">Produção sem rollback, sem runbook, sem observabilidade</h2>
+    <p>A operação não escreve software, mas opera infraestrutura de produção: funis são releases, BMs são servidores, conta banida é incidente, o teste de 3 dias é um canary. Fazem SRE acidental, no modo herói, sem rede.</p>
+
+    <table>
+      <thead><tr><th>Conceito SRE</th><th>Equivalente na operação</th></tr></thead>
+      <tbody>
+        <tr><td>Versão deployada</td><td>Versão do funil (V1…V91, TBA, TBA2)</td></tr>
+        <tr><td>Rollback</td><td>Voltar da V91 para a V90 quando a nova quebra</td></tr>
+        <tr><td>Incidente de produção</td><td>Conta bloqueada pelo Meta</td></tr>
+        <tr><td>Canary deploy</td><td>O "Testar (3 dias)" de cada criativo</td></tr>
+        <tr><td>Observabilidade</td><td>Métricas de funil (hoje: planilha manual)</td></tr>
+        <tr><td>Toil</td><td>"Preencher planilha" repetido em ~140 tasks</td></tr>
+      </tbody>
+    </table>
+
+    <h4>O P0: funis sem reversibilidade</h4>
+    <p>51 versões, 233 tasks, <strong>zero menção a rollback/revert/fallback</strong>. Nenhum registro de qual versão está no ar. Cada "V91" é um <code>git push --force</code> na main de um repo sem histórico. Charity Majors mataria por isso: não dá nem para responder "qual versão está no ar agora?" — a primeira pergunta de qualquer incidente.</p>
+
+    <h4>BMs: alta disponibilidade certa, formalização errada</h4>
+    <p>85% das BMs banidas + 115 perfis de backup = arquitetura de redundância correta (design for failure). O problema não é a estratégia — é que o incident response é <strong>tácito</strong>. Quem sabe rotacionar é um single point of failure humano. Ninguém mede o MTTR real de um ban.</p>
+
+    <div class="conc-div">
+      <div class="col c"><h4>Onde concordam</h4><ul>
+        <li>Reversibilidade barata é inegociável — rollback de funil é prioridade #1.</li>
+        <li>Você não opera o que não mede (planilha manual + afiliado sem tracking ofendem os três).</li>
+        <li>Conhecimento tácito é risco — rotação de contas tem que sair da cabeça das pessoas.</li>
+      </ul></div>
+      <div class="col d"><h4>Onde divergem</h4><ul>
+        <li>SRE puxa para processo formal (error budgets, postmortems estruturados).</li>
+        <li>DORA/Kim prioriza velocidade de feedback e rollback barato — mais certo aqui.</li>
+        <li>Síntese: reversibilidade + observabilidade do DORA, só os artefatos de 1 página do SRE.</li>
+      </ul></div>
+    </div>
+
+    <div class="reco-split">
+      <div class="box"><h5>Conserto do P0 (1 página)</h5><ol>
+        <li>Registro "Produção Atual": <code>Funil X → V91 | última boa: V90</code>.</li>
+        <li>Changelog de 1 linha por versão.</li>
+        <li>Export do TypeBot antes de sobrescrever = o rollback.</li>
+        <li>Procedimento de rollback em 5 passos.</li>
+      </ol></div>
+      <div class="box"><h5>Observabilidade</h5><ol>
+        <li>Migrar os ~140 pontos de planilha para Metabase/Grafana (já pagos).</li>
+        <li>Consertar tracking do Creators Club ANTES de escalar.</li>
+        <li>Critério pass/fail do teste de 3 dias = SLO de criativo (CPA/ROAS/CTR).</li>
+        <li>Um dashboard único primeiro, não instrumentar tudo.</li>
+      </ol></div>
+    </div>
+
+    <div class="verdict">A operação já opera produção, sofre incidentes e faz canary todo dia — mas sem rollback, runbook ou observabilidade; o conserto não é tecnologia (já têm Metabase/Grafana/N8N), é disciplina barata de registrar a versão ativa e definir um número de pass/fail.</div>
+  </div>
+</div></section>
+
+<!-- ===== LENS 6 SECURITY ===== -->
+<section id="sec"><div class="inner">
+  <div class="lens" style="--c:var(--red)">
+    <div class="who">Lente 06 · Zero Trust (NIST) + OWASP + Governança LGPD</div>
+    <h2 class="sec" style="margin-top:8px">96 chaves debaixo do tapete</h2>
+    <p>A operação não é um banco — é marketing de performance de 20 pessoas. Mas acumulou, dentro de uma ferramenta de tarefas, o pior dos dois mundos: <strong>credenciais de produção em texto plano</strong> E <strong>dados pessoais de terceiros sem governança</strong>.</p>
+
+    <div class="flag crit" style="margin:18px 0">
+      <div class="sev">● Crítico · ação na próxima hora</div>
+      <h4>96 senhas + 105 logins visíveis a todo o workspace</h4>
+      <p>OWASP: todo segredo que tocou o campo "Senha" está comprometido por definição — não é "risco de vazar", já vazou (para o workspace, o export, integrações). Se UMA conta ClickUp é phishada, o atacante não ganha uma conta — ganha 96.</p>
+    </div>
+
+    <h4>O ex-colaborador problema</h4>
+    <p>2 anos de operação, sem registro de rotação. Todo ex-membro que teve acesso ao ClickUp <strong>ainda conhece as senhas da época dele</strong> — porque não foram trocadas. Tirar o crachá não adianta se a fechadura é a mesma senha que a pessoa decorou. Cada saída nos últimos 2 anos é um vazamento ambulante não contido.</p>
+
+    <h4>LGPD: base de leads sem governança</h4>
+    <p>Captação em massa (funis, WhatsApp API, SMS Comtele) = dados de milhares de titulares. Onde está a base? Quem acessa? Qual a base legal? Há registro de tratamento (Art. 37)? Vazio em todas. O risco mais imediato não é a multa — é a denúncia de spam que mata a entregabilidade do domínio.</p>
+
+    <div class="conc-div">
+      <div class="col c"><h4>Onde concordam</h4><ul>
+        <li>As 96 senhas saem do ClickUp HOJE — sem debate.</li>
+        <li>Segredo compartilhado em plaintext torna offboarding impossível.</li>
+        <li>Menor privilégio organiza tudo. O que não tem dono não tem trilha.</li>
+      </ul></div>
+      <div class="col d"><h4>Onde divergem</h4><ul>
+        <li>Zero Trust purista quer SSO/MFA/microssegmentação — teatro para 20 pessoas.</li>
+        <li>OWASP é o árbitro proporcional: cofre escala dos dois lados.</li>
+        <li>LGPD diverge no ritmo, não no destino: conformidade mínima viável.</li>
+      </ul></div>
+    </div>
+
+    <div class="reco-split">
+      <div class="box"><h5>HOJE (crítico)</h5><ol>
+        <li>Provisionar cofre (Bitwarden grátis / 1Password) — &lt;1h.</li>
+        <li>Migrar 96 senhas + 105 logins e APAGAR os campos.</li>
+        <li>Rotacionar as 3 expostas + qualquer admin/domínio.</li>
+        <li>MFA nas contas críticas: domínio, Meta, GHL.</li>
+      </ol></div>
+      <div class="box"><h5>O que NÃO fazer (anti-teatro)</h5><ol>
+        <li>Não implantar Zero Trust completo agora.</li>
+        <li>Não exigir DPO certificado / RIPD formal.</li>
+        <li>Não fazer política de 40 páginas que ninguém lê.</li>
+        <li>Teste de cada controle: "o time usa amanhã sem reclamar?"</li>
+      </ol></div>
+    </div>
+
+    <div class="verdict">96 senhas em texto plano há 2 anos sem rotação — tire para um cofre HOJE e rotacione as queimadas; tudo o mais pode esperar dias, isto não pode esperar a próxima hora. A solução certa é a mais simples que o time realmente adota.</div>
+  </div>
+</div></section>
+
+<!-- ===== CONVERGÊNCIA ===== -->
+<section id="convergencia"><div class="inner">
+  <span class="sec-kick">Síntese · onde as lentes se encontram</span>
+  <h2 class="sec">Convergências</h2>
+  <p class="sec-lead">Seis tradições diferentes, partindo de premissas distintas, batem no mesmo prego. Quando todas concordam, é onde investir primeiro.</p>
+
+  <div class="legend">
+    <span><span class="dot" style="background:var(--green)"></span> forte defensor</span>
+    <span><span class="dot" style="background:var(--gold)"></span> concorda</span>
+    <span><span class="dot" style="background:var(--line)"></span> neutro/n.a.</span>
+  </div>
+
+  <table class="matrix">
+    <thead><tr><th>Tema</th><th>Lean/TOC</th><th>Ágil</th><th>BPM</th><th>EOS</th><th>SRE</th><th>Segur.</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Dono obrigatório em toda task</strong></td>
+        <td><span class="dot" style="background:var(--gold)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--gold)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--gold)"></span></td><td><span class="dot" style="background:var(--green)"></span></td></tr>
+      <tr><td><strong>Limitar WIP / parar de empurrar</strong></td>
+        <td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--gold)"></span></td><td><span class="dot" style="background:var(--line)"></span></td><td><span class="dot" style="background:var(--gold)"></span></td><td><span class="dot" style="background:var(--line)"></span></td></tr>
+      <tr><td><strong>Consolidar padrão (5 templates, 7 status)</strong></td>
+        <td><span class="dot" style="background:var(--gold)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--gold)"></span></td><td><span class="dot" style="background:var(--gold)"></span></td><td><span class="dot" style="background:var(--line)"></span></td></tr>
+      <tr><td><strong>Medir (scorecard / dashboard, não planilha)</strong></td>
+        <td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--gold)"></span></td></tr>
+      <tr><td><strong>Reduzir bus factor / conhecimento tácito</strong></td>
+        <td><span class="dot" style="background:var(--gold)"></span></td><td><span class="dot" style="background:var(--gold)"></span></td><td><span class="dot" style="background:var(--line)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--gold)"></span></td></tr>
+      <tr><td><strong>Matar o backlog/stale morto</strong></td>
+        <td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--gold)"></span></td><td><span class="dot" style="background:var(--gold)"></span></td><td><span class="dot" style="background:var(--line)"></span></td><td><span class="dot" style="background:var(--line)"></span></td></tr>
+      <tr><td><strong>Padrão leve embutido > fiscalizado</strong></td>
+        <td><span class="dot" style="background:var(--gold)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--gold)"></span></td><td><span class="dot" style="background:var(--green)"></span></td><td><span class="dot" style="background:var(--green)"></span></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Os 4 consensos inegociáveis</h3>
+  <div class="grid2">
+    <div class="card"><h4 style="margin-top:0">① Dono em toda task</h4><p style="margin:0;font-size:14.5px">As 6 lentes apontam os 53% órfãos como falha transversal: sem nome, não há pull (Ágil), responsabilização (EOS), trilha (Segurança) nem fim do bastão no chão (Lean). <strong>É a alavanca mais barata e de maior retorno.</strong></p></div>
+    <div class="card"><h4 style="margin-top:0">② Medir de verdade</h4><p style="margin:0;font-size:14.5px">Unânime. EOS quer scorecard semanal, SRE quer dashboard, Six Sigma quer medição confiável, Ágil quer lead time. Tirar a métrica da planilha manual destrava todas as outras melhorias.</p></div>
+    <div class="card"><h4 style="margin-top:0">③ Consolidar o padrão</h4><p style="margin:0;font-size:14.5px">5 templates + 7 status. Ágil reduz colunas, BPM reduz variação, e o resto se beneficia de fluxo legível. A nomenclatura de ads prova que o time consegue.</p></div>
+    <div class="card"><h4 style="margin-top:0">④ Leve, não burocrático</h4><p style="margin:0;font-size:14.5px">Todas convergem no <em>como</em>: padrão embutido no fluxo, artefatos de 1 página, controle que o time adota amanhã. Burocracia que ninguém usa recria o caos.</p></div>
+  </div>
+</div></section>
+
+<!-- ===== DIVERGÊNCIA ===== -->
+<section id="divergencia"><div class="inner">
+  <span class="sec-kick">Síntese · onde as lentes brigam</span>
+  <h2 class="sec">Divergências</h2>
+  <p class="sec-lead">As tensões não se anulam — elas delimitam o intervalo seguro de mudança. Cada uma tem uma resolução proposta, sempre ponderada pelo requisito de agilidade + simplicidade.</p>
+
+  <div class="card">
+    <h4 style="margin-top:0">Evoluir × Recomeçar <span class="pill">Ágil interno · BPM interno</span></h4>
+    <p>Anderson (Kanban) e Six Sigma querem mudança <strong>incremental</strong>: comece com o que existe, melhore por piloto. Shape Up e Hammer querem <strong>ruptura</strong>: delete o backlog, redesenhe do zero.</p>
+    <p style="margin:0"><strong>Resolução:</strong> ambição radical no escopo (5 templates novos, vocabulário de status novo), execução incremental e medida (piloto na Remessa de Criativos, valida, propaga). Big bang mataria a agilidade.</p>
+  </div>
+
+  <div class="card">
+    <h4 style="margin-top:0">Eliminar desperdício em todo lugar × Focar só no gargalo <span class="pill">Lean × TOC</span></h4>
+    <p>Ohno ataca todo <em>muda</em> (inclusive os 3 dias de teste, handoffs do tráfego). Goldratt diz que otimizar não-gargalo é, em si, desperdício de esforço — e quer um buffer (estoque!) antes da copy.</p>
+    <p style="margin:0"><strong>Resolução:</strong> TOC primeiro (foco na copy, ignore o resto — mais rápido, mais simples). Quando o gargalo migrar, traga o Lean para varrer o muda residual. TOC dá o foco; Lean dá o acabamento.</p>
+  </div>
+
+  <div class="card">
+    <h4 style="margin-top:0">Estrutura primeiro × Pessoas primeiro <span class="pill">Wickman × Lencioni</span></h4>
+    <p>EOS quer desenhar o accountability chart e o scorecard — disciplina cria comportamento. Lencioni avisa: sem confiança e conflito produtivo na base, qualquer chart formal vira teatro.</p>
+    <p style="margin:0"><strong>Resolução:</strong> o Bus Factor dá a urgência (a pessoa pode sair na próxima semana). Comece pelo mínimo viável de accountability — assignee + scorecard de 5 números — que satisfaz Wickman, não viola Lencioni e ataca o risco. Estrutura pesada depois.</p>
+  </div>
+
+  <div class="card">
+    <h4 style="margin-top:0">Processo formal × Velocidade de feedback <span class="pill">SRE × DORA</span></h4>
+    <p>Google SRE quer error budgets, postmortems estruturados, SLOs negociados. Gene Kim/DORA prefere "deploy 10× por dia com rollback de 1 clique" a processo de aprovação de 5 páginas.</p>
+    <p style="margin:0"><strong>Resolução:</strong> a favor do DORA — a operação vive de testar criativo rápido. Pegar do SRE só os artefatos de 1 página (runbook, postmortem de 5 linhas, SLO de um número). Processo só onde compra reversibilidade ou visibilidade.</p>
+  </div>
+
+  <div class="card">
+    <h4 style="margin-top:0">Segurança ideal × Segurança que o time adota <span class="pill">Zero Trust × OWASP × realidade</span></h4>
+    <p>Zero Trust purista quer SSO, MFA em tudo, microssegmentação. Para 20 pessoas com requisito de agilidade, vira teatro — o time contorna e anota senha no bloco de notas de novo.</p>
+    <p style="margin:0"><strong>Resolução:</strong> OWASP como árbitro proporcional — cofre + rotação escala dos dois lados. Comece pelo cofre (ganho enorme, atrito mínimo). Zero Trust em doses (MFA primeiro, SSO quando crescer). Segurança que o time adota &gt; segurança ideal que o time sabota.</p>
+  </div>
+
+  <div class="card" style="border-color:var(--purple);border-left:4px solid var(--purple)">
+    <h4 style="margin-top:0">A divergência mais incômoda — e provavelmente a mais correta</h4>
+    <p style="margin:0"><strong>Rummler:</strong> "Vocês tratam como problema de processo (templates) algo que é problema organizacional (white space). Os 30 status não são defeito de desenho — são sintoma de que ninguém é dono do fluxo entre os silos. Conserte o template e, sem dono, em 6 meses haverá 30 status de novo." Conclusão que une todas as lentes: <strong>nenhuma mudança pega sem um dono de processo nomeado.</strong></p>
+  </div>
+</div></section>
+
+<!-- ===== POPS ===== -->
+<section id="pops"><div class="inner">
+  <span class="sec-kick">Ação · processos prescritivos</span>
+  <h2 class="sec">POPs &amp; templates</h2>
+  <p class="sec-lead">As 5 estruturas reais viram processos prescritivos: cada etapa com dono, input, output, critério de pronto e onde paralelizar. Funcionam para time de 3 ou de 30 — muda quem ocupa cada papel, não o esqueleto.</p>
+
+  <h3>Convenções comuns (valem para todos)</h3>
+  <div class="grid2">
+    <div class="card"><h4 style="margin-top:0">Regra de ouro</h4><p style="margin:0;font-size:14.5px"><strong>Quem produz não conclui.</strong> Quem aprova conclui. Copywriter manda para o Copy Chief; Editor manda para o Head de Edição. Mata a auto-aprovação.</p></div>
+    <div class="card"><h4 style="margin-top:0">Definition of Done global</h4><p style="margin:0;font-size:14.5px">Tem assignee · output existe e linkado · passou pela revisão prevista · renomeado no padrão (se gera ad/funil) · status movido por quem aprova.</p></div>
+  </div>
+
+  <h3>Os 5 POPs</h3>
+  <table>
+    <thead><tr><th>POP</th><th>Quando usar</th><th>Frequência</th><th>Duração</th></tr></thead>
+    <tbody>
+      <tr><td><strong>01 · Remessa de Criativos</strong></td><td>Novos ads/hooks para alimentar tráfego</td><td class="num">~245 instâncias</td><td>6–9 dias</td></tr>
+      <tr><td><strong>02 · Setup Aula ao Vivo</strong></td><td>Lançamento via aula/imersão ao vivo</td><td class="num">~10 instâncias</td><td>3–5 semanas</td></tr>
+      <tr><td><strong>03 · Implantação Infoproduto</strong></td><td>Subir produto novo do zero</td><td class="num">30+ subtasks</td><td>6–10 semanas</td></tr>
+      <tr><td><strong>04 · CDV Ciclo Semanal</strong></td><td>Live de terça do Clube de Viagens</td><td class="num">semanal</td><td>7 dias</td></tr>
+      <tr><td><strong>05 · Meteórico</strong></td><td>Evento-relâmpago no WhatsApp</td><td class="num">~58 tasks</td><td>5–10 dias</td></tr>
+    </tbody>
+  </table>
+
+  <div class="pop">
+    <div class="head">
+      <div><div class="id">POP-01 · O mais usado</div><h3>Remessa de Criativos</h3></div>
+      <div class="when"><strong>Gatilho:</strong> tráfego precisa de combustível novo<br><strong>Dono:</strong> Head de Conteúdo · <strong>6–9 dias</strong></div>
+    </div>
+    <p style="font-size:14.5px">O pipeline serial de 9 passos. O segredo de agilidade está em isolar o gargalo (copy) e paralelizar tudo que não depende dele.</p>
+    <div class="timeline">
+      <div class="tl-step"><div class="t">1 · Atualizar planilha de performance</div><div class="d">Dono: Gestor de Tráfego · Output: planilha com winners/losers da última leva <span class="badge-par">paraleliza com #2</span></div></div>
+      <div class="tl-step"><div class="t">2 · Criar estratégia de otimização</div><div class="d">Dono: Head de Conteúdo · Output: briefing do que testar (ângulos, hooks)</div></div>
+      <div class="tl-step bottle"><div class="t">3 · Escrever copy &nbsp;◆ RESTRIÇÃO</div><div class="d">Dono: Copywriter → aprovação Copy Chief · DoD: doc linkado, revisado, status movido pelo Chief <span class="badge-ser">gargalo — protege o ritmo</span></div></div>
+      <div class="tl-step"><div class="t">4 · Gravar</div><div class="d">Dono: Expert/Gravação · Input: copy aprovada · Output: brutos no Drive</div></div>
+      <div class="tl-step"><div class="t">5 · Editar</div><div class="d">Dono: Editor · DoD: 4×5 e 9×16, renomeado no padrão, enviado para revisão</div></div>
+      <div class="tl-step"><div class="t">6 · Revisar (condicional)</div><div class="d">Dono: Head de Edição · etapa ligável/desligável conscientemente</div></div>
+      <div class="tl-step"><div class="t">7 · Iniciar tráfego</div><div class="d">Dono: Gestor de Tráfego · Output: campanha no ar com nomenclatura</div></div>
+      <div class="tl-step bottle"><div class="t">8 · Testar (3 dias) &nbsp;◆ CANARY</div><div class="d">Critério pass/fail (SLO de criativo): mata se CPA &gt; X ou ROAS &lt; Y; escala se ROAS &gt; Z; zona cinza = decisão do gestor <span class="badge-ser">janela fixa</span></div></div>
+      <div class="tl-step"><div class="t">9 · Gerar relatório</div><div class="d">Dono: Gestor · ideal: automático via dashboard, não planilha manual</div></div>
+    </div>
+    <p style="font-size:14px;margin:0;color:var(--ink-soft)"><strong>Onde paralelizar:</strong> passos 1–2 rodam juntos. Para Hooks/BTC, pula-se copy+gravação (entra direto na edição). <strong>Time pequeno:</strong> 1 card com checklist, WIP rígido na copy. <strong>Time grande:</strong> parent com subtasks, buffer de briefings na frente da copy.</p>
+  </div>
+
+  <div class="pop">
+    <div class="head">
+      <div><div class="id">POP-04 · Recorrente semanal</div><h3>CDV Ciclo Semanal</h3></div>
+      <div class="when"><strong>Gatilho:</strong> toda semana, live de terça 20h<br><strong>Carrinho 48h, fecha quinta 19h</strong></div>
+    </div>
+    <pre style="margin:8px 0"><code>SEX/SÁB → prep conteúdo da live
+DOM ───→ email D-2 (antecipação)
+SEG ───→ email D-1 + mensagens 1:1
+TER ───→ ★ LIVE 20h
+QUA ───→ email + WhatsApp de vendas
+QUI ───→ último dia de carrinho (fecha 19h)</code></pre>
+    <h4 style="margin-top:14px">Métricas-chave &amp; regra de escala</h4>
+    <table style="margin-top:8px">
+      <thead><tr><th>Indicador</th><th>Meta</th></tr></thead>
+      <tbody>
+        <tr><td>CPL (custo por lead)</td><td class="num">&lt; R$ 8</td></tr>
+        <tr><td>Taxa de Show-up</td><td class="num">&gt; 35%</td></tr>
+        <tr><td>Conversão (assistiu → comprou)</td><td class="num">&gt; 8%</td></tr>
+        <tr><td>NPS</td><td class="num">&gt; 8,5</td></tr>
+        <tr><td>Renovação (12 meses)</td><td class="num">&gt; 70%</td></tr>
+      </tbody>
+    </table>
+    <blockquote style="margin:14px 0 0;font-size:15px">Regra de escala: só escalar com os 4 indicadores no verde por <strong>3 meses consecutivos</strong>. Caiu um? Reinicia a contagem. Não escalar antes disso.</blockquote>
+  </div>
+
+  <p style="font-size:14px;color:var(--ink-soft)">POPs 02, 03 e 05 seguem o mesmo formato (papéis, fluxo com DoD, onde paralelizar, checklist copiável, exceções, adaptação por tamanho) nos arquivos <code>diagnostico/pops/</code>.</p>
+
+  <div class="card" style="border-left:4px solid var(--accent-2);display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+    <div style="flex:1;min-width:240px">
+      <h4 style="margin:0 0 4px">↗ Catálogo de Blocos LEGO (aba separada)</h4>
+      <p style="margin:0;font-size:14px">A operação desmontada em <strong>~30 blocos reutilizáveis</strong> (não fluxos amarrados): cada bloco produz um entregável, tem <strong>parâmetros</strong> que o desamarram do contexto (página = captura/vendas/obrigado…), entradas/saídas pra encaixe e onde reaparece. Filtre, monte seu kit e <strong>exporte agnóstico</strong> (JSON/CSV/MD/Prompt LLM). Curadoria na voz de Goldratt.</p>
+    </div>
+    <a href="templates.html" style="background:var(--accent-2);color:#fff;text-decoration:none;padding:11px 20px;border-radius:9px;font-weight:600;font-size:14px;white-space:nowrap">Abrir biblioteca →</a>
+  </div>
+</div></section>
+
+<!-- ===== ROADMAP ===== -->
+<section id="roadmap"><div class="inner">
+  <span class="sec-kick">Ação · sequência</span>
+  <h2 class="sec">Roadmap de implementação</h2>
+  <p class="sec-lead">Ordenado por risco evitado ÷ esforço. Cada fase entrega algo completo e funcional — sem MVP pela metade.</p>
+
+  <div class="road">
+    <div class="phase">
+      <div class="when">HOJE</div>
+      <div>
+        <h4>Estancar o risco crítico <span class="pill tag-red">Segurança</span></h4>
+        <ul>
+          <li>Provisionar cofre (Bitwarden/1Password), migrar as 96 senhas + 105 logins, apagar os campos no ClickUp.</li>
+          <li>Rotacionar as 3 expostas + credenciais admin/domínio. Ligar MFA nas contas críticas.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="when">SEM. 1</div>
+      <div>
+        <h4>Accountability mínima <span class="pill tag-gld">EOS · Ágil</span></h4>
+        <ul>
+          <li>Regra dura: task sem assignee não existe (automação ClickUp cria bucket "🔴 sem dono").</li>
+          <li>Mutirão das 458 stale: fecha, reatribui ou mata. Nomear 1 dono de processo por space.</li>
+          <li>Checklist de offboarding de 1 página.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="when">SEM. 2–3</div>
+      <div>
+        <h4>Consolidar o padrão <span class="pill" style="background:#e9e0ef;border-color:#cdb6d9;color:var(--purple)">BPM · Ágil</span></h4>
+        <ul>
+          <li>30 → 7 status canônicos (minúsculas, sem typo, fechados para edição livre).</li>
+          <li>44 → 5 templates canônicos com etapas condicionais. Piloto na Remessa de Criativos.</li>
+          <li>Quadro Kanban de 6 colunas + WIP limits. Dedup de custom fields (29 → ~12).</li>
+        </ul>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="when">SEM. 3–4</div>
+      <div>
+        <h4>Proteger o gargalo <span class="pill" style="background:#f3e0db;border-color:#e0b3a9;color:var(--accent)">Lean/TOC</span></h4>
+        <ul>
+          <li>WIP limit na copy. Tirar não-copy do copywriter. Banco de hooks reutilizáveis.</li>
+          <li>Subir Marcel de 35% → 70% (gargalo nº2). Buffer de briefings na frente da copy.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="when">MÊS 2</div>
+      <div>
+        <h4>Confiabilidade &amp; medição <span class="pill" style="background:#dcebe1;border-color:#a9d3c0;color:var(--green)">SRE · EOS</span></h4>
+        <ul>
+          <li>Runbook de funil: registro de versão ativa + changelog + export antes de sobrescrever.</li>
+          <li>Runbook de conta banida (documentar o que já fazem). Critério pass/fail do teste de 3 dias.</li>
+          <li>Dashboard único no Metabase (tirar métrica da planilha). Scorecard semanal de 5 números.</li>
+          <li>Governança LGPD mínima: inventário de dados + base legal nos formulários + 1 responsável.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="when">CONTÍNUO</div>
+      <div>
+        <h4>Reduzir bus factor &amp; sustentar <span class="pill">EOS · Rummler</span></h4>
+        <ul>
+          <li>Cross-training nos 7 assentos com bus factor 1. Separar Visionário (Pedro) de Integrator (Bruno).</li>
+          <li>Process owner nomeado por família — sem ele, o padrão recai aos 30 status em 6 meses.</li>
+          <li>Varredura quinzenal de stale. Auditoria trimestral de status/campos órfãos.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  <div class="inner">
+    Diagnóstico gerado a partir de 9.839 tasks do ClickUp · 6 lentes de análise paralela · 5 POPs prescritivos<br>
+    Documentos completos em <code>mkt_process/diagnostico/lentes/</code> e <code>mkt_process/diagnostico/pops/</code>
+  </div>
+</footer>
+
+</main>
+</div>
+
+<a href="#topo" class="top-link" id="toplink">↑</a>
+
+<script>
+  // active nav on scroll
+  const links=[...document.querySelectorAll('nav.side a')];
+  const map=links.map(a=>({a,el:document.querySelector(a.getAttribute('href'))})).filter(x=>x.el);
+  const onScroll=()=>{
+    const y=window.scrollY+120;let cur=map[0];
+    for(const m of map){ if(m.el.offsetTop<=y) cur=m; }
+    links.forEach(a=>a.classList.remove('act'));
+    if(cur) cur.a.classList.add('act');
+    document.getElementById('toplink').classList.toggle('show',window.scrollY>600);
+  };
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+</script>
+</body>
+</html>
