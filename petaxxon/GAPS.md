@@ -17,16 +17,16 @@
 | 3 | **Tracking & Dados (Setup 02)** — UTMs padrão, pixel Meta+Google, eventos de conversão, atribuição de checkout | Aba 01+06 / Fase 2 | 🟡 | Checklist criado em `setups/setup-02-tracking-dados.md`. Falta: padronizar UTM, instalar/validar pixels+eventos, integrar Purchase, montar dashboard [a confirmar] |
 | 4 | **Funil SaaS trial→pagante (PlaySquad)** — página + mini-VSL + onboarding trial + ativação + upgrade | Aba 03 / Fase 3 | 🟡 | Ficha criada em `funis/saas-playsquad-trial.md`. Falta: definir planos/checkout, onboarding, gatilhos de upgrade e medição free→pago [a confirmar] |
 | 5 | **Funil de captura (lead magnet → webinário/vendas)** — squeeze, isca, nutrição até oferta | Aba 03 / Fase 3 | 🟡 | Ficha criada em `funis/captura-lead-magnet.md`. Falta: definir isca/tema, squeeze, sequência de nutrição e destino (webinário/vendas) [a confirmar] |
-| 6 | **Funil de webinário (Mega Combo)** — convite, sequência pré, oferta ao vivo, follow-up | Aba 03 / Fase 3 | 🟡 | Única rota documentada p/ vender FY + YouTube Dark juntos (ticket maior) |
-| 7 | **Ações na base / recompra** — segmentação por produto comprado + sequência e-mail/WhatsApp de recompra e ascensão | Aba 03+04 / Fase 3-4 | 🟡 | A base é o ativo mais barato de converter; não monetizar é custo de oportunidade direto |
+| 6 | **Funil de webinário (Mega Combo)** — Ads→WhatsApp→live diária→recuperação | Aba 03 / Fase 3 | 🟡 | Ficha em `funis/webinario-mega-combo.md` (modelo: sem captura tradicional; entrada por WhatsApp; live diária; recuperação). Falta: roteiro da live, fluxo WhatsApp, composição do combo [a confirmar] |
+| 7 | **Ações na base / recompra** — segmentação por produto comprado + sequência e-mail/WhatsApp de recompra e ascensão | Aba 03+04 / Fase 3-4 | 🟡 | Ficha em `funis/acoes-base-recompra.md`. Falta: mapa de ascensão por produto, calendário e copys [a confirmar] |
 
 ## Prioridade MÉDIA (consolida o que já roda / qualifica a decisão)
 
 | # | Gap | Aba / Fase | Status | Por que |
 |---|-----|-----------|--------|---------|
-| 8 | **Funil orgânico Shorts → venda direta (documentar)** — pitch, CTA, página, métricas | Aba 03 / Fase 3 | 🟡 | Já converte; documentar tira do conhecimento tácito e permite replicar |
-| 9 | **Funil orgânico conteúdo + pitch (vídeo longo)** — ângulo, estrutura, CTA, destino | Aba 03+04 / Fase 3-4 | 🔴 | Principal veículo do YouTube longo; sem funil separado dos Shorts |
-| 10 | **Recuperação WhatsApp** — carrinho abandonado, sequência, oferta, timing | Aba 03 / Fase 3 | 🟡 | ROI alto (base quente); depende de CRM + tracking de abandono |
+| 8 | **Funil orgânico Shorts → venda direta (documentar)** — pitch, CTA, página, métricas | Aba 03 / Fase 3 | 🟢 | Ficha em `funis/shorts-venda-direta.md` (já roda). Falta só medir atribuição e padronizar CTA [a confirmar] |
+| 9 | **Funil orgânico conteúdo + pitch (vídeo longo)** — ângulo, estrutura, CTA, destino | Aba 03+04 / Fase 3-4 | 🟡 | Ficha em `funis/conteudo-pitch.md`. Falta: formato/ponto do pitch e CTA padrão [a confirmar] |
+| 10 | **Recuperação WhatsApp** — carrinho abandonado, sequência, oferta, timing | Aba 03 / Fase 3 | 🟡 | Ficha em `funis/recuperacao-whatsapp.md`. Falta: gatilho de abandono, sequência e timing [a confirmar] |
 | 11 | **Rotas de campanha — playbooks preenchidos** — fichas p/ combinações principais (orgânico/base/quente; pago/frio/B; base/e-mail/upsell) | Aba 04 / Fase 4 | 🔴 | Estrutura existe; falta o playbook pronto p/ não decidir ad hoc |
 | 12 | **Operação & Cadência — donos + ritual semanal** — dono por tipo de ativo + pauta/critério/output do review | Aba 05 / Fase 4 | 🔴 | Cadência sem dono não se sustenta; é o que separa operação de projeto |
 | 13 | **Dados & Decisão — critérios pass/fail numéricos por funil** — ROAS mín., CVR, CPA por produto | Aba 06 / Fase 4 | 🔴 | Sem números, o review vira reunião de opiniões |
