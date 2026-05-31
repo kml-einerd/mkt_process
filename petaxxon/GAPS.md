@@ -13,6 +13,11 @@
 > **Regra de parada da rotina noturna:** só é "gap elegível" um item 🔴 **sem documento criado**. Como não
 > há nenhum, a rotina deve **encerrar sem fazer nada**. Ela só volta a agir se for adicionado um novo gap 🔴.
 
+> 🔎 **Descobertas do export do Monday (2026-05-31)** — a confirmar com o time, podem virar gaps novos:
+> - **Esteira real ≠ alvo:** hoje é `VVSA R$14 → Fórmula R$397 → Cyber R$197`; o **PlaySquad** vira upsell **após o lançamento**. As fichas descrevem o alvo (PlaySquad U1) — decidir se ajusto as fichas para refletir o estado atual + alvo.
+> - **Portfólio maior que o modelado:** Análise de Canal (Raio-X do YouTube), Desenhando Animes, English Plan, Lucre com YouTube (gravando), recorrência TubeClub [a confirmar]. Decidir quais entram no escopo do vault.
+> - **Checkout = Hotmart** (atualiza os `[a confirmar]` de checkout nos setups/fichas).
+
 ---
 
 ## Prioridade ALTA (bloqueia receita ou destrava em cascata)

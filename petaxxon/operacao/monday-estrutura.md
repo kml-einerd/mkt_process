@@ -168,5 +168,40 @@ O funil só vai ao ar após todos os itens marcados.
 
 ## As 3 camadas
 - **Ideal:** 1 workspace, 6 boards conectados + dashboard + board de Rotina de Otimização + checklist de Setup de Funil; item ↔ ficha sempre linkados; labels padronizados.
-- **Foto atual:** a confirmar com o time qual ferramenta de gestão está em uso hoje e o que migra. `[a confirmar]`
-- **Gaps:** criar os boards e popular a partir de `GAPS.md`; definir automações; treinar o time. (Fase 2-4)
+- **Foto atual:** **1 board só** ("🖥️ CYBERCLASS") com 9 grupos misturando produto + produção + referência (ver "Foto atual — board real" abaixo). Forte na produção (pipeline de remessas com subitens maduro); fraco na separação (tudo num board) e nos labels (duplicados). Checkout = **Hotmart**.
+- **Gaps:** separar em boards por responsabilidade; padronizar labels; conectar item↔ficha; ver "Migração" abaixo.
+
+---
+
+## Foto atual — board real (export 2026-05-31)
+
+> Lido de `Recursos/monday-export/` (board "🖥️ CYBERCLASS"). Serve de ponto de partida da migração.
+
+**Estrutura:** 1 board, 9 grupos:
+`CENTRAL` (referências e tarefas soltas) · `REMESSAS DE ANÚNCIOS` (pipeline de criativos) · `WEBINAR FÓRMULA` · `FÓRMULA DE YOUTUBE` · `VVSA R$14 > FÓRMULA R$397 > CYBER R$197` · `PLAY SQUAD` · `ANÁLISE DE CANAL (RAIO-X DO YOUTUBE)` · `DESENHANDO ANIMES` · `ENGLISH PLAN`.
+
+**O que já é bom (manter):**
+- O grupo **REMESSAS DE ANÚNCIOS** tem um pipeline de subitens maduro: `Copy → Revisão copy → Produção de imagens/Gravação → Revisão gravação → Edição 9x16 (stories) → Edição 16x9 (feed/YouTube) → Revisão vídeos → Subir anúncios`. É praticamente o board "Produção de Ativos" do modelo, já funcionando.
+- Nomenclatura de criativo já em uso e alinhada ao modelo: ex. `H3-C1-KML-ROD-F01-R1-FY26-9X16`.
+- Itens com Owner, Última atualização e Item ID.
+
+**O que está confuso (corrigir na migração):**
+- **Tudo num board só** — portfólio, produção, webinar, referência e vários produtos convivem; não escala.
+- **Produtos viram grupos** — some quando o portfólio cresce; melhor 1 board de Portfólio com 1 item por produto.
+- **Labels de status duplicados/inconsistentes:** `ADS RODANDO` **e** `RODANDO ADS` (mesmo estado, dois nomes), além de FEITO/PARA FAZER/REVISAR/PAUSADO/EM ANDAMENTO/GRAVAR/EDITAR/NÃO EXECUTADO. Padronizar.
+- **Sem boards de Funis, Setups, Campanhas e Dados** — funis/ofertas aparecem como subitens soltos.
+
+**Fatos reais capturados (atualizam o que estava `[a confirmar]`):**
+- **Checkout:** Hotmart.
+- **Esteira VVSA (real, hoje):** `VVSA R$14 → Fórmula R$397 → Cyber R$197`. O upsell **PlaySquad** entra **após o lançamento** (hoje o upsell do Fórmula é "+1 Fórmula R$97 / Cyber R$197"). Ver discrepância na nota do `GAPS.md`.
+- **Portfólio real é maior** que o modelado: além de Fórmula/VVSA/PlaySquad/YouTube Dark, há **Análise de Canal (Raio-X do YouTube)**, **Desenhando Animes**, **English Plan**, **Lucre com YouTube** (gravando) e recorrência **TubeClub** [a confirmar].
+- **Funil PlaySquad** já mapeado em subitens (Q1 página · Q2 mini-VSL · Q3 checkout/orderbumps) — bate com `funis/saas-playsquad-trial.md`.
+- **Recuperação** já prevista: "Recuperação de vendas — E-mail" e "— Remarketing".
+
+## Migração do board atual → modelo (simples, em 4 passos)
+1. **Padronizar labels** primeiro (rápido e alto impacto): unificar `RODANDO ADS`=`ADS RODANDO`; adotar o conjunto único de status do modelo.
+2. **Extrair o Portfólio:** criar o board **Portfólio & Esteira** com 1 item por produto (Fórmula, VVSA, Cyber, PlaySquad, Raio-X, Desenhando Animes, English Plan, Lucre com YouTube, TubeClub), cada um com preço, papel na esteira e status. Aposenta os grupos-por-produto.
+3. **Promover a produção:** renomear `REMESSAS DE ANÚNCIOS` → board **Produção de Ativos** (já está pronto) e criar os boards **Funis**, **Campanhas** (Webinar Fórmula entra aqui), **Setups** e **Dados**.
+4. **Conectar e mover o CENTRAL:** tarefas soltas do CENTRAL viram itens em **Backlog/Gaps**; cada item de Funil/Campanha/Setup ganha link para sua ficha em `petaxxon/`. Manter o Dashboard como tela do ritual semanal.
+
+> **Princípio da migração:** não recomeçar do zero — o board atual já tem o motor de produção. A migração é **separar responsabilidades em boards** e **padronizar labels**, não refazer.
