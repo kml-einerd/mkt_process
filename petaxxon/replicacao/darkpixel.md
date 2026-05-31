@@ -20,12 +20,12 @@
 ### Foto atual (parkeado — Fase 5)
 - O vault existe e está documentado, mas ainda não passou pela validação completa interna (algumas fichas em status "a testar" ou "a desenhar").
 - Nenhum cliente externo ativo.
-- Setups 02 e 03 documentados; setups 01, 04, 05, 06 ainda não criados.
+- Todos os 6 setups documentados (checklists escritos); ainda não implementados na operação.
 - Sem contrato-modelo, sem onboarding de cliente, sem precificação definida.
 
 ### Gaps (o que falta para ativar)
 - [ ] Concluir validação interna dos funis (pelo menos VSL e Shorts rodando com dados reais).
-- [ ] Criar setups restantes (01, 04, 05, 06) conforme template.
+- [ ] Implementar os setups na prática (os 6 checklists já existem; falta executá-los).
 - [ ] Redigir contrato-modelo DarkPixel (cláusula de confidencialidade + rev-share).
 - [ ] Definir precificação (setup fee + mensalidade + % resultado).
 - [ ] Criar checklist de onboarding de cliente externo (ver seção abaixo).

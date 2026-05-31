@@ -36,12 +36,12 @@
 
 ---
 
-## Funil 2 — Typebot Pré-venda (Conteúdo + Pitch)
-*(tipo: orgânico / pago — Vídeo longo ou bot pré-venda → Oferta → Checkout → Esteira)*
+## Funil 2 — Typebot Pré-venda
+*(tipo: pago/orgânico — bot que aquece respondendo perguntas → VSL embedada/página/checkout → Esteira)*
 
 | Métrica | Como medir | Meta (PASS) | Ação se FAIL |
 |---|---|---|---|
-| Retenção até o ponto de pitch (vídeo longo) | YouTube Analytics | [a confirmar] % dos espectadores | Iterar estrutura do vídeo / ponto do pitch |
+| Taxa de início do fluxo (entrou no bot) | Typebot analytics | [a confirmar] % | Iterar criativo / promessa de entrada |
 | Taxa de clique no CTA / link | UTM + GA4 | [a confirmar] % | Iterar CTA verbal ou posição do link |
 | Taxa de conclusão do fluxo (bot) | Typebot analytics | [a confirmar] % | Iterar perguntas / reduzir atrito |
 | Conversão CTA → checkout iniciado | GA4 / pixel | [a confirmar] % | Iterar página de destino ou oferta |
@@ -139,6 +139,20 @@
 | Taxa de ascensão (produto front → produto superior) | Plataforma + CRM | [a confirmar] % | Iterar apresentação do produto de ascensão |
 | Receita por envio (RPE) | Receita da ação / total enviado | [a confirmar] R$/envio | Abaixo do mínimo → iterar oferta ou pausar ação |
 | Ticket médio de recompra | Receita recompra / pedidos de recompra | [a confirmar] R$ | Revisar produtos ofertados / bumps |
+
+---
+
+## Funil 9 — Conteúdo + Pitch (vídeo longo)
+*(tipo: orgânico — vídeo temático longo com pitch integrado → CTA → Checkout → Esteira)*
+
+| Métrica | Como medir | Meta (PASS) | Ação se FAIL |
+|---|---|---|---|
+| Retenção até o ponto de pitch | YouTube Analytics | [a confirmar] % dos espectadores | Iterar estrutura do vídeo / ponto do pitch |
+| Taxa de clique no CTA / link | UTM + GA4 | [a confirmar] % | Iterar CTA verbal ou posição do link na descrição |
+| Conversão de página (clique → checkout iniciado) | GA4 / pixel | [a confirmar] % | Iterar página de destino |
+| Conversão de checkout (iniciado → pago) | Plataforma de pagamento | [a confirmar] % | Iterar formulário / oferta |
+| CAC orgânico (custo de produção / clientes) | Custo de produção / vendas | [a confirmar] R$ | Reavaliar ângulo do conteúdo ou produto |
+| Take rate — bumps e upsell | % compradores | [a confirmar] % | Iterar copy / preço |
 
 ---
 

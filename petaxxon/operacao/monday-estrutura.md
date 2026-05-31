@@ -27,7 +27,7 @@ Item = produto. Reflete a Aba 02.
 | Ficha | Link | p/ `petaxxon/...` |
 
 ### 2. Funis
-Item = funil (os 8 tipos). Reflete a Aba 03.
+Item = funil (os 9 tipos). Reflete a Aba 03.
 | Coluna | Tipo | Valores |
 |---|---|---|
 | Tipo | Status | VSL · Typebot · Webinário · Captura · Recuperação · SaaS-trial · Orgânico |

@@ -90,6 +90,17 @@
   /* rule list */
   .rules{background:#f3ece0;border:1px solid var(--line);border-radius:8px;padding:12px 18px;margin:14px 0}
   .rules li{margin:4px 0;font-size:13.5px}
+  /* documentos: lista de links pros .md */
+  .docs{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:8px;padding:12px 18px;margin:14px 0}
+  .docs ul{margin:6px 0 0;padding-left:18px}
+  .docs li{margin:5px 0;font-size:13.5px}
+  .docs a{color:var(--blue);text-decoration:none;border-bottom:1px solid #bcd0e0}
+  .docs a:hover{border-bottom-color:var(--blue)}
+  .docs .st{font-family:var(--mono);font-size:10px;font-weight:700;margin-left:6px}
+  .docs .st.on{color:var(--green)} .docs .st.test{color:#7d5f17} .docs .st.des{color:#a3271d}
+  .toplinks{margin-top:8px}
+  .toplinks a{color:#d8b89f;text-decoration:none;font-family:var(--mono);font-size:11px;border-bottom:1px solid #6b4a32;margin-right:16px}
+  .toplinks a:hover{color:#f4f0e6}
   @media(max-width:768px){.layers{grid-template-columns:1fr} main{padding:24px 16px 80px} .setups{grid-template-columns:repeat(2,1fr)} .routes{grid-template-columns:1fr} .core2{flex-direction:column;gap:6px} .ar2{transform:rotate(90deg)} }
 </style>
 </head>
@@ -97,6 +108,7 @@
 <header>
   <h1>Petaxxon · Modelo Operacional de Marketing &amp; Monetização</h1>
   <p>O mapa que o time abre pra se localizar e escolher o caminho. Macro → micro.</p>
+  <p class="toplinks"><a href="../INDEX.md">INDEX (todos os documentos)</a><a href="../GAPS.md">GAPS (backlog priorizado)</a><a href="../README.md">README</a></p>
 </header>
 <nav class="tabs" id="tabs">
   <button class="act" data-tab="t00"><span class="nm">00</span>Visão Macro</button>
@@ -236,9 +248,21 @@
 
     <h3>3 Camadas</h3>
     <div class="layers">
-      <div class="layer ideal"><b>① Ideal</b>Cada setup com checklist do que precisa existir antes de rodar qualquer funil ou campanha sobre ele.</div>
-      <div class="layer foto"><b>② Foto atual</b>A preencher (Fase 2).</div>
-      <div class="layer gaps"><b>③ Gaps</b>Tracking funcional; cofre de senhas. (Fase 2)</div>
+      <div class="layer ideal"><b>① Ideal</b>Os 6 setups com checklist cumprido: infra com cofre de senhas + 2FA + checkout testado; tracking ponta a ponta; CRM com tags e automações; nomenclatura padrão; biblioteca de ativos versionada; papéis e DoD no Monday.</div>
+      <div class="layer foto"><b>② Foto atual</b>Os 6 checklists estão escritos. Tracking (02) e CRM (03) ainda 🔴 — documentados mas não implementados. Papéis &amp; DoD (06) tem a regra produtor ≠ aprovador definida; falta praticar no Monday.</div>
+      <div class="layer gaps"><b>③ Gaps</b>Decisões do time [a confirmar]: ferramentas (checkout, CRM, cofre de senhas, plataforma de live); donos de cada setup; tabela de valores fixos de nomenclatura; padronizar UTM e validar pixels; mapear o que já existe na biblioteca de ativos.</div>
+    </div>
+
+    <div class="docs">
+      <strong>Documentos</strong>
+      <ul>
+        <li><a href="../setups/setup-01-infra-contas.md">Setup 01 · Infra &amp; Contas</a> — checklist criado <span class="st des">A IMPLEMENTAR</span></li>
+        <li><a href="../setups/setup-02-tracking-dados.md">Setup 02 · Tracking &amp; Dados</a> — checklist criado <span class="st des">A IMPLEMENTAR</span></li>
+        <li><a href="../setups/setup-03-crm-listas.md">Setup 03 · CRM &amp; Listas</a> — checklist criado <span class="st des">A IMPLEMENTAR</span></li>
+        <li><a href="../setups/setup-04-nomenclatura.md">Setup 04 · Nomenclatura</a> — padrão proposto <span class="st des">A APROVAR</span></li>
+        <li><a href="../setups/setup-05-ativos.md">Setup 05 · Biblioteca de Ativos</a> — checklist criado <span class="st des">A CONSOLIDAR</span></li>
+        <li><a href="../setups/setup-06-papeis-dod.md">Setup 06 · Papéis &amp; DoD</a> — papéis + DoD definidos <span class="st test">A PRATICAR</span></li>
+      </ul>
     </div>
   </section>
 
@@ -313,9 +337,20 @@
 
     <h3>3 Camadas</h3>
     <div class="layers">
-      <div class="layer ideal"><b>① Ideal</b>Esteira padronizada: muda o front-end, mantém bumps → PlaySquad → continuação.</div>
-      <div class="layer foto"><b>② Foto atual</b>VVSA e Fórmula YouTube rodando; YouTube Dark a integrar.</div>
-      <div class="layer gaps"><b>③ Gaps</b>YouTube Dark; FY chegar a 5 bumps.</div>
+      <div class="layer ideal"><b>① Ideal</b>Esteira padronizada: muda o front-end, mantém 5 bumps → PlaySquad (Upsell 1) → continuação. PlaySquad também ganha funil próprio (trial → pagante).</div>
+      <div class="layer foto"><b>② Foto atual</b>VVSA e Fórmula YouTube 2026 rodando (FY hoje com 2 bumps, meta 5); PlaySquad ativo como Upsell 1 universal mas só captando e-mail no trial; YouTube Dark a integrar na continuação.</div>
+      <div class="layer gaps"><b>③ Gaps</b>FY chegar a 5 order bumps; definir os produtos de cada bump [a confirmar]; integrar YouTube Dark na continuação; criar o funil próprio do PlaySquad (free→pago); definir continuações por produto.</div>
+    </div>
+
+    <div class="docs">
+      <strong>Documentos — fichas de funil por produto</strong>
+      <ul>
+        <li><a href="../funis/vsl-tradicional.md">VSL Tradicional</a> — Fórmula YouTube 2026 (carro-chefe) <span class="st on">RODA</span></li>
+        <li><a href="../funis/typebot-pre-venda.md">Typebot Pré-Venda</a> — qualquer front-end do portfólio <span class="st on">RODA</span></li>
+        <li><a href="../funis/webinario-mega-combo.md">Webinário (Mega Combo)</a> — FY + YouTube Dark + combo <span class="st test">A TESTAR</span></li>
+        <li><a href="../funis/saas-playsquad-trial.md">SaaS PlaySquad (trial→pagante)</a> — funil próprio do PlaySquad <span class="st des">A DESENHAR</span></li>
+        <li><a href="../funis/acoes-base-recompra.md">Ações na Base / Recompra</a> — ascensão de oferta no portfólio <span class="st test">A TESTAR</span></li>
+      </ul>
     </div>
   </section>
 
@@ -331,48 +366,63 @@
           <th>Tipo de funil</th>
           <th>Status</th>
           <th>Observação</th>
+          <th>Ficha</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td><strong>VSL tradicional</strong></td>
           <td><span class="status s-on">RODA</span></td>
-          <td>Vídeo de vendas → página → checkout + esteira.</td>
+          <td>Vídeo de vendas → página → checkout + esteira (Rota B).</td>
+          <td><a href="../funis/vsl-tradicional.md">vsl-tradicional</a></td>
         </tr>
         <tr>
           <td><strong>Typebot pré-venda</strong></td>
           <td><span class="status s-on">RODA</span></td>
-          <td>Bot aquece; VSL embedada → checkout ou página.</td>
+          <td>Bot aquece; VSL embedada → checkout ou página (Rota B).</td>
+          <td><a href="../funis/typebot-pre-venda.md">typebot-pre-venda</a></td>
         </tr>
         <tr>
           <td><strong>Webinário (Mega Combo)</strong></td>
           <td><span class="status s-test">A TESTAR</span></td>
-          <td>Vende Fórmula YouTube + YouTube Dark + combo.</td>
+          <td>Ads → WhatsApp → live diária → recuperação. Vende o combo (Rota A).</td>
+          <td><a href="../funis/webinario-mega-combo.md">webinario-mega-combo</a></td>
         </tr>
         <tr>
           <td><strong>Captura (lead magnet)</strong></td>
           <td><span class="status s-design">A DESENHAR</span></td>
-          <td>Ebook/grátis → webinar/vendas (Rota A).</td>
+          <td>Isca grátis → lista → webinário/vendas (Rota A).</td>
+          <td><a href="../funis/captura-lead-magnet.md">captura-lead-magnet</a></td>
         </tr>
         <tr>
           <td><strong>Recuperação WhatsApp</strong></td>
           <td><span class="status s-test">A TESTAR</span></td>
-          <td>Ações na base para monetização constante.</td>
+          <td>Carrinho abandonado / lead quente → sequência WhatsApp (Rota A).</td>
+          <td><a href="../funis/recuperacao-whatsapp.md">recuperacao-whatsapp</a></td>
         </tr>
         <tr>
           <td><strong>Shorts → venda direta</strong></td>
           <td><span class="status s-on">RODA</span></td>
-          <td>Orgânico: conteúdo + pitch direto no vídeo curto.</td>
+          <td>Orgânico: conteúdo + pitch direto no vídeo curto (Rota B).</td>
+          <td><a href="../funis/shorts-venda-direta.md">shorts-venda-direta</a></td>
         </tr>
         <tr>
           <td><strong>SaaS: página + mini-VSL + trial</strong></td>
           <td><span class="status s-design">A DESENHAR</span></td>
-          <td>Funil próprio PlaySquad: free → pagante.</td>
+          <td>Funil próprio PlaySquad: free → pagante (Rota A).</td>
+          <td><a href="../funis/saas-playsquad-trial.md">saas-playsquad-trial</a></td>
         </tr>
         <tr>
           <td><strong>Ações na base / recompra</strong></td>
           <td><span class="status s-test">A TESTAR</span></td>
-          <td>E-mail/WhatsApp para quem já é contato.</td>
+          <td>E-mail/WhatsApp para quem já é contato (Rota A).</td>
+          <td><a href="../funis/acoes-base-recompra.md">acoes-base-recompra</a></td>
+        </tr>
+        <tr>
+          <td><strong>Conteúdo + pitch (vídeo longo)</strong></td>
+          <td><span class="status s-design">A DESENHAR</span></td>
+          <td>Orgânico YouTube longo com pitch integrado (Rota B; pode alimentar A).</td>
+          <td><a href="../funis/conteudo-pitch.md">conteudo-pitch</a></td>
         </tr>
       </tbody>
     </table>
@@ -390,9 +440,13 @@
 
     <h3>3 Camadas</h3>
     <div class="layers">
-      <div class="layer ideal"><b>① Ideal</b>8 tipos documentados com ficha completa (estrutura, componentes, métricas de pass/fail).</div>
-      <div class="layer foto"><b>② Foto atual</b>3 rodando, 3 a testar, 2 a desenhar.</div>
-      <div class="layer gaps"><b>③ Gaps</b>Captura, SaaS trial→pago, funis para o orgânico. (Fase 3)</div>
+      <div class="layer ideal"><b>① Ideal</b>9 tipos documentados com ficha completa (estrutura, componentes obrigatórios, esteira plugada, setups exigidos e métricas de pass/fail).</div>
+      <div class="layer foto"><b>② Foto atual</b>As 9 fichas existem. Status: 3 rodam (VSL, Typebot, Shorts), 3 a testar (Webinário, Recuperação WhatsApp, Ações na base), 3 a desenhar (Captura, SaaS trial, Conteúdo+pitch).</div>
+      <div class="layer gaps"><b>③ Gaps</b>Decisões [a confirmar] por ficha: números de métrica pass/fail (dependem do Setup 02); roteiro do Typebot e da live; isca/squeeze da captura; sequência e timing da recuperação; mapa de ascensão da base; onboarding/upgrade do SaaS; ponto de pitch do vídeo longo.</div>
+    </div>
+
+    <div class="docs">
+      <strong>Documentos</strong> — todas as 9 fichas estão linkadas na coluna <em>Ficha</em> do catálogo acima. Estrutura comum: o que é &amp; quando usar · componentes obrigatórios · esteira plugada · setups exigidos · métricas pass/fail · dono &amp; DoD.
     </div>
   </section>
 
@@ -460,9 +514,18 @@
 
     <h3>3 Camadas</h3>
     <div class="layers">
-      <div class="layer ideal"><b>① Ideal</b>Playbook por rota com template de montagem de campanha: é só preencher e rodar.</div>
-      <div class="layer foto"><b>② Foto atual</b>A preencher (Fase 4).</div>
-      <div class="layer gaps"><b>③ Gaps</b>Ações na base; ações no orgânico. (Fase 4)</div>
+      <div class="layer ideal"><b>① Ideal</b>Um playbook por combinação principal (montagem plugável + ativos + setups exigidos + cronograma + métricas): é só preencher e rodar, sem decidir ad hoc.</div>
+      <div class="layer foto"><b>② Foto atual</b>3 playbooks escritos: orgânico Shorts+pitch (cobre o funil que já roda), pago frio VSL/Typebot, e base e-mail/WhatsApp. A campanha de base depende do CRM (Setup 03), ainda 🔴.</div>
+      <div class="layer gaps"><b>③ Gaps</b>Decisões [a confirmar]: donos e cronogramas reais; volume/cadência de Shorts e de disparos na base; budget inicial do pago; metas numéricas (dependem do Setup 02). Faltam playbooks para webinário diário e captura quando esses funis saírem do papel.</div>
+    </div>
+
+    <div class="docs">
+      <strong>Documentos — playbooks de campanha</strong>
+      <ul>
+        <li><a href="../campanhas/campanha-organico-shorts-pitch.md">Orgânico · Shorts + Pitch</a> — Rota B, venda direta, público frio + base <span class="st on">RODA</span></li>
+        <li><a href="../campanhas/campanha-pago-frio-vsl.md">Pago · Tráfego frio (VSL ou Typebot)</a> — Rota B, Meta/Google Ads <span class="st test">A TESTAR</span></li>
+        <li><a href="../campanhas/campanha-base-email-recompra.md">Base · E-mail / WhatsApp (recompra e ascensão)</a> — Rota A, base quente <span class="st test">A TESTAR</span></li>
+      </ul>
     </div>
   </section>
 
@@ -473,12 +536,13 @@
 
     <h3>Produção de ativos de monetização</h3>
     <table>
-      <thead><tr><th>Tipo de ativo</th><th>Formato</th><th>Dono</th></tr></thead>
+      <thead><tr><th>Tipo de ativo</th><th>Formato</th><th>Produz → Aprova</th></tr></thead>
       <tbody>
-        <tr><td><strong>Spot</strong></td><td>Áudio/vídeo curto inserido no conteúdo orgânico</td><td>A definir (Fase 4)</td></tr>
-        <tr><td><strong>Vídeo temático</strong></td><td>Vídeo dedicado com ângulo de venda</td><td>A definir (Fase 4)</td></tr>
-        <tr><td><strong>Conteúdo + pitch</strong></td><td>Conteúdo de valor + CTA direto</td><td>A definir (Fase 4)</td></tr>
-        <tr><td><strong>Criativo pago</strong></td><td>Imagem/vídeo para tráfego pago (Meta/Google)</td><td>A definir (Fase 4)</td></tr>
+        <tr><td><strong>Spot</strong></td><td>Áudio/vídeo curto inserido no conteúdo orgânico</td><td>Editor de Vídeo → Copy Chief</td></tr>
+        <tr><td><strong>Vídeo temático</strong></td><td>Vídeo dedicado com ângulo de venda</td><td>Editor de Vídeo + Copywriter → Copy Chief</td></tr>
+        <tr><td><strong>Conteúdo + pitch</strong></td><td>Conteúdo de valor + CTA direto</td><td>Copywriter + Editor de Vídeo → Copy Chief</td></tr>
+        <tr><td><strong>Impulsionamento</strong></td><td>Boost de conteúdo orgânico que já performou</td><td>Gestor de Tráfego → Copy Chief</td></tr>
+        <tr><td><strong>Criativo pago</strong></td><td>Imagem/vídeo para tráfego pago (Meta/Google)</td><td>Designer + Copywriter → Copy Chief</td></tr>
       </tbody>
     </table>
 
@@ -500,15 +564,25 @@
 
     <h3>WIP / buffer e ciclo de vida do cliente</h3>
     <div class="card">
-      <strong>WIP:</strong> máximo de funis em teste simultâneo a definir (Fase 4) — evita dispersão.<br>
+      <strong>WIP:</strong> máximo de funis em teste simultâneo <em>[a confirmar]</em> com o time — evita dispersão.<br>
       <strong>Ciclo do cliente:</strong> entrada (front-end) → esteira de checkout → nutrição pós-venda → recompra/ascensão de oferta → comunidade/SaaS.
     </div>
 
     <h3>3 Camadas</h3>
     <div class="layers">
-      <div class="layer ideal"><b>① Ideal</b>Cadência semanal consolidada + produção de ativos com dono claro, DoD definido e WIP controlado.</div>
-      <div class="layer foto"><b>② Foto atual</b>A preencher (Fase 4).</div>
-      <div class="layer gaps"><b>③ Gaps</b>Ritual de decisão formal; DoD por tipo de ativo. (Fase 4)</div>
+      <div class="layer ideal"><b>① Ideal</b>Ciclo semanal de decisão (escalar / iterar / matar) + checagem diária do webinário, produção de ativos com produtor ≠ aprovador e DoD definido, tudo espelhado no Monday.</div>
+      <div class="layer foto"><b>② Foto atual</b>O POP do ciclo semanal, a rotina de otimização e a estrutura do Monday (1 workspace, 6 boards + dashboard) estão documentados. A regra produtor ≠ aprovador e o DoD por tipo de entregável estão escritos no Setup 06.</div>
+      <div class="layer gaps"><b>③ Gaps</b>Decisões [a confirmar]: dia/horário fixos do ritual semanal e da checagem diária; onde fica o log diário (planilha ou Monday); limite de WIP; atribuir pessoas a cada papel e configurar os campos Produtor/Aprovador no Monday.</div>
+    </div>
+
+    <div class="docs">
+      <strong>Documentos</strong>
+      <ul>
+        <li><a href="../operacao/pop-ciclo-semanal.md">POP-01 · Ciclo Semanal de Decisão</a> — ritual semanal + checagem diária do webinário <span class="st test">A PRATICAR</span></li>
+        <li><a href="../operacao/rotina-otimizacao.md">Rotina de Otimização</a> — como ler dados e decidir escalar / iterar / matar <span class="st test">A PRATICAR</span></li>
+        <li><a href="../operacao/monday-estrutura.md">Estrutura no Monday</a> — 1 workspace, 6 boards + dashboard espelhando as 8 áreas <span class="st test">A MONTAR</span></li>
+        <li><a href="../operacao/rotina-noturna.md">Rotina Noturna</a> — avança 1 gap por execução a partir do GAPS.md <span class="st on">RODA</span></li>
+      </ul>
     </div>
   </section>
 
@@ -532,7 +606,7 @@
 
     <h3>Critério pass/fail</h3>
     <div class="card">
-      Cada funil tem limites definidos antes de rodar: se ROAS ≥ X em N dias → escala. Se ROAS &lt; Y → pausa e revisa copy/oferta/público. Os valores são preenchidos por funil na Fase 4, com base em benchmarks iniciais do portfólio atual.
+      Regra geral (de <code>pass-fail-por-funil.md</code>): métrica-chave em PASS em ≥ 70% das linhas → <strong>escalar</strong>; 1–2 métricas fora, isoladas → <strong>iterar</strong>; ≥ 3 fora ou CPA/ROAS inviável por 2 semanas → <strong>matar/pausar</strong>; volume abaixo do mínimo → <strong>aguardar amostra</strong>. Os valores numéricos por linha estão como <em>[a confirmar]</em> até o Setup 02 (Tracking) calibrar com dados reais.
     </div>
 
     <h3>Dashboard e relatório</h3>
@@ -547,9 +621,17 @@
 
     <h3>3 Camadas</h3>
     <div class="layers">
-      <div class="layer ideal"><b>① Ideal</b>Critério pass/fail objetivo por funil + dashboard consolidado semanal automatizado.</div>
-      <div class="layer foto"><b>② Foto atual</b>A preencher (Fase 4).</div>
-      <div class="layer gaps"><b>③ Gaps</b>Tracking funcional é pré-requisito (Aba 01). (Fase 4)</div>
+      <div class="layer ideal"><b>① Ideal</b>Critério pass/fail objetivo por funil + dashboard consolidado semanal, alimentando o ritual de decisão (Aba 05).</div>
+      <div class="layer foto"><b>② Foto atual</b>O documento de pass/fail existe: regra geral de decisão + tabela de métricas por funil (CTR, CPC, CVR página, CVR checkout, CPA, ROAS, take rates). As metas numéricas estão em branco — dependem do Setup 02 (Tracking), ainda 🔴.</div>
+      <div class="layer gaps"><b>③ Gaps</b>Tornar o Tracking (Setup 02) funcional é pré-requisito absoluto; só então preencher as metas [a confirmar] por linha e o volume mínimo de conversões antes de decidir; montar o dashboard único por funil.</div>
+    </div>
+
+    <div class="docs">
+      <strong>Documentos</strong>
+      <ul>
+        <li><a href="../dados/pass-fail-por-funil.md">Pass / Fail por Funil</a> — regra de decisão + tabela de métricas por funil <span class="st test">METAS A CALIBRAR</span></li>
+        <li><a href="../dados/historico-metas.md">Histórico de Metas</a> — log de calibração (data, fonte, aprovador)</li>
+      </ul>
     </div>
   </section>
 
@@ -580,9 +662,16 @@
 
     <h3>3 Camadas</h3>
     <div class="layers">
-      <div class="layer ideal"><b>① Ideal</b>Pacote replicável completo: setups + funis + rotas de campanha clonáveis para nova operação em ≤ 2 semanas.</div>
-      <div class="layer foto"><b>② Foto atual</b>Parkeado (Fase 5).</div>
-      <div class="layer gaps"><b>③ Gaps</b>Tudo. (Fase 5)</div>
+      <div class="layer ideal"><b>① Ideal</b>Processo plug-and-play: novo cliente → fork do vault → briefing de adaptação → operação rodando em ≤ 30 dias. Funis validados internamente replicados sem recriar; receita por taxa de gestão + rev-share.</div>
+      <div class="layer foto"><b>② Foto atual</b>Parkeado — o pacote de replicação está documentado (o que se duplica vs. o que se adapta), mas o vault ainda não passou pela validação interna completa e não há cliente externo ativo.</div>
+      <div class="layer gaps"><b>③ Gaps</b>Concluir validação interna (pelo menos VSL e Shorts com dados reais); implementar os Setups 02/03; redigir contrato-modelo (confidencialidade + rev-share); definir precificação; criar checklist de onboarding de cliente externo; produzir deck de prospecção.</div>
+    </div>
+
+    <div class="docs">
+      <strong>Documentos</strong>
+      <ul>
+        <li><a href="../replicacao/darkpixel.md">DarkPixel · Pacote de Replicação</a> — o que se duplica, o que se adapta, onboarding de nova operação <span class="st des">PARKEADO (Fase 5)</span></li>
+      </ul>
     </div>
   </section>
 
