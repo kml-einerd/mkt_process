@@ -26,3 +26,8 @@
 
 ## Critério de Pronto FINAL
 [Quando o procedimento inteiro está "feito".]
+
+## As 3 camadas
+- **Ideal:** [...]
+- **Foto atual:** [estado do POP: roda / a testar / a desenhar]
+- **Gaps:** [...]

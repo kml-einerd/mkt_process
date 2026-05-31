@@ -17,11 +17,15 @@
 ## Cronograma
 | Dia | Ação | Dono |
 |---|---|---|
-| [...] | [...] | [...]
+| [...] | [...] | [...] |
 
 ## Métricas & meta
-| Métrica | Meta |
-|---|---|
+| Métrica | Meta | Ação se abaixo |
+|---|---|---|
+| [conversão / ROAS / receita] | [meta] | [ajustar/encerrar] |
+
+## Dono & Definition of Done
+Quem PRODUZ não conclui; quem APROVA conclui. DoD: [...]
 
 ## As 3 camadas
 - **Ideal:** [...]
