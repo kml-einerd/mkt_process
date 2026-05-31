@@ -81,6 +81,7 @@
   .govrow{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
   .gov{background:#f3ece0;border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:11px;color:#3d382e;font-family:var(--mono)}
   .status-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0}
+  .status-row span:not(.status){font-size:13px}
   /* parkeado badge */
   .parked{background:#2c2719;color:#b5a888;border:2px dashed #5a5340;border-radius:10px;padding:14px 18px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-align:center;margin:18px 0}
   .parked b{color:var(--accent)}
@@ -149,7 +150,7 @@
     <div class="core2">
       <div class="st"><div class="n">3 · FUNIL</div><h4>Biblioteca de Funis</h4><p>Escolhe o tipo certo (captura ou venda) e pluga. VSL, quiz, live, evergreen, trial…</p></div>
       <div class="ar2">→</div>
-      <div class="st"><div class="n">4 · OFERTA</div><h4>Portfólio</h4><p>O que está sendo vendido.<div class="port"><div class="o">Infoproduto</div><div class="o">High-ticket</div><div class="o">Assinatura</div><div class="o">SaaS</div></div></p></div>
+      <div class="st"><div class="n">4 · OFERTA</div><h4>Portfólio</h4><p>O que está sendo vendido.</p><div class="port"><div class="o">Infoproduto</div><div class="o">High-ticket</div><div class="o">Assinatura</div><div class="o">SaaS</div></div></div>
       <div class="ar2">→</div>
       <div class="st"><div class="n">5 · VENDA</div><h4>Conversão</h4><p>Checkout, recuperação, follow-up. Fechar a venda.</p></div>
       <div class="ar2">→</div>
@@ -382,9 +383,9 @@
 
     <h3>Legenda de status</h3>
     <div class="status-row">
-      <span class="status s-on">RODA</span><span style="font-size:13px">Em produção, validado</span>
-      <span class="status s-test">A TESTAR</span><span style="font-size:13px">Desenhado, aguarda teste real</span>
-      <span class="status s-design">A DESENHAR</span><span style="font-size:13px">Identificado, não documentado</span>
+      <span class="status s-on">RODA</span><span>Em produção, validado</span>
+      <span class="status s-test">A TESTAR</span><span>Desenhado, aguarda teste real</span>
+      <span class="status s-design">A DESENHAR</span><span>Identificado, não documentado</span>
     </div>
 
     <h3>3 Camadas</h3>
@@ -468,7 +469,7 @@
   <!-- TAB 05 · Operação & Cadência -->
   <section class="tab-panel" id="t05">
     <h2 class="sec">05 · Operação &amp; Cadência</h2>
-    <p class="lead">Como roda no dia a dia.</p>
+    <p class="lead">O que acontece toda semana para a operação rodar: produção de ativos de monetização, rituais de decisão e o ciclo de vida do cliente.</p>
 
     <h3>Produção de ativos de monetização</h3>
     <table>
