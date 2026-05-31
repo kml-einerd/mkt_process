@@ -8,7 +8,7 @@ import sys
 import time
 import urllib.request
 
-AUTH = "pk_55083676_Y6H71CF45KBOKMW6JJ1UB7AJO8UNCTX4"
+AUTH = os.environ["CLICKUP_API_KEY"]
 BASE = "https://api.clickup.com/api/v2"
 OUT = "/home/agdis/clickup-export"
 
