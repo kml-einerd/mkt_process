@@ -6,8 +6,11 @@
 
 ## O que cada execução faz
 1. Lê `petaxxon/GAPS.md`.
-2. Escolhe o gap de **maior prioridade** ainda aberto (🔴/🟡) **cujas dependências já estão atendidas**
-   (regra dura: **Tracking (Setup 02) e CRM (Setup 03) vêm antes** dos funis de base/recuperação/captura).
+2. Escolhe um **gap elegível = item 🔴 SEM documento criado** ainda, de maior prioridade, **cujas
+   dependências já estão atendidas** (regra dura: **Tracking (Setup 02) e CRM (Setup 03) vêm antes**
+   dos funis de base/recuperação/captura). **Itens 🟡/🟢/⏸️ NÃO são elegíveis** — o que falta neles é
+   input do time (`[a confirmar]`) ou implementação, não desenho. Se não houver 🔴 sem doc, **encerre
+   sem fazer nada** (hoje o desenho está completo — ver banner no topo do GAPS.md).
 3. Cria/preenche o documento correspondente (lista "Documentos a produzir" no `GAPS.md`) usando o
    template adequado de `petaxxon/_templates/`.
 4. Atualiza o Status do item no `GAPS.md` (🔴→🟡 ou 🟢).

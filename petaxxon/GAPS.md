@@ -4,7 +4,14 @@
 > Sai das camadas "Foto atual / Gaps" das 8 abas + dos gaps nomeados pelo time. É o insumo que a
 > **rotina noturna** consome (1 gap por execução). Atualize o Status conforme avança.
 
-**Status:** 🔴 a desenhar · 🟡 a testar · 🟢 documentado/rodando
+**Status:** 🔴 a desenhar · 🟡 a testar · 🟢 documentado/rodando · ⏸️ parkeado
+
+> ✅ **DESENHO COMPLETO (2026-05-31).** Todos os gaps já têm documento criado (ficha/checklist/playbook).
+> Não há mais 🔴 "a desenhar". O que resta nos itens 🟡 é **input do time** (`[a confirmar]`: ferramentas,
+> números, donos, roteiros) e **implementação** — isso NÃO é trabalho da rotina noturna.
+>
+> **Regra de parada da rotina noturna:** só é "gap elegível" um item 🔴 **sem documento criado**. Como não
+> há nenhum, a rotina deve **encerrar sem fazer nada**. Ela só volta a agir se for adicionado um novo gap 🔴.
 
 ---
 
@@ -27,16 +34,16 @@
 | 8 | **Funil orgânico Shorts → venda direta (documentar)** — pitch, CTA, página, métricas | Aba 03 / Fase 3 | 🟢 | Ficha em `funis/shorts-venda-direta.md` (já roda). Falta só medir atribuição e padronizar CTA [a confirmar] |
 | 9 | **Funil orgânico conteúdo + pitch (vídeo longo)** — ângulo, estrutura, CTA, destino | Aba 03+04 / Fase 3-4 | 🟡 | Ficha em `funis/conteudo-pitch.md`. Falta: formato/ponto do pitch e CTA padrão [a confirmar] |
 | 10 | **Recuperação WhatsApp** — carrinho abandonado, sequência, oferta, timing | Aba 03 / Fase 3 | 🟡 | Ficha em `funis/recuperacao-whatsapp.md`. Falta: gatilho de abandono, sequência e timing [a confirmar] |
-| 11 | **Rotas de campanha — playbooks preenchidos** — fichas p/ combinações principais (orgânico/base/quente; pago/frio/B; base/e-mail/upsell) | Aba 04 / Fase 4 | 🔴 | Estrutura existe; falta o playbook pronto p/ não decidir ad hoc |
-| 12 | **Operação & Cadência — donos + ritual semanal** — dono por tipo de ativo + pauta/critério/output do review | Aba 05 / Fase 4 | 🔴 | Cadência sem dono não se sustenta; é o que separa operação de projeto |
-| 13 | **Dados & Decisão — critérios pass/fail numéricos por funil** — ROAS mín., CVR, CPA por produto | Aba 06 / Fase 4 | 🔴 | Sem números, o review vira reunião de opiniões |
+| 11 | **Rotas de campanha — playbooks preenchidos** — fichas p/ combinações principais (orgânico/base/quente; pago/frio/B; base/e-mail/upsell) | Aba 04 / Fase 4 | 🟡 | 3 playbooks criados em `campanhas/`. Falta: playbooks de webinário e captura quando os funis saírem do papel; metas [a confirmar] |
+| 12 | **Operação & Cadência — donos + ritual semanal** — dono por tipo de ativo + pauta/critério/output do review | Aba 05 / Fase 4 | 🟡 | `operacao/pop-ciclo-semanal.md` + `rotina-otimizacao.md` criados. Falta: dia/horário fixos e donos reais [a confirmar] |
+| 13 | **Dados & Decisão — critérios pass/fail numéricos por funil** — ROAS mín., CVR, CPA por produto | Aba 06 / Fase 4 | 🟡 | `dados/pass-fail-por-funil.md` (9 funis) + `historico-metas.md` criados. Falta: os números (dependem do Setup 02 Tracking) [a confirmar] |
 
 ## Prioridade BAIXA / parkeado
 
 | # | Gap | Aba / Fase | Status | Por que |
 |---|-----|-----------|--------|---------|
-| 14 | **Setups restantes (01 Infra, 04 Nomenclatura, 05 Ativos, 06 Papéis&DoD)** | Aba 01 / Fase 2 | 🔴 | Importantes, mas menos bloqueantes que CRM/Tracking |
-| 15 | **Replicação / DarkPixel** — pacote clonável (setups+funis+campanhas) p/ outras operações/influencers | Aba 07 / Fase 5 | 🔴 | Parkeado por decisão de escopo |
+| 14 | **Setups restantes (01 Infra, 04 Nomenclatura, 05 Ativos, 06 Papéis&DoD)** | Aba 01 / Fase 2 | 🟡 | Checklists criados em `setups/`. Falta: implementar na prática (ferramentas/donos) [a confirmar] |
+| 15 | **Replicação / DarkPixel** — pacote clonável (setups+funis+campanhas) p/ outras operações/influencers | Aba 07 / Fase 5 | ⏸️ | Documento `replicacao/darkpixel.md` criado (neutro). Parkeado por decisão de escopo até Fases 1–4 validarem |
 
 ---
 
