@@ -16,7 +16,7 @@
 | 2 | **CRM & Listas (Setup 03)** — tags por produto/temperatura/canal, automações, segmentos WhatsApp×e-mail | Aba 01 / Fase 2 | 🟡 | Checklist criado em `setups/setup-03-crm-listas.md`. Falta: definir ferramenta, mapa de tags e construir/testar as automações [a confirmar] |
 | 3 | **Tracking & Dados (Setup 02)** — UTMs padrão, pixel Meta+Google, eventos de conversão, atribuição de checkout | Aba 01+06 / Fase 2 | 🟡 | Checklist criado em `setups/setup-02-tracking-dados.md`. Falta: padronizar UTM, instalar/validar pixels+eventos, integrar Purchase, montar dashboard [a confirmar] |
 | 4 | **Funil SaaS trial→pagante (PlaySquad)** — página + mini-VSL + onboarding trial + ativação + upgrade | Aba 03 / Fase 3 | 🟡 | Ficha criada em `funis/saas-playsquad-trial.md`. Falta: definir planos/checkout, onboarding, gatilhos de upgrade e medição free→pago [a confirmar] |
-| 5 | **Funil de captura (lead magnet → webinário/vendas)** — squeeze, isca, nutrição até oferta | Aba 03 / Fase 3 | 🔴 | Sem Rota A não há lista própria; receita fica refém de tráfego direto |
+| 5 | **Funil de captura (lead magnet → webinário/vendas)** — squeeze, isca, nutrição até oferta | Aba 03 / Fase 3 | 🟡 | Ficha criada em `funis/captura-lead-magnet.md`. Falta: definir isca/tema, squeeze, sequência de nutrição e destino (webinário/vendas) [a confirmar] |
 | 6 | **Funil de webinário (Mega Combo)** — convite, sequência pré, oferta ao vivo, follow-up | Aba 03 / Fase 3 | 🟡 | Única rota documentada p/ vender FY + YouTube Dark juntos (ticket maior) |
 | 7 | **Ações na base / recompra** — segmentação por produto comprado + sequência e-mail/WhatsApp de recompra e ascensão | Aba 03+04 / Fase 3-4 | 🟡 | A base é o ativo mais barato de converter; não monetizar é custo de oportunidade direto |
 
