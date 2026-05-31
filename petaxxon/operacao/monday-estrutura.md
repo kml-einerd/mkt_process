@@ -96,7 +96,77 @@ progresso dos setups (%) · gaps abertos por prioridade. É a tela do ritual sem
 - **Nomenclatura de item** segue o padrão de Setup 04 (Nomenclatura) — definir lá e reusar aqui.
 - **Toda automação** (mudar status → notificar dono/aprovador) documentada em Setup 03 (CRM/Automação) e no POP do ciclo semanal.
 
+---
+
+## 7. Board: Rotina de Otimização
+
+> Registra as decisões diárias e semanais de escalar / iterar / matar por funil.
+> Alimentado no ciclo diário (webinário e tráfego) e no ritual semanal (POP-01).
+> Referência de critérios: `dados/pass-fail-por-funil.md` e `petaxxon/operacao/rotina-otimizacao.md`.
+
+### Cadência
+- **Diária:** Gestor de Tráfego + Dono do Funil 3 (webinário) registram métricas do dia anterior e decisões imediatas.
+- **Semanal:** Gestor de Operações fecha o ciclo com decisões por funil após o ritual.
+
+### Colunas do board
+| Coluna | Tipo | Valores / Descrição |
+|---|---|---|
+| Funil | Status | VSL · Typebot · Webinário · Captura · Recuperação · Shorts · PlaySquad · Base/Recompra |
+| Data da avaliação | Data | |
+| Métrica avaliada | Texto | ex.: Taxa de presença · CPA · CTR |
+| Valor real | Número/Texto | valor medido no período |
+| Meta (PASS) | Texto | conforme `dados/pass-fail-por-funil.md` |
+| Sinal | Status | ✅ PASS · ❌ FAIL · ⏳ Aguardar amostra |
+| Decisão | Status | Escalar · Iterar · Matar · Aguardar |
+| Ação específica | Texto | ex.: "Aumentar budget 20 %" · "Testar novo criativo" |
+| Dono da ação | Pessoa | quem executa |
+| Prazo | Data | |
+| Status da ação | Status | A fazer · Em andamento · Concluído |
+
+### Regra de uso
+1. Nenhuma decisão de escalar/matar é tomada sem um item neste board.
+2. O Gestor de Operações é o único que marca "Concluído" nas decisões (não o executor).
+3. Itens com sinal "Aguardar amostra" não geram ação — ficam abertos até o volume mínimo ser atingido.
+
+---
+
+## 8. Checklist: Setup de Funil (subir um funil novo)
+
+> Sequência para ativar um funil novo na operação, garantindo que todos os setups estão conectados
+> e a esteira está configurada corretamente.
+
+### Como usar
+Criar um item neste checklist para cada funil novo. Marcar cada passo conforme concluído.
+O funil só vai ao ar após todos os itens marcados.
+
+### Passos
+| # | Passo | Setup de referência | Responsável | DoD do passo |
+|---|---|---|---|---|
+| 1 | Definir o produto/oferta e posição na esteira (front-end, upsell, bump) | Setup 01 · Portfólio & Esteira | [a confirmar] | Produto cadastrado no checkout; posição na esteira documentada |
+| 2 | Criar e verificar domínio/subdomínio do funil | Setup 01 · Infra & Contas | Infra | SSL ativo; DNS propagado; redirecionamentos testados |
+| 3 | Configurar 5 order bumps e Upsell 1 PlaySquad no checkout | Setup 01 | Infra + CRM | Bumps e upsell ativos; testados com compra de teste |
+| 4 | Instalar tracking: pixel, UTMs e evento Purchase | Setup 02 · Tracking & Dados | Infra + Gestor de Tráfego | Compra de teste dispara PageView + InitiateCheckout + Purchase com valor correto |
+| 5 | Configurar CRM: lista, tags, automações de confirmação e recuperação | Setup 03 · CRM & Listas | CRM | Fluxo testado; opt-out funcionando; lead de teste percorre o fluxo completo |
+| 6 | Nomear todos os ativos conforme Setup 04 (Nomenclatura) | Setup 04 · Nomenclatura | Gestor de Operações | Nenhum ativo com nome fora do padrão |
+| 7 | Subir os ativos na Biblioteca (Setup 05) | Setup 05 · Biblioteca de Ativos | [a confirmar] | Ativos indexados e acessíveis pelo time |
+| 8 | Definir Produtor e Aprovador de cada ativo do funil | Setup 06 · Papéis & DoD | Gestor de Operações | Toda tarefa no Monday com Produtor ≠ Aprovador |
+| 9 | Preencher a tabela de metas do funil em `dados/pass-fail-por-funil.md` | Rotina de Otimização | Gestor de Operações | Metas definidas e aprovadas; `[a confirmar]` substituído por número real |
+| 10 | Criar o item do funil no board "Funis" do Monday e linkar a ficha | — | Gestor de Operações | Item criado com Tipo, Produto, Dono/Aprovador e Ficha preenchidos |
+| 11 | Validar ponta a ponta: percurso completo do funil com compra de teste | Setup 01 + 02 + 03 | Gestor de Operações (aprova) + Infra (executa) | Compra de teste concluída; todos os eventos disparados; funil no ar com status 🟡 a testar |
+
+### Colunas do checklist no Monday
+| Coluna | Tipo |
+|---|---|
+| Funil | Texto |
+| Passo (1–11) | Status / Número |
+| Setup de referência | Texto |
+| Responsável | Pessoa |
+| Status | Status (A fazer · Em andamento · Concluído) |
+| Observação | Texto |
+
+---
+
 ## As 3 camadas
-- **Ideal:** 1 workspace, 6 boards conectados + dashboard; item ↔ ficha sempre linkados; labels padronizados.
+- **Ideal:** 1 workspace, 6 boards conectados + dashboard + board de Rotina de Otimização + checklist de Setup de Funil; item ↔ ficha sempre linkados; labels padronizados.
 - **Foto atual:** a confirmar com o time qual ferramenta de gestão está em uso hoje e o que migra. `[a confirmar]`
 - **Gaps:** criar os boards e popular a partir de `GAPS.md`; definir automações; treinar o time. (Fase 2-4)
