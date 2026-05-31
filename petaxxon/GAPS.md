@@ -13,7 +13,7 @@
 | # | Gap | Aba / Fase | Status | Por que é alta |
 |---|-----|-----------|--------|----------------|
 | 1 | **Fatia vertical Fórmula YouTube 2026 (VSL)** — ficha de funil completa + 3 setups base + rota + métricas de referência | Todas / Fase 1 | 🟡 | Ficha criada em `funis/vsl-tradicional.md`. Faltam: Setup 02 (Tracking) + Setup 03 (CRM) preenchidos, playbook de rota, e números de métrica [a confirmar] |
-| 2 | **CRM & Listas (Setup 03)** — tags por produto/temperatura/canal, automações, segmentos WhatsApp×e-mail | Aba 01 / Fase 2 | 🔴 | Pré-requisito em cascata p/ captura, webinário, base e recuperação |
+| 2 | **CRM & Listas (Setup 03)** — tags por produto/temperatura/canal, automações, segmentos WhatsApp×e-mail | Aba 01 / Fase 2 | 🟡 | Checklist criado em `setups/setup-03-crm-listas.md`. Falta: definir ferramenta, mapa de tags e construir/testar as automações [a confirmar] |
 | 3 | **Tracking & Dados (Setup 02)** — UTMs padrão, pixel Meta+Google, eventos de conversão, atribuição de checkout | Aba 01+06 / Fase 2 | 🔴 | Sem dado confiável não há decisão pass/fail; trava a Aba 06 inteira |
 | 4 | **Funil SaaS trial→pagante (PlaySquad)** — página + mini-VSL + onboarding trial + ativação + upgrade | Aba 03 / Fase 3 | 🔴 | PlaySquad é Upsell 1 universal; se o trial não converte, o ativo mais recorrente está quebrado |
 | 5 | **Funil de captura (lead magnet → webinário/vendas)** — squeeze, isca, nutrição até oferta | Aba 03 / Fase 3 | 🔴 | Sem Rota A não há lista própria; receita fica refém de tráfego direto |
