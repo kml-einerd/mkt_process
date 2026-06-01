@@ -9,11 +9,40 @@ O Monday é o **espelho operacional** do `mapa/index.html`. O HTML é o mapa (o 
 o Monday é o **trabalho rodando** (o "quem/quando/em que status"). Um item no Monday sempre aponta
 para sua ficha em `petaxxon/funis|setups|campanhas/`.
 
+## Modelo decidido (canônico — lê isto primeiro)
+**Eixo organizador:** quadros por **função**, não por funil. O **funil é etiqueta + visão** dentro dos
+quadros (no Monday: coluna "Funil" + visão agrupada/filtrada) — **não** um quadro por funil. Exceção: uma
+operação **diária e pesada** (o webinário) pode ganhar quadro próprio.
+
+**Ciclo de vida do funil — 2 fases (a regra que organiza o trabalho):**
+- **① SETUP — "checklist zero de start":** subir o funil (páginas, VSL, checkout+esteira, tracking, CRM,
+  nomenclatura). É **projeto finito** → tem status até 100% e **arquiva** quando o funil entra no ar.
+- **② OTIMIZAÇÃO — "o resto":** contínua = **remessas** (alimentar com criativos) + **ajustes de
+  performance** (escalar/iterar/matar). É **operação** → roda pra sempre, nunca "conclui".
+- *Por que separar:* misturar o checklist finito de start com a otimização infinita na mesma lista é o que
+  faz tarefa se perder. Separados, nada se perde.
+
+**Quadros finais (5 + 1 opcional)** — detalhe de colunas mais abaixo:
+1. **Portfólio & Produtos** — 1 item por produto (estágio, esteira, preço). *[novo]*
+2. **Funis & Campanhas** — 1 item por funil/campanha; coluna **Fase** (Setup/Otimização); o **checklist de
+   Setup** vive aqui como subitens; link p/ ficha. *[novo]*
+3. **Produção de Ativos** — **fila ÚNICA** de remessas (pipeline Copy→…→Subir) com coluna **Funil** +
+   visão agrupada por funil. *[reusa o grupo REMESSAS atual, promovido a quadro]*
+4. **Otimização** — log de performance (sinal→escalar/iterar/matar), coluna Funil; cadência diária/semanal.
+   *(é o board da seção 7 abaixo)* *[novo]*
+5. **Setups & Backlog** — 6 setups + fila de gaps (recebe o grupo CENTRAL atual). *[novo]*
+6. **(opcional) Webinar diário** — quadro próprio só se a operação diária justificar.
+
+**Dashboard/Comando:** visão de **status** (o que roda/parou/em produção — não metas financeiras) puxando dos 5 quadros.
+
+> As definições de coluna abaixo ("Os boards") seguem válidas; este resumo é o que manda em caso de dúvida.
+> Prompts prontos para a IA do Monday criar tudo isto: ver **`monday-prompts.md`**.
+
 ## Workspace
 **`Petaxxon · Marketing & Monetização`** — um workspace. (Ao replicar p/ outra operação do grupo via
 DarkPixel: duplicar o workspace inteiro — é o pacote clonável.)
 
-## Os 6 boards
+## Os boards (detalhe de colunas)
 
 ### 1. Portfólio & Esteira
 Item = produto. Reflete a Aba 02.

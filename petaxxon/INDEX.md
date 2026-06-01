@@ -107,7 +107,8 @@
 |---|---|---|
 | [operacao/pop-ciclo-semanal.md](./operacao/pop-ciclo-semanal.md) | 🟡 | POP-01: ritual semanal de decisão + checagem diária do webinário |
 | [operacao/rotina-otimizacao.md](./operacao/rotina-otimizacao.md) | 🟡 | Manual de como ler dados e decidir escalar / iterar / matar |
-| [operacao/monday-estrutura.md](./operacao/monday-estrutura.md) | 🟡 | Modelo de Monday: 1 workspace, 6 boards + dashboard espelhando o vault |
+| [operacao/monday-estrutura.md](./operacao/monday-estrutura.md) | 🟡 | Modelo de Monday: quadros por função, funil como visão, ciclo Setup/Otimização; Foto atual + migração |
+| [operacao/monday-prompts.md](./operacao/monday-prompts.md) | 🟡 | Prompts prontos p/ a IA do Monday criar os 5 quadros + migração manual |
 | [operacao/rotina-noturna.md](./operacao/rotina-noturna.md) | 🟢 | Cron que avança 1 gap por execução (00h–06h) a partir do GAPS.md |
 
 ---
@@ -140,4 +141,4 @@
 
 ---
 
-*Gerado a partir da estrutura real do vault (`find petaxxon -type f`) — todos os 33 arquivos existentes estão listados.*
+*Gerado a partir da estrutura real do vault (`find petaxxon -type f`) — todos os 34 arquivos existentes estão listados.*
