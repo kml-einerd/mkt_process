@@ -5,9 +5,12 @@
   "type": "module",
   "description": "Central de Operações Petaxxon — mapa visual de processos (React Flow)",
   "scripts": {
+    "predev": "node scripts/copy-docs.mjs",
     "dev": "vite",
+    "prebuild": "node scripts/copy-docs.mjs",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "validate": "node scripts/validate.mjs"
   },
   "dependencies": {
     "@xyflow/react": "^12.3.6",

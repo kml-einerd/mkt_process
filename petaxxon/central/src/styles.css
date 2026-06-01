@@ -28,8 +28,23 @@ body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-heigh
 .sb-tag{font-family:var(--mono);font-size:8.5px;letter-spacing:.04em;text-transform:uppercase;color:#7d735a;border:1px solid #3a3322;border-radius:10px;padding:2px 6px;white-space:nowrap}
 
 /* ── Canvas ── */
-.canvas{flex:1;position:relative;background:var(--paper)}
+.canvas{flex:1;display:flex;flex-direction:column;position:relative;background:var(--paper);overflow:hidden}
+.canvas-flow{flex:1;position:relative;min-height:0}
 .react-flow__attribution{display:none}
+
+/* ── Barra de cabeçalho (breadcrumb + navegação) ── */
+.topbar{flex:0 0 auto;display:flex;align-items:center;gap:16px;padding:10px 16px;
+  background:var(--card);border-bottom:1px solid var(--line);box-shadow:0 1px 2px rgba(22,20,15,.05);z-index:5}
+.topbar-nav{display:flex;gap:8px;flex:0 0 auto}
+.tb-btn{font-family:var(--sans);font-size:12.5px;font-weight:600;color:#fff;background:var(--accent);
+  border:none;border-radius:7px;padding:7px 12px;cursor:pointer;transition:opacity .12s,background .12s}
+.tb-btn:hover:not(:disabled){opacity:.88}
+.tb-btn.ghost{background:transparent;color:var(--blue);border:1px solid var(--line)}
+.tb-btn.ghost:hover:not(:disabled){background:var(--paper)}
+.tb-btn:disabled{opacity:.35;cursor:default}
+.topbar-crumb{display:flex;flex-direction:column;min-width:0;flex:1}
+.tb-cat{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);line-height:1.4}
+.tb-title{font-family:var(--serif);font-size:17px;color:var(--ink);line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 /* ── Nó de processo ── */
 .pnode{width:180px;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--mute);

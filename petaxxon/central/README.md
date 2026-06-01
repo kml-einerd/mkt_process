@@ -24,6 +24,10 @@ npm run build    # gera dist/ estático (abre por file:// também)
 - `src/App.jsx` — converte os dados em nós/arestas do React Flow.
 
 ## Status
-**Modo A · Agência de Funil completo** (9 diagramas): macro + Onboard · Escrita de VSL · Produção & Gravação ·
-Edição · Infra · Auxiliares · Régua — todos com checklist, responsável e POP ligado. **+ Produção de Ativos** (Modo B).
-Os demais (Modo B e Compartilhado) aparecem na barra lateral como "a desenhar" — é o inventário a preencher.
+**Completo — 30 processos desenhados** nos 3 grupos (validado: 228 nós, sem erros):
+- **Modo A · Agência de Funil** (8): macro + Onboard · Escrita de VSL · Produção & Gravação · Edição · Infra · Auxiliares · Régua.
+- **Modo B · Produtos Próprios** (17): Produção de Ativos · Portfólio & Esteira · Setup de funil · hub de funis + os 9 funis · 3 campanhas · Webinar.
+- **Compartilhado** (5): Setups 01–06 · Otimização · Ciclo semanal · Backlog/Gaps · Peer review/QA.
+
+Navegação: breadcrumb + **Voltar** + **Início**; nós macro com `goto`. Links de documento resolvem via
+`vault/` (o `predev`/`prebuild` copia os docs do vault para `public/vault/`). `npm run validate` checa os invariantes.

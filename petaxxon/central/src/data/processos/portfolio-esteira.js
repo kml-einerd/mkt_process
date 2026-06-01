@@ -1,0 +1,150 @@
+// MODO B · Portfólio & Esteira — fluxo padrão de checkout do grupo Petaxxon.
+// Raia única "Esteira"; nós = etapas da esteira (front-end → bumps → upsell → continuação).
+
+const processo = {
+  id: 'portfolio-esteira',
+  titulo: 'Portfólio & Esteira',
+  categoria: 'Modo B · Produtos Próprios',
+  fase: 'Esteira',
+  descricao:
+    'Esteira-ALVO de checkout do grupo: muda o front-end, a mecânica permanece — 5 order bumps → PlaySquad (Upsell 1 universal) → continuação que varia por front-end. ' +
+    'Ressalva: a esteira REAL hoje (export Monday 2026-05-31) é VVSA R$14 → Fórmula R$397 → Cyber R$197, e o upsell atual do Fórmula é "+1 Fórmula R$97 / Cyber R$197"; o PlaySquad entra como Upsell 1 universal APÓS o lançamento. Ver GAPS.md e operacao/monday-estrutura.md.',
+  docs: [
+    { label: 'Funil SaaS PlaySquad (trial→pagante)', href: '../funis/saas-playsquad-trial.md' },
+    { label: 'Funil VSL Tradicional (Fórmula YouTube)', href: '../funis/vsl-tradicional.md' },
+  ],
+  lanes: [
+    { id: 'esteira', label: 'Esteira · Portfólio de Produtos', color: '#2a5a86' },
+  ],
+  nodes: [
+    {
+      id: 'e1',
+      lane: 'esteira',
+      x: 40,
+      label: 'Front-end (entrada)',
+      responsavel: 'Gestor de Operações',
+      status: 'A fazer',
+      checklist: [
+        'Definir qual produto está no front-end (VVSA, Fórmula YouTube 2026 ou YouTube Dark)',
+        'Verificar página de vendas / funil de entrada no ar',
+        'Confirmar tracking (UTM + pixel + evento de conversão) ativo — Setup 02',
+        'Confirmar nomenclatura do funil no padrão — Setup 04',
+      ],
+      pop: { label: 'Funil VSL Tradicional', href: '../funis/vsl-tradicional.md' },
+    },
+    {
+      id: 'e2',
+      lane: 'esteira',
+      x: 320,
+      label: 'Order Bump 1',
+      responsavel: 'Gestor de Operações',
+      status: 'A fazer',
+      checklist: [
+        'Definir produto/oferta do bump 1 [a confirmar]',
+        'Configurar bump no checkout',
+        'Validar take rate (evento de conversão)',
+      ],
+    },
+    {
+      id: 'e3',
+      lane: 'esteira',
+      x: 600,
+      label: 'Order Bumps 2–5',
+      responsavel: 'Gestor de Operações',
+      status: 'A fazer',
+      checklist: [
+        'Definir produtos/ofertas dos bumps 2, 3, 4 e 5 [a confirmar]',
+        'Regra: sempre 5 bumps independente do front-end',
+        'FY hoje com 2 bumps — meta chegar a 5 [a confirmar quais bumps]',
+        'Configurar e testar cada bump no checkout',
+        'Monitorar take rate individual por bump',
+      ],
+    },
+    {
+      id: 'e4',
+      lane: 'esteira',
+      x: 880,
+      label: 'Upsell 1 · PlaySquad',
+      responsavel: 'Gestor de Operações',
+      status: 'A fazer',
+      checklist: [
+        'ALVO: PlaySquad é o Upsell 1 universal em TODOS os funis — não trocar',
+        'Estado atual (a confirmar): upsell do Fórmula hoje é "+1 Fórmula R$97 / Cyber R$197"; PlaySquad vira U1 universal APÓS o lançamento (ver GAPS.md / monday-estrutura.md)',
+        'Página de upsell com mini-VSL do PlaySquad no ar',
+        'Trial ativo — hoje capta apenas e-mail; avaliar capturar mais dados [a confirmar]',
+        'Sequência trial→pagante configurada no CRM — depende do Setup 03',
+        'Tracking de conversão free→pago ativo — depende do Setup 02',
+      ],
+      pop: { label: 'Funil SaaS PlaySquad (trial→pagante)', href: '../funis/saas-playsquad-trial.md' },
+    },
+    {
+      id: 'e5',
+      lane: 'esteira',
+      x: 1160,
+      label: 'Continuação · VVSA → Fórmula → Cyber',
+      responsavel: 'Gestor de Operações',
+      status: 'A fazer',
+      checklist: [
+        'Continuação quando front-end é VVSA: oferta Fórmula YouTube 2026',
+        'Esteira VVSA real (hoje): VVSA R$14 → Fórmula R$397 → Cyber/Cyberclass R$197 (ver monday-estrutura.md)',
+        'Confirmar onde Cyber/Cyberclass entra na esteira-alvo [a confirmar]',
+        'Página de oferta da continuação no ar',
+        'Confirmar checkout (Hotmart) e tracking da continuação',
+      ],
+    },
+    {
+      id: 'e6',
+      lane: 'esteira',
+      x: 1440,
+      label: 'Continuação · FY → YouTube Dark',
+      responsavel: 'Gestor de Operações',
+      status: 'A fazer',
+      checklist: [
+        'Continuação quando front-end é Fórmula YouTube 2026: oferta YouTube Dark',
+        'YouTube Dark ainda a integrar na continuação [a confirmar]',
+        'Página de oferta da continuação no ar',
+        'Confirmar checkout e tracking da continuação',
+      ],
+    },
+    {
+      id: 'e7',
+      lane: 'esteira',
+      x: 1720,
+      label: 'Continuação · YT Dark → Fórmula YouTube',
+      responsavel: 'Gestor de Operações',
+      status: 'A fazer',
+      checklist: [
+        'Continuação quando front-end é YouTube Dark: oferta Fórmula YouTube 2026',
+        'Página de oferta da continuação no ar',
+        'Confirmar checkout e tracking da continuação',
+      ],
+    },
+    {
+      id: 'e8',
+      lane: 'esteira',
+      x: 2000,
+      label: 'Pós-venda · Recompra & Ascensão',
+      responsavel: 'CRM / Operação',
+      status: 'A fazer',
+      checklist: [
+        'Tag de comprador por produto aplicada no CRM — Setup 03',
+        'Automação pós-venda ativa (e-mail/WhatsApp)',
+        'Ciclo do cliente: nutrição → recompra → ascensão de oferta → comunidade/SaaS',
+        'Review mensal de esteira (checar bumps, upsells e sequências)',
+      ],
+    },
+  ],
+  edges: [
+    { source: 'e1', target: 'e2' },
+    { source: 'e2', target: 'e3' },
+    { source: 'e3', target: 'e4' },
+    { source: 'e4', target: 'e5', label: 'front-end: VVSA' },
+    { source: 'e4', target: 'e6', label: 'front-end: FY 2026' },
+    { source: 'e4', target: 'e7', label: 'front-end: YT Dark' },
+    { source: 'e5', target: 'e8' },
+    { source: 'e6', target: 'e8' },
+    { source: 'e7', target: 'e8' },
+  ],
+}
+
+export default processo

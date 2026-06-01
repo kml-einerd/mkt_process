@@ -1,4 +1,5 @@
 import { STATUS } from '../data/shared.js'
+import { resolveDocHref } from '../data/docs.js'
 
 // Painel lateral: detalhe do Entregável clicado (com Checklist e POP), ou a visão geral do processo.
 export default function DetailPanel({ processo, node, onClose }) {
@@ -25,7 +26,7 @@ export default function DetailPanel({ processo, node, onClose }) {
           </>
         )}
         <div className="detail-links">
-          {node.pop && <a className="btn" href={node.pop.href} target="_blank" rel="noreferrer">🔗 {node.pop.label || 'POP'}</a>}
+          {node.pop && <a className="btn" href={resolveDocHref(node.pop.href)} target="_blank" rel="noreferrer">🔗 {node.pop.label || 'POP'}</a>}
           <a className="btn ghost" href="#" onClick={(e) => e.preventDefault()}>🔗 Item no Monday</a>
         </div>
       </aside>
@@ -42,7 +43,7 @@ export default function DetailPanel({ processo, node, onClose }) {
           <div className="detail-kick2">Documentos / POPs</div>
           <div className="detail-links col">
             {processo.docs.map((d) => (
-              <a key={d.href} className="btn ghost" href={d.href} target="_blank" rel="noreferrer">🔗 {d.label}</a>
+              <a key={d.href} className="btn ghost" href={resolveDocHref(d.href)} target="_blank" rel="noreferrer">🔗 {d.label}</a>
             ))}
           </div>
         </>
