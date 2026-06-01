@@ -24,5 +24,6 @@ npm run build    # gera dist/ estático (abre por file:// também)
 - `src/App.jsx` — converte os dados em nós/arestas do React Flow.
 
 ## Status
-Protótipo: **1 processo desenhado** (Produção de Ativos, com raias e nós clicáveis).
-Os demais aparecem na barra lateral como "a desenhar" — é o inventário a preencher.
+**Modo A · Agência de Funil completo** (9 diagramas): macro + Onboard · Escrita de VSL · Produção & Gravação ·
+Edição · Infra · Auxiliares · Régua — todos com checklist, responsável e POP ligado. **+ Produção de Ativos** (Modo B).
+Os demais (Modo B e Compartilhado) aparecem na barra lateral como "a desenhar" — é o inventário a preencher.

@@ -41,8 +41,14 @@ body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-heigh
 .pnode-label{font-size:13px;font-weight:600;color:var(--ink);line-height:1.25}
 .pnode-meta{display:flex;align-items:center;gap:7px;margin-top:8px;flex-wrap:wrap}
 .pnode .dono{font-size:11px;color:#6f6650}
-.pnode-links{display:flex;gap:9px;margin-top:8px}
+.pnode-links{display:flex;gap:9px;margin-top:8px;flex-wrap:wrap}
 .pnode .lk{font-family:var(--mono);font-size:9.5px;color:var(--blue)}
+.pnode .lk.chk{color:#6f6650}
+.pnode .lk.go{color:var(--accent);font-weight:700}
+.pnode.macro{width:200px}
+.pnode.macro .pnode-label{font-size:14px}
+.detail-chk{margin:8px 0 0;padding-left:18px}
+.detail-chk li{font-size:13px;color:#2b271f;margin:5px 0;line-height:1.4}
 .badge{font-family:var(--mono);font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:20px;white-space:nowrap}
 .react-flow__handle{width:7px;height:7px;background:var(--mute);border:1px solid var(--paper)}
 

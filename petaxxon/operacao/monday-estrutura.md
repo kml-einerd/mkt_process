@@ -234,3 +234,29 @@ O funil só vai ao ar após todos os itens marcados.
 4. **Conectar e mover o CENTRAL:** tarefas soltas do CENTRAL viram itens em **Backlog/Gaps**; cada item de Funil/Campanha/Setup ganha link para sua ficha em `petaxxon/`. Manter o Dashboard como tela do ritual semanal.
 
 > **Princípio da migração:** não recomeçar do zero — o board atual já tem o motor de produção. A migração é **separar responsabilidades em boards** e **padronizar labels**, não refazer.
+
+---
+
+## Modo A · Agência de Funil — mapeamento no Monday
+O Modo B (acima) é produto próprio. O **Modo A** (construir funis de VSL para clientes) é **por cliente/projeto**
+e usa o schema canônico `Entregável · Checklist · Setor · POP · Responsável` (ver app `central/`):
+
+| Schema | No Monday |
+|---|---|
+| Setor | coluna (status/pessoas) |
+| Entregável | **item** (ou subitem do funil) |
+| Checklist | **subitens** / checklist do item |
+| POP | **link** no item |
+| Responsável | coluna pessoas |
+
+**Quadros do Modo A (somam-se aos 5 do Modo B):**
+1. **Clientes & Projetos** (Onboard) — 1 item por cliente. Colunas: Modelo comercial (Afiliado/Produtor),
+   Status do onboard, links (ATA · Central do cliente · Planilha de margem). É a porta de entrada.
+2. **Funis em Construção** — 1 item por funil-cliente. Coluna **Fase**: `Onboard · Escrita · Produção ·
+   Edição · Infra · Start`. Os **entregáveis** de cada fase entram como subitens (espelham os processos do
+   app: Escrita de VSL, Produção & Gravação, Edição, Infra). Coluna Setor + Responsável + link do POP.
+3. Reusa os quadros **Otimização** e cria a **Régua de recuperação** como visão/itens recorrentes após o Start.
+
+**Regra:** um funil "nasce" em *Clientes & Projetos* (Onboard) → vira item em *Funis em Construção* percorrendo
+as Fases → ao dar **Start**, passa a alimentar *Produção de Ativos* (remessas) e *Otimização* (igual ao Modo B).
+Assim os dois modos convergem na operação contínua.
