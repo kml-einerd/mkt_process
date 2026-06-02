@@ -4,14 +4,14 @@
 const processo = {
   id: 'funil-webinario',
   titulo: 'Funil Webinário (Mega Combo)',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Otimização',
   descricao: 'Webinário diário de venda do Mega Combo via Click-to-WhatsApp: ads → cadastro no WhatsApp → live com pitch → checkout+esteira → recuperação de vendas.',
   docs: [
     { label: 'Ficha do Funil Webinário', href: '../funis/webinario-mega-combo.md' },
   ],
   lanes: [
-    { id: 'trafego',      label: 'Tráfego',                color: '#2a5a86' },
+    { id: 'trafego',      label: 'Gestor de Tráfego',                color: '#2a5a86' },
     { id: 'crm',          label: 'CRM / WhatsApp',          color: '#a9842f' },
     { id: 'conteudo',     label: 'Conteúdo / Live',         color: '#b5462b' },
     { id: 'produto',      label: 'Produto / Checkout',      color: '#2e6b4a' },
@@ -38,7 +38,7 @@ const processo = {
     {
       id: 'n2', lane: 'crm', x: 320,
       label: 'Fluxo de Cadastro & Confirmação (WhatsApp)',
-      responsavel: 'Gestor de CRM',
+      responsavel: 'CRM',
       status: 'A fazer',
       checklist: [
         'Configurar bot/fluxo de boas-vindas',
@@ -51,7 +51,7 @@ const processo = {
     {
       id: 'n3', lane: 'crm', x: 600,
       label: 'Lembretes Pré-Live (automação)',
-      responsavel: 'Gestor de CRM',
+      responsavel: 'CRM',
       status: 'A fazer',
       checklist: [
         'Configurar sequência de lembretes (D-1, H-1, H) [a confirmar intervalos]',
@@ -77,7 +77,7 @@ const processo = {
     {
       id: 'n5', lane: 'conteudo', x: 1160,
       label: 'Live Diária (transmissão)',
-      responsavel: 'Apresentador / Operador de Live',
+      responsavel: 'Apresentador',
       status: 'A fazer',
       checklist: [
         'Configurar sala de transmissão [a confirmar ferramenta]',
@@ -106,7 +106,7 @@ const processo = {
     {
       id: 'n7', lane: 'crm', x: 1720,
       label: 'Recuperação de Vendas (WhatsApp pós-live)',
-      responsavel: 'Gestor de CRM',
+      responsavel: 'CRM',
       status: 'A fazer',
       checklist: [
         'Segmentar presentes que não compraram',

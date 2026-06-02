@@ -2,14 +2,14 @@
 const processo = {
   id: 'funil-typebot',
   titulo: 'Funil Typebot pré-venda',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Otimização',
   descricao: 'Funil conversacional que aquece o lead via perguntas sequenciais, entrega a oferta (VSL embedada, página de vendas ou checkout direto) e conecta ao checkout com 5 order bumps + PlaySquad.',
   docs: [
     { label: 'Ficha do funil Typebot pré-venda', href: '../funis/typebot-pre-venda.md' },
   ],
   lanes: [
-    { id: 'trafego',  label: 'Tráfego',           color: '#2a5a86' },
+    { id: 'trafego',  label: 'Gestor de Tráfego',           color: '#2a5a86' },
     { id: 'bot',      label: 'Bot / Produto',      color: '#a9842f' },
     { id: 'tracking', label: 'Tracking & Dados',   color: '#8a8170' },
     { id: 'crm',      label: 'CRM & Listas',       color: '#2e6b4a' },
@@ -76,7 +76,7 @@ const processo = {
     {
       id: 'n5', lane: 'tracking', x: 320,
       label: 'Tracking de entrada (pixel + UTM)',
-      responsavel: 'Especialista de Dados / Tracking',
+      responsavel: 'Analista de Dados',
       status: 'A fazer',
       checklist: [
         'Garantir UTM preservado da URL de entrada até o checkout (Setup 02 — 🔴)',
@@ -88,7 +88,7 @@ const processo = {
     {
       id: 'n6', lane: 'tracking', x: 880,
       label: 'Evento de conversão no checkout',
-      responsavel: 'Especialista de Dados / Tracking',
+      responsavel: 'Analista de Dados',
       status: 'A fazer',
       checklist: [
         'Configurar evento Purchase no checkout (Setup 02 — 🔴)',
@@ -102,7 +102,7 @@ const processo = {
     {
       id: 'n7', lane: 'crm', x: 600,
       label: 'Coleta e integração do lead',
-      responsavel: 'Responsável CRM / Automações',
+      responsavel: 'CRM',
       status: 'A fazer',
       checklist: [
         'Coletar e-mail e/ou WhatsApp dentro do Typebot',

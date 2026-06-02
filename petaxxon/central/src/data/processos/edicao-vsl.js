@@ -4,7 +4,7 @@ const BLOCOS = ['Lead 1', 'Lead 2', 'Lead 3', 'História', 'Nascimento do Produt
 const processo = {
   id: 'edicao-vsl',
   titulo: 'Edição de VSL',
-  categoria: 'Modo A · Agência de Funil',
+  categoria: 'DarkPixel · Agência (em breve)',
   fase: 'Setup',
   descricao: 'Edição da VSL bloco a bloco: setup, geração de materiais IA, inserts de B-rolls/zoom e lettering, montagem e finalização.',
   docs: [

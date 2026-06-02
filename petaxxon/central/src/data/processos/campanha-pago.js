@@ -1,7 +1,7 @@
 const processo = {
   id: 'campanha-pago',
   titulo: 'Campanha Pago-frio (VSL)',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Otimização',
   descricao: 'Venda direta para tráfego frio via anúncio pago (Meta/Google) com funil VSL Tradicional ou Typebot Pré-Venda, checkout e esteira padrão.',
   docs: [
@@ -26,7 +26,7 @@ const processo = {
       lane: 'estrategia',
       x: 40,
       label: 'Definir oferta e funil',
-      responsavel: 'Estrategista',
+      responsavel: 'Gestor de Operações',
       status: 'A fazer',
       checklist: [
         'Definir produto front-end e preço [a confirmar]',
@@ -41,7 +41,7 @@ const processo = {
       lane: 'infra',
       x: 320,
       label: 'Validar infra & tracking (D-14)',
-      responsavel: 'Responsável de Infra',
+      responsavel: 'Infra',
       status: 'A fazer',
       checklist: [
         'Conta de anúncios ativa + método de pagamento configurado [a confirmar]',
@@ -57,7 +57,7 @@ const processo = {
       lane: 'infra',
       x: 600,
       label: 'Configurar CRM & tag comprador (Setup 03)',
-      responsavel: 'Responsável de Infra',
+      responsavel: 'Infra',
       status: 'A fazer',
       checklist: [
         'Confirmar automação que aplica tag de comprador na venda',
@@ -71,7 +71,7 @@ const processo = {
       lane: 'criativo',
       x: 880,
       label: 'Produzir criativos (D-7)',
-      responsavel: 'Criativo',
+      responsavel: 'Designer',
       status: 'A fazer',
       checklist: [
         'Briefar formatos e variações de criativo [a confirmar]',
@@ -102,7 +102,7 @@ const processo = {
       lane: 'midia',
       x: 1440,
       label: 'Configurar campanha na plataforma (D-5)',
-      responsavel: 'Gestor de Mídia',
+      responsavel: 'Gestor de Tráfego',
       status: 'A fazer',
       checklist: [
         'Criar campanha/ad set/anúncios com nomenclatura padrão (Setup 04)',
@@ -118,7 +118,7 @@ const processo = {
       lane: 'infra',
       x: 1720,
       label: 'Teste ponta a ponta (D-3)',
-      responsavel: 'Responsável de Infra',
+      responsavel: 'Infra',
       status: 'A fazer',
       checklist: [
         'Clicar em anúncio de teste e percorrer funil completo',
@@ -134,7 +134,7 @@ const processo = {
       lane: 'midia',
       x: 2000,
       label: 'Go live (D0)',
-      responsavel: 'Gestor de Mídia',
+      responsavel: 'Gestor de Tráfego',
       status: 'A fazer',
       checklist: [
         'Ativar campanha com budget inicial [a confirmar valor]',
@@ -149,7 +149,7 @@ const processo = {
       lane: 'analise',
       x: 2280,
       label: 'Primeira análise (D+3)',
-      responsavel: 'Analista',
+      responsavel: 'Analista de Dados',
       status: 'A fazer',
       checklist: [
         'Coletar CPM, CTR, CPC, CPA e ROAS por criativo',
@@ -164,7 +164,7 @@ const processo = {
       lane: 'estrategia',
       x: 2560,
       label: 'Decisão: escalar / iterar / pausar (D+7)',
-      responsavel: 'Estrategista (Aprovador)',
+      responsavel: 'Gestor de Operações',
       status: 'A fazer',
       checklist: [
         'Revisar ROAS ≥ meta mínima viável [a confirmar] e CPA ≤ limite [a confirmar]',
@@ -180,7 +180,7 @@ const processo = {
       lane: 'criativo',
       x: 2840,
       label: 'Iteração de criativos',
-      responsavel: 'Criativo',
+      responsavel: 'Designer',
       status: 'A fazer',
       checklist: [
         'Produzir novo gancho/variação com base nos dados',

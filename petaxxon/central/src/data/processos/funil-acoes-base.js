@@ -2,7 +2,7 @@
 const processo = {
   id: 'funil-acoes-base',
   titulo: 'Ações na base (recompra)',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Otimização',
   descricao:
     'Monetização recorrente de quem já é contato/cliente via e-mail e WhatsApp — recompra e ascensão de oferta — sem custo de aquisição novo.',

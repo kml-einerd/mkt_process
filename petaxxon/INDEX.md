@@ -109,7 +109,7 @@
 | [operacao/rotina-otimizacao.md](./operacao/rotina-otimizacao.md) | 🟡 | Manual de como ler dados e decidir escalar / iterar / matar |
 | [operacao/monday-estrutura.md](./operacao/monday-estrutura.md) | 🟡 | Modelo de Monday: quadros por função, funil como visão, ciclo Setup/Otimização; Foto atual + migração |
 | [operacao/monday-prompts.md](./operacao/monday-prompts.md) | 🟡 | Prompts prontos p/ a IA do Monday criar os 5 quadros + migração manual |
-| [central/](./central/README.md) | 🟢 | App React Flow (Vite): **30 processos** clicáveis (Modo A + B + Compartilhado), navegação + links de documento resolvidos |
+| [central/](./central/README.md) | 🟢 | App React Flow (Vite): **32 processos** clicáveis (Petaxxon Infoprodutos · DarkPixel · Compartilhado), navegação + links resolvidos |
 | [processos/README.md](./processos/README.md) | 🟡 | Modo A · Agência de Funil: índice dos processos + 13 POPs/modelos em `processos/pops/` |
 | [operacao/rotina-noturna.md](./operacao/rotina-noturna.md) | 🟢 | Cron que avança 1 gap por execução (00h–06h) a partir do GAPS.md |
 

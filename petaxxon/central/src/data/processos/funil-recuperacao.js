@@ -2,7 +2,7 @@
 const processo = {
   id: 'funil-recuperacao',
   titulo: 'Funil Recuperação (WhatsApp)',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Otimização',
   descricao: 'Recuperação de vendas via WhatsApp para carrinho abandonado e leads quentes que não compraram. Acoplado a qualquer funil com checkout.',
   docs: [
@@ -23,7 +23,7 @@ const processo = {
     {
       id: 'n1', lane: 'tracking', x: 40,
       label: 'Gatilho de Abandono',
-      responsavel: 'Responsável por Dados / Setup 02',
+      responsavel: 'Analista de Dados',
       status: 'A fazer',
       checklist: [
         'Confirmar Setup 02 (Tracking) funcional — pendente 🟡',
@@ -37,7 +37,7 @@ const processo = {
     {
       id: 'n2', lane: 'crm', x: 320,
       label: 'Configuração do CRM / WhatsApp',
-      responsavel: 'Responsável por CRM / Setup 03',
+      responsavel: 'CRM',
       status: 'A fazer',
       checklist: [
         'Confirmar Setup 03 (CRM & Listas) funcional — pendente 🟡',
@@ -67,7 +67,7 @@ const processo = {
     {
       id: 'n4', lane: 'checkout', x: 880,
       label: 'Link de Volta ao Checkout',
-      responsavel: 'Responsável pelo Produto / [a confirmar]',
+      responsavel: 'Responsável pelo Produto',
       status: 'A fazer',
       checklist: [
         'Confirmar URL de checkout do funil de origem',
@@ -81,7 +81,7 @@ const processo = {
     {
       id: 'n5', lane: 'crm', x: 1160,
       label: 'Sequência Ativa e Monitorada',
-      responsavel: 'Responsável por CRM / Setup 03',
+      responsavel: 'CRM',
       status: 'A fazer',
       checklist: [
         'Ativar automação no CRM/WhatsApp',
@@ -95,7 +95,7 @@ const processo = {
     {
       id: 'n6', lane: 'tracking', x: 1440,
       label: 'Métricas de Recuperação',
-      responsavel: 'Responsável por Dados / Setup 02',
+      responsavel: 'Analista de Dados',
       status: 'A fazer',
       checklist: [
         'Definir meta de taxa de recuperação (abandono → compra) [a confirmar]',

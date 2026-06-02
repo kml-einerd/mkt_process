@@ -4,7 +4,7 @@
 const processo = {
   id: 'portfolio-esteira',
   titulo: 'Portfólio & Esteira',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Esteira',
   descricao:
     'Esteira-ALVO de checkout do grupo: muda o front-end, a mecânica permanece — 5 order bumps → PlaySquad (Upsell 1 universal) → continuação que varia por front-end. ' +

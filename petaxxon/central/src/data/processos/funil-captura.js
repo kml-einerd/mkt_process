@@ -4,14 +4,14 @@
 const processo = {
   id: 'funil-captura',
   titulo: 'Funil Captura (lead magnet)',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Otimização',
   descricao: 'Funil de topo que troca material grátis (ebook/conteúdo) por contato, construindo lista própria (Rota A), e entrega o lead para webinário ou funil de vendas downstream.',
   docs: [
     { label: 'Ficha Funil Captura', href: '../funis/captura-lead-magnet.md' },
   ],
   lanes: [
-    { id: 'trafego',   label: 'Tráfego',              color: '#2a5a86' },
+    { id: 'trafego',   label: 'Gestor de Tráfego',              color: '#2a5a86' },
     { id: 'conteudo',  label: 'Conteúdo / Isca',       color: '#b5462b' },
     { id: 'crm',       label: 'CRM / Automação',       color: '#a9842f' },
     { id: 'produto',   label: 'Produto / Destino',     color: '#2e6b4a' },
@@ -70,7 +70,7 @@ const processo = {
     {
       id: 'n4', lane: 'crm', x: 880,
       label: 'Entrega Automática da Isca',
-      responsavel: 'Gestor de CRM',
+      responsavel: 'CRM',
       status: 'A fazer',
       checklist: [
         'Configurar automação de entrega (e-mail/WhatsApp) — Setup 03',

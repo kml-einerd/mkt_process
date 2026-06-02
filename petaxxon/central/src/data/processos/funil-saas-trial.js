@@ -2,7 +2,7 @@
 const processo = {
   id: 'funil-saas-trial',
   titulo: 'Funil SaaS PlaySquad (trial→pago)',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Otimização',
   descricao: 'Funil próprio do PlaySquad: captura → trial → onboarding/ativação → sequência de upgrade → plano pagante. Objetivo: converter free → pagante.',
   docs: [

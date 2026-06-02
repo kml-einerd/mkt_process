@@ -3,7 +3,7 @@
 const processo = {
   id: 'auxiliares',
   titulo: 'Auxiliares (Upsell / Backredirect / Downsell)',
-  categoria: 'Modo A · Agência de Funil',
+  categoria: 'DarkPixel · Agência (em breve)',
   fase: 'Otimização',
   descricao: 'Processos auxiliares que ampliam a esteira após o start. Cada linha é um tipo; o fluxo é Escrita → (Edição) → Infra → Implementação.',
   docs: [

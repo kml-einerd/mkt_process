@@ -2,7 +2,7 @@
 const processo = {
   id: 'onboard',
   titulo: 'Onboard de cliente/projeto',
-  categoria: 'Modo A · Agência de Funil',
+  categoria: 'DarkPixel · Agência (em breve)',
   fase: 'Setup',
   descricao: 'Entrada de um novo cliente/projeto: criação no PM, duplicação de materiais, grupo, confirmações e call de onboarding.',
   docs: [

@@ -4,7 +4,7 @@
 const processo = {
   id: 'funis-proprios',
   titulo: 'Funis próprios — macro',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Visão geral',
   descricao:
     'Hub de navegação dos 9 funis próprios da operação Petaxxon. Cada caixa representa um funil com seu tipo, rota e status — clique para abrir o processo detalhado. Os funis rodam em paralelo (não são etapas sequenciais).',
@@ -61,7 +61,7 @@ const processo = {
       lane: 'macro',
       x: 1160,
       label: 'Shorts → Venda Direta',
-      responsavel: 'Produção de Conteúdo',
+      responsavel: 'Produtor de Conteúdo',
       status: 'Rodando',
       goto: 'funil-shorts',
       detalhe: 'Rota B · Short com gancho+pitch → CTA → Checkout. Motor orgânico. Status: roda.',
@@ -81,7 +81,7 @@ const processo = {
       lane: 'macro',
       x: 1720,
       label: 'Conteúdo + Pitch',
-      responsavel: 'Produção de Conteúdo',
+      responsavel: 'Produtor de Conteúdo',
       status: 'A fazer',
       goto: 'funil-conteudo-pitch',
       detalhe: 'Rota B · Vídeo longo (YouTube) com pitch integrado → CTA → Checkout. Status: a desenhar.',

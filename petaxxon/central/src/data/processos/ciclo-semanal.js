@@ -37,7 +37,7 @@ const processo = {
       lane: 'dono-funil',
       x: 320,
       label: 'D1 · Registrar métricas do webinário da véspera',
-      responsavel: 'Dono do Funil (webinário)',
+      responsavel: 'Dono do Funil',
       status: 'A fazer',
       checklist: [
         'Acessar dashboard com dados de ontem',
@@ -51,7 +51,7 @@ const processo = {
       lane: 'dono-funil',
       x: 600,
       label: 'D2 · Comparar métricas com meta (pass/fail)',
-      responsavel: 'Dono do Funil (webinário)',
+      responsavel: 'Dono do Funil',
       status: 'A fazer',
       checklist: [
         'Abrir tabela de metas do funil em dados/pass-fail-por-funil.md',
@@ -121,7 +121,7 @@ const processo = {
       lane: 'dono-funil',
       x: 1720,
       label: 'S1 · Preparar relatório por funil (últimos 7 dias)',
-      responsavel: 'Dono de cada funil ativo',
+      responsavel: 'Dono do Funil',
       status: 'A fazer',
       checklist: [
         'Abrir dashboard + dados/pass-fail-por-funil.md',
@@ -136,7 +136,7 @@ const processo = {
       lane: 'dono-funil',
       x: 2000,
       label: 'S2 · Apresentar métricas e propor decisão',
-      responsavel: 'Dono de cada funil ativo',
+      responsavel: 'Dono do Funil',
       status: 'A fazer',
       checklist: [
         'Apresentar relatório de S1 na reunião',

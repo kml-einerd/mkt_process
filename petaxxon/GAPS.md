@@ -18,6 +18,15 @@
 > - **Portfólio maior que o modelado:** Análise de Canal (Raio-X do YouTube), Desenhando Animes, English Plan, Lucre com YouTube (gravando), recorrência TubeClub [a confirmar]. Decidir quais entram no escopo do vault.
 > - **Checkout = Hotmart** (atualiza os `[a confirmar]` de checkout nos setups/fichas).
 
+> 🧭 **Central de Operações (app `central/`) — estado em 2026-06-02:** **32 processos** desenhados, navegáveis e
+> com links de documento. Reenquadrado para a realidade: **Petaxxon · Infoprodutos = operação ATUAL**; o modo
+> **DarkPixel · Agência (clientes) = molde pronto, em breve**. Papéis normalizados ao set canônico (Setup 06 + Dono do
+> Funil, Apresentador, Responsável pelo Produto, Produtor de Conteúdo, Analista de Dados). **Adicionado:** Pós-venda &
+> Retenção (WhatsApp API oficial, recuperação, remarketing, reembolso, recorrência TubeClub).
+>
+> 🔧 **Backlog aberto (processos a desenhar quando priorizar):** **Produção de infoproduto/curso** (aulas→grade→bônus→Hotmart);
+> **Lançamento de produto próprio** (página+Hotmart+checkout+5 bumps+e-mails transacionais); **Ofertas personalizadas** (slot aberto). Prompts do Monday para o modo DarkPixel/agência também pendentes (baixa prioridade — sem clientes ainda).
+
 ---
 
 ## Prioridade ALTA (bloqueia receita ou destrava em cascata)

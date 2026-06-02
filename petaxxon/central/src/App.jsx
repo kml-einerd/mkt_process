@@ -9,7 +9,7 @@ import { LANE_H, LANE_W, NODE_TOP } from './data/shared.js'
 
 const nodeTypes = { process: ProcessNode, lane: LaneNode }
 
-const HOME_ID = 'funil-agencia-macro'
+const HOME_ID = 'infoprodutos-macro'
 
 // Mapa id -> nome da categoria do catálogo (para o breadcrumb mesmo sem dados carregados).
 const CAT_OF = {}

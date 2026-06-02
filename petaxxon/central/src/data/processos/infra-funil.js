@@ -2,7 +2,7 @@
 const processo = {
   id: 'infra-funil',
   titulo: 'Infra do funil',
-  categoria: 'Modo A · Agência de Funil',
+  categoria: 'DarkPixel · Agência (em breve)',
   fase: 'Setup',
   descricao: 'Construção das páginas (VSL/Upsell/Downsell), configurações (Vturb, cloaker, checkout/DTC), revisão e Start do funil.',
   docs: [

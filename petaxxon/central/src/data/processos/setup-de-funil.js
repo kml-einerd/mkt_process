@@ -2,7 +2,7 @@
 const processo = {
   id: 'setup-de-funil',
   titulo: 'Setup de funil (start)',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Setup',
   descricao: 'Sequência de 11 passos para ativar um funil novo na operação, garantindo que todos os setups estão conectados e a esteira está configurada corretamente antes do ar.',
   docs: [

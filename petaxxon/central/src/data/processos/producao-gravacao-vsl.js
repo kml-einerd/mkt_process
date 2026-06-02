@@ -2,7 +2,7 @@
 const processo = {
   id: 'producao-gravacao-vsl',
   titulo: 'Produção & Gravação de VSL',
-  categoria: 'Modo A · Agência de Funil',
+  categoria: 'DarkPixel · Agência (em breve)',
   fase: 'Setup',
   descricao: 'Contratação de ator, contrato/pagamento, gravação no estúdio e finalização da produção.',
   docs: [

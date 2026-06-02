@@ -2,7 +2,7 @@
 const processo = {
   id: 'funil-vsl',
   titulo: 'Funil VSL Tradicional',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Otimização',
   descricao: 'Funil de venda direta via vídeo de vendas (VSL): anúncio/conteúdo → página de vendas → checkout com esteira de order bumps e upsell.',
   docs: [
@@ -53,7 +53,7 @@ const processo = {
     {
       id: 'n3', lane: 'checkout', x: 600,
       label: 'Checkout + Order Bumps',
-      responsavel: 'Responsável pelo Produto / [a confirmar]',
+      responsavel: 'Responsável pelo Produto',
       status: 'Rodando',
       checklist: [
         'Confirmar ferramenta de checkout ativa [a confirmar]',
@@ -68,7 +68,7 @@ const processo = {
     {
       id: 'n4', lane: 'checkout', x: 880,
       label: 'Esteira: Upsell PlaySquad + Continuação',
-      responsavel: 'Responsável pelo Produto / [a confirmar]',
+      responsavel: 'Responsável pelo Produto',
       status: 'Rodando',
       checklist: [
         'Confirmar Upsell 1 (PlaySquad) ativo após checkout',
@@ -82,7 +82,7 @@ const processo = {
     {
       id: 'n5', lane: 'tracking', x: 600,
       label: 'Tracking & UTM',
-      responsavel: 'Responsável por Dados / Setup 02',
+      responsavel: 'Analista de Dados',
       status: 'A fazer',
       checklist: [
         'Setup 02 (Tracking) funcional — ainda pendente 🔴',
@@ -96,7 +96,7 @@ const processo = {
     {
       id: 'n6', lane: 'crm', x: 880,
       label: 'CRM & Automação Pós-Venda',
-      responsavel: 'Responsável por CRM / Setup 03',
+      responsavel: 'CRM',
       status: 'A fazer',
       checklist: [
         'Setup 03 (CRM & Listas) funcional — ainda pendente 🔴',

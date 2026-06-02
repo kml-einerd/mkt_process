@@ -1,18 +1,8 @@
-// Registro de todos os processos da Central, organizados nos 2 modos + compartilhado.
+// Registro de todos os processos da Central, organizados por operação.
 // Mapear "tudo" = adicionar o arquivo de dados e registrar aqui. Itens sem dados aparecem como "a desenhar".
 
-// --- Modo A · Agência de Funil
-import funilAgenciaMacro from './processos/funil-agencia-macro.js'
-import onboard from './processos/onboard.js'
-import escritaVsl from './processos/escrita-vsl.js'
-import producaoGravacaoVsl from './processos/producao-gravacao-vsl.js'
-import edicaoVsl from './processos/edicao-vsl.js'
-import infraFunil from './processos/infra-funil.js'
-import auxiliares from './processos/auxiliares.js'
-import reguaRecuperacao from './processos/regua-recuperacao.js'
-
-// --- Modo B · Produtos Próprios
-import producaoAtivos from './processos/producao-ativos.js'
+// --- Petaxxon · Infoprodutos (operação ATUAL)
+import infoprodutosMacro from './processos/infoprodutos-macro.js'
 import portfolioEsteira from './processos/portfolio-esteira.js'
 import setupDeFunil from './processos/setup-de-funil.js'
 import funisProprios from './processos/funis-proprios.js'
@@ -29,8 +19,20 @@ import campanhaPago from './processos/campanha-pago.js'
 import campanhaOrganico from './processos/campanha-organico.js'
 import campanhaBase from './processos/campanha-base.js'
 import webinar from './processos/webinar.js'
+import producaoAtivos from './processos/producao-ativos.js'
+import posVendaRetencao from './processos/pos-venda-retencao.js'
 
-// --- Compartilhado
+// --- DarkPixel · Agência de Funil (em breve · clientes) — molde pronto
+import funilAgenciaMacro from './processos/funil-agencia-macro.js'
+import onboard from './processos/onboard.js'
+import escritaVsl from './processos/escrita-vsl.js'
+import producaoGravacaoVsl from './processos/producao-gravacao-vsl.js'
+import edicaoVsl from './processos/edicao-vsl.js'
+import infraFunil from './processos/infra-funil.js'
+import auxiliares from './processos/auxiliares.js'
+import reguaRecuperacao from './processos/regua-recuperacao.js'
+
+// --- Compartilhado (os dois modos usam)
 import setups from './processos/setups.js'
 import otimizacao from './processos/otimizacao.js'
 import cicloSemanal from './processos/ciclo-semanal.js'
@@ -38,17 +40,8 @@ import backlogGaps from './processos/backlog-gaps.js'
 import peerReviewQa from './processos/peer-review-qa.js'
 
 export const PROCESSOS = {
-  // Modo A
-  'funil-agencia-macro': funilAgenciaMacro,
-  'onboard': onboard,
-  'escrita-vsl': escritaVsl,
-  'producao-gravacao-vsl': producaoGravacaoVsl,
-  'edicao-vsl': edicaoVsl,
-  'infra-funil': infraFunil,
-  'auxiliares': auxiliares,
-  'regua-recuperacao': reguaRecuperacao,
-  // Modo B
-  'producao-ativos': producaoAtivos,
+  // Petaxxon · Infoprodutos (atual)
+  'infoprodutos-macro': infoprodutosMacro,
   'portfolio-esteira': portfolioEsteira,
   'setup-de-funil': setupDeFunil,
   'funis-proprios': funisProprios,
@@ -65,6 +58,17 @@ export const PROCESSOS = {
   'campanha-organico': campanhaOrganico,
   'campanha-base': campanhaBase,
   'webinar': webinar,
+  'producao-ativos': producaoAtivos,
+  'pos-venda-retencao': posVendaRetencao,
+  // DarkPixel · Agência (em breve)
+  'funil-agencia-macro': funilAgenciaMacro,
+  'onboard': onboard,
+  'escrita-vsl': escritaVsl,
+  'producao-gravacao-vsl': producaoGravacaoVsl,
+  'edicao-vsl': edicaoVsl,
+  'infra-funil': infraFunil,
+  'auxiliares': auxiliares,
+  'regua-recuperacao': reguaRecuperacao,
   // Compartilhado
   'setups': setups,
   'otimizacao': otimizacao,
@@ -73,26 +77,12 @@ export const PROCESSOS = {
   'peer-review-qa': peerReviewQa,
 }
 
-// Inventário completo (catálogo) — guia do que falta desenhar.
-// Itens sem arquivo de dados ficam SEM import e aparecem como "a desenhar".
+// Inventário completo (catálogo) — a operação atual primeiro; agência (DarkPixel) é molde futuro.
 export const CATEGORIAS = [
   {
-    nome: 'Modo A · Agência de Funil',
+    nome: 'Petaxxon · Infoprodutos (atual)',
     itens: [
-      { id: 'funil-agencia-macro', nome: '★ Macro (visão geral)' },
-      { id: 'onboard', nome: 'Onboard de cliente' },
-      { id: 'escrita-vsl', nome: 'Escrita de VSL' },
-      { id: 'producao-gravacao-vsl', nome: 'Produção & Gravação' },
-      { id: 'edicao-vsl', nome: 'Edição de VSL' },
-      { id: 'infra-funil', nome: 'Infra do funil' },
-      { id: 'auxiliares', nome: 'Auxiliares (Up/Back/Down)' },
-      { id: 'regua-recuperacao', nome: 'Régua de recuperação' },
-    ],
-  },
-  {
-    nome: 'Modo B · Produtos Próprios',
-    itens: [
-      { id: 'producao-ativos', nome: 'Produção de Ativos' },
+      { id: 'infoprodutos-macro', nome: '★ Macro (operação atual)' },
       { id: 'portfolio-esteira', nome: 'Portfólio & Esteira' },
       { id: 'setup-de-funil', nome: 'Setup de funil' },
       { id: 'funis-proprios', nome: 'Funis próprios (hub)' },
@@ -109,6 +99,21 @@ export const CATEGORIAS = [
       { id: 'campanha-organico', nome: 'Campanha · Orgânico' },
       { id: 'campanha-base', nome: 'Campanha · Base' },
       { id: 'webinar', nome: 'Webinar (operação)' },
+      { id: 'producao-ativos', nome: 'Produção de Ativos' },
+      { id: 'pos-venda-retencao', nome: 'Pós-venda & Retenção' },
+    ],
+  },
+  {
+    nome: 'DarkPixel · Agência (em breve)',
+    itens: [
+      { id: 'funil-agencia-macro', nome: '★ Macro (agência)' },
+      { id: 'onboard', nome: 'Onboard de cliente' },
+      { id: 'escrita-vsl', nome: 'Escrita de VSL' },
+      { id: 'producao-gravacao-vsl', nome: 'Produção & Gravação' },
+      { id: 'edicao-vsl', nome: 'Edição de VSL' },
+      { id: 'infra-funil', nome: 'Infra do funil' },
+      { id: 'auxiliares', nome: 'Auxiliares (Up/Back/Down)' },
+      { id: 'regua-recuperacao', nome: 'Régua de recuperação' },
     ],
   },
   {

@@ -24,6 +24,11 @@ Definir quem faz o quê na operação Petaxxon, garantir a separação entre pro
 | **Designer** | Cria criativos visuais para Ads, páginas e materiais de apoio | Criativos e layouts | — (produz; não aprova o próprio criativo) | Em time pequeno: pode acumular com Editor de Vídeo |
 | **CRM** | Configura e mantém listas, automações, fluxos de e-mail/WhatsApp e segmentações | Fluxos e configurações de automação | — (propõe; Gestor de Operações valida antes de ativar) | Em time pequeno: pode acumular com Gestor de Operações |
 | **Infra** | Mantém domínios, contas, integrações, checkout e segurança | Configurações técnicas e integrações | — (executa; Gestor de Operações valida testes de ponta a ponta) | Em time pequeno: pode acumular com CRM ou qualquer papel técnico |
+| **Dono do Funil** | Responde por um funil ativo de ponta a ponta (metas, otimização) | Decisões e ajustes do funil | — (propõe; escala é do Gestor de Operações) | Pode acumular com Gestor de Tráfego |
+| **Apresentador** | Apresenta lives/webinários e grava VSLs | Apresentações e gravações | — | Pode acumular com Copywriter |
+| **Responsável pelo Produto** | Cria/cura o infoproduto (aulas, grade, bônus, entrega na plataforma) | Produto e materiais de entrega | Entrega do produto | Pode acumular com Gestor de Operações |
+| **Produtor de Conteúdo** | Produz conteúdo orgânico (Shorts, YouTube, posts) | Conteúdo orgânico | — | Pode acumular com Editor de Vídeo |
+| **Analista de Dados** | Coleta e analisa métricas; abastece a otimização | Relatórios e dashboards | — (Gestor de Operações decide) | Pode acumular com Gestor de Operações |
 
 > **Nota sobre acúmulo:** em times pequenos, um mesmo profissional pode acumular papéis, desde que a regra produtor ≠ aprovador seja preservada. Se a mesma pessoa produz e aprova, um segundo par de olhos externo (freelancer, parceiro ou outro membro) deve validar antes de concluir.
 

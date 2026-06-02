@@ -1,7 +1,7 @@
 const processo = {
   id: 'campanha-organico',
   titulo: 'Campanha Orgânico (shorts→pitch)',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Otimização',
   descricao: 'Campanha de venda direta via YouTube Shorts: short com gancho + pitch → CTA → checkout com esteira. Já converte; objetivo é tornar a operação replicável e rastreada do clique à venda.',
   docs: [
@@ -55,7 +55,7 @@ const processo = {
       lane: 'distribuicao',
       x: 600,
       label: 'Publicar Shorts + fixar CTA',
-      responsavel: 'Gestor de Distribuição',
+      responsavel: 'Produtor de Conteúdo',
       status: 'A fazer',
       checklist: [
         'Aplicar UTM de origem orgânica no link de destino (Setup 04)',
@@ -104,7 +104,7 @@ const processo = {
       lane: 'conteudo',
       x: 1440,
       label: 'Iterar gancho / pitch',
-      responsavel: 'Gestor de Conteúdo',
+      responsavel: 'Produtor de Conteúdo',
       status: 'A fazer',
       checklist: [
         'Avaliar Views por Short — se abaixo da meta: testar novo gancho',
@@ -120,7 +120,7 @@ const processo = {
       lane: 'conteudo',
       x: 1720,
       label: 'Funil Shorts (macro)',
-      responsavel: 'Gestor de Conteúdo',
+      responsavel: 'Produtor de Conteúdo',
       status: 'A fazer',
       detalhe: 'Visão completa do funil Shorts → Venda Direta com esteira',
       goto: 'funil-shorts',

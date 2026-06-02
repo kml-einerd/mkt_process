@@ -24,10 +24,11 @@ npm run build    # gera dist/ estático (abre por file:// também)
 - `src/App.jsx` — converte os dados em nós/arestas do React Flow.
 
 ## Status
-**Completo — 30 processos desenhados** nos 3 grupos (validado: 228 nós, sem erros):
-- **Modo A · Agência de Funil** (8): macro + Onboard · Escrita de VSL · Produção & Gravação · Edição · Infra · Auxiliares · Régua.
-- **Modo B · Produtos Próprios** (17): Produção de Ativos · Portfólio & Esteira · Setup de funil · hub de funis + os 9 funis · 3 campanhas · Webinar.
+**Completo — 32 processos desenhados** (validado: 241 nós, sem erros). Abre no macro da operação atual.
+- **Petaxxon · Infoprodutos (atual)** (19): macro · Portfólio & Esteira · Setup de funil · hub + 9 funis · 3 campanhas · Webinar · Produção de Ativos · **Pós-venda & Retenção**.
+- **DarkPixel · Agência (em breve · clientes)** (8): molde pronto — macro · Onboard · Escrita VSL · Produção · Edição · Infra · Auxiliares · Régua.
 - **Compartilhado** (5): Setups 01–06 · Otimização · Ciclo semanal · Backlog/Gaps · Peer review/QA.
 
+Papéis normalizados ao set canônico (Setup 06 + Dono do Funil, Apresentador, Responsável pelo Produto, Produtor de Conteúdo, Analista de Dados).
 Navegação: breadcrumb + **Voltar** + **Início**; nós macro com `goto`. Links de documento resolvem via
 `vault/` (o `predev`/`prebuild` copia os docs do vault para `public/vault/`). `npm run validate` checa os invariantes.

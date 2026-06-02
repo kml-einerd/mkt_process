@@ -1,7 +1,7 @@
 const processo = {
   id: 'campanha-base',
   titulo: 'Campanha Base (e-mail/recompra)',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Otimização',
   descricao: 'Campanhas de recompra e ascensão para base interna (compradores e leads quentes) via e-mail e WhatsApp, seguindo o mapa de ascensão por produto comprado.',
   docs: [
@@ -25,7 +25,7 @@ const processo = {
       lane: 'estrategia',
       x: 40,
       label: 'Definir rodada da campanha',
-      responsavel: 'Gestor de Marketing',
+      responsavel: 'Gestor de Operações',
       status: 'A fazer',
       checklist: [
         'Definir qual ascensão será ofertada (mapa de recompra)',
@@ -40,7 +40,7 @@ const processo = {
       lane: 'crm',
       x: 320,
       label: 'Confirmar segmentos de base no CRM',
-      responsavel: 'Operador de CRM',
+      responsavel: 'CRM',
       status: 'A fazer',
       checklist: [
         'Verificar se Setup 03 (CRM & Listas) está ativo — pré-requisito crítico',
@@ -87,7 +87,7 @@ const processo = {
       lane: 'aprovacao',
       x: 1160,
       label: 'Validar envio teste e aprovar disparo',
-      responsavel: 'Gestor de Marketing',
+      responsavel: 'Gestor de Operações',
       status: 'A fazer',
       checklist: [
         'Enviar e-mail teste para endereço interno',
@@ -102,7 +102,7 @@ const processo = {
       lane: 'aprovacao',
       x: 1440,
       label: 'Disparar campanha (D0)',
-      responsavel: 'Operador de CRM',
+      responsavel: 'CRM',
       status: 'A fazer',
       checklist: [
         'Confirmar data e hora do disparo',
@@ -117,7 +117,7 @@ const processo = {
       lane: 'analise',
       x: 1720,
       label: 'Medir resultados (D+3)',
-      responsavel: 'Analista de Dados / Gestor',
+      responsavel: 'Analista de Dados',
       status: 'A fazer',
       checklist: [
         'Verificar taxa de abertura (meta [a confirmar])',
@@ -134,7 +134,7 @@ const processo = {
       lane: 'estrategia',
       x: 2000,
       label: 'Registrar aprendizados e planejar próxima rodada',
-      responsavel: 'Gestor de Marketing',
+      responsavel: 'Gestor de Operações',
       status: 'A fazer',
       checklist: [
         'Registrar o que funcionou e o que falhou',

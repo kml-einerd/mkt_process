@@ -4,7 +4,7 @@
 const processo = {
   id: 'funil-agencia-macro',
   titulo: 'Funil de Agência — macro',
-  categoria: 'Modo A · Agência de Funil',
+  categoria: 'DarkPixel · Agência (em breve)',
   fase: 'Visão geral',
   descricao:
     'O ciclo de construção de um funil de VSL (resposta direta) para um cliente, do onboard ao start. Clique em cada fase para abrir o processo detalhado. Auxiliares (Upsell/Downsell/Backredirect) e Régua de recuperação rodam após o start.',

@@ -2,7 +2,7 @@
 const processo = {
   id: 'escrita-vsl',
   titulo: 'Escrita de VSL',
-  categoria: 'Modo A · Agência de Funil',
+  categoria: 'DarkPixel · Agência (em breve)',
   fase: 'Setup',
   descricao: 'Da copy: brief → sales letter → briefing de produção → pack de ads → peer review → revisão do Copy Chief → estrutura de validação.',
   docs: [

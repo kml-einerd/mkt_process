@@ -2,7 +2,7 @@
 const processo = {
   id: 'regua-recuperacao',
   titulo: 'Régua de recuperação',
-  categoria: 'Modo A · Agência de Funil',
+  categoria: 'DarkPixel · Agência (em breve)',
   fase: 'Otimização',
   descricao: 'Sequências de recuperação de venda por canal. Rodam em paralelo após o start do funil.',
   docs: [

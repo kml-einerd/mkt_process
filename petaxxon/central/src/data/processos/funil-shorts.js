@@ -1,7 +1,7 @@
 const processo = {
   id: 'funil-shorts',
   titulo: 'Funil Shorts venda direta',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Otimização',
   descricao: 'Funil orgânico Short (conteúdo + pitch) → CTA → checkout, com esteira plugada. Já converte; objetivo é padronizar e tornar replicável sem depender de conhecimento tácito.',
   docs: [
@@ -39,7 +39,7 @@ const processo = {
       lane: 'cta',
       x: 320,
       label: 'CTA — link bio / comentário fixado',
-      responsavel: 'Gestor de Distribuição',
+      responsavel: 'Produtor de Conteúdo',
       status: 'A fazer',
       checklist: [
         'Definir destino do CTA (bio, comentário fixado ou descrição) [a confirmar padrão]',
@@ -100,7 +100,7 @@ const processo = {
       lane: 'conteudo',
       x: 1440,
       label: 'Padrão gancho/pitch documentado',
-      responsavel: 'Gestor de Conteúdo',
+      responsavel: 'Produtor de Conteúdo',
       status: 'A fazer',
       checklist: [
         'Documentar estrutura de gancho reutilizável',
@@ -115,7 +115,7 @@ const processo = {
       lane: 'conteudo',
       x: 1720,
       label: 'Produção de Ativos (macro)',
-      responsavel: 'Gestor de Conteúdo',
+      responsavel: 'Produtor de Conteúdo',
       status: 'A fazer',
       detalhe: 'Sub-processo de produção e biblioteca de ativos orgânicos',
       goto: 'producao-ativos',

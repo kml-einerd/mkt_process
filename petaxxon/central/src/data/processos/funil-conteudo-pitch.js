@@ -2,7 +2,7 @@
 const processo = {
   id: 'funil-conteudo-pitch',
   titulo: 'Funil Conteúdo + Pitch',
-  categoria: 'Modo B · Produtos Próprios',
+  categoria: 'Petaxxon · Infoprodutos (atual)',
   fase: 'Otimização',
   descricao: 'Vídeo de conteúdo temático longo (YouTube) com pitch integrado da oferta — CTA na descrição/fixado leva ao checkout com esteira de order bumps e upsell.',
   docs: [
@@ -21,7 +21,7 @@ const processo = {
     {
       id: 'n1', lane: 'conteudo', x: 40,
       label: 'Ângulo do Conteúdo + Definição do Pitch',
-      responsavel: 'Produtor de Conteúdo / Estrategista',
+      responsavel: 'Produtor de Conteúdo',
       status: 'A fazer',
       checklist: [
         'Definir tema do vídeo alinhado à oferta (ângulo que "puxa" o produto) [a confirmar]',
@@ -35,7 +35,7 @@ const processo = {
     {
       id: 'n2', lane: 'conteudo', x: 320,
       label: 'Gravação & Edição do Vídeo',
-      responsavel: 'Produtor de Conteúdo / Editor',
+      responsavel: 'Produtor de Conteúdo',
       status: 'A fazer',
       checklist: [
         'Gravar vídeo seguindo roteiro aprovado',
@@ -49,7 +49,7 @@ const processo = {
     {
       id: 'n3', lane: 'conteudo', x: 600,
       label: 'Publicação no YouTube + CTA',
-      responsavel: 'Produtor de Conteúdo / Gestor de Canal',
+      responsavel: 'Produtor de Conteúdo',
       status: 'A fazer',
       checklist: [
         'Fazer upload do vídeo no canal YouTube',
@@ -78,7 +78,7 @@ const processo = {
     {
       id: 'n5', lane: 'checkout', x: 880,
       label: 'Checkout + Order Bumps + Upsell',
-      responsavel: 'Responsável pelo Produto / [a confirmar]',
+      responsavel: 'Responsável pelo Produto',
       status: 'A fazer',
       checklist: [
         'Confirmar ferramenta de checkout ativa [a confirmar]',
@@ -93,7 +93,7 @@ const processo = {
     {
       id: 'n6', lane: 'tracking', x: 880,
       label: 'Tracking & Atribuição por Vídeo',
-      responsavel: 'Responsável por Dados / Setup 02',
+      responsavel: 'Analista de Dados',
       status: 'A fazer',
       checklist: [
         'Setup 02 (Tracking) funcional — pendente [a confirmar status]',
