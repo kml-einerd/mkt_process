@@ -689,6 +689,34 @@
     document.getElementById(b.dataset.tab).classList.add('act');
     window.scrollTo(0,0);
   });
+
+  // Intercepta cliques em links .md para abrir no visualizador customizado
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a');
+    if (a && a.getAttribute('href') && a.getAttribute('href').endsWith('.md')) {
+      e.preventDefault();
+      var href = a.getAttribute('href');
+      
+      // Se estiver rodando sob http/https (servidor de desenvolvimento)
+      if (window.location.protocol.startsWith('http')) {
+        // O mapa é servido a partir de vault/mapa/index.html, então o href relativo '../setups/x.md'
+        // resolve para 'vault/setups/x.md'. Traduzimos o caminho para o viewer.
+        var resolved = href;
+        if (href.startsWith('../')) {
+          resolved = 'vault/' + href.slice(3);
+        } else if (href.startsWith('./')) {
+          resolved = 'vault/' + href.slice(2);
+        } else if (!href.startsWith('/')) {
+          resolved = 'vault/' + href;
+        }
+        window.open('/viewer.html?file=' + encodeURIComponent(resolved), '_blank');
+      } else {
+        // Se estiver em file://
+        // O viewer local estará em ../viewer.html se copiado para petaxxon/
+        window.open('../viewer.html?file=' + encodeURIComponent(href), '_blank');
+      }
+    }
+  });
 </script>
 </body>
 </html>

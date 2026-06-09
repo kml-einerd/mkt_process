@@ -29,9 +29,9 @@ Mega Combo → 5 ORDER BUMPS [a confirmar] → UPSELL 1: PlaySquad → continua�
 ```
 
 ## 5. Setups exigidos (links p/ Aba 01)
-- [ ] Infra & Contas: sala de transmissão da live + número/automação de WhatsApp [a confirmar ferramenta]
-- [ ] Tracking & Dados: inscrito → presença → venda (Setup 02 — 🟡)
-- [ ] CRM & Listas: cadastro, confirmação, lembrete e recuperação no WhatsApp (Setup 03 — 🟡)
+- [ ] Infra & Contas: sala de transmissão da live + número/automação de WhatsApp HotWebinar / GHL (conforme o caso)
+- [ ] Tracking & Dados: inscrito → presença → venda (Setup 02 — 🟢)
+- [ ] CRM & Listas: cadastro, confirmação, lembrete e recuperação no WhatsApp (Setup 03 — 🟢)
 - [ ] Nomenclatura: nome padrão da campanha/edição diária (Setup 04)
 - [ ] Biblioteca de Ativos: slides/pitch, criativos do ads, mensagens de WhatsApp
 
@@ -47,7 +47,7 @@ Mega Combo → 5 ORDER BUMPS [a confirmar] → UPSELL 1: PlaySquad → continua�
 ## 7. Dono & Definition of Done
 Quem PRODUZ não conclui; quem APROVA conclui. DoD: ads CTWA no ar, fluxo de WhatsApp (cadastro+confirmação+
 lembrete) ativo, live diária rodando com pitch do combo, checkout+esteira e recuperação configurados, e
-tracking inscrito→venda validado. Dono/aprovador: [a confirmar].
+tracking inscrito→venda validado. Dono/aprovador: Dono do Funil / Gestor de Operações.
 
 ## 8. As 3 camadas
 - **Ideal:** ads→WhatsApp→live diária→checkout→recuperação, tudo automatizado e medido por edição.

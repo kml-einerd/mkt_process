@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizador de Documentos · Petaxxon</title>
+  <!-- Google Fonts para tipografia premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Parser de Markdown Marked -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    :root {
+      --ink: #16140f;
+      --paper: #f4f0e6;
+      --card: #fbf9f2;
+      --line: #d8d0bd;
+      --accent: #b5462b;
+      --blue: #2a5a86;
+      --green: #2e6b4a;
+      --gold: #a9842f;
+      --mute: #8a8170;
+      --serif: 'Playfair Display', 'Iowan Old Style', Georgia, serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'Fira Code', ui-monospace, Menlo, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: var(--card);
+      border-bottom: 1px solid var(--line);
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(22, 20, 15, 0.04);
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--accent);
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .divider {
+      color: var(--line);
+    }
+
+    .doc-title {
+      font-family: var(--serif);
+      font-size: 16px;
+      color: var(--ink);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 500;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background-color: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.15s ease, transform 0.1s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn-ghost {
+      background-color: transparent;
+      color: var(--mute);
+      border: 1px solid var(--line);
+    }
+
+    .btn-ghost:hover {
+      background-color: rgba(22, 20, 15, 0.04);
+      color: var(--ink);
+    }
+
+    /* Conteúdo Principal */
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .content-card {
+      background-color: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 48px;
+      box-shadow: 0 4px 16px rgba(22, 20, 15, 0.05);
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 20px 12px 40px;
+      }
+      .content-card {
+        padding: 24px 16px;
+      }
+    }
+
+    /* Estilos do Markdown Renderizado */
+    .markdown-body {
+      font-size: 15px;
+      color: #2b271f;
+    }
+
+    .markdown-body > *:first-child {
+      margin-top: 0 !important;
+    }
+
+    .markdown-body h1,
+    .markdown-body h2,
+    .markdown-body h3,
+    .markdown-body h4,
+    .markdown-body h5,
+    .markdown-body h6 {
+      font-family: var(--serif);
+      color: var(--ink);
+      margin-top: 32px;
+      margin-bottom: 16px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .markdown-body h1 {
+      font-size: 28px;
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    .markdown-body h2 {
+      font-size: 22px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 6px;
+      margin-top: 28px;
+    }
+
+    .markdown-body h3 {
+      font-size: 18px;
+    }
+
+    .markdown-body p,
+    .markdown-body ul,
+    .markdown-body ol,
+    .markdown-body table,
+    .markdown-body blockquote,
+    .markdown-body pre {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    .markdown-body a {
+      color: var(--blue);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .markdown-body a:hover {
+      color: var(--accent);
+    }
+
+    .markdown-body ul,
+    .markdown-body ol {
+      padding-left: 24px;
+    }
+
+    .markdown-body li {
+      margin-bottom: 6px;
+    }
+
+    .markdown-body li > ul,
+    .markdown-body li > ol {
+      margin-top: 6px;
+      margin-bottom: 0;
+    }
+
+    /* Tabelas Premium */
+    .markdown-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14px;
+    }
+
+    .markdown-body th,
+    .markdown-body td {
+      border: 1px solid var(--line);
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    .markdown-body th {
+      background-color: rgba(22, 20, 15, 0.03);
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .markdown-body tr:nth-child(even) {
+      background-color: rgba(22, 20, 15, 0.01);
+    }
+
+    /* Citações e Avisos */
+    .markdown-body blockquote {
+      border-left: 4px solid var(--accent);
+      padding: 12px 20px;
+      background-color: rgba(181, 70, 43, 0.04);
+      color: #5c5341;
+      border-radius: 0 6px 6px 0;
+      font-style: italic;
+    }
+
+    /* Código */
+    .markdown-body code {
+      font-family: var(--mono);
+      font-size: 13.5px;
+      background-color: #eae6db;
+      padding: 2.5px 6px;
+      border-radius: 4px;
+      color: var(--accent);
+    }
+
+    .markdown-body pre {
+      background-color: #eae6db;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      overflow-x: auto;
+    }
+
+    .markdown-body pre code {
+      background-color: transparent;
+      padding: 0;
+      border-radius: 0;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .markdown-body hr {
+      border: 0;
+      border-top: 1px solid var(--line);
+      margin: 32px 0;
+    }
+
+    /* Estados de Loading e Erro */
+    .loading-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 40px 0;
+      color: var(--mute);
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(181, 70, 43, 0.1);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 1s infinite linear;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .error-card {
+      border-top: 4px solid var(--accent);
+      padding: 24px;
+      background-color: rgba(181, 70, 43, 0.03);
+      border-radius: 8px;
+    }
+
+    .error-card h2 {
+      font-family: var(--serif);
+      color: var(--accent);
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .error-card p {
+      font-size: 14.5px;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .solution-box {
+      background-color: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+
+    .solution-box h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .solution-box ol {
+      padding-left: 20px;
+    }
+
+    .solution-box li {
+      font-size: 13.5px;
+      margin-bottom: 8px;
+    }
+
+    .solution-box pre {
+      background-color: #eae6db;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-family: var(--mono);
+      font-size: 12px;
+      margin-top: 4px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <a href="/" class="brand">Petaxxon Central</a>
+      <span class="divider">/</span>
+      <div id="doc-title" class="doc-title">Carregando...</div>
+    </div>
+    <div class="header-right">
+      <button class="btn btn-ghost" onclick="window.print()">🖨️ Imprimir</button>
+      <button class="btn" onclick="window.close()">✖ Fechar</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="content-card">
+      <div id="loading" class="loading-state">
+        <div class="spinner"></div>
+        <p>Buscando documento...</p>
+      </div>
+      <div id="content" class="markdown-body" style="display: none;"></div>
+    </div>
+  </main>
+
+  <script>
+    // Configura o marked para quebrar linhas automaticamente
+    marked.setOptions({
+      breaks: true,
+      gfm: true
+    });
+
+    // Função auxiliar para extrair o título com base no nome do arquivo ou conteúdo
+    function getDocTitle(filePath, markdownContent) {
+      // Tenta achar o primeiro H1 no markdown (# Título)
+      const h1Match = markdownContent.match(/^#\s+(.+)$/m);
+      if (h1Match && h1Match[1]) {
+        return h1Match[1].trim();
+      }
+
+      // Se não achar, extrai o nome do arquivo a partir do caminho
+      const basename = filePath.split('/').pop();
+      // Substitui hifens por espaços e capitaliza
+      const cleaned = basename
+        .replace(/\.md$/i, '')
+        .replace(/[-_]/g, ' ')
+        .replace(/\b\w/g, c => c.toUpperCase());
+      return cleaned;
+    }
+
+    // Resolve caminhos relativos de markdown
+    function resolveRelativePath(basePath, relativePath) {
+      if (/^(https?:|mailto:|#)/.test(relativePath)) return relativePath;
+
+      const parts = basePath.split('/');
+      parts.pop(); // Remove o arquivo atual para obter o diretório pai
+
+      const relParts = relativePath.split('/');
+      for (const part of relParts) {
+        if (part === '.') {
+          continue;
+        } else if (part === '..') {
+          parts.pop();
+        } else {
+          parts.push(part);
+        }
+      }
+      return parts.join('/');
+    }
+
+    // Captura cliques em links internos de markdown e atualiza o visualizador
+    function setupLinkInterceptors(filePath) {
+      const contentDiv = document.getElementById('content');
+      contentDiv.addEventListener('click', function(e) {
+        const a = e.target.closest('a');
+        if (!a) return;
+
+        const href = a.getAttribute('href');
+        if (!href) return;
+
+        // Se for âncora interna (#...) ou link absoluto, permite o comportamento padrão
+        if (href.startsWith('#') || /^(https?:|mailto:)/.test(href)) {
+          return;
+        }
+
+        // Se terminar com .md, interceptamos e abrimos no próprio visualizador
+        if (href.endsWith('.md')) {
+          e.preventDefault();
+          const resolved = resolveRelativePath(filePath, href);
+          // Navega atualizando o parâmetro da URL atual
+          window.location.search = `?file=${encodeURIComponent(resolved)}`;
+        }
+      });
+    }
+
+    function showError(err, filePath) {
+      document.getElementById('loading').style.display = 'none';
+      const contentDiv = document.getElementById('content');
+      contentDiv.style.display = 'block';
+
+      const isFileProtocol = window.location.protocol === 'file:';
+      let errorHtml = `
+        <div class="error-card">
+          <h2>Erro ao carregar o documento</h2>
+          <p>${err.message || 'Houve um problema ao buscar o arquivo no servidor.'}</p>
+      `;
+
+      if (isFileProtocol) {
+        // Sugere a solução de rodar o servidor local caso esteja abrindo por file://
+        const localPath = filePath || 'vault/INDEX.md';
+        errorHtml += `
+          <div class="solution-box">
+            <h3>Solução para Acesso Local (CORS):</h3>
+            <p>Os navegadores modernos impedem o carregamento de arquivos locais diretamente pelo protocolo <code>file://</code>.</p>
+            <ol>
+              <li>Certifique-se de que a Central está rodando:
+                <pre><code>cd petaxxon/central && npm run dev</code></pre>
+              </li>
+              <li>Acesse a Central pelo servidor de desenvolvimento e veja os arquivos por lá:
+                <pre><code>http://localhost:5173/viewer.html?file=${encodeURIComponent(localPath)}</code></pre>
+              </li>
+            </ol>
+          </div>
+        `;
+      }
+
+      errorHtml += '</div>';
+      contentDiv.innerHTML = errorHtml;
+      document.getElementById('doc-title').textContent = 'Erro de Carregamento';
+    }
+
+    // Inicialização
+    (function init() {
+      const urlParams = new URLSearchParams(window.location.search);
+      let filePath = urlParams.get('file');
+
+      // Se nenhum arquivo foi especificado, direciona para o INDEX.md por padrão
+      if (!filePath) {
+        filePath = 'vault/INDEX.md';
+      }
+
+      // Sanitiza o caminho para garantir que não saia do diretório vault (prevenção básica)
+      // Se não começar com vault/ e não for link absoluto
+      if (!filePath.startsWith('vault/') && !filePath.startsWith('/vault/') && !/^(https?:)/.test(filePath)) {
+        filePath = 'vault/' + filePath;
+      }
+
+      fetch(filePath)
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(`Não foi possível encontrar o arquivo "${filePath}" (Status: ${res.status})`);
+          }
+          return res.text();
+        })
+        .then(markdown => {
+          document.getElementById('loading').style.display = 'none';
+          const contentDiv = document.getElementById('content');
+          contentDiv.style.display = 'block';
+          
+          // Renderiza o markdown
+          contentDiv.innerHTML = marked.parse(markdown);
+          
+          // Configura título
+          const docTitle = getDocTitle(filePath, markdown);
+          document.getElementById('doc-title').textContent = docTitle;
+          document.title = `${docTitle} · Documentação Petaxxon`;
+          
+          // Ativa interceptação de links
+          setupLinkInterceptors(filePath);
+        })
+        .catch(err => {
+          showError(err, filePath);
+        });
+    })();
+  </script>
+</body>
+</html>

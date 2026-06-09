@@ -106,7 +106,7 @@ const processo = {
       id: 'sb-titulo',
       lane: 'operacoes',
       x: 1440,
-      label: 'Parte B · Ritual Semanal (1×/semana, dia fixo [a confirmar])',
+      label: 'Parte B · Ritual Semanal (1×/semana, Quinta-feira às 13h)',
       responsavel: 'Gestor de Operações',
       status: 'A fazer',
       checklist: [

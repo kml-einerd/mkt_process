@@ -56,7 +56,7 @@ A decisão tem três saídas possíveis:
 ## 4. Como ler os dados por funil
 
 ### Sequência padrão de leitura
-1. Abrir o dashboard `[a confirmar ferramenta]` no recorte do período (diário ou semanal)
+1. Abrir o dashboard `HotWebinar / GHL (conforme o caso)` no recorte do período (diário ou semanal)
 2. Abrir `dados/pass-fail-por-funil.md` na seção do funil a analisar
 3. Para cada métrica da tabela: registrar o valor real e comparar com a meta (PASS / FAIL)
 4. Contar quantas métricas estão em FAIL

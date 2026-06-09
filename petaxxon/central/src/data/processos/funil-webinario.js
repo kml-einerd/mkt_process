@@ -80,7 +80,7 @@ const processo = {
       responsavel: 'Apresentador',
       status: 'A fazer',
       checklist: [
-        'Configurar sala de transmissão [a confirmar ferramenta]',
+        'Configurar sala de transmissão HotWebinar / GHL (conforme o caso)',
         'Testar áudio, vídeo e compartilhamento de tela',
         'Executar pitch do Mega Combo conforme roteiro',
         'Acionar oferta/checkout no momento correto',

@@ -26,7 +26,7 @@ front-end → 5 ORDER BUMPS → UPSELL 1: PlaySquad → continuação
 ```
 
 ## 5. Setups exigidos (links p/ Aba 01)
-- [ ] Tracking & Dados: atribuição de origem orgânica (Setup 02 — 🟡)
+- [ ] Tracking & Dados: atribuição de origem orgânica (Setup 02 — 🟢)
 - [ ] Nomenclatura: padrão de link/UTM para orgânico (Setup 04)
 - [ ] Biblioteca de Ativos: estrutura de gancho/pitch reutilizável
 
@@ -38,7 +38,7 @@ front-end → 5 ORDER BUMPS → UPSELL 1: PlaySquad → continuação
 
 ## 7. Dono & Definition of Done
 Quem PRODUZ não conclui; quem APROVA conclui. DoD: padrão de gancho/pitch documentado, CTA e destino
-definidos, atribuição orgânica medida. Dono/aprovador: [a confirmar].
+definidos, atribuição orgânica medida. Dono/aprovador: Dono do Funil / Gestor de Operações.
 
 ## 8. As 3 camadas
 - **Ideal:** padrão replicável de Short (gancho+pitch) → CTA → checkout, com atribuição orgânica medida.

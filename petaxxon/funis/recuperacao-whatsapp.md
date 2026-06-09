@@ -25,8 +25,8 @@ Leva de volta ao checkout+esteira do funil de origem (front-end → 5 bumps → 
 ```
 
 ## 5. Setups exigidos (links p/ Aba 01)
-- [ ] Tracking & Dados: evento de abandono (Setup 02 — 🟡)
-- [ ] CRM & Listas: gatilho + sequência no WhatsApp (Setup 03 — 🟡)
+- [ ] Tracking & Dados: evento de abandono (Setup 02 — 🟢)
+- [ ] CRM & Listas: gatilho + sequência no WhatsApp (Setup 03 — 🟢)
 - [ ] Nomenclatura: padrão da sequência (Setup 04)
 - [ ] Biblioteca de Ativos: copys de recuperação
 
@@ -38,7 +38,7 @@ Leva de volta ao checkout+esteira do funil de origem (front-end → 5 bumps → 
 
 ## 7. Dono & Definition of Done
 Quem PRODUZ não conclui; quem APROVA conclui. DoD: gatilho de abandono ativo, sequência WhatsApp rodando,
-link de volta ao checkout, e taxa de recuperação medida. Dono/aprovador: [a confirmar].
+link de volta ao checkout, e taxa de recuperação medida. Dono/aprovador: Dono do Funil / Gestor de Operações.
 
 ## 8. As 3 camadas
 - **Ideal:** gatilho de abandono → sequência WhatsApp → volta ao checkout, com taxa de recuperação medida.

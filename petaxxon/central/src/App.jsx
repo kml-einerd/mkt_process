@@ -22,11 +22,21 @@ function build(processo) {
   const laneColor = Object.fromEntries(processo.lanes.map((l) => [l.id, l.color]))
   const laneLabel = Object.fromEntries(processo.lanes.map((l) => [l.id, l.label]))
 
+  // Largura da raia = acompanha o nó mais à direita (card 180/200px + folga),
+  // nunca menor que LANE_W. Sem isto a raia termina antes do fim do fluxo e os
+  // cards mais à direita vazam para fora da banda.
+  const NODE_W = 200
+  const RIGHT_PAD = 64
+  const maxX = processo.nodes.reduce((m, n) => Math.max(m, n.x), 0)
+  const laneW = Math.max(LANE_W, maxX + NODE_W + RIGHT_PAD)
+
   const laneNodes = processo.lanes.map((l, i) => ({
     id: `lane-${l.id}`,
     type: 'lane',
     position: { x: 0, y: i * LANE_H },
-    data: { label: l.label, color: l.color, w: LANE_W, h: LANE_H },
+    data: { label: l.label, color: l.color, w: laneW, h: LANE_H },
+    width: laneW,
+    height: LANE_H,
     draggable: false, selectable: false, zIndex: 0,
   }))
 
@@ -35,6 +45,7 @@ function build(processo) {
     type: 'process',
     position: { x: n.x, y: laneIndex[n.lane] * LANE_H + NODE_TOP },
     data: { ...n, laneColor: laneColor[n.lane], setor: laneLabel[n.lane] },
+    width: n.goto ? 200 : 180,
     zIndex: 2,
   }))
 

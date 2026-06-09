@@ -30,8 +30,8 @@ Lead → nutrição → [funil de venda downstream: front-end → 5 ORDER BUMPS 
 
 ## 5. Setups exigidos (links p/ Aba 01)
 - [ ] Infra & Contas: squeeze page + hospedagem da isca
-- [ ] Tracking & Dados: evento de lead + atribuição lead→venda (Setup 02 — 🟡)
-- [ ] CRM & Listas: entrega da isca + sequência de nutrição + tag de origem (Setup 03 — 🟡)
+- [ ] Tracking & Dados: evento de lead + atribuição lead→venda (Setup 02 — 🟢)
+- [ ] CRM & Listas: entrega da isca + sequência de nutrição + tag de origem (Setup 03 — 🟢)
 - [ ] Nomenclatura: nome padrão da campanha/lead magnet (Setup 04)
 - [ ] Biblioteca de Ativos: isca (ebook/conteúdo), squeeze page, criativos
 
@@ -44,7 +44,7 @@ Lead → nutrição → [funil de venda downstream: front-end → 5 ORDER BUMPS 
 
 ## 7. Dono & Definition of Done
 Quem PRODUZ não conclui; quem APROVA conclui. DoD: isca pronta, squeeze no ar, entrega + nutrição ativas no
-CRM, destino (webinário/vendas) conectado, e tracking de lead→venda validado. Dono/aprovador: [a confirmar].
+CRM, destino (webinário/vendas) conectado, e tracking de lead→venda validado. Dono/aprovador: Dono do Funil / Gestor de Operações.
 
 ## 8. As 3 camadas
 - **Ideal:** squeeze → isca → nutrição → oferta, com lista própria crescendo e atribuição lead→venda medida.

@@ -108,7 +108,7 @@ const processo = {
       status: 'A fazer',
       checklist: [
         'Configurar disparo agendado conforme calendário (ab3)',
-        'Configurar automação de WhatsApp por segmento [a confirmar ferramenta]',
+        'Configurar automação de WhatsApp por segmento HotWebinar / GHL (conforme o caso)',
         'Aplicar supressão: excluir quem já comprou o produto ofertado',
         'Testar envio antes de disparar para toda a lista',
         'Registrar data e segmento de cada disparo',

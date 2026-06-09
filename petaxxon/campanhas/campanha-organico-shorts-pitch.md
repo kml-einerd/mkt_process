@@ -42,7 +42,7 @@
 ## Dono & Definition of Done
 Quem PRODUZ não conclui; quem APROVA conclui. DoD: Shorts publicados com CTA, link com UTM ativo,
 destino e esteira funcionando, e ao menos uma venda atribuída ao canal orgânico na rodada.
-Dono/aprovador: [a confirmar].
+Dono/aprovador: Dono do Funil / Gestor de Operações.
 
 ## As 3 camadas
 - **Ideal:** cadência recorrente de Shorts com gancho + pitch → CTA → checkout com esteira, totalmente rastreada de origem a venda.

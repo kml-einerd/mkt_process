@@ -59,6 +59,16 @@ async function main() {
     }
   }
 
+  // Copia viewer.html da raiz para public/viewer.html da Central
+  const viewerSrc = path.join(SRC, 'viewer.html')
+  const viewerDest = path.join(CENTRAL, 'public', 'viewer.html')
+  if (await exists(viewerSrc)) {
+    await fs.copyFile(viewerSrc, viewerDest)
+    console.log('[copy-docs] viewer.html copiado com sucesso para public/')
+  } else {
+    console.warn('[copy-docs] aviso: viewer.html raiz ausente, pulado')
+  }
+
   console.log(`[copy-docs] ${copied} arquivo(s) copiado(s) para ${path.relative(CENTRAL, DEST)}/`)
 }
 

@@ -29,7 +29,7 @@ const processo = {
       checklist: [
         'Definir produto e oferta (nome, preço, tipo)',
         'Definir posição na esteira: front-end, upsell ou order bump',
-        'Cadastrar produto no checkout (Hotmart)',
+        'Cadastrar produto no Hotmart',
         'Documentar posição na esteira',
       ],
       pop: { label: 'Setup 01 · Infra & Contas', href: '../setups/setup-01-infra-contas.md' },

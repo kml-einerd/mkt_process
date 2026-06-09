@@ -49,7 +49,7 @@
 ## Dono & Definition of Done
 Quem PRODUZ não conclui; quem APROVA conclui. DoD: segmento de base pronto no CRM, sequência de
 e-mail + WhatsApp disparada, checkout com UTM ativo, e receita da rodada medida por origem.
-Dono/aprovador: [a confirmar].
+Dono/aprovador: Dono do Funil / Gestor de Operações.
 
 ## As 3 camadas
 - **Ideal:** calendário recorrente de campanhas de recompra/ascensão por segmento (produto comprado), medido por receita por disparo, com CRM segmentado e-mail × WhatsApp.

@@ -31,8 +31,8 @@ PlaySquad (plano pagante) → order bumps [a confirmar] → continuação [a con
 
 ## 5. Setups exigidos (links p/ Aba 01)
 - [ ] Infra & Contas: app de trial + checkout de assinatura [a confirmar]
-- [ ] Tracking & Dados: eventos de signup, ativação e conversão free→pago (Setup 02 — 🟡)
-- [ ] CRM & Listas: segmento "trial ativo" vs "pagante" + sequência de upgrade (Setup 03 — 🟡)
+- [ ] Tracking & Dados: eventos de signup, ativação e conversão free→pago (Setup 02 — 🟢)
+- [ ] CRM & Listas: segmento "trial ativo" vs "pagante" + sequência de upgrade (Setup 03 — 🟢)
 - [ ] Nomenclatura: nome padrão do funil/campanha (Setup 04)
 - [ ] Biblioteca de Ativos: mini-VSL, página, prints/demos da ferramenta
 
@@ -46,7 +46,7 @@ PlaySquad (plano pagante) → order bumps [a confirmar] → continuação [a con
 
 ## 7. Dono & Definition of Done
 Quem PRODUZ não conclui; quem APROVA conclui. DoD: página+mini-VSL no ar, trial integrado ao CRM, onboarding
-ativo, sequência de upgrade rodando, e tracking de conversão free→pago validado. Dono/aprovador: [a confirmar].
+ativo, sequência de upgrade rodando, e tracking de conversão free→pago validado. Dono/aprovador: Dono do Funil / Gestor de Operações.
 
 ## 8. As 3 camadas
 - **Ideal:** funil próprio do SaaS com trial → ativação → upgrade automatizado e medido (free→pago).

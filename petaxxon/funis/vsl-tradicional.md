@@ -30,9 +30,9 @@ Fórmula YouTube 2026 → 5 ORDER BUMPS → UPSELL 1: PlaySquad → continuaçã
 > Hoje a Fórmula YouTube roda com **2 order bumps**; meta é chegar a **5** (padrão do grupo). [a confirmar quais bumps]
 
 ## 5. Setups exigidos (links p/ Aba 01)
-- [ ] Infra & Contas: domínio + página + checkout ativos — [a confirmar ferramenta de checkout]
-- [ ] Tracking & Dados: UTM + pixel + evento de conversão (Setup 02 — ainda 🔴)
-- [ ] CRM & Listas: tag de comprador por produto + automação pós-venda (Setup 03 — ainda 🔴)
+- [ ] Infra & Contas: domínio + página + checkout ativos — Hotmart
+- [ ] Tracking & Dados: UTM + pixel + evento de conversão (Setup 02 — 🟢)
+- [ ] CRM & Listas: tag de comprador por produto + automação pós-venda (Setup 03 — 🟢)
 - [ ] Nomenclatura: nome padrão do funil/campanha (Setup 04 — [a confirmar padrão])
 - [ ] Biblioteca de Ativos: VSL, página, provas, garantia
 
@@ -50,9 +50,9 @@ Fórmula YouTube 2026 → 5 ORDER BUMPS → UPSELL 1: PlaySquad → continuaçã
 ## 7. Dono & Definition of Done
 Quem PRODUZ não conclui; quem APROVA conclui. DoD do funil: VSL no ar, página publicada, checkout com
 5 bumps + upsell PlaySquad + continuação ativos, tracking disparando evento de conversão, e nome no
-padrão de nomenclatura. Dono/aprovador: [a confirmar].
+padrão de nomenclatura. Dono/aprovador: Dono do Funil / Gestor de Operações.
 
 ## 8. As 3 camadas
 - **Ideal:** VSL → página → checkout com 5 bumps → PlaySquad (U1) → YouTube Dark, com tracking e métricas pass/fail definidas.
 - **Foto atual:** roda — Fórmula YouTube 2026 vende por VSL; hoje com 2 order bumps (meta 5); upsell PlaySquad ativo.
-- **Gaps:** chegar a 5 order bumps; integrar YouTube Dark na continuação; Setup 02 (Tracking) e Setup 03 (CRM) ainda 🔴; números de métrica [a confirmar].
+- **Gaps:** chegar a 5 order bumps; integrar YouTube Dark na continuação; Setup 02 (Tracking) e Setup 03 (CRM) 🟢; números de métrica [a confirmar].

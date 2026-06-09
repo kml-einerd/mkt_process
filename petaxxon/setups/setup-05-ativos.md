@@ -22,7 +22,7 @@ dela. Sem biblioteca estruturada, cada lançamento cria dívida de produção.
 - [ ] Template de squeeze page (captura / lead magnet)
 - [ ] Template de página de obrigado (thank you page) pós-compra
 - [ ] Template de página de upsell / downsell
-- [ ] Template de checkout com os 5 order bumps configurados como padrão [a confirmar ferramenta]
+- [ ] Template de checkout com os 5 order bumps configurados como padrão HotWebinar / GHL (conforme o caso)
 
 ### Templates de VSL / vídeo
 - [ ] Estrutura de roteiro de VSL (gancho → problema → solução → oferta → garantia → CTA) — versão documentada

@@ -17,6 +17,6 @@ export const STATUS = {
 }
 
 // Geometria das raias (lanes horizontais).
-export const LANE_H = 150       // altura de cada raia
+export const LANE_H = 170       // altura de cada raia (folga p/ cards de 2-3 linhas não vazarem)
 export const LANE_W = 1760      // largura útil
 export const NODE_TOP = 38      // offset vertical do nó dentro da raia

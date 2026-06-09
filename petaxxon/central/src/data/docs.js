@@ -5,10 +5,23 @@
 export function resolveDocHref(href) {
   if (!href) return href
   if (/^(https?:|mailto:|#)/.test(href)) return href
-  if (href.startsWith('../')) return 'vault/' + href.slice(3)
-  if (href.startsWith('./')) return 'vault/' + href.slice(2)
-  if (href.startsWith('/')) return href
-  // caminho relativo simples (ex.: 'GAPS.md') -> vault/
-  if (/\.(md|html)$/i.test(href)) return 'vault/' + href
-  return href
+  if (href.includes('viewer.html?file=')) return href
+
+  let resolved = href
+  if (href.startsWith('../')) {
+    resolved = 'vault/' + href.slice(3)
+  } else if (href.startsWith('./')) {
+    resolved = 'vault/' + href.slice(2)
+  } else if (!href.startsWith('/')) {
+    // caminho relativo simples (ex.: 'GAPS.md') -> vault/
+    if (/\.(md|html)$/i.test(href)) {
+      resolved = 'vault/' + href
+    }
+  }
+
+  // Se o caminho resolvido terminar com .md, envolve no visualizador
+  if (resolved.endsWith('.md')) {
+    return `viewer.html?file=${encodeURIComponent(resolved)}`
+  }
+  return resolved
 }

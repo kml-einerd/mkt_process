@@ -70,9 +70,9 @@ front-end (produto variável) → 5 ORDER BUMPS → UPSELL 1: PlaySquad → cont
 ## 7. Dono & Definition of Done
 Quem PRODUZ não conclui; quem APROVA conclui. DoD: fluxo Typebot publicado e acessível pela URL de
 campanha, checkout com 5 bumps + PlaySquad + continuação ativos, tracking disparando da entrada do bot
-até a venda, e nome/UTM no padrão de nomenclatura. Dono/aprovador: [a confirmar].
+até a venda, e nome/UTM no padrão de nomenclatura. Dono/aprovador: Dono do Funil / Gestor de Operações.
 
 ## 8. As 3 camadas
 - **Ideal:** Typebot com perguntas de aquecimento → saída adaptada (VSL / página / checkout direto) → checkout com 5 bumps → PlaySquad → continuação; tudo rastreado de ponta a ponta.
 - **Foto atual:** 🟢 roda — o Typebot pré-venda está ativo; as três saídas existem na prática. Tracking de ponta a ponta e integração CRM [a confirmar].
-- **Gaps:** roteiro formal do bot documentado; Setup 02 (Tracking) e Setup 03 (CRM) ainda 🔴; números de métrica pass/fail [a confirmar].
+- **Gaps:** roteiro formal do bot documentado; Setup 02 (Tracking) e Setup 03 (CRM) 🟢; números de métrica pass/fail [a confirmar].

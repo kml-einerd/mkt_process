@@ -54,7 +54,7 @@
 ## Dono & Definition of Done
 Quem PRODUZ não conclui; quem APROVA conclui. DoD: campanha no ar com criativos no padrão de
 nomenclatura, pixel disparando Purchase, UTM preservado, e primeiro relatório de CPA/ROAS entregue
-ao aprovador no prazo definido. Dono/aprovador: [a confirmar].
+ao aprovador no prazo definido. Dono/aprovador: Dono do Funil / Gestor de Operações.
 
 ## As 3 camadas
 - **Ideal:** campanha pago/frio segmentada com criativos variados (teste A/B VSL × Typebot), UTMs padronizados, pixel funcional, CPA/ROAS definidos como pass/fail, e escalonamento baseado em dados.

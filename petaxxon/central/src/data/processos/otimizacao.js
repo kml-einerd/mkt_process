@@ -36,7 +36,7 @@ const processo = {
       responsavel: 'Gestor de Tráfego',
       status: 'A fazer',
       checklist: [
-        'Abrir dashboard [a confirmar ferramenta] no recorte do dia anterior',
+        'Abrir dashboard HotWebinar / GHL (conforme o caso) no recorte do dia anterior',
         'Funil 3 (webinário): inscritos, taxa de presença, conversão da live, taxa de recuperação',
         'Funis com Ads ativos: CPL, CPC, CTR vs. meta',
         'CPA intradiário de cada funil ativo',
@@ -145,7 +145,7 @@ const processo = {
       responsavel: 'Gestor de Operações + todos os donos de funil',
       status: 'A fazer',
       checklist: [
-        'Dia e horário fixos [a confirmar]',
+        'Quinta-feira às 13h',
         'Todos os funis ativos revisados: métricas da semana vs. meta',
         'Decisão registrada por funil',
         'Backlog atualizado',

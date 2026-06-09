@@ -26,7 +26,7 @@ front-end → 5 ORDER BUMPS → UPSELL 1: PlaySquad → continuação
 ```
 
 ## 5. Setups exigidos (links p/ Aba 01)
-- [ ] Tracking & Dados: atribuição por vídeo (Setup 02 — 🟡)
+- [ ] Tracking & Dados: atribuição por vídeo (Setup 02 — 🟢)
 - [ ] Nomenclatura: padrão de link/UTM por vídeo (Setup 04)
 - [ ] Biblioteca de Ativos: estrutura de roteiro com pitch
 
@@ -38,7 +38,7 @@ front-end → 5 ORDER BUMPS → UPSELL 1: PlaySquad → continuação
 
 ## 7. Dono & Definition of Done
 Quem PRODUZ não conclui; quem APROVA conclui. DoD: formato de pitch em vídeo longo documentado, CTA e destino
-definidos, atribuição medida. Dono/aprovador: [a confirmar].
+definidos, atribuição medida. Dono/aprovador: Dono do Funil / Gestor de Operações.
 
 ## 8. As 3 camadas
 - **Ideal:** roteiro de conteúdo longo com pitch integrado → CTA → checkout, medido por vídeo.

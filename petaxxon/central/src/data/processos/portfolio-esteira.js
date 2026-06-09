@@ -89,7 +89,7 @@ const processo = {
         'Esteira VVSA real (hoje): VVSA R$14 → Fórmula R$397 → Cyber/Cyberclass R$197 (ver monday-estrutura.md)',
         'Confirmar onde Cyber/Cyberclass entra na esteira-alvo [a confirmar]',
         'Página de oferta da continuação no ar',
-        'Confirmar checkout (Hotmart) e tracking da continuação',
+        'Confirmar Hotmart e tracking da continuação',
       ],
     },
     {

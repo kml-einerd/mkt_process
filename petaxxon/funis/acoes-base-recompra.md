@@ -27,8 +27,8 @@ Oferta de ascensão (front-end) → 5 ORDER BUMPS → UPSELL 1: PlaySquad → co
 ```
 
 ## 5. Setups exigidos (links p/ Aba 01)
-- [ ] Tracking & Dados: receita por ação/segmento (Setup 02 — 🟡)
-- [ ] CRM & Listas: segmentos por produto comprado + automações (Setup 03 — 🟡)
+- [ ] Tracking & Dados: receita por ação/segmento (Setup 02 — 🟢)
+- [ ] CRM & Listas: segmentos por produto comprado + automações (Setup 03 — 🟢)
 - [ ] Nomenclatura: nome padrão das ações (Setup 04)
 - [ ] Biblioteca de Ativos: copys, criativos
 
@@ -41,7 +41,7 @@ Oferta de ascensão (front-end) → 5 ORDER BUMPS → UPSELL 1: PlaySquad → co
 
 ## 7. Dono & Definition of Done
 Quem PRODUZ não conclui; quem APROVA conclui. DoD: segmentos prontos no CRM, mapa de ascensão definido,
-calendário de ações ativo, e receita por ação medida. Dono/aprovador: [a confirmar].
+calendário de ações ativo, e receita por ação medida. Dono/aprovador: Dono do Funil / Gestor de Operações.
 
 ## 8. As 3 camadas
 - **Ideal:** calendário recorrente de ofertas de recompra/ascensão por segmento, medido por receita.
