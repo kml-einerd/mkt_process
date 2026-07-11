@@ -1,5 +1,14 @@
 {
-  "meta": {"version":"2.0.0","title":"KML Operating System","subtitle":"Estratégia → motores → processos → fichas → execução → inteligência","status":"active","updated":"2026-07-10","source":"Atlas/KML + diagnóstico ClickUp + POPs consolidados"},
+  "meta": {"version":"2.0.1","title":"KML Operating System","subtitle":"Estratégia → motores → processos → fichas → execução → inteligência","status":"active","updated":"2026-07-10","source":"Atlas/KML + diagnóstico ClickUp + POPs consolidados"},
+  "thesis": {
+    "id":"THESIS-BASE-DERIK",
+    "status":"official",
+    "protected_core":true,
+    "statement":"Para conquistar o desejo primário, o público precisa aceitar a ação necessária, e isso se torna possível/crível por causa de um mecanismo único.",
+    "sequence":["desejo primário","estado negativo atual","ação necessária","mecanismo único","conclusão inevitável","prova proporcional","oferta coerente"],
+    "gates":["começa por uma crença que o público já tem","mecanismo simples, único e provável","premissas controversas têm prova proporcional","Big Idea não substitui o mecanismo","oferta fecha a tese","pessoa comum consegue explicar a lógica"],
+    "source":"N1 — Tese de Marketing Derik Carneiro — Base Protegida.md"
+  },
   "levels":[
     {"id":"N0","name":"Direção","question":"Onde jogar e o que não fazer?","output":"tese, princípio, restrição"},
     {"id":"N1","name":"Estratégia e motores","question":"Qual capacidade recorrente precisa existir?","output":"motor, oferta, arquitetura"},
@@ -26,7 +35,10 @@
     {"id":"F02","name":"Ficha de Tese","level":"N0","purpose":"Manter direção, mecanismo, prova, promessa, público e limites","output":"ângulo autorizado + hipótese","use":"antes de oferta, copy ou campanha"},
     {"id":"F03","name":"Briefing de Ativo","level":"N3","purpose":"Converter tese em briefing executável","output":"input completo para processo","use":"entrada de Remessa ou campanha"},
     {"id":"F04","name":"QA e Gate","level":"N3","purpose":"Registrar evidência de passagem e exceção","output":"aprovado, ajustes ou bloqueado","use":"antes de publicar/rodar"},
-    {"id":"F05","name":"Scorecard e Decisão","level":"N4","purpose":"Fechar o ciclo com números e uma decisão","output":"manter, mudar, pausar ou matar","use":"semanal e mensal"}
+    {"id":"F05","name":"Scorecard e Decisão","level":"N4","purpose":"Fechar o ciclo com números e uma decisão","output":"manter, mudar, pausar ou matar","use":"semanal e mensal"},
+    {"id":"F06","name":"Ficha de Produto","level":"N1","purpose":"Definir público, problema, transformação, entrega, margem, prova e risco","output":"produto apto a ser ofertado ou decisão de ajustar/pausar","use":"antes de criar oferta"},
+    {"id":"F07","name":"Ficha de Oferta","level":"N1","purpose":"Conectar promessa, mecanismo, stack, bônus, preço, garantia, objeções e CTA","output":"oferta coerente com a tese e pronta para aprovação","use":"antes de construir funil"},
+    {"id":"F08","name":"Ficha de Funil","level":"N1","purpose":"Mapear entrada, pré-venda, checkout, pós-compra, CRM, recuperação, tracking e métricas","output":"funil rastreável, testável e reversível","use":"antes de go-live"}
   ],
   "gates":[
     {"id":"G01","name":"Entrada","when":"Antes de transformar uma demanda em processo/tarefa","requires":["motor ou tese","resultado esperado","dono"]},
