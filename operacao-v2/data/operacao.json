@@ -1,0 +1,56 @@
+{
+  "meta": {"version":"2.0.0","title":"KML Operating System","subtitle":"Estratégia → motores → processos → fichas → execução → inteligência","status":"active","updated":"2026-07-10","source":"Atlas/KML + diagnóstico ClickUp + POPs consolidados"},
+  "levels":[
+    {"id":"N0","name":"Direção","question":"Onde jogar e o que não fazer?","output":"tese, princípio, restrição"},
+    {"id":"N1","name":"Estratégia e motores","question":"Qual capacidade recorrente precisa existir?","output":"motor, oferta, arquitetura"},
+    {"id":"N2","name":"Processos","question":"Como o valor atravessa o fluxo?","output":"processo, decisões, gates"},
+    {"id":"N3","name":"Fichas e procedimentos","question":"Como executar com qualidade?","output":"ficha, SOP, DoD"},
+    {"id":"N4","name":"Execução e inteligência","question":"O que aconteceu e qual é a próxima decisão?","output":"tarefa, evidência, métrica, aprendizado"}
+  ],
+  "motors":[
+    {"id":"M01","name":"Aquisição","purpose":"Gerar atenção, tráfego e demanda qualificada","metric":"criativos úteis/semana · CPL/CPA · volume de testes","color":"#f29f58"},
+    {"id":"M02","name":"Conversão","purpose":"Transformar atenção em oportunidade e venda","metric":"CVR por etapa · CPA · checkout iniciado","color":"#7dd3c7"},
+    {"id":"M03","name":"Monetização","purpose":"Capturar valor e recuperar receita","metric":"receita · AOV · payback · recuperação","color":"#c4a7e7"},
+    {"id":"M04","name":"Entrega e retenção","purpose":"Entregar a promessa e criar continuidade","metric":"ativação · suporte · reembolso · retenção","color":"#f6c85f"},
+    {"id":"M05","name":"Inteligência","purpose":"Converter evidência em decisão e melhoria","metric":"tempo de feedback · decisões fechadas · qualidade dos dados","color":"#8fb8de"}
+  ],
+  "processes":[
+    {"id":"P01","name":"Remessa de Criativos","motor":"M01","trigger":"Hipótese/ângulo aprovado","input":"tese + briefing + referência","steps":["Briefing","Copy","Gravação","Edição","QA","Publicação","Teste","Veredito","Aprendizado"],"gate":"G04","owner":"Head de Conteúdo","metric":"throughput · lead time · taxa de retrabalho","conditionals":["revisão","gravação","copy interna"],"dod":"Criativo publicado, testado e com veredito registrado"},
+    {"id":"P02","name":"Setup de Aula ao Vivo","motor":"M02","trigger":"Oferta/evento aprovado","input":"TAP + oferta + datas","steps":["TAP","Infra","Captação","Antecipação","Show-up","Live","Venda 48h","Onboarding"],"gate":"G03","owner":"Integrator","metric":"show-up · conversão · receita por live","conditionals":["live","evento gravado","venda evergreen"],"dod":"Evento executado, venda encerrada e pós-venda acionado"},
+    {"id":"P03","name":"Implantação de Infoproduto","motor":"M04","trigger":"Oferta comprada/produção autorizada","input":"produto + promessa + ativos","steps":["Arquitetura","Conteúdo","Materiais","Checkout","Área","Tracking","QA","Entrega"],"gate":"G03","owner":"Owner de Produto","metric":"tempo até ativação · completude · reembolso","conditionals":["bônus","comunidade","suporte ao vivo"],"dod":"Aluno acessa o produto correto e eventos críticos estão verificados"},
+    {"id":"P04","name":"CDV Semanal","motor":"M03","trigger":"Ciclo semanal ativo","input":"tese + calendário + oferta","steps":["Definições","Captação paga","Captação orgânica","Show-up","Live","Vendas 48h","Pós-venda","Scorecard","Regra de escala"],"gate":"G05","owner":"Owner do Ciclo","metric":"leads · show-up · vendas · caixa · qualidade","conditionals":["tema","bônus","janela de venda"],"dod":"Ciclo fechado, scorecard preenchido e decisão de escala registrada"},
+    {"id":"P05","name":"Meteórico","motor":"M02","trigger":"Campanha curta aprovada","input":"oferta + janela + ativos","steps":["Oferta","Captação","Aquecimento","Evento","Venda","Fechamento","Entrega","Aprendizado"],"gate":"G05","owner":"Integrator","metric":"leads/dia · conversão · receita · tempo de ciclo","conditionals":["evento","lista","urgência"],"dod":"Janela encerrada, caixa conciliado e aprendizado incorporado"}
+  ],
+  "fiches":[
+    {"id":"F01","name":"Raio-X 12 pontos","level":"N3","purpose":"Diagnosticar produto, oferta, funil e régua antes de criar tarefas","output":"gargalo + decisão + métrica + dono","use":"pré-processo / revisão mensal","points":["Direção e tese","Público, problema e mecanismo","Oferta e promessa","Produto e entrega","Aquisição e canais","Criativos e comunicação","Página/VSL/Typebot","Checkout/pagamento","Tracking/atribuição","CRM/régua/recuperação","Suporte/prova/retenção","Métrica/gargalo/próxima decisão"]},
+    {"id":"F02","name":"Ficha de Tese","level":"N0","purpose":"Manter direção, mecanismo, prova, promessa, público e limites","output":"ângulo autorizado + hipótese","use":"antes de oferta, copy ou campanha"},
+    {"id":"F03","name":"Briefing de Ativo","level":"N3","purpose":"Converter tese em briefing executável","output":"input completo para processo","use":"entrada de Remessa ou campanha"},
+    {"id":"F04","name":"QA e Gate","level":"N3","purpose":"Registrar evidência de passagem e exceção","output":"aprovado, ajustes ou bloqueado","use":"antes de publicar/rodar"},
+    {"id":"F05","name":"Scorecard e Decisão","level":"N4","purpose":"Fechar o ciclo com números e uma decisão","output":"manter, mudar, pausar ou matar","use":"semanal e mensal"}
+  ],
+  "gates":[
+    {"id":"G01","name":"Entrada","when":"Antes de transformar uma demanda em processo/tarefa","requires":["motor ou tese","resultado esperado","dono"]},
+    {"id":"G02","name":"Pronto para produzir","when":"Antes de iniciar execução","requires":["briefing","input","prioridade","dependências","DoD"]},
+    {"id":"G03","name":"Pronto para publicar","when":"Antes de colocar oferta/funil/produto no ar","requires":["QA","tracking","mobile/checkout","rollback ou reversão"]},
+    {"id":"G04","name":"Pronto para testar","when":"Antes de investir tráfego","requires":["ativo nomeado","evento","hipótese","janela","critério pass/fail"]},
+    {"id":"G05","name":"Aprendizado","when":"Depois do teste/ciclo","requires":["resultado","veredito","decisão","próxima data"]}
+  ],
+  "cadences":[
+    {"id":"C01","name":"Semanal","question":"Qual é o gargalo e que decisão desbloqueia throughput?","output":"prioridades, desbloqueios, scorecard"},
+    {"id":"C02","name":"Quinzenal","question":"O que está se repetindo e deve virar procedimento/ficha?","output":"candidatos a padronização"},
+    {"id":"C03","name":"Mensal","question":"Qual processo gerou retrabalho ou dados ruins?","output":"alteração versionada de processo"},
+    {"id":"C04","name":"Trimestral","question":"Qual motor/tese merece continuar recebendo recursos?","output":"manter, mudar, pausar ou matar"}
+  ],
+  "decisions":[
+    {"priority":"P0","name":"Segurança","value":"Não republicar credenciais nem dados sensíveis dos exports; rotacionar o que já vazou","owner":"Governança"},
+    {"priority":"P1","name":"Restrição","value":"Puxar a produção pela restrição real; não empurrar novas remessas para WIP parado","owner":"Integrator"},
+    {"priority":"P1","name":"Accountability","value":"Task sem dono não entra no fluxo; todo gate tem aprovador e evidência","owner":"Owner do processo"},
+    {"priority":"P1","name":"Variantes","value":"Variante é condicional explícita; não criar outro template para diferença cosmética","owner":"Process Owner"},
+    {"priority":"P2","name":"Fonte canônica","value":"Modelo e dados versionados geram as vistas; HTML/CSV não são fontes concorrentes","owner":"Arquitetura"}
+  ],
+  "links":[
+    {"label":"Camada estratégica operacional KML","url":"https://atlas-files.kmlsoueu.com/20260710T181000Z-camada-estrategica-operacional-kml.html"},
+    {"label":"Fluxos, réguas e tese de marketing","url":"https://atlas-files.kmlsoueu.com/20260710T175500Z-fluxos-producao-reguas-tese-marketing-kml.html"},
+    {"label":"Central de operações KML","url":"https://atlas-files.kmlsoueu.com/20260709T181720Z-central-operacoes-kml-daniel-v1.html"}
+  ]
+}

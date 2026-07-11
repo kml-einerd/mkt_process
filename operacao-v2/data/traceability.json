@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "active_source": "operacao-v2/data/operacao.json",
+  "incorporated": [
+    {"source":"diagnostico/lentes/*.md","action":"transform","output":"decisions + motors + gates + cadence"},
+    {"source":"diagnostico/pops/*.md","action":"transform","output":"five canonical processes and DoD"},
+    {"source":"Recursos/clickup-export/extrato/templates/*.md","action":"transform","output":"conditional variants and process families"},
+    {"source":"diagnostico/monday-blocos.csv","action":"transform","output":"fiches, inputs, outputs and roles"},
+    {"source":"diagnostico/monday-receitas.csv","action":"transform","output":"process composition"},
+    {"source":"Atlas/KML public HTMLs","action":"preserve-links-and-principles","output":"strategy layer, visual flows, thesis and cadence"}
+  ],
+  "removed_from_active_tree": [
+    "legacy diagnosis HTMLs",
+    "duplicated POP/SOP/template copies",
+    "raw ClickUp exports containing historical operational noise",
+    "generated scratch artifacts"
+  ],
+  "recovery": "git history before refactor/operacao-kml-v2"
+}
