@@ -1,0 +1,17 @@
+{
+  "version":"1.0",
+  "name":"KML Operating Scorecard",
+  "review_cadence":"weekly",
+  "owner":"M05",
+  "metrics":[
+    {"id":"S01","name":"Throughput","unit":"remessas/semana","source":"execution","decision_rule":"se abaixo do alvo, limitar WIP antes de abrir nova demanda"},
+    {"id":"S02","name":"Lead time até teste","unit":"horas","source":"execution","decision_rule":"se subindo, localizar gargalo de produção/QA"},
+    {"id":"S03","name":"Taxa de retrabalho","unit":"%","source":"QA","decision_rule":"se acima do limite, atualizar briefing/DoD"},
+    {"id":"S04","name":"Pass/fail de teste","unit":"status","source":"media","decision_rule":"CPA ≤ meta e CTR ≥ 1,5% e gasto ≥ 1× ticket para validar"},
+    {"id":"S05","name":"Cobertura de evidência","unit":"%","source":"governance","decision_rule":"tarefa sem evidência não fecha gate"},
+    {"id":"S06","name":"Tempo de feedback","unit":"dias","source":"intelligence","decision_rule":"se alto, fechar scorecard e decisão no próximo ritual"}
+  ],
+  "required_record_fields":["period","baseline","actual","delta","bottleneck","decision","owner","next_review","evidence_refs"],
+  "decision_options":["maintain","optimize","scale","retest","pause","kill"],
+  "sample_record":{"period":"YYYY-WW","baseline":null,"actual":null,"delta":null,"bottleneck":null,"decision":null,"owner":null,"next_review":null,"evidence_refs":[]}
+}

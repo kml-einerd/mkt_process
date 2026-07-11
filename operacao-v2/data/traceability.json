@@ -1,19 +1,17 @@
 {
-  "version": "2.0.0",
-  "active_source": "operacao-v2/data/operacao.json",
-  "incorporated": [
-    {"source":"diagnostico/lentes/*.md","action":"transform","output":"decisions + motors + gates + cadence"},
-    {"source":"diagnostico/pops/*.md","action":"transform","output":"five canonical processes and DoD"},
-    {"source":"Recursos/clickup-export/extrato/templates/*.md","action":"transform","output":"conditional variants and process families"},
-    {"source":"diagnostico/monday-blocos.csv","action":"transform","output":"fiches, inputs, outputs and roles"},
-    {"source":"diagnostico/monday-receitas.csv","action":"transform","output":"process composition"},
-    {"source":"Atlas/KML public HTMLs","action":"preserve-links-and-principles","output":"strategy layer, visual flows, thesis and cadence"}
+  "version":"2.0.1",
+  "active_source":"operacao-v2/data/operacao.json",
+  "rule":"HTML/CSV/JSON de vista não são fontes concorrentes; a fonte canônica é validada e versionada.",
+  "processes":[
+    {"process_id":"P01","canonical":"P-CRIATIVOS-REMESSA","pop":"diagnostico/pops/pop-01-remessa-criativos.md","sops":["Recursos/clickup-export/extrato/sops/01*.md","Recursos/clickup-export/extrato/sops/02*.md"],"fiches":["F02","F03","F04","F05"],"gates":["G01","G02","G04","G05"],"confidence":"high"},
+    {"process_id":"P02","canonical":"P-AULA-LIVE-SETUP","pop":"diagnostico/pops/pop-02-setup-aula-ao-vivo.md","sops":["Recursos/clickup-export/extrato/sops/03*.md","Recursos/clickup-export/extrato/sops/04*.md"],"fiches":["F06","F07","F08","F04"],"gates":["G01","G02","G03"],"confidence":"medium"},
+    {"process_id":"P03","canonical":"P-INFOPRODUTO-IMPLANTACAO","pop":"diagnostico/pops/pop-03-implantacao-infoproduto.md","sops":["Recursos/clickup-export/extrato/sops/05*.md"],"fiches":["F06","F07","F08","F04"],"gates":["G01","G02","G03","G05"],"confidence":"medium"},
+    {"process_id":"P04","canonical":"P-CDV-CICLO-SEMANAL","pop":"diagnostico/pops/pop-04-cdv-ciclo-semanal.md","sops":["Recursos/clickup-export/extrato/sops/06*.md"],"fiches":["F01","F05","F08"],"gates":["G03","G05"],"notes":"SOP-06 é sobreposição operacional do POP-04; consolidar em uma fonte, não duplicar.","confidence":"high"},
+    {"process_id":"P05","canonical":"P-METEORICO","pop":"diagnostico/pops/pop-05-meteorico.md","sops":["Recursos/clickup-export/extrato/sops/07*.md"],"fiches":["F01","F02","F03","F05"],"gates":["G01","G02","G04","G05"],"notes":"SOP-07 deve ser normalizado por nomenclatura e não virar processo paralelo.","confidence":"medium"}
   ],
-  "removed_from_active_tree": [
-    "legacy diagnosis HTMLs",
-    "duplicated POP/SOP/template copies",
-    "raw ClickUp exports containing historical operational noise",
-    "generated scratch artifacts"
-  ],
-  "recovery": "git history before refactor/operacao-kml-v2"
+  "unresolved":[
+    {"id":"TR-001","issue":"SOP-06/POP-04 overlap","action":"consolidate","owner":"Process Owner","status":"open"},
+    {"id":"TR-002","issue":"SOP-07 nomenclature overlap","action":"normalize","owner":"Process Owner","status":"open"},
+    {"id":"TR-003","issue":"44 legacy variants","action":"classify as condition/exception/instance","owner":"Architecture","status":"open"}
+  ]
 }

@@ -1,0 +1,9 @@
+{
+  "version":"1.0",
+  "records":[],
+  "record_schema":{
+    "required":["id","date","context","hypothesis","evidence_refs","result","decision","change_ref","next_review","owner"],
+    "decision_options":["maintain","optimize","scale","retest","pause","kill"]
+  },
+  "flow":["tese","motor","processo","ficha","tarefa","evidência","métrica","decisão","alteração versionada","nova execução"]
+}

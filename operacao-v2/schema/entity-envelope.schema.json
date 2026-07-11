@@ -1,0 +1,25 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"kml-operating-entity-envelope-v1",
+  "title":"KML/Atlas Entity Envelope",
+  "type":"object",
+  "required":["id","entity_type","level","status","title","version","owner","source_refs","updated_at"],
+  "properties":{
+    "id":{"type":"string","pattern":"^[A-Z0-9][A-Z0-9_-]+$"},
+    "entity_type":{"type":"string","enum":["thesis","motor","product","offer","funnel","process","procedure","ficha","block","recipe","gate","cadence","task","evidence","scorecard","decision","learning_record"]},
+    "level":{"type":"string","enum":["N0","N1","N2","N3","N4"]},
+    "status":{"type":"string","enum":["draft","active","official","approved","in_review","todo","blocked","paused","archived","superseded"]},
+    "title":{"type":"string","minLength":1},
+    "version":{"type":"integer","minimum":1},
+    "owner":{"type":"string","minLength":1},
+    "backup":{"type":"string"},
+    "motor":{"type":"string"},
+    "process_id":{"type":"string"},
+    "ficha_id":{"type":"string"},
+    "gate_id":{"type":"string"},
+    "source_refs":{"type":"array","items":{"type":"string"},"minItems":1},
+    "updated_at":{"type":"string","format":"date"},
+    "review_at":{"type":"string","format":"date"}
+  },
+  "additionalProperties":true
+}
